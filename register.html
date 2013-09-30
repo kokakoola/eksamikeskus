@@ -1,0 +1,101 @@
+<!-- @include _includes/_head -->
+<div id="wrap">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="span12">
+      <h2>Tervitus-selgitustekst</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+  </div>
+    <form class="form-horizontal">
+      <fieldset>
+
+      <!-- Form Name -->
+      <legend>Registreerumine</legend>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">Eksami liik</label>
+        <div class="controls">
+          <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
+        </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="control-group">
+        <label class="control-label" for="checkboxes">Korduseksam</label>
+        <div class="controls">
+          <label class="checkbox inline" for="checkboxes-0">
+            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          </label>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+            <option>Eraõigus ja tsiviilkohtu menetlus</option>
+            <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
+            <option>Karistusõigus ja kriminaalmenetlus</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Eksami toimumise kuupäev</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+            <option>23.01.2014</option>
+            <option>30.01.2014</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Ruum</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+            <option>3 (30 kohta)</option>
+            <option>4 (2 kohta)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">E-posti aadress</label>
+        <div class="controls">
+          <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+<!--           <p class="help-block">help</p> -->
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">E-posti aadress uuesti</label>
+        <div class="controls">
+          <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+        </div>
+      </div>
+
+
+      <!-- Button -->
+      <div class="form-actions" style="background: none; border: none;">
+        <button type="button" class="btn" onclick="JavaScript:alert('Mis nüüd toimuma peaks?')">Loobu</button>
+        <a class="btn btn-primary" href="<!-- @path registered.html -->">Kinnita</a>
+      </div>
+
+      </fieldset>
+</form>
+  </div>
+
+  <div id="push"></div>
+</div>
+<!-- @include _includes/_footer -->

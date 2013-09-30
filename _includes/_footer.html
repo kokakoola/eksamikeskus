@@ -1,0 +1,76 @@
+  <div id="footer">
+    <div class="container">
+      <ul class="inline">
+        <li class="nav-header">Temporary navigation</li>
+        <li class="active"><a href="<!-- @path index.html -->">Home</a></li>
+        <li><a href="<!-- @path test.html -->">Kirjalik eksam</a></li> 
+        <li><a href="<!-- @path register-unavailable.html -->">Eksamit veel pole</a></li> 
+        <li><a href="<!-- @path test.html -->">Kirjalik eksam</a></li> 
+      </ul>
+    </div>
+
+  </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/downCount-master/jquery.downCount.js"></script>
+    <script src="js/prettyCheckable/prettyCheckable.js"></script>
+    <script src="js/bootpag.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+    <script>
+       $(function() {
+    $('#nav-wrapper').height($("#nav").height());
+    
+    $('#nav').affix({
+        offset: { top: $('#nav').offset().top }
+    });
+});
+
+    </script>
+    <script class="source" type="text/javascript">
+        $('.countdown').downCount({
+            date: '10/01/2013 23:30:00',
+            offset: +3
+        }, function () {
+            alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
+        });
+    </script>
+    <script>
+    $().ready(function(){
+
+      $('input.myClass').prettyCheckable();
+
+    });
+</script>
+<script>
+  $('.field1').bootpag({
+      total: 10,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content1").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field2').bootpag({
+      total: 10,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content2").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field3').bootpag({
+      total: 9,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content3").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field4').bootpag({
+      total: 4,
+      page: 1, 
+      maxVisible: 3
+    }).on("page", function(event, num){
+        $(".content4").html("Test question " + num); // or some ajax content loading...
+    });
+    </script>
+</script>
+</body>
+</html>

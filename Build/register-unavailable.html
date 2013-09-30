@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="eng" xmlns:ng="http://angularjs.org" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Advokatuur eksamikeskkond</title>
+        <meta name="viewport" content="width=997">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="css/style.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="js/prettyCheckable/prettyCheckable.css">
+        <!-- <link href="css/advokatuur.css" rel="stylesheet" media="screen"> -->
+
+        <script src="js/script.js"></script>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->  
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+
+
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+    </head>
+    <body>
+<div ng-controller="EmployeeController">
+      Manager: {{employee.name}} [ {{department}} ]<br>
+      Reports:
+        <ul>
+          <li ng-repeat="employee in employee.reports">
+            {{employee.name}} [ {{department}} ]
+          </li>
+        </ul>
+      <hr>
+      {{greeting}}
+    </div>
+<div id="wrap">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="well span12">
+      <h2>Tervitus-selgitustekst</h2>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+  </div>
+
+  </div>
+
+  <div id="push"></div>
+</div>
+  <div id="footer">
+    <div class="container">
+      <ul class="inline">
+        <li class="nav-header">Temporary navigation</li>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="test.html">Kirjalik eksam</a></li> 
+        <li class='current'><a class='current' href="register-unavailable.html">Eksamit veel pole</a></li> 
+        <li><a href="test.html">Kirjalik eksam</a></li> 
+      </ul>
+    </div>
+
+  </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-affix.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/downCount-master/jquery.downCount.js"></script>
+    <script src="js/prettyCheckable/prettyCheckable.js"></script>
+    <script src="js/bootpag.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+    <script>
+       $(function() {
+    $('#nav-wrapper').height($("#nav").height());
+    
+    $('#nav').affix({
+        offset: { top: $('#nav').offset().top }
+    });
+});
+
+    </script>
+    <script class="source" type="text/javascript">
+        $('.countdown').downCount({
+            date: '10/01/2013 23:30:00',
+            offset: +3
+        }, function () {
+            alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
+        });
+    </script>
+    <script>
+    $().ready(function(){
+
+      $('input.myClass').prettyCheckable();
+
+    });
+</script>
+<script>
+  $('.field1').bootpag({
+      total: 10,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content1").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field2').bootpag({
+      total: 10,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content2").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field3').bootpag({
+      total: 9,
+      page: 1
+    }).on("page", function(event, num){
+        $(".content3").html("Test question " + num); // or some ajax content loading...
+    });
+  $('.field4').bootpag({
+      total: 4,
+      page: 1, 
+      maxVisible: 3
+    }).on("page", function(event, num){
+        $(".content4").html("Test question " + num); // or some ajax content loading...
+    });
+    </script>
+</script>
+</body>
+</html>

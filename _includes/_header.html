@@ -1,0 +1,201 @@
+    <!-- @reload -->
+    <!-- @include _includes/_head -->
+    <header>
+      <div class="navbar navbar-inverse ">
+        <div class="navbar-inner">
+          <div style="width:997px;margin:0 auto;">
+            <div class="nav-collapse collapse">
+              <div id="login-box" class="clearfix hide" style="margin:10px;height:100px;margin-top:40px;">
+                <!-- SIGNIN FORM  -->
+                <div style="color:red" class="pull-right"></div>
+                <div class="clearfix"></div>
+                <form method="post" class="pull-right clearfix" style="width:600px;margin:0;" action="/est/avaleht?widget=user-signin-form" name="login_form" id="signin-form">
+                  <input type="hidden" name="signin[redirect]" value="/est/siseveeb" id="signin_redirect"><input type="hidden" name="signin[_csrf_token]" value="8ccf94a66b9168582cdeaa1037c751fa" id="signin__csrf_token">            
+                  <div>
+                    <a class="button gradient blue-button pull-right" style="height:22px;margin-left:5px;" href="#" onclick="$('#signin-form').submit()">Sisene</a>
+
+                  </div>
+                  <input type="password" name="signin[password]" class="pull-right" style="width:159px;height:30px;padding:0;border:0;" placeholder="Parool" tabindex="2" id="signin_password">            <input type="text" name="signin[username]" class="pull-right" style="width:159px;height:30px;padding:0;margin-right:5px;border:0;" placeholder="Kasutaja" tabindex="1" id="signin_username">            <input type="submit" value="Login" style="visibility:hidden;">
+                </form>
+                <div class="" id="login-mobile" style="display:none;">
+                  <a class="button gradient blue-button pull-right" style="height:22px;margin-left:5px;" id="mobile-login-submit" href="#">Sisene</a>
+                  <input id="mobile-nr" type="text" style="width:159px;height:30px;padding:0;border:0;" class="pull-right" placeholder="Mobiiltelefoni number">
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearfix pull-right">
+                  <a href="#" id="login-id-button"><img src="/frontend/img/login-id.png" alt=""></a>
+                  <a href="#" id="login-mobile-button"><img src="/frontend/img/login-mid.png" alt=""></a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="clearfix">
+                  <p class="pull-right" style="color:#666"><small>ID-kaardi ning mobiil-ID-ga sisenemine advokatuuri tööorganite liikmetele.</small></p>
+                </div>
+
+
+              </div>
+
+            <script type="text/javascript">
+              function toggleLogin() {
+                if ($('#signin-form').is(':visible')) {
+                  $('#signin-form').slideToggle('fast', function() {
+                    $('#login-mobile').slideToggle();
+                  });
+                } else {
+                  $('#login-mobile').slideToggle('fast', function() {
+                    $('#signin-form').slideToggle();
+                  });
+                }
+              }
+              
+              $('#mobile-nr').focus(function(){
+                $(this).val('+372');
+              });
+
+              $('#login-mobile-button').click(function(e) {
+                e.preventDefault();
+                toggleLogin();
+              });
+
+              $('#mobile-login-submit').click(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                  url: "/action/sfGuardAuth/signInMobileId",
+                  data: {nr: $('#mobile-nr').val()}
+                }).done(function(data) {
+                  if (data.status != 0) {
+                    alert('Sõnum on saadetud Teie telefonile. Teie kontrollkood on: "'+data.ChallengeID+'".  Kontrollige koodi! Mobiil-IDga sisselogimiseks tuleb Teil oma telefoni sisestada Mobiil-ID PIN1-kood pärast seda, kui olete saanud SMS-i sama kontrollkoodiga, mida näete siin.');
+                    mobileInt = setInterval(function() {
+                      $.get('/action/sfGuardAuth/signInMobileId')
+                      .done(function(data) {
+                        if (data.status == 1 || data.status == 0) {
+                          clearInterval(mobileInt);
+                          if (data.status == 1) {
+                            window.location.href = '/est/siseveeb';
+                          }
+                          if (data.status == 0) {
+                            alert(data.message);
+                          }
+                        }
+                      });
+                    }, 5000);
+                  } else {
+                    alert('Vigane number või puudub mobiili id leping');
+                  }
+                });
+
+              });
+              $('#login-id-button').click(function(e) {
+                e.preventDefault();
+
+                $.ajax({
+                  url: '/id/id.php'
+                }).done(function(data) {
+                  $.ajax({
+                    url: '/action/sfGuardAuth/signInIdCard',
+                    data: {'id-data': data}
+                  }).done(function(data) {
+                    if (data.status == 1) {
+                      window.location.href = '/est/siseveeb';
+                    } else {
+                      alert('Viga: ' + data.message);
+                    }
+                  });
+                }).error(function(jqXHR, textStatus, errorThrown) {
+                  alert('Logimine ebaõnnestus! Veenduge, et kas id kaart on korralikult lugejas või sisestatud PIN kood oli õige. Vea kordumisel palun sulgege brauser ja proovige algusest.');
+                });
+
+              });
+
+              </script>
+
+
+
+              <ul class="nav head-nav">
+                <li class="active">
+                  <a href="/est"> Eesti</a>
+                </li>
+                <li class="">
+                  <a href="/eng"> English</a>
+                </li>
+                <li class="">
+                  <a href="/ru"> По русски</a>
+                </li>
+              </ul>
+              <ul class="nav head-nav pull-right">
+                <li><a id="mobile-web" href="/mobile.php/est/avaleht">Mobiiliveeb</a></li>
+                <script type="text/javascript">
+                $('#mobile-web').click(function(){
+                  $.removeCookie('not-mobile');
+                });
+                </script>
+                <li><a href="https://tvt.advokatuur.ee/login?ReturnUrl=%2f">TVT.ADVOKATUUR.EE</a></li>
+                <li>
+                  <a id="login" href="#" onclick="$('#login-box').slideToggle();
+                  return false;">
+                  <strong>LOGI SISEVÕRKU</strong>
+                </a>
+              </li>
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    <div id="header-container" class="header-container clearfix">
+      <div class="header-inner">
+        <a href="/est/avaleht">
+          <img class="logo" src="../frontend/img/logo3.png" alt="">
+        </a>
+        <div class="search">
+          <form action="/est/otsing" method="get">
+            <input type="text" name="q" value="" placeholder="Sisesta otsingusõna">
+            <a href="#" onclick="$(this).parent('form').submit();return false;" class="search-button"></a>
+          </form>
+        </div>            
+        <div class="main-menu">
+          <div class="navbar">
+            <div class="navbar-inner">
+              <ul class="nav">
+                <li class="active">
+                  <a href="/est/avaleht" style="">
+                    <span>Avaleht                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/uudised" style="">
+                    <span>Uudised                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/advokatuur" style="">
+                    <span>Advokatuur                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/advokaadid" style="">
+                    <span>Advokaadid                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/oigusaktid" style="">
+                    <span>Õigusaktid                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/koolitused" style="">
+                    <span>Koolitused                    </span>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/est/kontakt" style="">
+                    <span>Kontakt                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
