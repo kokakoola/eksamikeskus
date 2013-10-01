@@ -7,9 +7,11 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <link href="css/style.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="js/prettyCheckable/prettyCheckable.css">
-        <!-- <link href="css/advokatuur.css" rel="stylesheet" media="screen"> -->
+        <link href="css/advokatuur.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet" media="screen">
+        <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
+
 
         <script src="js/script.js"></script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -50,26 +52,124 @@
         <!-- /Hammer reload -->
       
     </head>
-    <body>
-<div ng-controller="EmployeeController">
-      Manager: {{employee.name}} [ {{department}} ]<br>
-      Reports:
-        <ul>
-          <li ng-repeat="employee in employee.reports">
-            {{employee.name}} [ {{department}} ]
-          </li>
-        </ul>
-      <hr>
-      {{greeting}}
+    
+
+
+
+
+<!DOCTYPE html>
+<html lang="eng" xmlns:ng="http://angularjs.org" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Advokatuur eksamikeskkond</title>
+        <meta name="viewport" content="width=997">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="js/prettyCheckable/prettyCheckable.css">
+        <link href="css/advokatuur.css" rel="stylesheet" media="screen">
+        <link href="css/style.css" rel="stylesheet" media="screen">
+        <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
+
+
+        <script src="js/script.js"></script>
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->  
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+
+
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+    </head>
+    
+
+
+
+<body>
+  <header>
+    <div class="navbar navbar-inverse" style="height: 23px;">
+      <div class="navbar-inner">
+        <div id="" style="width:997px;margin:0 auto;">
+          <div class="nav-collapse collapse">
+            <ul class="nav head-nav">
+              <li class="active">
+                <a href="/est"> EKSAMIKESKKOND</a>
+              </li>
+            </ul>
+            <ul class="nav head-nav pull-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eksamineeritav <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Administraator</a></li>
+                  <li><a href="#">Kantselei töötaja</a></li>
+                  <li><a href="#">Kutsesobivuskomisjoni liige</a></li>
+                  <li class="divider"></li>
+                  <li><a href="https://www.advokatuur.ee/est/avaleht">Logi välja</a></li>
+                </ul>
+              </li>
+              <li><a id="mobile-web" href="/mobile.php/est/avaleht">Ants Jurisalu</a></li>
+<!--                 <a id="login" href="#" onclick="$('#login-box').slideToggle();
+                return false;">
+              </a> -->
+
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
     </div>
+    <div id="header-container" class="header-container clearfix">
+      <div class="header-inner">
+        <a href="/est/avaleht">
+          <img class="logo" src="../frontend/img/logo3.png" alt="">
+        </a>
+
+        <div class="search">
+          <form action="/est/otsing" method="get">
+            <input type="text" name="q" value="" placeholder="Sisesta otsingusõna">
+            <a href="#" onclick="$(this).parent('form').submit();return false;" class="search-button"></a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
 <div id="wrap">
 
-
   <div class="container">
+    <div class="pagename"><h1>Registreerimine</h1></div>
     <div class="row">
-      <div class="span12">
-      <h2>Tervitus-selgitustekst</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      <div class="span12 well">
+      <h3>Tere, Ants Juristu</h3>
+      <p>Sul on maagilisel kombel kätte jõudnud aeg kirjalikku eksamit teha. Vedas Sul, et sa õigel ajal ikka märkasid siia vaatama tulla! </p> <p> Eksam koosneb kahest osast - <b>kirjalikust ja suulisest</b>. Siin saad registreeruda kirjalikule eksamile kestvusega 90 min. Suulisele eksamile (kaasusülesanne, kestvus 5h) pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse Sulle e-mailile. </p>  <p> Kas korduseksamit saab ka teha? See olgu üllatuseks!
       </p>
     </div>
   </div>
@@ -77,13 +177,17 @@
       <fieldset>
 
       <!-- Form Name -->
-      <legend>Registreerumine</legend>
+      <legend>Registreerimine</legend>
 
       <!-- Text input-->
       <div class="control-group">
         <label class="control-label" for="textinput">Eksami liik</label>
         <div class="controls">
-          <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
+          <label class="checkbox inline" for="checkboxes-0">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-0" value="1">
+          </label>
+          <span class="help-inline">Vandeadvokaadi eksam </span> 
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Lihtsalt kontroll, ega me mingit näpuviga teinud pole. Kui Sa tegelikult pead mingit muud eksamit tegema, helista meile ja ütle." ></a>
         </div>
       </div>
 
@@ -91,9 +195,11 @@
       <div class="control-group">
         <label class="control-label" for="checkboxes">Korduseksam</label>
         <div class="controls">
-          <label class="checkbox inline" for="checkboxes-0">
-            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          <label class="checkbox inline" for="checkboxes-1">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-1" value="2">
           </label>
+          <span class="help-inline">Jah</span>
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Kui eelmine kord eksam viltu läks, saad seda kaks korda uuesti proovida. Edasi vali palun mõni teine elukutse." ></a>
         </div>
       </div>
 
@@ -101,7 +207,7 @@
       <div class="control-group">
         <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
             <option>Eraõigus ja tsiviilkohtu menetlus</option>
             <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
             <option>Karistusõigus ja kriminaalmenetlus</option>
@@ -111,10 +217,10 @@
 
       <!-- Select Basic -->
       <div class="control-group">
-        <label class="control-label" for="selectbasic">Eksami toimumise kuupäev</label>
+        <label class="control-label" for="selectbasic">Eksami toimumise koht ja aeg</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
-            <option>23.01.2014</option>
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+            <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta) 23.01.2014 kl 14.00</option>
             <option>30.01.2014</option>
           </select>
         </div>
@@ -124,7 +230,7 @@
       <div class="control-group">
         <label class="control-label" for="selectbasic">Ruum</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
             <option>3 (30 kohta)</option>
             <option>4 (2 kohta)</option>
           </select>
@@ -163,12 +269,12 @@
 </div>
   <div id="footer">
     <div class="container">
-      <ul class="inline">
-        <li class="nav-header">Temporary navigation</li>
-        <li class="active"><a href="index.html">Home</a></li>
+      <ul class="inline" style="line-height: 60px;">
+        <li class="nav-header"></li>
+        <li class="active"><a href="index.html">Algus</a></li>
         <li><a href="test.html">Kirjalik eksam</a></li> 
         <li><a href="register-unavailable.html">Eksamit veel pole</a></li> 
-        <li><a href="test.html">Kirjalik eksam</a></li> 
+        <li class='current'><a class='current' href="register.html">Registreerimisvorm</a></li> 
       </ul>
     </div>
 
@@ -177,19 +283,26 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-affix.js"></script>
     <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
     <script src="js/downCount-master/jquery.downCount.js"></script>
     <script src="js/prettyCheckable/prettyCheckable.js"></script>
+    <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
     <script src="js/bootpag.js"></script>
+    <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-
+<script>
+  $('.glyphicon-info-sign').popover();
+</script>
     <script>
-       $(function() {
-    $('#nav-wrapper').height($("#nav").height());
+//        $(function() {
+//     $('#nav-wrapper').height($("#nav").height());
     
-    $('#nav').affix({
-        offset: { top: $('#nav').offset().top }
-    });
-});
+//     $('#nav').affix({
+//         offset: { top: $('#nav').offset().top }
+//     });
+// });
 
     </script>
     <script class="source" type="text/javascript">
@@ -203,7 +316,7 @@
     <script>
     $().ready(function(){
 
-      $('input.myClass').prettyCheckable();
+      $('input.check-lg').prettyCheckable();
 
     });
 </script>
@@ -234,6 +347,17 @@
         $(".content4").html("Test question " + num); // or some ajax content loading...
     });
     </script>
+<script>
+  $(".main").onepage_scroll({
+   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+});
+</script>
+<script>
+  $('.selectpicker').selectpicker();
 </script>
 </body>
 </html>

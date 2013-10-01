@@ -55,10 +55,45 @@
   </div>
   <div class="container">
     <div class="span12">
-      
+
+<form class="form-horizontal" ng-controller="QuestionListCtrl">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Eraõigus ja tsiviilkohtumenetlus</legend>
+
+<p>Kokku küsimusi: {{tests.length}}</p>
+
+<!-- Multiple Radios -->
+<div class="control-group" ng-repeat="test in tests" >
+  <label class="control-label" for="radios">{{$index + 1}}. {{test.question}}</label>
+  <div class="controls">
+    <label class="radio" for="radios-0">
+      <input type="radio" name="radios" id="radios-0" value="{{$index}}" checked="checked">
+      {{test.answer1}} 
+    </label>
+    <label class="radio" for="radios-1">
+      <input type="radio" name="radios" id="radios-1" value="{{$index}}">
+      {{test.answer2}} 
+    </label>
+    <label class="radio" for="radios-2">
+      <input type="radio" name="radios" id="radios-2" value="{{$index}}">
+      {{test.answer3}}
+    </label>
+    <label class="radio" for="radios-3">
+      <input type="radio" name="radios" id="radios-3" value="Option four">
+      {{test.answer4}}
+    </label>
+  </div>
+  <hr>
+</div>
+
+</fieldset>
+</form>
+
+
             <p class="well demo content1">
-              Dynamic content here. <input type="radio" class="myClass" value="yes" id="answer" name="answer"/>
-      <input type="radio" class="myClass" value="yes" id="answer" name="answer"/>
+              Dynamic content here. 
           </p>
       <h2>some lorem ipsum for scrolling:</h2>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.

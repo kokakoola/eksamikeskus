@@ -1,11 +1,11 @@
   <div id="footer">
     <div class="container">
-      <ul class="inline">
-        <li class="nav-header">Temporary navigation</li>
-        <li class="active"><a href="<!-- @path index.html -->">Home</a></li>
+      <ul class="inline" style="line-height: 60px;">
+        <li class="nav-header"></li>
+        <li class="active"><a href="<!-- @path index.html -->">Algus</a></li>
         <li><a href="<!-- @path test.html -->">Kirjalik eksam</a></li> 
         <li><a href="<!-- @path register-unavailable.html -->">Eksamit veel pole</a></li> 
-        <li><a href="<!-- @path test.html -->">Kirjalik eksam</a></li> 
+        <li><a href="<!-- @path register.html -->">Registreerimisvorm</a></li> 
       </ul>
     </div>
 
@@ -14,19 +14,26 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-affix.js"></script>
     <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
     <script src="js/downCount-master/jquery.downCount.js"></script>
     <script src="js/prettyCheckable/prettyCheckable.js"></script>
+    <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
     <script src="js/bootpag.js"></script>
+    <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-
+<script>
+  $('.glyphicon-info-sign').popover();
+</script>
     <script>
-       $(function() {
-    $('#nav-wrapper').height($("#nav").height());
+//        $(function() {
+//     $('#nav-wrapper').height($("#nav").height());
     
-    $('#nav').affix({
-        offset: { top: $('#nav').offset().top }
-    });
-});
+//     $('#nav').affix({
+//         offset: { top: $('#nav').offset().top }
+//     });
+// });
 
     </script>
     <script class="source" type="text/javascript">
@@ -40,7 +47,7 @@
     <script>
     $().ready(function(){
 
-      $('input.myClass').prettyCheckable();
+      $('input.check-lg').prettyCheckable();
 
     });
 </script>
@@ -71,6 +78,17 @@
         $(".content4").html("Test question " + num); // or some ajax content loading...
     });
     </script>
+<script>
+  $(".main").onepage_scroll({
+   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+});
+</script>
+<script>
+  $('.selectpicker').selectpicker();
 </script>
 </body>
 </html>

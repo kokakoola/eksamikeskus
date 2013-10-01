@@ -1,12 +1,13 @@
 <!-- @include _includes/_head -->
+<!-- @include _includes/_header -->
 <div id="wrap">
 
-
   <div class="container">
+    <div class="pagename"><h1>Registreerimine</h1></div>
     <div class="row">
-      <div class="span12">
-      <h2>Tervitus-selgitustekst</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+      <div class="span12 well">
+      <h3>Tere, Ants Juristu</h3>
+      <p>Sul on maagilisel kombel kätte jõudnud aeg kirjalikku eksamit teha. Vedas Sul, et sa õigel ajal ikka märkasid siia vaatama tulla! </p> <p> Eksam koosneb kahest osast - <b>kirjalikust ja suulisest</b>. Siin saad registreeruda kirjalikule eksamile kestvusega 90 min. Suulisele eksamile (kaasusülesanne, kestvus 5h) pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse Sulle e-mailile. </p>  <p> Kas korduseksamit saab ka teha? See olgu üllatuseks!
       </p>
     </div>
   </div>
@@ -14,13 +15,17 @@
       <fieldset>
 
       <!-- Form Name -->
-      <legend>Registreerumine</legend>
+      <legend>Registreerimine</legend>
 
       <!-- Text input-->
       <div class="control-group">
         <label class="control-label" for="textinput">Eksami liik</label>
         <div class="controls">
-          <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
+          <label class="checkbox inline" for="checkboxes-0">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-0" value="1">
+          </label>
+          <span class="help-inline">Vandeadvokaadi eksam </span> 
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Lihtsalt kontroll, ega me mingit näpuviga teinud pole. Kui Sa tegelikult pead mingit muud eksamit tegema, helista meile ja ütle." ></a>
         </div>
       </div>
 
@@ -28,9 +33,11 @@
       <div class="control-group">
         <label class="control-label" for="checkboxes">Korduseksam</label>
         <div class="controls">
-          <label class="checkbox inline" for="checkboxes-0">
-            <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+          <label class="checkbox inline" for="checkboxes-1">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-1" value="2">
           </label>
+          <span class="help-inline">Jah</span>
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Kui eelmine kord eksam viltu läks, saad seda kaks korda uuesti proovida. Edasi vali palun mõni teine elukutse." ></a>
         </div>
       </div>
 
@@ -38,7 +45,7 @@
       <div class="control-group">
         <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
             <option>Eraõigus ja tsiviilkohtu menetlus</option>
             <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
             <option>Karistusõigus ja kriminaalmenetlus</option>
@@ -48,10 +55,10 @@
 
       <!-- Select Basic -->
       <div class="control-group">
-        <label class="control-label" for="selectbasic">Eksami toimumise kuupäev</label>
+        <label class="control-label" for="selectbasic">Eksami toimumise koht ja aeg</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
-            <option>23.01.2014</option>
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+            <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta) 23.01.2014 kl 14.00</option>
             <option>30.01.2014</option>
           </select>
         </div>
@@ -61,7 +68,7 @@
       <div class="control-group">
         <label class="control-label" for="selectbasic">Ruum</label>
         <div class="controls">
-          <select id="selectbasic" name="selectbasic" class="input-xlarge">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
             <option>3 (30 kohta)</option>
             <option>4 (2 kohta)</option>
           </select>
