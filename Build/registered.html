@@ -13,7 +13,7 @@
         <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
 
 
-        <script src="js/script.js"></script>
+        
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
         <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
 
 
-        <script src="js/script.js"></script>
+        
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -162,72 +162,70 @@
       </div>
     </div>
   </header>
-<div id="wrap">
-
 
   <div class="container">
     <div class="pagename"><h1>Registreerimise kinnitus</h1></div>
     <div class="row">
-            <div class="span12 well">
-      <h3>Täname!</h3>
-      <p >
+      <div class="span12 well">
+        <h3>Täname!</h3>
+        <p >
          Eksamit saad siinsamas keskkkonnas tühistada <b>kuni xx.xx.xxxx</b>. Kui pärast seda kuupäeva selgub, et Sa ei saa mingil põhjusel tulla, teavita sellest kindlasti Advokatuuri telefonil 662 0665 või meilitsi <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a>. Kui jätad eksamile ilmumata, aga pole seda tühistanud, <b>läheb eksami tulemus kirja mitterahuldavana</b>. <p>Uue eksamiaja saad valida peale eelmise eksami tühistamist.</p>
-        </p>
+       </p>
+     </div>
+     <div class="span12">
+      <form class="form-horizontal">
+        <fieldset>
+
+          <!-- Form Name -->
+          <legend>Oled registreeritud järgnevale kirjalikule eksamile</legend>
+
+          <!-- Text input-->
+          <div class="control-group">
+            <label class="control-label" for="textinput">Eksami liik</label>
+            <div class="controls">
+              <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="textinput">Kaasuse valdkond</label>
+            <div class="controls">
+              <span class="help-inline" style="line-height: 30px;">Riigi põhikord, avalik õigus ja halduskohtumenetlus</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="textinput">Toimumisaeg</label>
+            <div class="controls">
+              <span class="help-inline" style="line-height: 30px;">30.01.2014 kell 14.00-15.30</span>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <label class="control-label" for="textinput">Toimumiskoht</label>
+            <div class="controls">
+              <span class="help-inline" style="line-height: 30px;">Rävala pst 3, x korrus, ruum 3</span>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-actions" style="background: none; border: none;">
+            <button type="button" class="btn">Loobu eksamist</button>
+            <button type="submit" class="btn btn-primary">Välju</button>
+          </div>
+
+        </fieldset>
+      </form>
     </div>
-  <div class="span12">
-        <form class="form-horizontal">
-          <fieldset>
-
-            <!-- Form Name -->
-            <legend>Oled registreeritud järgnevale kirjalikule eksamile</legend>
-
-            <!-- Text input-->
-            <div class="control-group">
-              <label class="control-label" for="textinput">Eksami liik</label>
-              <div class="controls">
-                <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="textinput">Kaasuse valdkond</label>
-              <div class="controls">
-                <span class="help-inline" style="line-height: 30px;">Riigi põhikord, avalik õigus ja halduskohtumenetlus</span>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="textinput">Toimumisaeg</label>
-              <div class="controls">
-                <span class="help-inline" style="line-height: 30px;">30.01.2014 kell 14.00-15.30</span>
-              </div>
-            </div>
-
-            <div class="control-group">
-              <label class="control-label" for="textinput">Toimumiskoht</label>
-              <div class="controls">
-                <span class="help-inline" style="line-height: 30px;">Rävala pst 3, x korrus, ruum 3</span>
-              </div>
-            </div>
-
-            <!-- Button -->
-            <div class="form-actions" style="background: none; border: none;">
-              <button type="button" class="btn">Loobu eksamist</button>
-              <button type="submit" class="btn btn-primary">Välju</button>
-            </div>
-
-          </fieldset>
-        </form>
-      </div>
-    </div>
-    
   </div>
 
-  <div id="push"></div>
 </div>
+
+<div id="push"></div>
+
   <div id="footer">
     <div class="container">
-      <ul class="inline" style="line-height: 60px;">
+      <ul class="inline">
         <li class="nav-header"></li>
         <li class="active"><a href="index.html">Algus</a></li>
         <li><a href="test.html">Kirjalik eksam</a></li> 
@@ -244,12 +242,15 @@
     <script src="js/bootstrap-dropdown.js"></script>
     <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootbox.min.js"></script>
     <script src="js/downCount-master/jquery.downCount.js"></script>
     <script src="js/prettyCheckable/prettyCheckable.js"></script>
     <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
     <script src="js/bootpag.js"></script>
     <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="js/script.js"></script>
 <script>
   $('.glyphicon-info-sign').popover();
 </script>
@@ -263,9 +264,11 @@
 // });
 
     </script>
+
+
     <script class="source" type="text/javascript">
         $('.countdown').downCount({
-            date: '10/01/2013 23:30:00',
+            date: '10/03/2013 23:30:00',
             offset: +3
         }, function () {
             alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
@@ -306,13 +309,13 @@
     });
     </script>
 <script>
-  $(".main").onepage_scroll({
-   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 1000, // AnimationTime let you define how long each section takes to animate
-   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-});
+//   $(".main").onepage_scroll({
+//    sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+//    easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+//    animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+//    pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+//    updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+// });
 </script>
 <script>
   $('.selectpicker').selectpicker();

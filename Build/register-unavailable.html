@@ -13,7 +13,7 @@
         <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
 
 
-        <script src="js/script.js"></script>
+        
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -72,7 +72,7 @@
         <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
 
 
-        <script src="js/script.js"></script>
+        
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
           <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -162,66 +162,187 @@
       </div>
     </div>
   </header>
-<ng:include src="registered.html"></ng:include>
 <!-- Adding the ng-app declaration to initialize AngularJS -->
-<div id="main" >
-  <!-- The navigation menu will get the value of the "active" variable as a class.
-     The $event.preventDefault() stops the page from jumping when a link is clicked. -->
-
-  <nav class="{{active}}" ng-click="$event.preventDefault()">
-
-    <!-- When a link in the menu is clicked, we set the active variable -->
-
-    <a href="#" class="home" ng-click="active='home'">Home</a>
-    <a href="#" class="projects" ng-click="active='projects'">Projects</a>
-    <a href="#" class="services" ng-click="active='services'">Services</a>
-    <a href="#" class="contact" ng-click="active='contact'">Contact</a>
-  </nav>
-
-  <!-- ng-show will show an element if the value in the quotes is truthful,
-     while ng-hide does the opposite. Because the active variable is not set
-     initially, this will cause the first paragraph to be visible. -->
-
-  <p ng-hide="active">Please click a menu item</p>
-  <p ng-show="active">You chose <b>{{active}}</b></p>
-</div>
-
-<ul nav-menu>
-  <li><a href="/">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#properties">Properties</a></li>
-  <li><a href="/page/services">Services</a></li>
-  <li><a href="/page/social">Social</a></li>
-</ul>
-
-<div id="about">about</div>
-<div id="properties">properties</div>
 
 <div id="wrap">
   <div class="container" id="login">
-        <div class="pagename"><h1>Autentimine</h1></div>
+    <div class="pagename"><h1>Autentimine</h1></div>
     <div class="row">
-            <div class="span12 well">
-      <h3>Tere!</h3>
-      <p >
-         Kui soovid end advokaadieksamile kirja panna, oled õiges kohas. Loodame, et oled saanud Advokatuurist kutse siia lehele - vastasel korral ei pruugi sulle olla ligipääsuõigust veel antud. Kui leiad, et sul peaks olema ligipääsud, aga sa ei pääse eksamikeskkonda sisse, teavita meid telefonil 662 0665 või saada kiri <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a>.  <p>Sisenemiseks palun autendi end.</p>
-        </p>
-    </div>
-    <div class="clearfix pull-right">
-        <a href="#" id="login-id-button"><img src="../frontend/img/login-id.png" alt=""></a>
-        <a href="#" id="login-mobile-button"><img src="../frontend/img/login-mid.png" alt=""></a>
-      </div>
+      <div class="span8 offset2 well" id="welcome">
+  <h3>Tere!</h3>
+  <p >
+   Kui soovid end advokaadieksamile kirja panna, oled õiges kohas. Loodame, et oled saanud Advokatuurist kutse siia lehele - vastasel korral ei pruugi sulle olla ligipääsuõigust veel antud. Kui leiad, et sul peaks olema ligipääsud, aga sa ei pääse eksamikeskkonda sisse, teavita meid telefonil 662 0665 või saada kiri <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a>. </p> <p>Sisenemiseks palun logi sisse ID-kaardi või mobiil-ID-ga.</p>
+   <br>
+   <div class="offset2">
+    <a href="#" id="js-login-id-button"><img src="../frontend/img/login-id.png" alt=""></a>
+    <a href="#" id="js-login-mobile-button"><img src="../frontend/img/login-mid.png" alt=""></a>
   </div>
+  <br>
+</div>
+      <section id="register" class="hide">
+  <div class="row">
+    <div class="span12 well">
+      <h3>Tere, Ants Juristu</h3>
+      <p>Sul on maagilisel kombel kätte jõudnud aeg kirjalikku eksamit teha. Vedas Sul, et sa õigel ajal ikka märkasid siia vaatama tulla! </p> <p> Eksam koosneb kahest osast - <b>kirjalikust ja suulisest</b>. Siin saad registreeruda kirjalikule eksamile kestvusega 90 min. Suulisele eksamile (kaasusülesanne, kestvus 5h) pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse Sulle e-mailile. </p>  <p> Kas korduseksamit saab ka teha? See olgu üllatuseks!
+    </p>
+  </div>
+</div>
+<form class="form-horizontal">
+  <fieldset>
 
-    
+    <!-- Form Name -->
+    <legend>Registreerimine</legend>
 
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">Eksami liik</label>
+      <div class="controls">
+        <label class="checkbox inline" for="checkboxes-0">
+          <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-0" value="1">
+        </label>
+        <span class="help-inline">Vandeadvokaadi eksam </span> 
+        <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Lihtsalt kontroll, ega me mingit näpuviga teinud pole. Kui Sa tegelikult pead mingit muud eksamit tegema, helista meile ja ütle." ></a>
+      </div>
+    </div>
+
+    <!-- Multiple Checkboxes (inline) -->
+    <div class="control-group">
+      <label class="control-label" for="checkboxes">Korduseksam</label>
+      <div class="controls">
+        <label class="checkbox inline" for="checkboxes-1">
+          <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-1" value="2">
+        </label>
+        <span class="help-inline">Jah</span>
+        <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Kui eelmine kord eksam viltu läks, saad seda kaks korda uuesti proovida. Edasi vali palun mõni teine elukutse." ></a>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
+      <div class="controls">
+        <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+          <option>Eraõigus ja tsiviilkohtu menetlus</option>
+          <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
+          <option>Karistusõigus ja kriminaalmenetlus</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="selectbasic">Eksami toimumise koht ja aeg</label>
+      <div class="controls">
+        <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+          <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta) 23.01.2014 kl 14.00</option>
+          <option>30.01.2014</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Select Basic -->
+    <div class="control-group">
+      <label class="control-label" for="selectbasic">Ruum</label>
+      <div class="controls">
+        <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+          <option>3 (30 kohta)</option>
+          <option>4 (2 kohta)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">E-posti aadress</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+        <!--           <p class="help-block">help</p> -->
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="textinput">E-posti aadress uuesti</label>
+      <div class="controls">
+        <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+      </div>
+    </div>
+
+
+    <!-- Button -->
+    <div class="form-actions" style="background: none; border: none;">
+      <button type="button" class="btn" id="js-cancel-reg">Loobu</button>
+      <a class="btn btn-primary" id="js-confirm-reg">Kinnita</a>
+    </div>
+
+  </fieldset>
+</form>
+</section>
+      <section id="registered" class="hide">
+
+  <div class="row">
+    <div class="span12 well">
+      <h3>Täname!</h3>
+      <p >
+       Eksamit saad siinsamas keskkkonnas tühistada <b>kuni xx.xx.xxxx</b>. Kui pärast seda kuupäeva selgub, et Sa ei saa mingil põhjusel tulla, teavita sellest kindlasti Advokatuuri telefonil 662 0665 või meilitsi <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a>. Kui jätad eksamile ilmumata, aga pole seda tühistanud, <b>läheb eksami tulemus kirja mitterahuldavana</b>. <p>Uue eksamiaja saad valida peale eelmise eksami tühistamist.</p>
+     </p>
+   </div>
+   <div class="span12">
+    <form class="form-horizontal">
+      <fieldset>
+
+        <!-- Form Name -->
+        <legend>Oled registreeritud järgnevale kirjalikule eksamile</legend>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="textinput">Eksami liik</label>
+          <div class="controls">
+            <span class="help-inline" style="line-height: 30px;">Vandeadvokaadi eksam</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="textinput">Kaasuse valdkond</label>
+          <div class="controls">
+            <span class="help-inline" style="line-height: 30px;">Riigi põhikord, avalik õigus ja halduskohtumenetlus</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="textinput">Toimumisaeg</label>
+          <div class="controls">
+            <span class="help-inline" style="line-height: 30px;">30.01.2014 kell 14.00-15.30</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="textinput">Toimumiskoht</label>
+          <div class="controls">
+            <span class="help-inline" style="line-height: 30px;">Rävala pst 3, x korrus, ruum 3</span>
+          </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-actions" style="background: none; border: none;">
+          <button type="button" class="btn">Loobu eksamist</button>
+          <button type="submit" class="btn btn-primary">Välju</button>
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</div>
+</section>
+    </div>
   </div>
 
   <div id="push"></div>
 </div>
+
   <div id="footer">
     <div class="container">
-      <ul class="inline" style="line-height: 60px;">
+      <ul class="inline">
         <li class="nav-header"></li>
         <li class="active"><a href="index.html">Algus</a></li>
         <li><a href="test.html">Kirjalik eksam</a></li> 
@@ -238,12 +359,15 @@
     <script src="js/bootstrap-dropdown.js"></script>
     <script src="js/bootstrap-tooltip.js"></script>
     <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootbox.min.js"></script>
     <script src="js/downCount-master/jquery.downCount.js"></script>
     <script src="js/prettyCheckable/prettyCheckable.js"></script>
     <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
     <script src="js/bootpag.js"></script>
     <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="js/script.js"></script>
 <script>
   $('.glyphicon-info-sign').popover();
 </script>
@@ -257,9 +381,11 @@
 // });
 
     </script>
+
+
     <script class="source" type="text/javascript">
         $('.countdown').downCount({
-            date: '10/01/2013 23:30:00',
+            date: '10/03/2013 23:30:00',
             offset: +3
         }, function () {
             alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
@@ -300,13 +426,13 @@
     });
     </script>
 <script>
-  $(".main").onepage_scroll({
-   sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-   easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-   animationTime: 1000, // AnimationTime let you define how long each section takes to animate
-   pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
-   updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-});
+//   $(".main").onepage_scroll({
+//    sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
+//    easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+//    animationTime: 1000, // AnimationTime let you define how long each section takes to animate
+//    pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
+//    updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+// });
 </script>
 <script>
   $('.selectpicker').selectpicker();

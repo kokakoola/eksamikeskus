@@ -1,60 +1,18 @@
 <!-- @include _includes/_head -->
 <!-- @include _includes/_header -->
-<ng:include src="registered.html"></ng:include>
 <!-- Adding the ng-app declaration to initialize AngularJS -->
-<div id="main" >
-  <!-- The navigation menu will get the value of the "active" variable as a class.
-     The $event.preventDefault() stops the page from jumping when a link is clicked. -->
-
-  <nav class="{{active}}" ng-click="$event.preventDefault()">
-
-    <!-- When a link in the menu is clicked, we set the active variable -->
-
-    <a href="#" class="home" ng-click="active='home'">Home</a>
-    <a href="#" class="projects" ng-click="active='projects'">Projects</a>
-    <a href="#" class="services" ng-click="active='services'">Services</a>
-    <a href="#" class="contact" ng-click="active='contact'">Contact</a>
-  </nav>
-
-  <!-- ng-show will show an element if the value in the quotes is truthful,
-     while ng-hide does the opposite. Because the active variable is not set
-     initially, this will cause the first paragraph to be visible. -->
-
-  <p ng-hide="active">Please click a menu item</p>
-  <p ng-show="active">You chose <b>{{active}}</b></p>
-</div>
-
-<ul nav-menu>
-  <li><a href="/">Home</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#properties">Properties</a></li>
-  <li><a href="/page/services">Services</a></li>
-  <li><a href="/page/social">Social</a></li>
-</ul>
-
-<div id="about">about</div>
-<div id="properties">properties</div>
 
 <div id="wrap">
   <div class="container" id="login">
-        <div class="pagename"><h1>Autentimine</h1></div>
+    <div class="pagename"><h1>Autentimine</h1></div>
     <div class="row">
-            <div class="span12 well">
-      <h3>Tere!</h3>
-      <p >
-         Kui soovid end advokaadieksamile kirja panna, oled õiges kohas. Loodame, et oled saanud Advokatuurist kutse siia lehele - vastasel korral ei pruugi sulle olla ligipääsuõigust veel antud. Kui leiad, et sul peaks olema ligipääsud, aga sa ei pääse eksamikeskkonda sisse, teavita meid telefonil 662 0665 või saada kiri <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a>.  <p>Sisenemiseks palun autendi end.</p>
-        </p>
+      <!-- @include _includes/_examinant/_welcome -->
+      <!-- @include _includes/_examinant/_register -->
+      <!-- @include _includes/_examinant/_registered -->
     </div>
-    <div class="clearfix pull-right">
-        <a href="#" id="login-id-button"><img src="../frontend/img/login-id.png" alt=""></a>
-        <a href="#" id="login-mobile-button"><img src="../frontend/img/login-mid.png" alt=""></a>
-      </div>
-  </div>
-
-    
-
   </div>
 
   <div id="push"></div>
 </div>
+
 <!-- @include _includes/_footer -->

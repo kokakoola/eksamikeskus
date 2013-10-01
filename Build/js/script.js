@@ -25,3 +25,33 @@ function QuestionListCtrl($scope) {
   ];
 }
 
+ //bootstrap-modal + bootbox alert
+ $(document).on("click", "#js-login-mobile-button", function(e) {
+  bootbox.alert("Sõnum on saadetud Teie telefonile. Teie kontrollkood on: XXXXX.  Kontrollige koodi! Mobiil-IDga sisselogimiseks tuleb Teil oma telefoni sisestada Mobiil-ID PIN1-kood pärast seda, kui olete saanud SMS-i sama kontrollkoodiga, mida näete siin.", function() {
+  });
+});
+ $(document).on("click", "#js-login-id-button", function(e) {
+  bootbox.prompt("Palun sisesta PIN1", function(result) {                
+    if (result === null) {                                             
+      bootbox.alert("Logimine ebaõnnestus! Veenduge, et kas id kaart on korralikult lugejas või sisestatud PIN kood oli õige. Vea kordumisel palun sulgege brauser ja proovige algusest.");
+    } else if (result > 0) {
+      $('#welcome').hide(); 
+      $('.pagename h1').html('Registreerimine');
+      $('#register').show();
+    }
+  });
+});
+$(document).on("click", "#js-cancel-reg", function(e) {
+  bootbox.alert("Registreerimine katkestatud");
+  window.location.href='https://www.advokatuur.ee/est/avaleht';
+
+});
+$(document).on("click", "#js-confirm-reg", function(e) {
+  $('#register').hide();
+  $('.pagename h1').html('Registreerimise kinnitus');
+  $('#registered').show();
+});
+
+
+
+
