@@ -1,99 +1,37 @@
-  <div id="footer">
-    <div class="container">
-      <ul class="inline">
-        <li class="nav-header"></li>
-        <li class="active"><a href="<!-- @path index.html -->">Algus</a></li>
-        <li><a href="<!-- @path test.html -->">Kirjalik eksam</a></li> 
-        <li><a href="<!-- @path register-unavailable.html -->">Eksamit veel pole</a></li> 
-        <li><a href="<!-- @path register.html -->">Registreerimisvorm</a></li> 
-      </ul>
+    <div id="footer">
+      <div class="container">
+        <ul class="inline">
+          <li class="nav-header"></li>
+          <li class="active"><a href="<!-- @path index.html -->">Algus</a></li>
+          <li><a href="<!-- @path examinant-register.html -->">Registreerimine</a></li> 
+          <li><a href="<!-- @path examinant-test.html -->">Valikvastustega eksam</a></li> 
+<!--           <li><a href="#">Kaasuseksam</a></li> 
+          <li><a href="#">Admin</a></li>  -->
+        </ul>
+      </div>
     </div>
 
-  </div>
+<!-- bootstrap -->
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap-affix.js"></script>
+      <script src="js/bootstrap-tab.js"></script>
+      <script src="js/bootstrap-dropdown.js"></script>
+      <script src="js/bootstrap-tooltip.js"></script>
+      <script src="js/bootstrap-popover.js"></script>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-affix.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootbox.min.js"></script>
-    <script src="js/downCount-master/jquery.downCount.js"></script>
-    <script src="js/prettyCheckable/prettyCheckable.js"></script>
-    <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
-    <script src="js/bootpag.js"></script>
-    <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="js/script.js"></script>
-<script>
-  $('.glyphicon-info-sign').popover();
-</script>
-    <script>
-//        $(function() {
-//     $('#nav-wrapper').height($("#nav").height());
-    
-//     $('#nav').affix({
-//         offset: { top: $('#nav').offset().top }
-//     });
-// });
+<!-- vendor -->
+      <script src="js/bootbox.min.js"></script>
+      <script src="js/downCount-master/jquery.downCount.js"></script>
+      <script src="js/prettyCheckable/prettyCheckable.js"></script>
+      <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
+      <script src="js/bootpag.js"></script>
+      <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
+      <script src="js/bootstrap-modal.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
-    </script>
+<!-- document scripts -->
+      <script src="js/advokatuur-angular-rules.js"></script>
+      <script src="js/advokatuur-jquery-plugins.js"></script>
 
-
-    <script class="source" type="text/javascript">
-        $('.countdown').downCount({
-            date: '10/03/2013 23:30:00',
-            offset: +3
-        }, function () {
-            alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
-        });
-    </script>
-    <script>
-    $().ready(function(){
-
-      $('input.check-lg').prettyCheckable();
-
-    });
-</script>
-<script>
-  $('.field1').bootpag({
-      total: 10,
-      page: 1
-    }).on("page", function(event, num){
-        $(".content1").html("Test question " + num); // or some ajax content loading...
-    });
-  $('.field2').bootpag({
-      total: 10,
-      page: 1
-    }).on("page", function(event, num){
-        $(".content2").html("Test question " + num); // or some ajax content loading...
-    });
-  $('.field3').bootpag({
-      total: 9,
-      page: 1
-    }).on("page", function(event, num){
-        $(".content3").html("Test question " + num); // or some ajax content loading...
-    });
-  $('.field4').bootpag({
-      total: 4,
-      page: 1, 
-      maxVisible: 3
-    }).on("page", function(event, num){
-        $(".content4").html("Test question " + num); // or some ajax content loading...
-    });
-    </script>
-<script>
-//   $(".main").onepage_scroll({
-//    sectionContainer: "section", // sectionContainer accepts any kind of selector in case you don't want to use section
-//    easing: "ease", // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-//    animationTime: 1000, // AnimationTime let you define how long each section takes to animate
-//    pagination: true, // You can either show or hide the pagination. Toggle true for show, false for hide.
-//    updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-// });
-</script>
-<script>
-  $('.selectpicker').selectpicker();
-</script>
-</body>
+  </body>
 </html>

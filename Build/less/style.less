@@ -51,19 +51,11 @@
 
 // Vendor
 
-
 /* Sticky footer styles http://getbootstrap.com/2.3.2/examples/sticky-footer-navbar.html
 -------------------------------------------------- */
-
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
-
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 100%;
+  min-height: 100
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
@@ -75,14 +67,13 @@ body {
 #footer {
   height: 70px;
 }
+
 #footer {
   background-color: #f5f5f5; 
-
-}
-
-#footer ul {
-  padding-top: 5px;
-  line-height: 60px;
+    ul {
+    padding-top: 5px;
+    line-height: 60px;
+  }
 }
 
 /* Lastly, apply responsive CSS fixes as necessary */
@@ -104,132 +95,39 @@ body {
 //   padding: 9px 0;
 // }
 
-// RESPONSIVE CLASSES
-// ------------------
 
-@import "bootstrap-less/responsive-utilities.less";
+// General adjustments
+// -----------------------
+.container {
+  width: 997px;
+  h1 {
+  max-height: 100px;
+  font-size: 24px;
+  color: #242424;
+  line-height: 29px;
+  margin: 10px 0 0px;
+  margin-bottom: 20px;
+  display: none;
+  }
+}
 
 b {
 font-family: 'clbd', Arial, sans-serif;
 }
 
+// Help icon style
 .controls a.glyphicon {
   font-size: 120%;
   top: 3px;
   left: 5px;
+  :hover, :focus {
+    text-decoration: none;
+  }
 }
 
-.controls a:hover, .controls a:focus {
-  text-decoration: none;
-}
-
-// .form-horizontal input {
-//   height: 30px;
-// }
-
+// Adjust button group placemenet
 .form-actions button {
   margin-right: 15px; 
-}
-// header styles
-// ----------------
-header {
-background: #105B8B;
-width: 100%;
-margin-bottom: 30px;
-}
-
-.container {
-  width: 997px;
-}
-
-#header-container {
-width: 100%;
-height: 170px;
-margin: 0 auto;
-background: url(../frontend/css/img/header_bg.png) no-repeat center top;
-}
-
-.head-nav li {
-background: url(../frontend/css/img/mmenu_line.png) no-repeat right 11px;
-}
-
-header .logo {
-position: absolute;
-top: 20px;
-}
-
-.search {
-position: absolute;
-top: 108px;
-right: 2px;
-height: 38px;
-width: 337px;
-}
-
-.search input {
-width: 280px;
-height: 38px;
-border: 0;
-border-radius: 0;
-padding: 0px 5px;
-margin: 0px;
-}
-
-.search a.search-button {
-height: 38px;
-float: right;
-margin-left: -10px;
-width: 55px;
-position: absolute;
-display: inline-block;
-background: url(../frontend/css/img/search.png) no-repeat 0 0;
-}
-
-.header-inner {
-width: 997px;
-margin: 0 auto;
-position: relative;
-}
-
-.header .dropdown-menu {
-  border-radius: 0;
-}
-
-.container h1 {
-max-height: 100px;
-font-size: 24px;
-color: #242424;
-line-height: 29px;
-margin: 10px 0 0px;
-margin-bottom: 20px;
-}
-
-.pagename {
-  position: absolute;
-  left: 280px;
-  top: 155px;
-  text-transform: uppercase;
-}
-.pagename h1 {
-  color: #fff;
-  font-weight: normal;
-}
-
-#nav-wrapper.affix {
-    position: fixed;
-    top: 0;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-}
-
-#nav > .navbar-inner {
-    // border-left: 0;
-    // border-right: 0;
-    // border-radius: 0;
-    // -webkit-border-radius: 0;
-    // -moz-border-radius: 0;
-    // -o-border-radius: 0;
 }
 
 .well {
@@ -242,7 +140,109 @@ margin-bottom: 20px;
   display: none;
 }
 
-// dynamic numbers for testquestions
+// header styles
+// ----------------
+header {
+background: #105B8B;
+width: 100%;
+margin-bottom: 30px;
+  .logo {
+  position: absolute;
+  top: 20px;
+  }
+  .pagename {
+    position: absolute;
+    left: 200px;
+    top: 105px;
+    text-transform: uppercase;
+    h1 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}
+
+#header-container {
+width: 100%;
+height: 170px;
+margin: 0 auto;
+background: url(img/header_bg.png) no-repeat center top;
+// display: none;
+}
+
+//For Proto to hide design
+#header-container {
+display: none;
+}
+
+.container h1 {
+  font-size: 32px;
+  display: block;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.head-nav li {
+background: url(img/menu_line.png) no-repeat right 11px;
+}
+
+.search {
+position: absolute;
+top: 108px;
+right: 2px;
+height: 38px;
+width: 337px;
+  input {
+  width: 280px;
+  height: 38px;
+  border: 0;
+  border-radius: 0;
+  padding: 0px 5px;
+  margin: 0px;
+  }
+  a.search-button {
+  height: 38px;
+  float: right;
+  margin-left: -10px;
+  width: 55px;
+  position: absolute;
+  display: inline-block;
+  background: url(img/search.png) no-repeat 0 0;
+  }
+}
+
+.header-inner {
+width: 997px;
+margin: 0 auto;
+position: relative;
+}
+
+.header .dropdown-menu {
+  border-radius: 0;
+}
+
+// Test page styles
+#nav-wrapper.affix {
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+// #nav > .navbar-inner {
+//     border-left: 0;
+//     border-right: 0;
+//     border-radius: 0;
+//     -webkit-border-radius: 0;
+//     -moz-border-radius: 0;
+//     -o-border-radius: 0;
+// }
+
+
+// dynamic numbering example
 //  body {
 //         counter-reset: h2counter;
 //     }
@@ -261,3 +261,8 @@ margin-bottom: 20px;
 //         content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
 //         counter-increment: h3counter;
 //     }
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "bootstrap-less/responsive-utilities.less";
