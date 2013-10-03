@@ -4,6 +4,8 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
+  $('#myModal').modal('toggle');
+
 
 //Call external plugins
 //****************

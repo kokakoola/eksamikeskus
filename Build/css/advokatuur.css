@@ -474,7 +474,7 @@ a.big-button:hover {background:url(../img/bg_hover.png) repeat-x 0 0;color:#abab
 .left-menu .submenu a{padding-left:35px}
 .left-menu a{text-transform:uppercase; text-decoration:none;  color:#242424}
 
-.breadcrumbs {width:100%;margin-left:0;margin-top:10px; background:url(../img/menu_line.png)repeat-x 0 bottom;  }
+.breadcrumbs {width:100%;margin-left:0;margin-top:10px; background:url(../img/mmenu_line.png)repeat-x 0 bottom;  }
 .breadcrumbs li {float:left; list-style:none;}
 .breadcrumbs a {font-size:13px; color:#0b74b8;text-decoration:none}
 .breadcrumbs span {font-size:13px; color:#242424; padding:0 5px}
