@@ -4,16 +4,20 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
-  $('#myModal').modal('toggle');
-
 
 //Call external plugins
 //****************
 
  //bootstrap-modal + bootbox alert
+
+//hide some divs onload
+  $( document ).ready( function () {
+  $('#register, #registered').hide();
+ });
+
+//autent page buttons actions
  $(document).on("click", "#js-login-mobile-button", function(e) {
-  bootbox.alert("Sõnum on saadetud Teie telefonile. Teie kontrollkood on: XXXXX. Kontrollige koodi! Mobiil-IDga sisselogimiseks tuleb Teil oma telefoni sisestada Mobiil-ID PIN1-kood pärast seda, kui olete saanud SMS-i sama kontrollkoodiga, mida näete siin.", function() {
-  });
+  bootbox.alert("Sulle pole veel eksami kohta käivaid andmeid sisestatud. Palun pöördu hiljem tagasi.");
 });
  $(document).on("click", "#js-login-id-button", function(e) {
   bootbox.prompt("Palun sisesta PIN1", function(result) {
@@ -26,16 +30,58 @@
     }
   });
 });
-$(document).on("click", "#js-cancel-reg", function(e) {
-  bootbox.alert("Registreerimine katkestatud");
-  window.location.href='https://www.advokatuur.ee/est/avaleht';
 
+//registration page buttons actions
+$(document).on("click", "#js-cancel-reg", function(e) {
+  e.preventDefault();
+  bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
+    function(result) {
+      if (result) {
+      window.location.href='https://www.advokatuur.ee/est/avaleht';
+      }
+    });
 });
 $(document).on("click", "#js-confirm-reg", function(e) {
   $('#register').hide();
   $('.pagename h1').html('Registreerimise kinnitus');
-  $('#registered').delay(2000).show();
+  $('#registered').show();
 });
+
+
+//confirmation page buttons actions
+$("#js-delete-reg").click(function(e){
+  e.preventDefault();
+  bootbox.confirm("Oled kindel, et soovid registreeringust loobuda?",
+    function(result) {
+      if (result) {
+      window.location.href='https://www.advokatuur.ee/est/avaleht';
+      }
+    });
+});
+
+
+
+  // bootbox.dialog({
+  //   message: "I am a custom dialog",
+  //   title: "Custom title",
+  //   buttons: {
+  //     success: {
+  //       label: "Success!",
+  //       className: "btn-success",
+  //       callback: function() {
+  //         window.location.href='https://www.advokatuur.ee/est/avaleht';
+  //       }
+  //     },
+  //     main: {
+  //       label: "Click ME!",
+  //       className: "btn-primary",
+  //       callback: function() {
+  //         window.location.href='https://www.advokatuur.ee/est/avaleht';
+  //       }
+  //     }
+  //   }
+  // });
+
 
 // <!--                 <a id="login" href="#" onclick="$('#login-box').slideToggle();
 //                 return false;">
@@ -51,10 +97,10 @@ $(document).on("click", "#js-confirm-reg", function(e) {
 
 // Timer for Test Rules
 $('.countdown').downCount({
-    date: '10/03/2013 23:30:00',
+    date: '10/06/2013 23:30:00',
     offset: +3
 }, function () {
-    alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
+    bootbox.alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
 });
 
 
@@ -62,33 +108,6 @@ $('.countdown').downCount({
 $().ready(function(){
   $('input.check-lg').prettyCheckable();
 });
-
-// Dynamic paging for Test Rules
-$('.field1').bootpag({
-    total: 10,
-    page: 1
-  }).on("page", function(event, num){
-      $(".content1").html("Test question " + num); // or some ajax content loading...
-  });
-$('.field2').bootpag({
-    total: 10,
-    page: 1
-  }).on("page", function(event, num){
-      $(".content2").html("Test question " + num); // or some ajax content loading...
-  });
-$('.field3').bootpag({
-    total: 9,
-    page: 1
-  }).on("page", function(event, num){
-      $(".content3").html("Test question " + num); // or some ajax content loading...
-  });
-$('.field4').bootpag({
-    total: 4,
-    page: 1, 
-    maxVisible: 3
-  }).on("page", function(event, num){
-      $(".content4").html("Test question " + num); // or some ajax content loading...
-  });
 
 // One Page Scroll
 //   $(".main").onepage_scroll({

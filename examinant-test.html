@@ -15,11 +15,20 @@
       <!-- span12 -->
     </div> <!-- row -->
   </div>
+
+<section id="test" ng-controller="QuestionListCtrl">
   <div id="nav-wrapper" data-spy="affix" data-offset-top="100">
       <div class="well" id="nav">
         <div class="container">
 
-          <div class="span9">
+          <div class="pagination" >
+  <ul >
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
+  </ul>
+</div>
+
+          <div class="span9" >
             <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Eraõigus ja tsiviilkohtumenetlus</a></li>
@@ -56,7 +65,7 @@
   <div class="container">
     <div class="span12">
 
-<form class="form-horizontal" ng-controller="QuestionListCtrl">
+<form class="form-horizontal" >
 <fieldset>
 
 <!-- Form Name -->
@@ -66,7 +75,7 @@
 
 <!-- Multiple Radios -->
 <div class="control-group" ng-repeat="test in tests" >
-  <label class="control-label" for="radios">{{$index + 1}}. {{test.question}}</label>
+  <label class="control-label" for="radios" id="question{{$index + 1}}">{{$index + 1}}. {{test.question}}</label>
   <div class="controls">
     <label class="radio" for="radios-0">
       <input type="radio" name="{{$index + 1}}" id="radios-0" value="{{$index}}" checked="checked">
@@ -90,11 +99,6 @@
 
 </fieldset>
 </form>
-
-
-    <p class="well demo content1">
-      Dynamic content here. 
-  </p>
           
       <h2>some lorem ipsum for scrolling:</h2>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
@@ -105,4 +109,5 @@
 
   <div id="push"></div>
 </div>
+</section>
 <!-- @include _includes/_footer -->

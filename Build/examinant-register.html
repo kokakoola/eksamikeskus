@@ -146,7 +146,7 @@
   </header>
 
 <div id="wrap">
-  <div class="container" id="login">
+  <div class="container" style="min-height:100%;">
     <div class="row">
       <div class="pagename"><h1>Autentimine</h1></div>
         <section id="welcome">
@@ -162,8 +162,9 @@
     </div>
     <br>
   </div>
+  <div class="clear"></div>
 </section>
-        <section id="register" class="hide">
+        <section id="register">
 
   <div class="span12 well">
     <h3>Tere, Ants Juristu</h3>
@@ -263,7 +264,7 @@
     </form>
   </div>
 </section>
-        <section id="registered" class="hide">
+        <section id="registered">
 
   <div class="span12 well">
     <h3>Täname!</h3>
@@ -308,8 +309,8 @@
 
         <!-- Button -->
         <div class="form-actions" style="background: none; border: none;">
-          <button type="button" class="btn">Loobu eksamist</button>
-          <button type="submit" class="btn btn-primary">Välju</button>
+          <button type="button" class="btn" id="js-delete-reg">Loobu eksamist</button>
+          <button type="submit" class="btn btn-primary" id="js-exit-reg" onclick="window.location.href='https://www.advokatuur.ee/est/avaleht';">Välju</button>
         </div>
 
       </fieldset>
@@ -326,8 +327,7 @@
       <div class="container">
         <ul class="inline">
           <li class="nav-header"></li>
-          <li class="active"><a href="index.html">Algus</a></li>
-          <li class='current'><a class='current' href="examinant-register.html">Registreerimine</a></li> 
+          <li class="active"><a href="index.html">Registreerimine</a></li>
           <li><a href="examinant-test.html">Valikvastustega eksam</a></li> 
 <!--           <li><a href="#">Kaasuseksam</a></li> 
           <li><a href="#">Admin</a></li>  -->
@@ -343,15 +343,15 @@
       <script src="js/bootstrap-dropdown.js"></script>
       <script src="js/bootstrap-tooltip.js"></script>
       <script src="js/bootstrap-popover.js"></script>
+      <script src="js/bootstrap-modal.js"></script>
 
 <!-- vendor -->
       <script src="js/bootbox.min.js"></script>
       <script src="js/downCount-master/jquery.downCount.js"></script>
       <script src="js/prettyCheckable/prettyCheckable.js"></script>
       <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
-      <script src="js/bootpag.js"></script>
       <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
-      <script src="js/bootstrap-modal.js"></script>
+
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
 <!-- document scripts -->

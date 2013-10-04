@@ -342,7 +342,7 @@ html {
     src: url('/fonts/clne.eot');
     src: url('/fonts/clne.eot?#iefix') format('embedded-opentype'),
         url(../fonts/clne.woff) format('woff'),
-        url('../fonts/clne.ttf') format('truetype'),
+        url(../fonts/clne.ttf) format('truetype'),
         url('/fonts/clne.svg#clne') format('svg');
     font-weight: normal;
     font-style: normal;

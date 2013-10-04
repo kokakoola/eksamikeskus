@@ -49,8 +49,7 @@
         <!-- /Hammer reload -->
       
   </head>
-<div id="wrap">
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="eng" xmlns:ng="http://angularjs.org" ng-app>
   <head>
     <meta charset="utf-8">
@@ -145,121 +144,117 @@
       </div>
     </div>
   </header>
+<div id="wrap">
+
   <div class="container">
+    
     <div class="row">
-      <!-- micro hero unit-->
-      <div class="span12">
-        <div class="well">
-          <h1> Advokaadieksam </h1>
-          <p> 50 küsimust, aega on 2 tundi. Küsimustele võid vastata endale sobivas järjekorras. Kord vastatud küsimust saab testi jooksul parandada. Kui kahtled, lisa küsimuse juurde lipuke ja saad selle juurde tagasi pöörduda. Tühiku klahv liigutab ekraani ühe ekraanivaate võrra alla, Shift-tühik ühe ekraanivaate võrra üles.<br>Soovime Sulle palju edu! </p>
-          <p> <a class="btn btn-primary" href="#">Tell me more</a> </p>
-        </div>
-        <!-- well -->
-      </div>
-      <!-- span12 -->
-    </div> <!-- row -->
-  </div>
-
-<section id="test" ng-controller="QuestionListCtrl">
-  <div id="nav-wrapper" data-spy="affix" data-offset-top="100">
-      <div class="well" id="nav">
-        <div class="container">
-
-          <div class="pagination" >
-  <ul >
-    <li class="disabled"><a href="#">&laquo;</a></li>
-    <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
-  </ul>
-</div>
-
-          <div class="span9" >
-            <div class="tabbable tabs-left"> <!-- Only required for left/right tabs -->
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#tab1" data-toggle="tab">Eraõigus ja tsiviilkohtumenetlus</a></li>
-                <li><a href="#tab2" data-toggle="tab">Riigi põhikorra, avaliku õiguse ja halduskohtu menetlus</a></li>
-                <li><a href="#tab3" data-toggle="tab">Karistusõiguse ja kriminaalmenetlus</a></li>
-                <li><a href="#tab4" data-toggle="tab">Advokatuur</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="tab1">
-                  <p class="field1 pagination"><ul class="bootpag"></ul></p>
-                </div>
-                <div class="tab-pane" id="tab2">
-                  <p class="field2 pagination"><ul class="bootpag"></ul></p>
-                </div>
-                <div class="tab-pane" id="tab3">
-                  <p class="field3 pagination"><ul class="bootpag"></ul></p>
-                </div>
-                <div class="tab-pane" id="tab4">
-                  <p class="field4 pagination"><ul class="bootpag"></ul></p>
-                </div>
-              </div>
-            </div>
-          
-          </div>
-          <div class="span2">
-            <span class="navbar-text countdown">
-              Aega jäänud <span class="label"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
-            </span>
-          </div>
-        </div> <!-- container -->
-
-    </div> <!-- navbar -->
-  </div>
-  <div class="container">
-    <div class="span12">
-
-<form class="form-horizontal" >
-<fieldset>
-
-<!-- Form Name -->
-<legend>Eraõigus ja tsiviilkohtumenetlus</legend>
-
-<p>Kokku küsimusi: {{tests.length}}</p>
-
-<!-- Multiple Radios -->
-<div class="control-group" ng-repeat="test in tests" >
-  <label class="control-label" for="radios" id="question{{$index + 1}}">{{$index + 1}}. {{test.question}}</label>
-  <div class="controls">
-    <label class="radio" for="radios-0">
-      <input type="radio" name="{{$index + 1}}" id="radios-0" value="{{$index}}" checked="checked">
-      {{test.answer1}} 
-    </label>
-    <label class="radio" for="radios-1">
-      <input type="radio" name="{{$index + 1}}" id="radios-1" value="{{$index}}">
-      {{test.answer2}} 
-    </label>
-    <label class="radio" for="radios-2">
-      <input type="radio" name="{{$index + 1}}" id="radios-2" value="{{$index}}">
-      {{test.answer3}}
-    </label>
-    <label class="radio" for="radios-3">
-      <input type="radio" name="{{$index + 1}}" id="radios-3" value="Option four">
-      {{test.answer4}}
-    </label>
-  </div>
-  <hr>
-</div>
-
-</fieldset>
-</form>
-          
-      <h2>some lorem ipsum for scrolling:</h2>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-
+      <div class="span12 well">
+      <h3>Tere, Ants Juristu</h3>
+      <p>Sul on maagilisel kombel kätte jõudnud aeg kirjalikku eksamit teha. Vedas Sul, et sa õigel ajal ikka märkasid siia vaatama tulla! </p> <p> Eksam koosneb kahest osast - <b>kirjalikust ja suulisest</b>. Siin saad registreeruda kirjalikule eksamile kestvusega 90 min. Suulisele eksamile (kaasusülesanne, kestvus 5h) pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse Sulle e-mailile. </p>  <p> Kas korduseksamit saab ka teha? See olgu üllatuseks!
+      </p>
     </div>
+  </div>
+    <form class="form-horizontal">
+      <fieldset>
+
+      <!-- Form Name -->
+      <legend>Registreerimine</legend>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">Eksami liik</label>
+        <div class="controls">
+          <label class="checkbox inline" for="checkboxes-0">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-0" value="1">
+          </label>
+          <span class="help-inline">Vandeadvokaadi eksam </span> 
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Lihtsalt kontroll, ega me mingit näpuviga teinud pole. Kui Sa tegelikult pead mingit muud eksamit tegema, helista meile ja ütle." ></a>
+        </div>
+      </div>
+
+      <!-- Multiple Checkboxes (inline) -->
+      <div class="control-group">
+        <label class="control-label" for="checkboxes">Korduseksam</label>
+        <div class="controls">
+          <label class="checkbox inline" for="checkboxes-1">
+            <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-1" value="2">
+          </label>
+          <span class="help-inline">Jah</span>
+          <a href="javascript:void(0);" data-toggle="popover" class="glyphicon glyphicon-info-sign" title="" data-content="Kui eelmine kord eksam viltu läks, saad seda kaks korda uuesti proovida. Edasi vali palun mõni teine elukutse." ></a>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+            <option>Eraõigus ja tsiviilkohtu menetlus</option>
+            <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
+            <option>Karistusõigus ja kriminaalmenetlus</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Eksami toimumise koht ja aeg</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+            <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta) 23.01.2014 kl 14.00</option>
+            <option>30.01.2014</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="control-group">
+        <label class="control-label" for="selectbasic">Ruum</label>
+        <div class="controls">
+          <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+            <option>3 (30 kohta)</option>
+            <option>4 (2 kohta)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">E-posti aadress</label>
+        <div class="controls">
+          <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+<!--           <p class="help-block">help</p> -->
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="control-group">
+        <label class="control-label" for="textinput">E-posti aadress uuesti</label>
+        <div class="controls">
+          <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+        </div>
+      </div>
+
+
+      <!-- Button -->
+      <div class="form-actions" style="background: none; border: none;">
+        <button type="button" class="btn" onclick="JavaScript:alert('Mis nüüd toimuma peaks?')">Loobu</button>
+        <a class="btn btn-primary" href="_includes/_examinant/_registered.html">Kinnita</a>
+      </div>
+
+      </fieldset>
+</form>
   </div>
 
   <div id="push"></div>
 </div>
-</section>
     <div id="footer">
       <div class="container">
         <ul class="inline">
           <li class="nav-header"></li>
           <li class="active"><a href="index.html">Registreerimine</a></li>
-          <li class='current'><a class='current' href="examinant-test.html">Valikvastustega eksam</a></li> 
+          <li><a href="examinant-test.html">Valikvastustega eksam</a></li> 
 <!--           <li><a href="#">Kaasuseksam</a></li> 
           <li><a href="#">Admin</a></li>  -->
         </ul>
