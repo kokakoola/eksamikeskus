@@ -1,0 +1,339 @@
+
+
+// Core variables and mixins
+@import "bootstrap-less/reset.less";
+@import "_variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "bootstrap-less/bootstrap.less";
+@import "bootstrap-less/mixins.less";
+
+// Grid system and page structure
+@import "bootstrap-less/scaffolding.less";
+@import "bootstrap-less/grid.less";
+@import "bootstrap-less/layouts.less";
+
+// Base CSS
+@import "bootstrap-less/type.less";
+@import "bootstrap-less/code.less";
+@import "bootstrap-less/forms.less";
+@import "bootstrap-less/tables.less";
+
+// Components: common
+
+@import "bootstrap-less/dropdowns.less";
+@import "bootstrap-less/wells.less";
+@import "bootstrap-less/component-animations.less";
+@import "bootstrap-less/close.less";
+
+// Components: Buttons & Alerts
+@import "bootstrap-less/buttons.less";
+@import "bootstrap-less/button-groups.less";
+@import "bootstrap-less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "bootstrap-less/navs.less";
+@import "bootstrap-less/navbar.less";
+@import "bootstrap-less/breadcrumbs.less";
+@import "bootstrap-less/pagination.less";
+@import "bootstrap-less/pager.less";
+
+// Components: Popovers
+@import "bootstrap-less/modals.less";
+@import "bootstrap-less/tooltip.less";
+@import "bootstrap-less/popovers.less";
+
+// Components: Misc
+@import "bootstrap-less/thumbnails.less";
+
+@import "bootstrap-less/glyphicons.less";
+
+// Utility classes
+@import "bootstrap-less/utilities.less"; // Has to be last to override when necessary
+
+// Vendor
+
+/* Sticky footer styles http://getbootstrap.com/2.3.2/examples/sticky-footer-navbar.html
+-------------------------------------------------- */
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 70px;
+}
+
+#footer {
+  background-color: #f5f5f5; 
+    ul {
+    padding-top: 5px;
+    line-height: 60px;
+  }
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+//Needed if using fixed navbar 
+// body {
+//   padding-top: 60px;
+//   padding-bottom: 40px;
+// }
+// .sidebar-nav {
+//   padding: 9px 0;
+// }
+
+
+// General adjustments
+// -----------------------
+.container {
+  width: 997px;
+  h1 {
+  max-height: 100px;
+  font-size: 24px;
+  color: #242424;
+  line-height: 29px;
+  margin: 10px 0 0px;
+  margin-bottom: 20px;
+  display: none;
+  }
+}
+
+b {
+font-family: 'clbd', Arial, sans-serif;
+}
+
+// Help icon style
+.controls a.glyphicon {
+  font-size: 120%;
+  top: 3px;
+  left: 5px;
+  :hover, :focus {
+    text-decoration: none;
+  }
+}
+
+// Adjust button group placemenet
+.form-actions button {
+  margin-right: 15px; 
+}
+
+.well {
+  border-radius: none;
+  background: #F6F6F6;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+// header styles
+// ----------------
+header {
+background: #105B8B;
+width: 100%;
+margin-bottom: 30px;
+  .logo {
+  position: absolute;
+  top: 20px;
+  }
+  .pagename {
+    position: absolute;
+    left: 200px;
+    top: 105px;
+    text-transform: uppercase;
+    h1 {
+      font-size: 24px;
+      color: #fff;
+      font-weight: normal;
+    }
+  }
+}
+
+#header-container {
+width: 100%;
+height: 170px;
+margin: 0 auto;
+background: url(img/header_bg.png) no-repeat center top;
+// display: none;
+}
+
+//For Proto to hide design
+#header-container {
+display: none;
+}
+
+.container h1 {
+  font-size: 32px;
+  display: block;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.head-nav li {
+background: url(img/menu_line.png) no-repeat right 11px;
+}
+
+.search {
+position: absolute;
+top: 108px;
+right: 2px;
+height: 38px;
+width: 337px;
+  input {
+  width: 280px;
+  height: 38px;
+  border: 0;
+  border-radius: 0;
+  padding: 0px 5px;
+  margin: 0px;
+  }
+  a.search-button {
+  height: 38px;
+  float: right;
+  margin-left: -10px;
+  width: 55px;
+  position: absolute;
+  display: inline-block;
+  background: url(img/search.png) no-repeat 0 0;
+  }
+}
+
+.header-inner {
+width: 997px;
+margin: 0 auto;
+position: relative;
+}
+
+.header .dropdown-menu {
+  border-radius: 0;
+}
+
+.test-sidenav {
+width: 228px;
+margin: 30px 0 0;
+padding: 0;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+-moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+
+.test-sidenav.affix-bottom {
+position: absolute;
+top: auto;
+bottom: 90px;
+}
+
+// #nav-wrapper.affix {
+//   position: fixed;
+//   top: 0;
+//   margin: 0 auto;
+//   left: 0;
+//   right: 0;
+// }
+
+input.ng-dirty {
+        background-color: #FA787E;
+      }
+
+.pagination {
+  padding: 30px;
+}
+
+#test .pagination ul > li  {
+line-height: 36px;
+width: 30px;
+}
+
+#test .pagination ul > .visited > a {
+background-color: #0b80c7;
+color: #fff;
+}
+
+#test .pagination ul > .flagged > a {
+background-color: #F87D1C;
+color: #fff;
+}
+
+.testquestion:hover {
+  
+
+}
+
+#test .form-horizontal .control-label {
+  width: 220px;
+  text-align: left;
+}
+
+#test .form-horizontal .controls {
+margin-left: 230px;
+}
+
+#test .flagged label {
+  margin-left: -100px;
+float: left;
+margin-top: -30px;
+}
+
+
+// .ng-pristine label{
+//   color: red;
+// }
+
+// .ng-dirty label{
+//   color: green;
+// }
+
+
+
+// #nav > .navbar-inner {
+//     border-left: 0;
+//     border-right: 0;
+//     border-radius: 0;
+//     -webkit-border-radius: 0;
+//     -moz-border-radius: 0;
+//     -o-border-radius: 0;
+// }
+
+
+// dynamic numbering example
+//  body {
+//         counter-reset: h2counter;
+//     }
+
+// legend {
+//         counter-reset: h2counter;
+//     }
+
+// legend:before {
+//         content: counter(h2counter) ".\0000a0\0000a0";
+//         counter-increment: h2counter;
+//         counter-reset: h3counter;
+//     }
+
+//  label.control-label:before {
+//         content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+//         counter-increment: h3counter;
+//     }
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "bootstrap-less/responsive-utilities.less";
