@@ -42,5 +42,4 @@ node_modules
 # Visual Studio
 /*.user
 /*.suo
-
-
+/obj
