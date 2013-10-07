@@ -1,0 +1,46 @@
+<div class="clear"></div>
+  <section id="test" data-spy="scroll" data-target=".pagination" ng-controller="QuestionListCtrl">
+    <div class="span3">
+      <div class="well test-sidenav affix-bottom">
+        
+        <div class="pagination">
+          <ul >
+            <li class="flagged"><a href="#">1</a></li>
+            <li class="visited"><a href="#">2</a></li>
+            <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
+          </ul>
+          <p>Kui sa pole mõnes vastuses kindel, märgista see, et saaksid hiljem selle juurde tagasi pöörduda: loetelus on ta siis oranzhi värvi.</p>
+        </div>
+        <div class="countdown">
+          Aega jäänud <span class="btn"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="span9">
+
+      <form class="form-horizontal" novalidate ng-submit="submitForm();" ng-controller="QuestionListCtrl">
+        <fieldset>
+          <legend>Eraõigus ja tsiviilkohtumenetlus</legend>
+          <p>Kokku küsimusi: {{tests.length}}</p>
+          <!-- STABLE VERSION -->
+          <div class="control-group" ng-repeat="test in tests | limitTo:100" >
+            <label class="control-label " for="{{test.question}}" id="question{{$index + 1}}" >{{$index + 1}}. {{test.question}}</label>
+
+            <div class="controls" >
+              <label class="radio testquestion" for="{{value}}" ng-repeat="(key, value) in test.answers">
+                <input type="radio" name="{{test.question}}" id="{{value}}" value="{{key}}" checked="checked" ng-model="tests">
+                {{key}}: {{value}}
+              </label>
+              <div class="checkbox flagged">
+                <label>
+                  <input type="checkbox"> Märgista
+                </label>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+</section>

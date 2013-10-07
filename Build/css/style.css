@@ -11940,12 +11940,51 @@ header .pagename h1 {
 .header .dropdown-menu {
   border-radius: 0;
 }
-#nav-wrapper.affix {
-  position: fixed;
-  top: 0;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+.test-sidenav {
+  width: 228px;
+  margin: 30px 0 0;
+  padding: 0;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
+.test-sidenav.affix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 90px;
+}
+input.ng-dirty {
+  background-color: #FA787E;
+}
+.pagination {
+  padding: 30px;
+}
+#test .pagination ul > li {
+  line-height: 36px;
+  width: 30px;
+}
+#test .pagination ul > .visited > a {
+  background-color: #0b80c7;
+  color: #fff;
+}
+#test .pagination ul > .flagged > a {
+  background-color: #F87D1C;
+  color: #fff;
+}
+#test .form-horizontal .control-label {
+  width: 220px;
+  text-align: left;
+}
+#test .form-horizontal .controls {
+  margin-left: 230px;
+}
+#test .flagged label {
+  margin-left: -100px;
+  float: left;
+  margin-top: -30px;
 }
 @-ms-viewport {
   width: device-width;

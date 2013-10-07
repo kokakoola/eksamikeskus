@@ -4,6 +4,10 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
+  $('.test-sidenav').scrollspy();
+
+  $('.test-sidenav').affix();
+
 
 //Call external plugins
 //****************
@@ -13,6 +17,7 @@
 //hide some divs onload
   $( document ).ready( function () {
   $('#register, #registered').hide();
+  $('#test').hide();
  });
 
 //autent page buttons actions
@@ -32,20 +37,20 @@
 });
 
 //registration page buttons actions
-$(document).on("click", "#js-cancel-reg", function(e) {
-  e.preventDefault();
-  bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
-    function(result) {
-      if (result) {
-      window.location.href='https://www.advokatuur.ee/est/avaleht';
-      }
-    });
-});
-$(document).on("click", "#js-confirm-reg", function(e) {
-  $('#register').hide();
-  $('.pagename h1').html('Registreerimise kinnitus');
-  $('#registered').show();
-});
+// $(document).on("click", "#js-cancel-reg", function(e) {
+//   e.preventDefault();
+//   bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
+//     function(result) {
+//       if (result) {
+//       window.location.href='https://www.advokatuur.ee/est/avaleht';
+//       }
+//     });
+// });
+// $(document).on("click", "#js-confirm-reg", function(e) {
+//   $('#register').hide();
+//   $('.pagename h1').html('Registreerimise kinnitus');
+//   $('#registered').show();
+// });
 
 
 //confirmation page buttons actions
@@ -59,28 +64,6 @@ $("#js-delete-reg").click(function(e){
     });
 });
 
-
-
-  // bootbox.dialog({
-  //   message: "I am a custom dialog",
-  //   title: "Custom title",
-  //   buttons: {
-  //     success: {
-  //       label: "Success!",
-  //       className: "btn-success",
-  //       callback: function() {
-  //         window.location.href='https://www.advokatuur.ee/est/avaleht';
-  //       }
-  //     },
-  //     main: {
-  //       label: "Click ME!",
-  //       className: "btn-primary",
-  //       callback: function() {
-  //         window.location.href='https://www.advokatuur.ee/est/avaleht';
-  //       }
-  //     }
-  //   }
-  // });
 
 
 // <!--                 <a id="login" href="#" onclick="$('#login-box').slideToggle();
@@ -97,7 +80,7 @@ $("#js-delete-reg").click(function(e){
 
 // Timer for Test Rules
 $('.countdown').downCount({
-    date: '10/06/2013 23:30:00',
+    date: '10/10/2013 23:30:00',
     offset: +3
 }, function () {
     bootbox.alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
