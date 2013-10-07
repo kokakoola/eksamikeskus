@@ -38,3 +38,9 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+# Visual Studio
+/*.user
+/*.suo
+
+
