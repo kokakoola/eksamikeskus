@@ -103,3 +103,21 @@ $().ready(function(){
 
 // Better selectbox
 $('.selectpicker').selectpicker();
+
+if (bindPages) {
+    function showPage(id) {
+        if (id && $(id).length > 0) {
+            $('section:not(' + id + ')').hide();
+            $(id).show();
+        }
+        else {
+            $('section:not(:first)').hide();
+        }
+    }
+    
+    showPage(location.hash);
+        
+    $(window).on('hashchange', function () {
+        showPage(location.hash);
+    });
+}
