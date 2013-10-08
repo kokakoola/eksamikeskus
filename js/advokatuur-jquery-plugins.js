@@ -65,6 +65,10 @@ $("#js-delete-reg").click(function(e){
       }
     });
 });
+$(document).on("click", "#js-add-user", function (e) {
+    $('#user-list').hide();
+    $('#add_user').show();
+});
 
 $("#js-end-test").click(function(e){
   e.preventDefault();
