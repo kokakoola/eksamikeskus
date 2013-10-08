@@ -134,6 +134,7 @@
     <Content Include="less\bootstrap-less\tests\navbar.html" />
     <Content Include="less\bootstrap-less\utilities.css" />
     <Content Include="less\bootstrap-less\variables.css" />
+    <Content Include="administrator_index.html" />
     <Content Include="register.html" />
     <Content Include="_bootstrap-2.3.2\.gitignore" />
     <Content Include="_bootstrap-2.3.2\docs\assets\css\bootstrap-responsive.css" />
@@ -219,6 +220,8 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_administrator_header.html" />
+    <Content Include="_includes\_administrator\_user_list.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
     <Content Include="_includes\_examinant\_test_start.html" />
