@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="comission-index.html" />
     <Content Include="css\advokatuur.css" />
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
@@ -221,9 +222,11 @@
     <Content Include="_includes\_administrator\_user_list.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
+    <Content Include="_includes\_examinant\_test_end.html" />
     <Content Include="_includes\_examinant\_test_start.html" />
     <Content Include="_includes\_examinant\_test_test.html" />
     <Content Include="_includes\_examinant\_welcome.html" />
+    <Content Include="_includes\_examinant\_written_start.html" />
     <Content Include="_includes\_footer.html" />
     <Content Include="_includes\_head.html" />
     <Content Include="_includes\_header.html" />
@@ -295,6 +298,7 @@
     <None Include="less\style.less" />
     <None Include="less\_variables.less" />
     <None Include="README" />
+    <None Include="web.config" />
     <None Include="_bootstrap-2.3.2\.travis.yml" />
     <None Include="_bootstrap-2.3.2\docs\assets\js\README.md" />
     <None Include="_bootstrap-2.3.2\docs\build\package.json" />
