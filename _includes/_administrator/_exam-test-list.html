@@ -1,0 +1,153 @@
+﻿<section id="exam-test-list">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav">
+					<li class="active"><a href="#exam-test-list">Kirjalik eksam</a></li>
+					<li><a href="#oral-exam-list">Suuline eksam</a></li>
+					<li><a href="#exam-test-questions">Testi küsimused</a></li>
+					<li><a href="#">Kaasusülesanded</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<ul class="nav nav-pills">
+			<li class="active"><a href="#exam-test-list">Eksamite nimekiri</a></li>
+			<li><a href="#examinant-statistics">Eksamineeritavate statistika</a></li>
+		</ul>
+
+
+	<!--Breadcrumbs -->
+	<ul class="breadcrumb">
+		<li><a href="#exam-test-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+	</ul>
+
+	<form class="form-horizontal">
+		<fieldset>
+			<!-- Text input-->
+			<div class="row">
+				<div class="span4">
+					<div class="control-group">
+
+						<label class="control-label " for="textinput1">Eksami toimumiskoht</label>
+
+						<div class="controls controls-row">
+							<input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
+						</div>
+					</div>
+				</div>
+				<!-- Text input-->
+				<div class="span4">
+					<div class="control-group">
+
+						<label class="control-label" for="textinput2">Eksami kellaaeg</label>
+
+						<div class="controls">
+							<input id="textinput" name="textinput2" type="text" placeholder="Perekonnanimi" class="input-medium">
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+
+					<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+						<label class="control-label" for="dp3">Eksami kuupäev</label>
+						<input class="span2" size="16" type="text" value="12-02-2012">
+						<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+					</div>
+				</div>
+				<div class="span1 offset7 pull-right">
+					<!-- Button -->
+					<a class="btn btn-primary" href="#exam-test-list-search">Otsi</a>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+	<div class="control-group pull-right">
+                <div class="controls">
+                    <div class="input-prepend">
+                         <a href="#exam-add-exam" class="btn">Lisa Eksam</a>
+                        <span class="add-on"><i class="glyphicon glyphicon-plus-sign"></i></span>
+                    </div>
+                </div>
+            </div>
+
+	<table class="table table-bordered">
+        <tr>
+            <th>Eksami kuupäev</th>
+            <th>Kellaaeg</th>
+            <th>Toimumiskoht</th>
+            <th>Testi kestvus</th>
+			<th>Kaasuse kestvus</th>
+			<th>Max osalejate arv</th>
+			<th>Reg. lõppkuupäev</th>
+			<th></th>
+		</tr>
+        <tr>
+            <td>27.12.2013</td>
+            <td>10:00</td>
+            <td>
+				<ul class="nav nav-pills">
+					<li>Rävala pst 3, Tallinn ruum 2</li>
+					<li>Rävala pst 3, Tallinn ruum 3</li>
+				</ul>
+            </td>
+			<td>90 minutit</td>
+			<td>360 minutit</td>
+			<td>60</td>
+			<td>27.09.2013</td>
+            <td>
+				<ul class="nav nav-pills">
+				  <li><a href="#exam-change-exam">Muuda</a></li>
+				  <li><a href="#exam-test-list-deleted">Kustuta</a></li>
+				  <li ><a href="#oral-exam-generated-list">Genereeri suulise eksami järjekord</a></li>
+				</ul>
+            </td>
+        </tr>
+		<tr>
+            <td>27.01.2013</td>
+            <td>10:00</td>
+            <td>
+				<ul class="nav nav-pills">
+					<li>Rävala pst 3, Tallinn ruum 2</li>
+					<li>Rävala pst 3, Tallinn ruum 3</li>
+				</ul>
+            </td>
+			<td>90 minutit</td>
+			<td>360 minutit</td>
+			<td>60</td>
+			<td>27.12.2013</td>
+            <td>
+				<ul class="nav nav-pills">
+				  <li><a href="#exam-change-exam">Muuda</a></li>
+				  <li><a href="#exam-test-list-deleted">Kustuta</a></li>
+				  <li class="disabled"><a>Genereeri suulise eksami järjekord</a></li>
+				</ul>
+            </td>
+        </tr>
+		<tr>
+            <td>27.01.2013</td>
+            <td>10:00</td>
+            <td>
+				<ul class="nav nav-pills">
+					<li>Rävala pst 3, Tallinn ruum 2</li>
+					<li>Rävala pst 3, Tallinn ruum 3</li>
+				</ul>
+            </td>
+			<td>90 minutit</td>
+			<td>360 minutit</td>
+			<td>60</td>
+			<td>27.12.2013</td>
+            <td>
+				<ul class="nav nav-pills">
+				  <li><a href="#exam-change-exam">Muuda</a></li>
+				  <li><a href="#exam-test-list-deleted">Kustuta</a></li>
+				  <li class="disabled"><a>Genereeri suulise eksami järjekord</a></li>
+				</ul>
+            </td>
+        </tr>
+    </table>
+	 <p>
+            <small>Kokku: 3 kirjet</small>
+        </p>
+</section>

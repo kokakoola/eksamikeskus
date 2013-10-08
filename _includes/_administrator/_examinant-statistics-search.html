@@ -1,0 +1,213 @@
+﻿<section id="examinant-statistics-search">
+	
+			<div class="navbar">
+			<div class="navbar-inner">
+				<ul class="nav">
+					<li class="active"><a href="#exam-test-list">Kirjalik eksam</a></li>
+					<li><a href="#oral-exam-list">Suuline eksam</a></li>
+					<li><a href="#exam-test-questions">Testi küsimused</a></li>
+					<li><a href="#">Kaasusülesanded</a></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<ul class="nav nav-pills">
+			<li><a href="#exam-test-list">Eksamite nimekiri</a></li>
+			<li class="active"><a href="#examinant-statistics">Eksamineeritavate statistika</a></li>
+		</ul>
+
+		<!--Breadcrumbs -->
+	<ul class="breadcrumb">
+		<li><a href="#examinant-statistics">Eksamineeritavate statistika</a> <span class="divider">/</span></li>
+	</ul>
+
+	<form class="form-horizontal">
+        <fieldset>
+            <!-- Text input-->
+            <div class="row">
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label " for="">Nimi</label>
+
+                        <div class="controls controls-row">
+                            <input id="text1" name="textinput" type="text" placeholder="Nimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Isikukood</label>
+
+                        <div class="controls">
+                            <input id="textinput" name="textinput" type="text" placeholder="Isikukood" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Kaasuse valdkond</label>
+                        <div class="controls">
+                            <select id="select3" name="selectbasic" class="span3 selectpicker">
+                                <option>Riigi põhikord,avalik õigusja halduskohtumenetlus</option>
+                                <option>Eraõigus ja tsiviilkohtumenetlus</option>
+                                <option>Karistusõigus ja kriminaalmenetlus</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Perekonnanimi</label>
+
+                        <div class="controls">
+                            <input id="text3" name="textinput" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Juhatuse otsuse nr</label>
+
+                        <div class="controls">
+                            <input id="text4" name="textinput" type="text" placeholder="Juhatuse otsuse nr" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="selectbasic1">Eksami liik</label>
+                        <div class="controls">
+                            <select id="select2" name="selectbasic1" class="span3 selectpicker">
+                                <option>Vandeadvokaadi eksam</option>
+                                <option>Vandeadvokaadi abi eksam</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+<label class="control-label" for="selectbasic2">Roll</label>
+                        <div class="controls">
+                            <select id="select1" name="selectbasic2" class="span3 selectpicker">
+                                <option>Eksamineeritav</option>
+                                <option>Administraator</option>
+                                <option>Kutsesobivuskomisjoni liige</option>
+                                <option>Advokatuuri kantselei töötaja</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Kuupäev</label>
+
+                        <div class="controls">
+                            <input id="text7" name="textinput" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="selectbasic3">Sooritatavus</label>
+                        <div class="controls">
+                            <select id="selectbasic" name="selectbasic3" class="span3 selectpicker">
+                                <option>Sooritatud</option>
+                                <option>Mittesooritatud</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+				<!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="">Komisjoni otsuse nr</label>
+
+                        <div class="controls">
+                            <input id="text9" name="textinput" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+               
+                <div class="span1 offset7 pull-right">
+                    <!-- Button -->
+                    <a class="btn btn-primary" href="#examinant-statistics-search">Otsi</a>
+                </div>
+				
+            </div>
+           	
+           <a class="btn">Genereeri CSV</a>
+				
+        </fieldset>
+    </form>
+    <table class="table table-bordered">
+        <tr>
+            <th>Nimi</th>
+            <th>Perekonnanimi</th>
+            <th>Eksami liik</th>
+            <th>Eksami staatus</th>
+			<th>Eksami kuupäev</th>
+			<th>Kaasuse valdkond</th>
+			<th>Komisjoni otsuse nr</th>
+        </tr>
+		<tr>
+            <td>Aadu</td>
+            <td>Taas</td>
+            <td>Vandeadvokaadi eksam</td>
+			<td>Sooritatud</td>
+			<td>27.01.2012</td>
+			<td>Karistusõigus ja kriminaalmenetlus</td>
+			<td>2</td>
+        </tr>
+		<tr>
+            <td>Aadu</td>
+            <td>Laas</td>
+            <td>Vandeadvokaadi eksam</td>
+			<td>Sooritatud</td>
+			<td>27.01.2012</td>
+			<td>Karistusõigus ja kriminaalmenetlus</td>
+			<td>3</td>
+        </tr>
+		<tr>
+            <td>Aadu</td>
+            <td>Paas</td>
+            <td>Vandeadvokaadi eksam</td>
+			<td>Sooritatud</td>
+			<td>27.01.2012</td>
+			<td>Karistusõigus ja kriminaalmenetlus</td>
+			<td>5</td>
+        </tr>
+    </table>
+	 <p>
+            <small>Kokku: 3 kirjet</small>
+        </p>
+
+</section>
