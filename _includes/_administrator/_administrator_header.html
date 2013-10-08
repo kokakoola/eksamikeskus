@@ -1,0 +1,53 @@
+<!-- @include _includes/_head -->
+
+<body>
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top" style="height: 23px;">
+            <div class="navbar-inner">
+                <div id="" style="width: 997px; margin: 0 auto;">
+                    <div class="nav-collapse collapse">
+            <ul class="nav head-nav">
+                <li class="active">
+                    <a href="/est">EKSAMIKESKKOND</a>
+
+                </li>
+                <li><a href="/est">Kasutajad</a></li>
+                <li><a href="/est">Eksamid</a></li>
+                <li><a href="/est">Seaded</a></li>
+            </ul>
+
+                        <ul class="nav head-nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eksamineeritav <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Administraator</a></li>
+                                    <li><a href="#">Kantselei töötaja</a></li>
+                                    <li><a href="#">Kutsesobivuskomisjoni liige</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://www.advokatuur.ee/est/avaleht">Logi välja</a></li>
+                                </ul>
+                            </li>
+                            <li><a id="mobile-web" href="/mobile.php/est/avaleht">Ants Jurisalu</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="header-container" class="header-container clearfix">
+            <div class="header-inner">
+                <a href="/est/avaleht">
+                    <img class="logo" src="img/logo3.png" alt="">
+                </a>
+                <div class="pagename">
+                    <h1>Autentimine</h1>
+                </div>
+                <div class="search">
+                    <form action="/est/otsing" method="get">
+                        <input type="text" name="q" value="" placeholder="Sisesta otsingusõna">
+                        <a href="#" onclick="$(this).parent('form').submit();return false;" class="search-button"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>

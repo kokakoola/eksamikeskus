@@ -1,0 +1,98 @@
+<section id="user-list">
+    <!--Breadcrumbs -->
+    <br/>
+    <br/>
+    <br/>
+    <ul class="breadcrumb">
+        <li class="active">Kasutajate nimekiri</li>
+    </ul>
+
+    <form class="form-horizontal">
+        <fieldset>
+            <!-- Text input-->
+            <div class="row">
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label " for="textinput">Nimi</label>
+
+                        <div class="controls controls-row">
+                            <input id="text1" name="textinput" type="text" placeholder="Nimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="textinput">Perekonnanimi</label>
+
+                        <div class="controls">
+                            <input id="textinput" name="textinput" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Basic -->
+                <div class="span4">
+                    <div class="control-group">
+                        <label class="control-label" for="selectbasic">Roll</label>
+                        <div class="controls">
+                            <select id="selectbasic" name="selectbasic" class="span3 selectpicker">
+                                <option>Eksamineeritav</option>
+                                <option>Administraator</option>
+                                <option>Kutsesobivuskomisjoni liige</option>
+                                <option>Advokatuuri kantselei töötaja</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span4 ">
+                    <!-- Select Basic -->
+                    <div class="control-group">
+                        <label class="control-label" for="selectbasic">Aktiivne</label>
+                        <div class="controls">
+                            <select id="select1" name="selectbasic" class="span1 selectpicker">
+                                <option>Jah</option>
+                                <option>Ei</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="span1 offset7 pull-right">
+                    <!-- Button -->
+                    <a class="btn btn-primary" href="<!-- @path registered.html -->">Otsi</a>
+                </div>
+            </div>
+           
+            <div class="control-group pull-right">
+                <div class="controls">
+                    <div class="input-prepend">
+                         <input id="text3 inputIcon" name="textinput" type="text" placeholder="Lisa kasutaja" class="input-xlarge">
+                        <span class="add-on"><i class="glyphicon glyphicon-plus-sign"></i></span>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <table class="table table-bordered">
+        <tr>
+            <th>Nimi</th>
+            <th>Perekonnanimi</th>
+            <th>Roll</th>
+            <th>Tegevus</th>
+        </tr>
+        <tr>
+            <td>Aadu</td>
+            <td>Aas</td>
+            <td>EksamineeritavTere</td>
+            <td><ul class="nav nav-pills"><li><a href="#" class="">Muuda kasutaja</a></li><li><a href="#">Kustuta kasutaja</a></li><li><a href="#">Vaata eksamite infot</a></li></ul></td>
+        </tr>
+    </table>
+
+
+</section>
