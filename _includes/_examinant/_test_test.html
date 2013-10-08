@@ -1,29 +1,29 @@
-<div class="clear"></div>
+
   <section id="test" data-spy="scroll" data-target=".pagination" ng-controller="QuestionListCtrl">
     <div class="span3">
       <div class="well test-sidenav affix-bottom">
         
         <div class="pagination">
+          <p>Vastatud: 1/{{tests.length}}</p>
           <ul >
-            <li class="flagged"><a href="#">1</a></li>
-            <li class="visited"><a href="#">2</a></li>
+            <li ><a class="btn-warning" href="#">1</a></li>
+            <li ><a class="btn-primary" href="#">2</a></li>
             <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
           </ul>
           <p>Kui sa pole mõnes vastuses kindel, märgista see, et saaksid hiljem selle juurde tagasi pöörduda: loetelus on ta siis oranzhi värvi.</p>
         </div>
-        <div class="countdown">
+        <div class="navbar-text countdown">
           Aega jäänud <span class="btn"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
         </div>
       </div>
     </div>
     <div class="span9">
-
-      <form class="form-horizontal" novalidate ng-submit="submitForm();" ng-controller="QuestionListCtrl">
-        <fieldset>
-          <legend>Eraõigus ja tsiviilkohtumenetlus</legend>
-          <p>Kokku küsimusi: {{tests.length}}</p>
+      <form class="form-horizontal" novalidate ng-controller="QuestionListCtrl">
+        <fieldset ng-repeat="test in tests | limitTo:100">
+          <legend>{{test.field}}</legend>
+          
           <!-- STABLE VERSION -->
-          <div class="control-group" ng-repeat="test in tests | limitTo:100" >
+          <div class="control-group"  >
             <label class="control-label " for="{{test.question}}" id="question{{$index + 1}}" >{{$index + 1}}. {{test.question}}</label>
 
             <div class="controls" >
@@ -31,15 +31,15 @@
                 <input type="radio" name="{{test.question}}" id="{{value}}" value="{{key}}" checked="checked" ng-model="tests">
                 {{key}}: {{value}}
               </label>
-              <div class="checkbox flagged">
-                <label>
-                  <input type="checkbox"> Märgista
+              <div class="flagged checkbox">
+                  <input type="checkbox" data-color="yellow" class="check-lg" id="mark"/> <label for="mark">Märgista
                 </label>
               </div>
             </div>
             <hr>
           </div>
         </fieldset>
+        <p class="text-center"> <a id="js-end-test" class="btn btn-primary" href="#">Esitan testi</a> </p>
       </form>
     </div>
 

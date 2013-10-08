@@ -286,11 +286,40 @@ color: #fff;
 margin-left: 230px;
 }
 
-#test .flagged label {
-  margin-left: -100px;
+#test .flagged  {
+  margin-left: -160px;
 float: left;
 margin-top: -30px;
+label {
+margin-top: -30px;
+margin-left: 40px;
 }
+}
+
+
+/**
+ * Progress bars with centered text
+ */
+.progress {
+    position: relative;
+}
+
+.bar {
+    z-index: 1;
+    position: absolute;
+
+}
+
+.progress span {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    color: #fff; // You might need to change it
+    text-align: left;
+    line-height: 1.55;
+
+}
+
 
 
 // .ng-pristine label{

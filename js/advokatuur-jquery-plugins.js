@@ -8,6 +8,8 @@
 
   $('.test-sidenav').affix();
 
+  // $('.make-switch').bootstrapSwitch('toggleActivation');
+
 
 //Call external plugins
 //****************
@@ -17,7 +19,7 @@
 //hide some divs onload
   $( document ).ready( function () {
   $('#register, #registered').hide();
-  $('#test').hide();
+  $('#test, #test-end, #written-start').hide();
  });
 
 //autent page buttons actions
@@ -64,6 +66,15 @@ $("#js-delete-reg").click(function(e){
     });
 });
 
+$("#js-end-test").click(function(e){
+  e.preventDefault();
+  bootbox.confirm("Peale testi lõpetamist kinnitatakse testi tulemus ning hiljem vastuseid muuta ei saa. Oled kindel, et soovid testi esitada?",
+    function(result) {
+      if (result) {
+      $('#test').hide(); $('.pagename h1').hide(); $('#test-end').show();
+      }
+    });
+});
 
 
 // <!--                 <a id="login" href="#" onclick="$('#login-box').slideToggle();
@@ -103,3 +114,21 @@ $().ready(function(){
 
 // Better selectbox
 $('.selectpicker').selectpicker();
+
+if (bindPages) {
+    function showPage(id) {
+        if (id && $(id).length > 0) {
+            $('section:not(' + id + ')').hide();
+            $(id).show();
+        }
+        else {
+            $('section:not(:first)').hide();
+        }
+    }
+    
+    showPage(location.hash);
+        
+    $(window).on('hashchange', function () {
+        showPage(location.hash);
+    });
+}
