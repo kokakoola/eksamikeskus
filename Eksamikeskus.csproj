@@ -44,6 +44,8 @@
     <Content Include="img\bg.png" />
     <Content Include="img\footer_bg.png" />
     <Content Include="img\frontpage_cycle.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
     <Content Include="img\header_active.png" />
     <Content Include="img\header_bg.png" />
     <Content Include="img\icon_19.png" />
@@ -65,6 +67,8 @@
     <Content Include="js\bootstrap-button.js" />
     <Content Include="js\bootstrap-carousel.js" />
     <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="js\bootstrap-datepicker.et.js" />
+    <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-dropdown.js" />
     <Content Include="js\bootstrap-modal.js" />
     <Content Include="js\bootstrap-popover.js" />
@@ -220,6 +224,13 @@
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
     <Content Include="_includes\_administrator\_administrator_header.html" />
     <Content Include="_includes\_administrator\_user_list.html" />
+    <Content Include="_includes\_comission\_decision_staticform.html" />
+    <Content Include="_includes\_comission\_decision_confirm.html" />
+    <Content Include="_includes\_comission\_decision.html" />
+    <Content Include="_includes\_comission\_oral_exam_edit.html" />
+    <Content Include="_includes\_comission\_oral_exam.html" />
+    <Content Include="_includes\_comission\_oral_exams.html" />
+    <Content Include="_includes\_comission\_user_exam.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
     <Content Include="_includes\_examinant\_test_end.html" />
