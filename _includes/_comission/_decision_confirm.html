@@ -1,0 +1,59 @@
+﻿<section id="decision-confirm">
+    <div class="pagename">
+        <h1>Suuliste eksamite nimekiri</h1>
+    </div>
+    <ul class="breadcrumb">
+        <li><a href="#oral-exams">Suuliste eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li><a href="#user-exam">Aadu Aas eksami detailvaade</a> <span class="divider">/</span></li>
+        <li>Aadu Aas eksami otsus</li>
+    </ul>
+    <div class="span12">
+        <div id="decision-confirm-alert" class="alert alert-success" style="display: none;">
+             Aadu Aas eksami otsus on kinnitatud
+        </div>
+        <form class="form-horizontal">
+            <fieldset>
+                <legend></legend>
+                <div class="control-group">
+                    <label class="control-label">Otsuse kuupäev</label>
+                    <div class="controls">
+                        <span>8.10.2013</span>
+                    </div>
+                </div>
+                <!-- #include file="_decision_staticform.html" -->
+                <!-- @include _decision_staticform -->
+                <div class="control-group">
+                    <label class="control-label">Kirjaliku kaasusülesande lahenduse hinne</label>
+                    <div class="controls">
+                        <span>9</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Suulise eksami hinne</label>
+                    <div class="controls">
+                        <span>8</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Isikusobivus</label>
+                    <div class="controls">
+                        <span>Sobiv</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Eksami sooritamise otsus</label>
+                    <div class="controls">
+                        <span>Sooritatud</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="javascript:window.print();"><i class="glyphicon glyphicon-print"></i>&nbsp;Prindi</a>
+                </div>
+                <div>
+                    <a href="#decision" class="btn btn-large offset4">Tagasi</a>
+                    <input type="submit" class="btn btn-large btn-primary offset1" value="Kinnita" onclick="hideOnPage($(this).parent()); showOnPage($('#decision-confirm-alert')); window.scrollTo(0, 0);" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>

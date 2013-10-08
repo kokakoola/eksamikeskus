@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="comission-index.html" />
     <Content Include="css\advokatuur.css" />
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
@@ -43,6 +44,8 @@
     <Content Include="img\bg.png" />
     <Content Include="img\footer_bg.png" />
     <Content Include="img\frontpage_cycle.png" />
+    <Content Include="img\glyphicons-halflings-white.png" />
+    <Content Include="img\glyphicons-halflings.png" />
     <Content Include="img\header_active.png" />
     <Content Include="img\header_bg.png" />
     <Content Include="img\icon_19.png" />
@@ -64,6 +67,8 @@
     <Content Include="js\bootstrap-button.js" />
     <Content Include="js\bootstrap-carousel.js" />
     <Content Include="js\bootstrap-collapse.js" />
+    <Content Include="js\bootstrap-datepicker.et.js" />
+    <Content Include="js\bootstrap-datepicker.js" />
     <Content Include="js\bootstrap-dropdown.js" />
     <Content Include="js\bootstrap-modal.js" />
     <Content Include="js\bootstrap-popover.js" />
@@ -131,6 +136,7 @@
     <Content Include="less\bootstrap-less\tests\navbar.html" />
     <Content Include="less\bootstrap-less\utilities.css" />
     <Content Include="less\bootstrap-less\variables.css" />
+    <Content Include="administrator_index.html" />
     <Content Include="register.html" />
     <Content Include="_bootstrap-2.3.2\.gitignore" />
     <Content Include="_bootstrap-2.3.2\docs\assets\css\bootstrap-responsive.css" />
@@ -216,11 +222,25 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_exam_answeres.html" />
+    <Content Include="_includes\_administrator\_student_exam_info.html" />
+    <Content Include="_includes\_administrator\_add_user.html" />
+    <Content Include="_includes\_administrator\_administrator_header.html" />
+    <Content Include="_includes\_administrator\_user_list.html" />
+    <Content Include="_includes\_comission\_decision_staticform.html" />
+    <Content Include="_includes\_comission\_decision_confirm.html" />
+    <Content Include="_includes\_comission\_decision.html" />
+    <Content Include="_includes\_comission\_oral_exam_edit.html" />
+    <Content Include="_includes\_comission\_oral_exam.html" />
+    <Content Include="_includes\_comission\_oral_exams.html" />
+    <Content Include="_includes\_comission\_user_exam.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
+    <Content Include="_includes\_examinant\_test_end.html" />
     <Content Include="_includes\_examinant\_test_start.html" />
     <Content Include="_includes\_examinant\_test_test.html" />
     <Content Include="_includes\_examinant\_welcome.html" />
+    <Content Include="_includes\_examinant\_written_start.html" />
     <Content Include="_includes\_footer.html" />
     <Content Include="_includes\_head.html" />
     <Content Include="_includes\_header.html" />
@@ -229,6 +249,7 @@
     <None Include=".editorconfig" />
     <None Include=".hammer-ignore" />
     <None Include=".travis.yml" />
+    <None Include="csv\Eksamineeritavad.csv" />
     <None Include="fonts\clbd.ttf" />
     <None Include="fonts\clbd.woff" />
     <None Include="fonts\clne.ttf" />
@@ -292,6 +313,7 @@
     <None Include="less\style.less" />
     <None Include="less\_variables.less" />
     <None Include="README" />
+    <None Include="web.config" />
     <None Include="_bootstrap-2.3.2\.travis.yml" />
     <None Include="_bootstrap-2.3.2\docs\assets\js\README.md" />
     <None Include="_bootstrap-2.3.2\docs\build\package.json" />

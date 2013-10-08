@@ -124,11 +124,25 @@ if (bindPages) {
         else {
             $('section:not(:first)').hide();
         }
+
+        window.setTimeout(function() { window.scrollTo(0, 0); }, 10);
     }
     
     showPage(location.hash);
         
     $(window).on('hashchange', function () {
         showPage(location.hash);
+        $(".hiddenOnPage").show();
+        $(".shownOnPage").hide();
     });
 }
+
+function hideOnPage(jqElem) {
+    $(jqElem).hide().addClass("hiddenOnPage");
+}
+
+function showOnPage(jqElem) {
+    $(jqElem).show().addClass("shownOnPage");
+}
+
+$('.date').datepicker();
