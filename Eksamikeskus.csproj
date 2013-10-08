@@ -34,6 +34,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="comission-index.html" />
     <Content Include="css\advokatuur.css" />
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
@@ -216,6 +217,10 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_comission\_user-exam.html" />
+    <Content Include="_includes\_comission\_oral-exam-edit.html" />
+    <Content Include="_includes\_comission\_oral-exam.html" />
+    <Content Include="_includes\_comission\_oral-exams.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
     <Content Include="_includes\_examinant\_test_start.html" />
