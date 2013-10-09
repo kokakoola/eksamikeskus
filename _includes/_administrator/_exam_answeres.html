@@ -17,24 +17,84 @@
         <div class="tab-content">
             <div class="tab-pane active" id="1">
                 <p>Kirjaliku eksami kuupäev 27.01.2012</p>
-                <form class="form-horizontal" novalidate ng-controller="QuestionListCtrl">
-                    <fieldset ng-repeat="test in tests | limitTo:12">
+                <form class="form-inline">
+                    <fieldset>
 
-
-                        <!-- STABLE VERSION -->
                         <div class="control-group">
-                            <label class="control-label " for="{{test.question}}" id="Label1">{{$index + 1}}. {{test.question}}</label>
-
+                            <label class="control-label" id="Label2">
+                                <h6>1.1 Käsipant, samuti õiguste pant lõpeb</h6>
+                            </label>
                             <div class="controls">
-                                <label class="radio testquestion" for="{{value}}" ng-repeat="(key, value) in test.answers">
-                                    <!--<input type="radio" name="{{test.question}}" id="Radio1" value="{{key}}" checked="checked" ng-model="tests">-->
-                                    {{key}}: {{value}}
-                                   
+                                <label class="radio inline" for="radios-0">
+                                    <input type="radio" name="radios" id="radios-0" value="1234" checked>
+                                    a:pandiga tagatud nõude loovutamiselz
                                 </label>
-
+                                <br />
+                                <label class="radio inline" for="radios-0">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;b:pandi registrist kustutamisel
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-0">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;c:pandi eseme üleandmisel
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-0">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;d:kui pandipidaja teatab pantijale kirjalikult pandi vabastamisest
+                                </label>
                             </div>
-                            <hr>
                         </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" id="Label3">
+                                <h6>1.2 Nõude aegumine peatub mh</h6>
+                            </label>
+                            <div class="controls">
+                                <label class="radio inline" for="radios-1">
+                                    <input type="radio" name="radios1" id="radios-1" value="1234" checked>
+                                    a:hagiavalduse esitamisega
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;b:nõude tunnustamisega kohustatud isiku poolt
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;c:läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;d:nõude loovutamisega
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <div class="control-group">
+                            <label class="control-label" id="Label3">
+                                <h6>1.2 Nõude aegumine peatub mh</h6>
+                            </label>
+                            <div class="controls">
+                                <label class="radio inline" for="radios-1">
+                                    <input type="radio" name="radios1" id="radios-1" value="1234" checked>
+                                    a:hagiavalduse esitamisega
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;b:nõude tunnustamisega kohustatud isiku poolt
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;c:läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
+                                </label>
+                                <br />
+                                <label class="radio inline" for="radios-1">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;d:nõude loovutamisega
+                                </label>
+                            </div>
+                        </div>
+
                     </fieldset>
                 </form>
             </div>
