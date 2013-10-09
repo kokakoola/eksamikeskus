@@ -222,6 +222,8 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_new_student_exam_info.html" />
+    <Content Include="_includes\_administrator\_user_list_added_user.html" />
     <Content Include="_includes\_administrator\_exam-add-exam.html" />
     <Content Include="_includes\_administrator\_exam-change-exam.html" />
     <Content Include="_includes\_administrator\_exam-question-add.html" />
