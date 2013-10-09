@@ -8,42 +8,214 @@
         <li><a href="#student-exam-info">Aadu Aas eksamite info</a> <span class="divider">/</span></li>
         <li class="active">27.10.2012 eksami vastused</li>
     </ul>
-    <!-- #include file="\_includes\_comission\_user_exam.html" -->
     <h3>Aadu Aas</h3>
-    <ul class="nav nav-tabs">
-        <li class="dropdown">
-            <a class="dropdown-toggle"
-                data-toggle="dropdown"
-                href="#">Dropdown
-        <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <!-- links -->
-            </ul>
-        </li>
-    </ul>
-    <p>Kirjaliku eksami kuupäev 27.01.2012</p>
-    <div class="span9">
-
-        <form class="form-horizontal" novalidate ng-controller="QuestionListCtrl">
-            <fieldset ng-repeat="test in tests | limitTo:12">
+    <div class="tabbable">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#1" data-toggle="tab">Testi tulemus</a></li>
+            <li><a href="#2" data-toggle="tab">Kirjaliku kaasusülesande lahendus</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="1">
+                <p>Kirjaliku eksami kuupäev 27.01.2012</p>
+                <form class="form-horizontal" novalidate ng-controller="QuestionListCtrl">
+                    <fieldset ng-repeat="test in tests | limitTo:12">
 
 
-                <!-- STABLE VERSION -->
-                <div class="control-group">
-                    <label class="control-label " for="{{test.question}}" id="question{{$index + 1}}">{{$index + 1}}. {{test.question}}</label>
+                        <!-- STABLE VERSION -->
+                        <div class="control-group">
+                            <label class="control-label " for="{{test.question}}" id="Label1">{{$index + 1}}. {{test.question}}</label>
 
-                    <div class="controls">
-                        <label class="radio testquestion" for="{{value}}" ng-repeat="(key, value) in test.answers">
-                            <input type="radio" name="{{test.question}}" id="{{value}}" value="{{key}}" checked="checked" ng-model="tests">
-                            {{key}}: {{value}}
-                        </label>
+                            <div class="controls">
+                                <label class="radio testquestion" for="{{value}}" ng-repeat="(key, value) in test.answers">
+                                    <!--<input type="radio" name="{{test.question}}" id="Radio1" value="{{key}}" checked="checked" ng-model="tests">-->
+                                    {{key}}: {{value}}
+                                   
+                                </label>
 
+                            </div>
+                            <hr>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane" id="2">
+                <div class="span4">
+                    <h3>Aadu Aas</h3>
+                    <p>Kirjaliku eksami kuupäev 02.01.2014</p>
+                    <p>Vandeadvokaadi eksam</p>
+                    <p>Eraõigus ja tsiviilkohtumenetlus</p>
+                    <p class="pull-right">45/50</p>
+                    <h4>Kirjalik test</h4>
+                    <div class="pull-right">
+                        <table class="table">
+                            <tr>
+                                <th>eraõigus ja<br />
+                                    tsiviilkohtumenetlus</th>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <th>riigi põhikord, avalik õigus ja<br />
+                                    halduskohtumenetlus</th>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <th>karistusõigus ja<br />
+                                    kriminaalmenetlus</th>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <th>Advokatuur</th>
+                                <td>3</td>
+                            </tr>
+                        </table>
                     </div>
-                    <hr>
+                    <h4>Kaasuse kommentaarid</h4>
+                    <div class="accordion" id="comment-accordion">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse1">Aadu Luberg, 02.01.2014 13:30
+                                </a>
+                            </div>
+                            <div id="comment-accordion-collapse1" class="accordion-body collapse in">
+                                <div class="accordion-inner">
+                                    Kutsesobivuskomisjoni liikme kommentaar
+                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse2">Mari-Ann Simovart, 02.01.2014 13:30
+                                </a>
+                            </div>
+                            <div id="comment-accordion-collapse2" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <textarea rows="6">Kutsesobivuskomisjoni liikme kommentaar 2</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse3">Kommentaar
+                                </a>
+                            </div>
+                            <div id="comment-accordion-collapse3" class="accordion-body collapse">
+                                <div class="accordion-inner">
+                                    <textarea rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn" data-toggle="button">Salvesta</button>
+                    </div>
                 </div>
-            </fieldset>
-        </form>
+                <div class="span8">
+                    <div class="row">
+                        <div class="span8">
+                            <div class="accordion" id="case-accordion">
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseOne">Kaasusülesanne eraõiguse ja tsiviilkohtumenetluse valdkonnas</a>
+                                    </div>
+                                    <div id="case-accordion-collapseOne" class="accordion-body collapse in">
+                                        <div class="accordion-inner">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                           
+                                            </p>
+                                            <p>
+                                                Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                           
+                                            </p>
+                                            <p>
+                                                Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseTwo">Kaasuse näidislahendus</a>
+                                    </div>
+                                    <div id="case-accordion-collapseTwo" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                           
+                                            </p>
+                                            <p>
+                                                Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                           
+                                            </p>
+                                            <p>
+                                                Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseThree">Aadu Aas kaasusülesande lahendus</a>
+                                    </div>
+                                    <div id="case-accordion-collapseThree" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                           
+                                            </p>
+                                            <p>
+                                                Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                           
+                                            </p>
+                                            <p>
+                                                Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                           
+                                            </p>
+                                            <p>
+                                                Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                           
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4 text-center">
+                            <a href="#oral-exam" class="btn btn-large">Tagasi</a>
+                        </div>
+                        <div class="span4 text-center">
+                            <a href="#decision" class="btn btn-large btn-primary">Eksamitulemuste otsus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 </section>
