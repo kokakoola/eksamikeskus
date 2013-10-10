@@ -123,6 +123,7 @@ if (bindPages) {
         }
         else {
             $('section:not(:first)').hide();
+            $('section:first').show();
         }
 
         window.setTimeout(function() { window.scrollTo(0, 0); }, 10);
