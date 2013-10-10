@@ -1,4 +1,4 @@
-<section id="user-list">
+<section id="user-list-only-new-user">
     <!--Breadcrumbs -->
     <br />
     <br />
@@ -15,7 +15,7 @@
                 <div class="span4">
                     <div class="control-group">
 
-                        <label class="control-label" for="textinput1">Eesnimi        </label>
+                        <label class="control-label" for="textinput1">Nimi        </label>
                         <div class="controls">
                             <input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
                         </div>
@@ -45,31 +45,31 @@
                         </div>
                     </div>
                 </div>
-                </div>
-                <div class="row">
-                    <div class="span4">
+            </div>
+            <div class="row">
+                <div class="span4">
 
-                        <div class="control-group">
-                            <label class="control-label">Aktiivne</label>
-                            <div class="controls">
-                                <select id="select1" class="input-medium">
-                                    <option>Jah</option>
-                                    <option>Ei</option>
-                                </select>
-                            </div>
+                    <div class="control-group">
+                        <label class="control-label">Aktiivne</label>
+                        <div class="controls">
+                            <select id="select1" class="input-medium">
+                                <option>Jah</option>
+                                <option>Ei</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="span1 offset6 pull-right">
-
-                        <a class="btn btn-primary" href="#">Otsi</a>
-                    </div>
                 </div>
-         
+                <div class="span1 offset6 pull-right">
+
+                    <a class="btn btn-primary" href="#">Otsi</a>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="control-group span3 offset9">
                     <div class="controls">
                         <div class="input-prepend">
-                            <a type="button" href="#add-user" class="btn btn-small">Lisa kasutaja  <i class="glyphicon glyphicon-plus-sign"></i>
+                            <a type="submit" href="#add-user" class="btn btn-small">Lisa kasutaja  <i class="glyphicon glyphicon-plus-sign"></i>
                             </a>
 
                         </div>
@@ -79,25 +79,23 @@
         </fieldset>
     </form>
     <table class="table table-bordered">
-        <tr class="sort">
-            <th>Eesnimi</th>
+        <tr>
+            <th>Nimi</th>
             <th>Perekonnanimi</th>
             <th>Roll</th>
             <th>Tegevus</th>
         </tr>
         <tr>
-            <td>Aadu</td>
-            <td>Aas</td>
+            <td>Uus nimi</td>
+            <td>Uus perekonnanimi</td>
             <td>Eksamineeritav</td>
             <td>
                 <ul class="nav nav-pills">
-                    <li><a href="#change-user" class="">Muuda kasutaja</a></li>
+                    <li><a href="#users-change-new-user" class="">Muuda kasutaja</a></li>
                     <li><a href="#users-list-deleted-aadu">Kustuta kasutaja</a></li>
-                    <li><a href="#student-exam-info">Vaata eksamite infot</a></li>
+                    <li><a href="#new-student-exam-info">Vaata eksamite infot</a></li>
                 </ul>
             </td>
         </tr>
     </table>
-
-
 </section>

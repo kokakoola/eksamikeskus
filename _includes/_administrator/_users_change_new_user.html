@@ -1,0 +1,104 @@
+<section id="users-change-new-user">
+    <!--Breadcrumbs -->
+    <br />
+    <br />
+    <br />
+
+    <ul class="breadcrumb">
+        <li><a href="#user-list-added-user">Kasutajate nimekiri</a> <span class="divider">/</span></li>
+        <li class="active">Kasutaja muutmine</li>
+    </ul>
+    <form class="form-horizontal">
+        <fieldset>
+
+            <!-- Form Name -->
+            <legend>Kasutaja lisamine</legend>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="textinput">Nimi</label>
+                <div class="controls">
+                    <input id="textinput" name="textinput" type="text" value="Uus eesnimi" class="input-xlarge">
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="textinput">Perekonnanimi</label>
+                <div class="controls">
+                    <input id="text1" name="textinput" type="text" value="Uus prekonnanimi"class="input-xlarge">
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="control-group">
+                <label class="control-label" for="textinput">Isikukood</label>
+                <div class="controls">
+                    <input id="text2" name="textinput" type="text" value="12341234123" class="input-xlarge">
+                </div>
+            </div>
+
+            <!-- Multiple Radios -->
+            <div class="control-group">
+                <label class="control-label" for="radios">Roll</label>
+                <div class="controls">
+                    <label class="radio" for="radios-0">
+                        <input type="radio" name="radios" id="radios-0" value="Eksamineeritav" checked="checked">
+                        Eksamineeritav
+                    </label>
+                    <label class="radio" for="radios-1">
+                        <input type="radio" name="radios" id="radios-1" checked value="Advokatuuri kantselei töötaja">
+                        Advokatuuri kantselei töötaja
+                    </label>
+                    <label class="radio" for="radios-2">
+                        <input type="radio" name="radios" id="radios-2" value="Kutsesobivuskomisjoni liige">
+                        Kutsesobivuskomisjoni liige
+                    </label>
+                    <label class="radio" for="radios-3">
+                        <input type="radio" name="radios" id="radios-3" value="Administraator">
+                        Administraator
+                    </label>
+                </div>
+            </div>
+
+            <!-- Select Basic -->
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">Eksami liik</label>
+                <div class="controls">
+                    <select id="selectbasic" name="selectbasic" class="input-xlarge">
+                        <option>--vali--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="control-group">
+                    <label class="control-label" for="inputDecisionDate">Juhatuse otsuse kuupäev</label>
+                    <div class="controls">
+                         <div class="input-append date" id="dp3" data-date="08.10.2013" data-date-format="dd.mm.yyyy">
+				            <input class="input-xlarge" size="16" type="text" value="08.10.2013">
+				            <span class="add-on"><i class="glyphicon glyphicon-calendar"></i></span>
+			              </div>
+                    </div>
+                </div>
+            <!-- Multiple Checkboxes (inline) -->
+            <div class="control-group">
+                <label class="control-label" for="checkboxes"></label>
+                <div class="controls">
+                    <label class="checkbox inline" for="checkboxes-0">
+                        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="Aktiivne kasutaja">
+                        Aktiivne kasutaja
+                    </label>
+                </div>
+            </div>
+
+            <!-- Button (Double) -->
+            <div class="control-group">
+                <div class="controls">
+                    <a href="#user-list-added-user" name="button1id" class="btn btn-default">Katkesta</a>
+                    <a href="#user-list-added-user" name="button2id" class="btn btn-primary">Muuda</a>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</section>

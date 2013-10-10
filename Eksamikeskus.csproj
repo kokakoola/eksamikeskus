@@ -222,6 +222,14 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_settings_exam_conditions.html" />
+    <Content Include="_includes\_administrator\_settings_userrights.html" />
+    <Content Include="_includes\_administrator\_users_exam_result.html" />
+    <Content Include="_includes\_administrator\_users _student_exam_info_canceled_registration.html" />
+    <Content Include="_includes\_administrator\_users_list_only_new_user.html" />
+    <Content Include="_includes\_administrator\_users_list_deleted_aadu.html" />
+    <Content Include="_includes\_administrator\_users_change_new_user.html" />
+    <Content Include="_includes\_administrator\_users_change_user.html" />
     <Content Include="_includes\_administrator\_exam_result.html" />
     <Content Include="_includes\_administrator\_new_student_exam_info.html" />
     <Content Include="_includes\_administrator\_user_list_added_user.html" />
