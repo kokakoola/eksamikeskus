@@ -8,7 +8,26 @@
         <li><a href="#student-exam-info">Aadu Aas eksamite info</a> <span class="divider">/</span></li>
         <li class="active">27.10.2012 eksami vastused</li>
     </ul>
-    <h3>Aadu Aas</h3>
+    <div class="row">
+        <div class="span4">
+            <h3>Aadu Aas</h3>
+        </div>
+        <div class="span2 offset1">
+        <div class="control-group">
+
+            <div class="controls">
+                <a id="A1" href="#student-exam-info" name="singlebutton" type="button" class="btn btn-default ">Mitte Ilmunud</a>
+            </div>
+        </div>
+        </div><div class="span2">
+        <div class="control-group">
+
+            <div class="controls">
+                <a id="A2" href="#student-exam-info" name="singlebutton" type="button" class="btn btn-default">Kõrvaldatud</a>
+            </div>
+        </div>
+    </div>
+    </div>
     <div class="tabbable">
         <ul class="nav nav-tabs">
             <li class="active"><a href="#1" data-toggle="tab">Testi tulemus</a></li>
@@ -17,86 +36,132 @@
         <div class="tab-content">
             <div class="tab-pane active" id="1">
                 <p>Kirjaliku eksami kuupäev 27.01.2012</p>
+
+
+
                 <form class="form-inline">
                     <fieldset>
 
+                        <!-- Form Name -->
+                        <legend>1. Eraõigus ja tsiviilkohtumenetlus</legend>
+
+
+                        <!-- Multiple Radios -->
                         <div class="control-group">
-                            <label class="control-label" id="Label2">
+                            <label class="control-label" for="radios2">
                                 <h6>1.1 Käsipant, samuti õiguste pant lõpeb</h6>
                             </label>
                             <div class="controls">
-                                <label class="radio inline" for="radios-0">
-                                    <input type="radio" name="radios" id="radios-0" value="1234" checked>
-                                    a:pandiga tagatud nõude loovutamiselz
+                                <label class="radio" for="radios2-0">
+                                    <input type="radio" name="radios2" id="radios2-0" value="Option one" checked>
+                                    a:Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-0">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;b:pandi registrist kustutamisel
+                                <label class="radio" for="radios2-1">
+                                    <input type="radio" name="radios2" id="radios2-1" value="Option two" class="hidden">
+                                    b:pandi registrist kustutamisel
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-0">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;c:pandi eseme üleandmisel
+                                <label class="radio" for="radios2-2">
+                                    <input type="radio" name="radios2" id="radios2-2" value="Option three" class="hidden">
+                                    c:pandi eseme üleandmisel
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-0">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;d:kui pandipidaja teatab pantijale kirjalikult pandi vabastamisest
+                                <label class="radio" for="radios2-3">
+                                    <input type="radio" name="radios2" id="radios2-3" value="Option four" class="hidden">
+                                    d:kui pandipidaja teatab pantijale kirjalikult pandi vabastamisest
                                 </label>
                             </div>
                         </div>
-                    </fieldset>
-                    <fieldset>
+
+                        <!-- Multiple Radios -->
                         <div class="control-group">
-                            <label class="control-label" id="Label3">
-                                <h6>1.2 Nõude aegumine peatub mh</h6>
+                            <label class="control-label" for="radios6">
+                                <h6>1.2 Nõude aegumine peatub mh"</h6>
                             </label>
                             <div class="controls">
-                                <label class="radio inline" for="radios-1">
-                                    <input type="radio" name="radios1" id="radios-1" value="1234" checked>
+
+                                <label class="radio" for="radios3-0">
+                                    <input type="radio" name="radios6" id="radios33" value="Option one" class="hidden">
                                     a:hagiavalduse esitamisega
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;b:nõude tunnustamisega kohustatud isiku poolt
+                                <label class="radio" for="radios3-1">
+                                    <input type="radio" name="radios6" id="radios3-1" value="Option two" checked>
+                                    b:nõude tunnustamisega kohustatud isiku poolt
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;c:läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
+                                <label class="radio" for="radios3-2">
+                                    <input type="radio" name="radios6" id="radios3-2" value="Option three" class="hidden">
+                                    c:läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;d:nõude loovutamisega
+                                <label class="radio" for="radios3-3">
+                                    <input type="radio" name="radios6" id="radios3-3" value="Option four" class="hidden">
+                                    d:nõude loovutamisega
                                 </label>
                             </div>
                         </div>
-                    </fieldset>
-                    
-                    <fieldset>
+
+                        <!-- Multiple Radios -->
                         <div class="control-group">
-                            <label class="control-label" id="Label3">
-                                <h6>1.2 Nõude aegumine peatub mh</h6>
+                            <label class="control-label" for="radios4">
+                                <h6>1.3 Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada"</h6>
                             </label>
                             <div class="controls">
-                                <label class="radio inline" for="radios-1">
-                                    <input type="radio" name="radios1" id="radios-1" value="1234" checked>
-                                    a:hagiavalduse esitamisega
+                                <label class="radio" for="radios3-0">
+                                    <input type="radio" name="radios42" id="radios3-0" value="Option one" checked>
+                                    a:10 päeva jooksul alates otsuse apellandile kättetoimetamisest
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;b:nõude tunnustamisega kohustatud isiku poolt
+                                <label class="radio" for="radios3-1">
+                                    <input type="radio" name="radios3" id="radios3-1" value="Option two" class="hidden">
+                                    b:15 päeva jooksul alates otsuse apellandile kättetoimetamisest
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;c:läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
+                                <label class="radio" for="radios3-2">
+                                    <input type="radio" name="radios3" id="radios3-2" value="Option three" class="hidden">
+                                    c:20 päeva jooksul alates otsuse apellandile kättetoimetamisest
                                 </label>
                                 <br />
-                                <label class="radio inline" for="radios-1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;d:nõude loovutamisega
+                                <label class="radio" for="radios3-3">
+                                    <input type="radio" name="radios3" id="radios3-3" value="Option four" class="hidden">
+                                    d:25 päeva jooksul alates otsuse apellandile kättetoimetamisest
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Multiple Radios -->
+                        <div class="control-group">
+                            <label class="control-label" for="radios4">
+                                <h6>1.4 Müügilepingu sõlmimisega"</h6>
+                            </label>
+                            <div class="controls">
+                                <label class="radio" for="radios3-0">
+                                    <input type="radio" name="radios5" id="radios3-0" value="Option one" class="hidden">
+                                    a:tekib ostjal õigus nõuda müügieseme omandi ülekandmist
+                                </label>
+                                <br />
+                                <label class="radio" for="radios3-1">
+                                    <input type="radio" name="radios3" id="radios3-1" value="Option two" class="hidden">
+                                    b:läheb müügieseme omand üle ostjale juhul, kui ta on müügihinna täielikult tasunud
+                                </label>
+                                <br />
+                                <label class="radio" for="radios3-2">
+                                    <input type="radio" name="radios3" id="radios3-2" value="Option three" class="hidden">
+                                    c:läheb müügieseme omand üle ostjale, välja arvatud juhul, kui on kokku lepitud omandireservatsioonis
+                                </label>
+                                <br />
+                                <label class="radio" for="radios3-3">
+                                    <input type="radio" name="radios3" id="radios3-3" value="Option four" checked>
+                                    d:täidab ostja oma ostuhinna tasumise kohustuse
                                 </label>
                             </div>
                         </div>
 
                     </fieldset>
                 </form>
+
             </div>
             <div class="tab-pane" id="2">
                 <div class="span4">
@@ -264,18 +329,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="span4 text-center">
-                            <a href="#oral-exam" class="btn btn-large">Tagasi</a>
-                        </div>
-                        <div class="span4 text-center">
-                            <a href="#decision" class="btn btn-large btn-primary">Eksamitulemuste otsus</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Button -->
+    <div class="control-group pull-right">
 
+        <div class="controls">
+            <a id="singlebutton" href="#student-exam-info" name="singlebutton" type="button" class="btn btn-default">Tagasi</a>
+        </div>
+    </div>
 </section>
