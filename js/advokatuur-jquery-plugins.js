@@ -169,4 +169,25 @@ function resetValues() {
 	$('#oela').text(10); $('#oel').text(9);
 }
 
+function calculateTotal() {
+	var total = parseInt($('#v1t').val(),10);
+	total += parseInt($('#v2t').val(), 10);
+	total += parseInt($('#v3t').val(), 10);
+	total += parseInt($('#v4t').val(), 10);
+	$('#totalq').text(total);
+	calculatePercent('#totalq', '#totalc', '#totalp')
+}
+
+function calculatePercent(totalElemId, partialElemId, percentElemId) {
+	var total = 0;
+	if (totalElemId == '#totalq') {
+		total = parseInt($(totalElemId).text(), 10);
+	} else {
+		total = parseInt($(totalElemId).val(), 10);
+	}
+	var partial = parseInt($(partialElemId).val(), 10);
+	var percent = parseInt((partial*100/total),10);
+	$(percentElemId).text(percent);
+}
+
 $('.date').datepicker();
