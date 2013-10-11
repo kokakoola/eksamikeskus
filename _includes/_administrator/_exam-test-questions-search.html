@@ -5,19 +5,19 @@
 					<li><a href="#exam-test-list">Kirjalik eksam</a></li>
 					<li><a href="#oral-exam-list">Suuline eksam</a></li>
 					<li class="active"><a href="#exam-test-questions">Testi küsimused</a></li>
-					<li><a href="#">Kaasusülesanded</a></li>
+					<li><a href="#exam-writings">Kaasusülesanded</a></li>
 				</ul>
 			</div>
 		</div>
 
 	<!--Breadcrumbs -->
-	<ul class="breadcrumb">
+<!--	<ul class="breadcrumb">
 		<li><a href="#exam-test-questions">Testi küsimuste nimekiri</a> <span class="divider">/</span></li>
-	</ul>
+	</ul>-->
 
 	<form class="form-horizontal">
 		<fieldset>
-			<!-- Text input-->
+			<legend>Testi küsimuste nimekiri</legend>
 			<div class="row">
 				
                 <div class="span4">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
 
-				<div class="span4">
+				<div class="span4 offset2">
                     <div class="control-group">
 
                         <label class="control-label" for="">Küsimuse staatus</label>
@@ -43,6 +43,7 @@
                             <select id="select1" name="selectbasic" class="span3 selectpicker">
                                 <option>Aktiivne</option>
                                 <option>Mitte aktiivne</option>
+								<option>Testkeskkonna küsimus</option>
                             </select>
                         </div>
                     </div>
@@ -81,7 +82,7 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a href="#exam-test-questions-search">Kustuta</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etqs')">Kustuta</a></li>
 				</ul>
             </td>
         </tr>
@@ -93,7 +94,7 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a href="#exam-test-questions-search">Kustuta</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etqs')">Kustuta</a></li>
 				</ul>
             </td>
         </tr>
@@ -105,7 +106,7 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a href="#exam-test-questions-search">Kustuta</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etqs')">Kustuta</a></li>
 				</ul>
             </td>
         </tr>
@@ -113,6 +114,6 @@
 	
     </table>
 	 <p>
-            <small>Kokku: 3 kirjet</small>
+            <small>Kokku: <span id="etqs">3</span> kirjet</small>
         </p>
 </section>

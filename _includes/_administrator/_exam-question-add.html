@@ -6,38 +6,191 @@
 				<li><a href="#exam-test-list">Kirjalik eksam</a></li>
 				<li><a href="#oral-exam-list">Suuline eksam</a></li>
 				<li class="active"><a href="#exam-test-questions">Testi küsimused</a></li>
-				<li><a href="#">Kaasusülesanded</a></li>
+				<li><a href="#exam-writings">Kaasusülesanded</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<!--Breadcrumbs -->
-	<ul class="breadcrumb">
+	<!--	<ul class="breadcrumb">
 		<li><a href="#exam-add-exam">Testi küsimuste nimekiri</a> <span class="divider">/</span></li>
 		<li><a>Testi küsimuse lisamine</a> </li>
-	</ul>
+	</ul>-->
 
 
-	<div class="span7">
-		<form class="form-horizontal">
-			<fieldset>
 
-				<!-- Form Name -->
-				<legend>Testi küsimuse lisamine</legend>
+	<form class="form-horizontal">
+		<fieldset>
 
-				
-				TODO
-
-
-				<!-- Button -->
-				<div class="form-actions" style="background: none; border: none;">
-					<a class="btn" href="#exam-test-questions" id="A1">Katkesta</a>
-					<a class="btn btn-primary" href="#exam-test-questions-added">Lisa</a>
+			<!-- Form Name -->
+			<legend>Testi küsimuse lisamine</legend>
+			<div class="control-group">
+				<label class="control-label" for="">Küsimuse valdkond</label>
+				<div class="controls">
+					<select id="select3" name="selectbasic" class="selectpicker">
+						<option>Riigi põhikord,avalik õigusja halduskohtumenetlus</option>
+						<option>Eraõigus ja tsiviilkohtumenetlus</option>
+						<option>Karistusõigus ja kriminaalmenetlus</option>
+						<option>Advokatuur ja advokaadi kutsetegevus</option>
+					</select>
 				</div>
-			</fieldset>
+			</div>
 
-		</form>
-	</div>
+
+			<div class="control-group">
+
+				<label class="control-label " for="">Sisesta küsimus:</label>
+
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>
+					<br />
+					<small>4000</small>
+				</div>
+			</div>
+
+
+			<div class="control-group">
+				<label class="control-label " for="">Sisesta Vastused:</label>
+			</div>
+
+
+
+			<div class="control-group">
+
+				<label class="control-label " for="">A</label>
+
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+
+			<div class="control-group">
+
+				<label class="control-label " for="">B</label>
+
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label " for="">C</label>
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent());hideOnPage($('#C'))">X</button>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label " for="">D</label>
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent());hideOnPage($('#D'))">X</button>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+			<div id="ET" class="hidden">
+				<label class="control-label " for="">E</label>
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent());hideOnPage($('#ER'))">X</button>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+			<div class="hidden">
+				<label class="control-label " for="">F</label>
+				<div class="controls controls-row">
+					<textarea class="questionarea" rows="5"></textarea>&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent());hideOnPage($('#F'))">X</button>
+					<br />
+					<small>1000</small>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label" for="radios6">
+					Õige vastus on:
+				</label>
+				<div class="controls">
+
+					<label class="radio" for="radios3-0">
+						<input type="radio" name="radios6" id="radios33" value="Option one">
+						A
+					</label>
+					<br />
+					<label class="radio" for="radios3-1">
+						<input type="radio" name="radios6" id="radios3-1" value="Option two">
+						B
+					</label>
+					
+					<label id="C" class="radio" for="radios3-2">
+						<br />
+						<input type="radio" name="radios6" id="radios3-2" value="Option three">
+						C
+					</label>
+
+					<label id="D" class="radio" for="radios3-3">
+						<br />
+						<input type="radio" name="radios6" id="radios3-3" value="Option four">
+						D
+					</label>
+
+					<label id="ER" class="hidden" for="radios3-4">
+						<br />
+						<input type="radio" name="radios6" id="radio1" value="Option five">
+						E
+					</label>
+					<label id="F" class="hidden" for="radios3-5">
+						<br />
+						<input type="radio" name="radios6" id="radio2" value="Option six">
+						F
+					</label>
+				</div>
+			</div>
+
+			<div class="control-group ">
+				<div class="controls">
+					<div class="input-prepend">
+						<button onclick="shownOnPage2($('#ER'),'radio');shownOnPage2($('#ET'),'control-group')" class="btn">Lisa Vastusevariant</button>
+						<span class="add-on"><i class="glyphicon glyphicon-plus-sign"></i></span>
+					</div>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<label class="checkbox inline" for="checkboxes-0">
+						<input type="checkbox" name="checkboxes" class="check-lg" id="checkbox2" value="1">
+					</label>
+					<span class="help-inline">Testkeskkonna küsimus</span>
+					<br />
+					<label class="checkbox inline" for="checkboxes-0">
+						<input type="checkbox" name="checkboxes" class="check-lg" id="checkbox6" value="1">
+					</label>
+					<span class="help-inline">Kohustuslik küsimus</span>
+					<div class="control-group pull-right">
+						<a class="btn" href="#exam-test-questions" id="A1">Katkesta</a>
+						<a class="btn btn-primary" href="#exam-test-questions-added">Muuda</a>
+					</div>
+				</div>
+			</div>
+
+
+		</fieldset>
+
+
+	</form>
+
 
 
 </section>

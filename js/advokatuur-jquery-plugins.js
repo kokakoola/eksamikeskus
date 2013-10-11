@@ -145,4 +145,14 @@ function showOnPage(jqElem) {
     $(jqElem).show().addClass("shownOnPage");
 }
 
+function shownOnPage2(jqElem,newclass) {
+	$(jqElem).show().removeClass("hidden").removeClass("hiddenOnPage").addClass(newclass);
+}
+
+function decreaseCount(id) {
+	var value = $(id).text();
+	value = value - 1;
+	$(id).text(value);
+}
+
 $('.date').datepicker();

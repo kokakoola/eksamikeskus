@@ -1,17 +1,11 @@
-﻿<section id="decision-confirm">
-    <div class="navbar">
-        <div class="navbar-inner">
-            <ul class="nav">
-                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
-            </ul>
-        </div>
+<section id="users-exam-result">
+    <div class="pagename">
+        <h1>Suuliste eksamite nimekiri</h1>
     </div>
-
-    <!--Breadcrumbs -->
     <ul class="breadcrumb">
-        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
-        <li><a href="#user-exam">Aadu Aas eksami detailvaade</a> <span class="divider">/</span></li>
-        <li>Aadu Aas eksami otsus</li>
+        <li><a href="#user-list">Kasutajate nimekiri</a> <span class="divider">/</span></li>
+        <li><a href="#student-exam-info">Aadu Aas eksamite info</a> <span class="divider">/</span></li>
+        <li class="active">Aadu Aas eksami otsus</li>
     </ul>
     <div class="span12">
         <div id="decision-confirm-alert" class="alert alert-success" style="display: none;">
@@ -26,16 +20,22 @@
                         <span>8.10.2013</span>
                     </div>
                 </div>
-                <!-- #include file="_decision_staticform.html" -->
-                <!-- @include _decision_staticform -->
+                <!-- #include file="..\_comission\_decision_staticform.html" -->
+                <!-- @include ..\_comission\_decision_staticform-->
                 <div class="control-group">
-                    <label class="control-label">Kirjaliku kaasusülesande lahenduse hinne</label>
+                    <label class="control-label">
+                    Kirjaliku kaasusülesande lahenduse hinne
+                    <br />
+                    <a href="#exam-answeres">Vaata kaasuse lahendust</a></label>
                     <div class="controls">
                         <span>9</span>
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label">Suulise eksami hinne</label>
+                    <label class="control-label">
+                    Suulise eksami hinne
+                    <br />
+                    <a href="#exam-answeres">Vaata suulise eksami hinnet</a></label>
                     <div class="controls">
                         <span>8</span>
                     </div>
@@ -56,11 +56,11 @@
                     <a href="javascript:window.print();"><i class="glyphicon glyphicon-print"></i>&nbsp;Prindi</a>
                 </div>
                 <div>
-                    <a href="#decision" class="btn offset4">Tagasi</a>
-                    <input type="submit" class="btn btn-primary offset1" value="Kinnita" onclick="hideOnPage($(this).parent()); showOnPage($('#decision-confirm-alert')); window.scrollTo(0, 0);" />
+                    <a href="#student-exam-info" class="btn offset4">Tagasi</a>
+                    <!--<input type="submit" class="btn btn-primary offset1" value="Kinnita" onclick="hideOnPage($(this).parent()); showOnPage($('#decision-confirm-alert')); window.scrollTo(0, 0);" />-->
                 </div>
             </fieldset>
         </form>
     </div>
 </section>
-            
+
