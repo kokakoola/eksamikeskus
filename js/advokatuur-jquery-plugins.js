@@ -45,6 +45,7 @@ $(document).on("click", "#js-login-id-button", function (e) {
   });
 });
 
+$('.js-textarea').wysihtml5();
 //registration page buttons actions
 // $(document).on("click", "#js-cancel-reg", function(e) {
 //   e.preventDefault();
