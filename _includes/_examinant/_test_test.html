@@ -1,23 +1,38 @@
-
-  <section id="test" data-spy="scroll" data-target=".pagination" ng-controller="QuestionListCtrl">
+<style>
+  .body {
+  position: relative;
+}
+.affix {
+  width: inherit; //helped keep the content the same size on fluid layouts
+  position: fixed;
+  top: 50px;  //height of the nav
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;  //height of the footer
+}
+</style>
+  <section id="test"   ng-controller="QuestionListCtrl"><!--  data-spy="scroll" data-target=".pagination" data-offset-top="400" -->
     <div class="span3">
-      <div class="well test-sidenav affix-bottom">
-        
-        <div class="pagination">
+      <div class="test-sidenav affix-bottom" data-spy="affix" data-offset-top="100" data-offset-bottom="100">
+        <div class="pagination" id="pagenav">
           <p>Vastatud: 1/{{tests.length}}</p>
-          <ul >
+          <ul class="nav">
             <li ><a class="btn-warning" href="#">1</a></li>
             <li ><a class="btn-primary" href="#">2</a></li>
             <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
           </ul>
           <p>Kui sa pole mõnes vastuses kindel, märgista see, et saaksid hiljem selle juurde tagasi pöörduda: loetelus on ta siis oranzhi värvi.</p>
-        </div>
-        <div class="navbar-text countdown">
-          Aega jäänud <span class="btn"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
-        </div>
+
+        <span class="navbar-text countdown">
+          Aega jäänud <br><span class="btn"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
+        </span>
+                </div>
       </div>
     </div>
-    <div class="span9">
+    <div class="span9" >
       <form class="form-horizontal" novalidate ng-controller="QuestionListCtrl">
         <fieldset ng-repeat="test in tests | limitTo:100">
           <legend>{{test.field}}</legend>

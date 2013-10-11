@@ -11959,7 +11959,7 @@ header .pagename h1 {
 input.ng-dirty {
   background-color: #FA787E;
 }
-.pagination {
+#pagenav {
   padding: 30px;
 }
 #test .pagination ul > li {

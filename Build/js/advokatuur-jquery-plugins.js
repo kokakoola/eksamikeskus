@@ -4,9 +4,9 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
-  $('.test-sidenav').scrollspy();
+  // $('.test-sidenav').scrollspy();
 
-  $('.test-sidenav').affix();
+  // $('#pagenav').affix();
 
   // $('.make-switch').bootstrapSwitch('toggleActivation');
 
@@ -19,14 +19,14 @@
 //hide some divs onload
 $(document).ready(function () {
   $('#register, #registered').hide();
-  $('#test, #test-end, #written-start').hide();
+  // $('#test, #test-end, #written-start').hide();
+  $('#test-start, #test-end').hide();
  });
 
 //made by: Mari-Liis
 function handleRadiobuttonClick() {
-    
-            $("#inputDate").prop('disabled', !$('#radios-0').is(':checked'));
-            $("#selectbasicDisable").prop('disabled', !$('#radios-0').is(':checked'));
+  $("#inputDate").prop('disabled', !$('#radios-0').is(':checked'));
+  $("#selectbasicDisable").prop('disabled', !$('#radios-0').is(':checked'));
 }
 
 //autent page buttons actions
