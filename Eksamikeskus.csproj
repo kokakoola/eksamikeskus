@@ -36,7 +36,6 @@
     <Content Include=".gitignore" />
     <Content Include="comission-index.html" />
     <Content Include="css\advokatuur.css" />
-    <Content Include="js\wysihtml5\bootstrap-wysihtml5.css" />
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
     <Content Include="examinant-test.html" />
@@ -78,7 +77,6 @@
     <Content Include="js\bootstrap-tooltip.js" />
     <Content Include="js\bootstrap-transition.js" />
     <Content Include="js\bootstrap-typeahead.js" />
-    <Content Include="js\wysihtml5\bootstrap-wysihtml5.js" />
     <Content Include="js\downCount-master\index.html" />
     <Content Include="js\downCount-master\jquery.downCount.js" />
     <Content Include="js\jquery.js" />
@@ -124,6 +122,8 @@
     <Content Include="js\tests\unit\bootstrap-typeahead.js" />
     <Content Include="js\tests\vendor\qunit.css" />
     <Content Include="js\tests\vendor\qunit.js" />
+    <Content Include="js\wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="js\wysihtml5\bootstrap-wysihtml5.js" />
     <Content Include="js\wysihtml5\wysihtml5-0.3.0.min.js" />
     <Content Include="less\bootstrap-less\bootstrap.css" />
     <Content Include="less\bootstrap-less\media.css" />
