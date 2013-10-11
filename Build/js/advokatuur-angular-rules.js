@@ -42,7 +42,7 @@ function QuestionListCtrl($scope) {
       "a": "tekib ostjal õigus nõuda müügieseme omandi ülekandmist",
       "b": "läheb müügieseme omand üle ostjale juhul, kui ta on müügihinna täielikult tasunud",
       "c": "läheb müügieseme omand üle ostjale, välja arvatud juhul, kui on kokku lepitud omandireservatsioonis",
-      "d": "täidab ostja oma ostuhinna tasumise kohustuse"
+      "d": "T"
     }
    },{
     "question": "Käsipant, samuti õiguste pant lõpeb",
