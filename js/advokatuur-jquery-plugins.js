@@ -130,7 +130,6 @@ if (bindPages) {
         }
         else {
             $('section:not(:first)').hide();
-            $('section:first').show();
         }
 
         window.setTimeout(function () { window.scrollTo(0, 0); }, 10);
@@ -151,6 +150,16 @@ function hideOnPage(jqElem) {
 
 function showOnPage(jqElem) {
     $(jqElem).show().addClass("shownOnPage");
+}
+
+function shownOnPage2(jqElem,newclass) {
+	$(jqElem).show().removeClass("hidden").removeClass("hiddenOnPage").addClass(newclass);
+}
+
+function decreaseCount(id) {
+	var value = $(id).text();
+	value = value - 1;
+	$(id).text(value);
 }
 
 $('.date').datepicker();

@@ -6,25 +6,25 @@
 				<li class="active"><a href="#exam-test-list">Kirjalik eksam</a></li>
 				<li><a href="#oral-exam-list">Suuline eksam</a></li>
 				<li><a href="#exam-test-questions">Testi küsimused</a></li>
-				<li><a href="#">Kaasusülesanded</a></li>
+				<li><a href="#exam-writings">Kaasusülesanded</a></li>
 			</ul>
 		</div>
 	</div>
 
 
-	<ul class="nav nav-pills">
+<!--	<ul class="nav nav-pills">
 		<li class="active"><a href="#exam-test-list">Eksamite nimekiri</a></li>
 		<li ><a href="#examinant-statistics">Eksamineeritavate statistika</a></li>
 	</ul>
 
 	<!--Breadcrumbs -->
-	<ul class="breadcrumb">
+<!--	<ul class="breadcrumb">
 		<li><a href="#exam-add-exam">Eksamite nimekiri</a> <span class="divider">/</span></li>
 		<li><a>Eksami lisamine</a> </li>
-	</ul>
+	</ul>-->
 
 
-	<div class="span7">
+
 		<form class="form-horizontal">
 			<fieldset>
 
@@ -61,10 +61,10 @@
 				<div id="r1" class="span7">
 					<div class="control-group">
 
-						<label class="control-label" for="">Toimumiskoht ja ruum</label>
+						<label class="control-label" for="">Toimumiskoht ja Ruum</label>
 
 						<div class="controls">
-							<input id="text3" name="textinput" type="text" placeholder="Toimumiskoht ja ruum" class="input-large">
+							<input id="text3" name="textinput" type="text" placeholder="Toimumiskoht ja ruum 1" class="input-large">
 						</div>
 					</div>
 				</div>
@@ -75,9 +75,36 @@
 						<label class="control-label" for="">Max osalejate arv ruumis</label>
 
 						<div class="controls">
-							<input id="text4" name="textinput" type="text" placeholder="Max osalejate arv ruumis" class="input-large">
+							<input id="text4" name="textinput" type="text" placeholder="Max osalejate arv ruumis 1" class="input-large">
 						</div>
 					</div>
+				</div>
+
+
+				<div class="hidden" id="showMe">
+				<div id="Div4" class="span7">
+					<div class="control-group">
+
+						<label class="control-label" for="">Toimumiskoht ja ruum</label>
+
+						<div class="controls">
+							<input id="text1" name="textinput" type="text" placeholder="Toimumiskoht ja ruum 2" class="input-large">&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent().parent().parent())">X</button>
+						</div>
+					</div>
+				</div>
+				<!-- Text input-->
+				<div id="Div5" class="span7">
+					<div class="control-group">
+
+						<label class="control-label" for="">Max osalejate arv ruumis</label>
+
+						<div class="controls">
+							<input id="text7" name="textinput" type="text" placeholder="Max osalejate arv ruumis 2" class="input-large">&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent().parent().parent())">X</button>
+						</div>
+					</div>
+				</div>
 				</div>
 
 				<div class="span7">
@@ -85,7 +112,7 @@
 
 						<div class="controls">
 							<div class="input-prepend">
-								<button onclick="" class="btn">Lisa eksami toimumiskoht</button>
+								<button onclick="shownOnPage2($('#showMe'),'showOnPage')" class="btn">Lisa eksami toimumiskoht</button>
 								<span class="add-on"><i class="glyphicon glyphicon-plus-sign"></i></span>
 							</div>
 						</div>
@@ -145,15 +172,16 @@
 
 
 				<!-- Button -->
-
+				<div class="span7">
+					<div class="control-group">
 				<div class="form-actions" style="background: none; border: none;">
 					<a class="btn" href="#exam-test-list" id="A1">Katkesta</a>
 					<a class="btn btn-primary" href="#exam-test-list-added">Lisa</a>
-				</div>
+				</div></div></div>
 			</fieldset>
 
 		</form>
-	</div>
+	
 
 
 </section>

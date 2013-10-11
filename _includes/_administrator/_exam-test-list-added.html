@@ -7,34 +7,43 @@
 					<li class="active"><a href="#exam-test-list">Kirjalik eksam</a></li>
 					<li><a href="#oral-exam-list">Suuline eksam</a></li>
 					<li><a href="#exam-test-questions">Testi küsimused</a></li>
-					<li><a href="#">Kaasusülesanded</a></li>
+					<li><a href="#exam-writings">Kaasusülesanded</a></li>
 				</ul>
 			</div>
 		</div>
 
-
+<!--
 		<ul class="nav nav-pills">
 			<li class="active"><a href="#exam-test-list">Eksamite nimekiri</a></li>
 			<li><a href="#examinant-statistics">Eksamineeritavate statistika</a></li>
-		</ul>
+		</ul>-->
 
 
 	<!--Breadcrumbs -->
-	<ul class="breadcrumb">
+<!--	<ul class="breadcrumb">
 		<li><a href="#exam-test-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
-	</ul>
+	</ul>-->
 
 	<form class="form-horizontal">
 		<fieldset>
+			<legend>Kirjalike eksamite nimekiri</legend>
 			<!-- Text input-->
 			<div class="row">
+				<div class="span4">
+
+					<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+						<label class="control-label" for="dp3">Eksami kuupäev&nbsp;&nbsp;</label>
+						<input class="span2" size="16" type="text" value="12-02-2012">
+						<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+					</div>
+				</div>
 				<div class="span4">
 					<div class="control-group">
 
 						<label class="control-label " for="textinput1">Eksami toimumiskoht</label>
 
 						<div class="controls controls-row">
-							<input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
+							<input id="text1" name="textinput1" type="text" placeholder="Eksami toimumiskoht" class="input-medium">
 						</div>
 					</div>
 				</div>
@@ -45,18 +54,11 @@
 						<label class="control-label" for="textinput2">Eksami kellaaeg</label>
 
 						<div class="controls">
-							<input id="textinput" name="textinput2" type="text" placeholder="Perekonnanimi" class="input-medium">
+							<input id="textinput" name="textinput2" type="text" placeholder="Eksami kellaaeg" class="input-medium">
 						</div>
 					</div>
 				</div>
-				<div class="span4">
-
-					<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-						<label class="control-label" for="dp3">Eksami kuupäev</label>
-						<input class="span2" size="16" type="text" value="12-02-2012">
-						<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-					</div>
-				</div>
+				
 				<div class="span1 offset7 pull-right">
 					<!-- Button -->
 					<a class="btn btn-primary" href="#exam-test-list-search">Otsi</a>
@@ -101,7 +103,7 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a href="#exam-test-list">Kustuta</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etla')">Kustuta</a></li>
 				  <li ><a href="#oral-exam-generated-list">Genereeri suulise eksami järjekord</a></li>
 				</ul>
             </td>
@@ -122,8 +124,8 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a href="#exam-test-list">Kustuta</a></li>
-				  <li class="disabled"><a>Genereeri suulise eksami järjekord</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etla')">Kustuta</a></li>
+				  <li><a href="#myModal2" role="button"  data-toggle="modal">Genereeri kirjaliku eksami küsimustik</a></li>
 				</ul>
             </td>
         </tr>
@@ -143,8 +145,8 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a href="#exam-test-list">Kustuta</a></li>
-				  <li class="disabled"><a>Genereeri suulise eksami järjekord</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etla')">Kustuta</a></li>
+				  <li><a> </a></li>
 				</ul>
             </td>
         </tr>
@@ -165,13 +167,29 @@
             <td>
 				<ul class="nav nav-pills">
 				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a href="#exam-test-list">Kustuta</a></li>
-				  <li class="disabled"><a>Genereeri suulise eksami järjekord</a></li>
+				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etla')">Kustuta</a></li>
+				  <li><a> </a></li>
 				</ul>
             </td>
         </tr>
     </table>
 	 <p>
-            <small>Kokku: 4 kirjet</small>
+            <small>Kokku: <span id="etla">4</span> kirjet</small>
         </p>
+
+	<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModal1Label" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="myModal1Label">Teade</h3>
+		</div>
+		<div class="modal-body">
+			
+
+				Kirjaliku eksami küsimustiku genereerimine õnnestus!
+				
+	</div>
+	<div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Sulge</button>
+	</div>
+	</div>
 </section>
