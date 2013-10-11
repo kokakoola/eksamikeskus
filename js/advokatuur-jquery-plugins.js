@@ -4,10 +4,6 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
-  $('.test-sidenav').scrollspy();
-
-  $('.test-sidenav').affix();
-
   // $('.make-switch').bootstrapSwitch('toggleActivation');
 
 
@@ -20,11 +16,11 @@
 $(document).ready(function () {
   $('#register, #registered').hide();
   $('#test, #test-end, #written-start').hide();
+  // $('#test-start, #test-end').hide(); to access test directly
  });
 
 //made by: Mari-Liis
 function handleRadiobuttonClick() {
-    
             $("#inputDate").prop('disabled', !$('#radios-0').is(':checked'));
             $("#selectbasicDisable").prop('disabled', !$('#radios-0').is(':checked'));
 }
@@ -61,6 +57,21 @@ $('.js-textarea').wysihtml5();
 //   $('.pagename h1').html('Registreerimise kinnitus');
 //   $('#registered').show();
 // });
+// registration page buttons actions
+$(document).on("click", "#js-cancel-reg", function(e) {
+  e.preventDefault();
+  bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
+    function(result) {
+      if (result) {
+      window.location.href='https://www.advokatuur.ee/est/avaleht';
+      }
+    });
+});
+$(document).on("click", "#js-confirm-reg", function(e) {
+  $('#register').hide();
+  $('.pagename h1').html('Registreerimise kinnitus');
+  $('#registered').show();
+});
 
 
 //confirmation page buttons actions
@@ -110,6 +121,7 @@ $('.countdown').downCount({
 $().ready(function () {
   $('input.check-lg').prettyCheckable();
 });
+
 
 // One Page Scroll
 //   $(".main").onepage_scroll({
@@ -168,6 +180,27 @@ function resetValues() {
 	$('#etqa').text(5); $('#etqs').text(3); $('#etq').text(4);
 	$('#ewa').text(5); $('#ews').text(1); $('#ew').text(4);
 	$('#oela').text(10); $('#oel').text(9);
+}
+
+function calculateTotal() {
+	var total = parseInt($('#v1t').val(),10);
+	total += parseInt($('#v2t').val(), 10);
+	total += parseInt($('#v3t').val(), 10);
+	total += parseInt($('#v4t').val(), 10);
+	$('#totalq').text(total);
+	calculatePercent('#totalq', '#totalc', '#totalp')
+}
+
+function calculatePercent(totalElemId, partialElemId, percentElemId) {
+	var total = 0;
+	if (totalElemId == '#totalq') {
+		total = parseInt($(totalElemId).text(), 10);
+	} else {
+		total = parseInt($(totalElemId).val(), 10);
+	}
+	var partial = parseInt($(partialElemId).val(), 10);
+	var percent = parseInt((partial*100/total),10);
+	$(percentElemId).text(percent);
 }
 
 $('.date').datepicker();

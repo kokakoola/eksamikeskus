@@ -31,7 +31,7 @@
                             <div class="control-group span2">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls">
-                                    <input id="textinput" name="textinput" type="text" value="15" placeholder="" class="input-mini">
+                                    <input onkeyup="calculateTotal();calculatePercent('#v1t','#v1c','#v1p')" id="v1t" name="textinput" type="text" value="15" placeholder="" class="input-mini">
                                 </div>
                             </div>
                         </td>
@@ -40,8 +40,8 @@
                             <div class="control-group span4">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls offset1">
-                                    <input id="text1" name="textinput" type="text" value="8" placeholder="" class="input-mini">
-                                    ehk 53 %
+                                    <input onkeyup="calculatePercent('#v1t','#v1c','#v1p')" id="v1c" name="textinput" type="text" value="8" placeholder="" class="input-mini">
+                                    ehk <span id="v1p">53</span> %
                                 </div>
                             </div>
                         </td>
@@ -55,8 +55,8 @@
                                 <div class="control-group span4">
                                     <label class="control-label" for="textinput"></label>
                                     <div class="controls offset1">
-                                        <input id="text8" name="textinput" type="text" value="35" placeholder="" class="input-mini">
-                                        ehk 70 %
+                                        <input onkeyup="calculatePercent('#totalq','#totalc','#totalp')" id="totalc" name="textinput" type="text" value="35" placeholder="" class="input-mini">
+                                        ehk <span id="totalp">70</span> %
                                     </div>
                                 </div>
                         </td>
@@ -71,7 +71,7 @@
                             <div class="control-group span2">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls">
-                                    <input id="text2" name="textinput" type="text" value="15" placeholder="" class="input-mini">
+                                    <input onkeyup="calculateTotal();calculatePercent('#v2t','#v2c','#v2p')"  id="v2t" name="textinput" type="text" value="15" placeholder="" class="input-mini">
                                 </div>
                             </div>
                         </td>
@@ -80,8 +80,8 @@
                             <div class="control-group span4">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls offset1">
-                                    <input id="text5" name="textinput" type="text" value="8" placeholder="" class="input-mini">
-                                    ehk 53 %
+                                    <input onkeyup="calculatePercent('#v2t','#v2c','#v2p')" id="v2c" name="textinput" type="text" value="8" placeholder="" class="input-mini">
+                                    ehk <span id="v2p">53</span> %
                                 </div>
                             </div>
                         </td>
@@ -97,7 +97,7 @@
                             <div class="control-group span2">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls">
-                                    <input id="text3" name="textinput" type="text" value="15" placeholder="" class="input-mini">
+                                    <input onkeyup="calculateTotal();calculatePercent('#v3t','#v3c','#v3p')" id="v3t" name="textinput" type="text" value="15" placeholder="" class="input-mini">
                                 </div>
                             </div>
                         </td>
@@ -106,8 +106,8 @@
                             <div class="control-group span4">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls offset1">
-                                    <input id="text6" name="textinput" type="text" value="8" placeholder="" class="input-mini">
-                                    ehk 53 %
+                                    <input onkeyup="calculatePercent('#v3t','#v3c','#v3p')" id="v3c" name="textinput" type="text" value="8" placeholder="" class="input-mini">
+                                    ehk <span id="v3p">53</span> %
                                 </div>
                             </div>
                         </td>
@@ -123,7 +123,7 @@
                             <div class="control-group span2">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls">
-                                    <input id="text4" name="textinput" type="text" value="9" placeholder="" class="input-mini">
+                                    <input onkeyup="calculateTotal();calculatePercent('#v4t','#v4c','#v4p')" id="v4t" name="textinput" type="text" value="5" placeholder="" class="input-mini">
                                 </div>
                             </div>
                         </td>
@@ -132,8 +132,8 @@
                             <div class="control-group span">
                                 <label class="control-label" for="textinput"></label>
                                 <div class="controls offset1">
-                                    <input id="text7" name="textinput" type="text" value="3" placeholder="" class="input-mini">
-                                    ehk 60 %
+                                    <input onkeyup="calculatePercent('#v4t','#v4c','#v4p')" id="v4c" name="textinput" type="text" value="3" placeholder="" class="input-mini">
+                                    ehk <span id="v4p">60</span> %
                                 </div>
                             </div>
                         </td>
@@ -144,12 +144,14 @@
                             <p class="text-center"><a href="#exam-test-questions">67</a></p>
                         </td>
                         <td>
-                            <p class="text-center">50</p>
+                            <p class="text-center"><span id="totalq">50</span></p>
                         </td>
                         <td colspan="2"></td>
                     </tr>
                 </tbody>
             </table>
+
+
 
             <!-- Button (Double) -->
             <div class="control-group pull-right">
