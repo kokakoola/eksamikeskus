@@ -1,0 +1,1029 @@
+﻿<!-- #include file="_includes/_head.html" -->
+<!-- #include file="_includes/_comission/_comission_header.html" -->
+<!DOCTYPE html>
+<html lang="eng" xmlns:ng="http://angularjs.org" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Advokatuur eksamikeskkond</title>
+    <meta name="viewport" content="width=997">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="js/prettyCheckable/prettyCheckable.css">
+    <link href="css/advokatuur.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->  
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+<!DOCTYPE html>
+<html lang="eng" xmlns:ng="http://angularjs.org" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Advokatuur eksamikeskkond</title>
+    <meta name="viewport" content="width=997">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="js/prettyCheckable/prettyCheckable.css">
+    <link href="css/advokatuur.css" rel="stylesheet" media="screen">
+    <link href="css/style.css" rel="stylesheet" media="screen">
+    <link href="js/silviomoreto-bootstrap-select/bootstrap-select.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->  
+    <!--[if gte IE 9]>
+      <style type="text/css">
+        .gradient {
+           filter: none;
+        }
+      </style>
+    <![endif]-->
+
+
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  </head>
+
+<body>
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top" style="height: 23px;">
+            <div class="navbar-inner">
+                <div id="" style="width: 997px; margin: 0 auto;">
+                    <div class="nav-collapse collapse">
+                        <ul class="nav head-nav">
+                            <li class="active">
+                                <a href="#oral-exam-list">EKSAMIKESKKOND</a>
+
+                            </li>
+                            <li><a href="#oral-exam-list">Eksamid</a></li>
+                        </ul>
+
+                        <ul class="nav head-nav pull-right">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Eksamineeritav <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Administraator</a></li>
+                                    <li><a href="#">Kantselei töötaja</a></li>
+                                    <li><a href="#">Kutsesobivuskomisjoni liige</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="https://www.advokatuur.ee/est/avaleht">Logi välja</a></li>
+                                </ul>
+                            </li>
+                            <li><a id="mobile-web" href="/mobile.php/est/avaleht">Ants Jurisalu</a></li>
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div id="header-container" class="header-container clearfix">
+            <div class="header-inner">
+                <a href="/est/avaleht">
+                    <img class="logo" src="img/logo3.png" alt="">
+                </a>
+                <div class="pagename">
+                    <h1>Autentimine</h1>
+                </div>
+                <div class="search">
+                    <form action="/est/otsing" method="get">
+                        <input type="text" name="q" value="" placeholder="Sisesta otsingusõna">
+                        <a href="#" onclick="$(this).parent('form').submit();return false;" class="search-button"></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<div id="wrap">
+    <div class="container" style="min-height: 100%;">
+        <div class="row">
+            <!-- #include file="_includes/_comission/_oral-exam-list.html" -->
+			﻿<section id="oral-exam-list">
+
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+    </ul>
+
+
+    <form class="form-horizontal">
+        <fieldset>
+            <!-- Text input-->
+            <div class="row">
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label " for="textinput1">Eksami toimumiskoht</label>
+
+                        <div class="controls controls-row">
+                            <input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="textinput2">Eksami kellaaeg</label>
+
+                        <div class="controls">
+                            <input id="textinput" name="textinput2" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+
+                    <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <label class="control-label" for="dp3">Eksami kuupäev</label>
+                        <input class="span2" size="16" type="text" value="12-02-2012">
+                        <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+                    </div>
+                </div>
+                <div class="span1 offset7 pull-right">
+                    <!-- Button -->
+                    <a class="btn btn-primary" href="#oral-exam-list-search">Otsi</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Eksami kuupäev</th>
+            <th>Kellaaeg</th>
+            <th>Toimumiskoht</th>
+            <th>Kutsesobivuskomisjoni koosseis</th>
+            <th>Max arv</th>
+            <th>Tegevus</th>
+        </tr>
+        <tr>
+            <td>03.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 2</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>03.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 3</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>10.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 2</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>10.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 3</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>17.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 2</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>17.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 3</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <p>
+        <small>Kokku: 6 kirjet</small>
+    </p>
+</section>
+	
+			<!-- #include file="_includes/_comission/_oral-exam-list-search.html" -->
+			﻿<section id="oral-exam-list-search">
+
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li><a href="#exam-test-list">Kirjalik eksam</a></li>
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+                <li><a href="#exam-test-questions">Testi küsimused</a></li>
+                <li><a href="#">Kaasusülesanded</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+    </ul>
+
+
+    <form class="form-horizontal">
+        <fieldset>
+            <!-- Text input-->
+            <div class="row">
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label " for="textinput1">Eksami toimumiskoht</label>
+
+                        <div class="controls controls-row">
+                            <input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="textinput2">Eksami kellaaeg</label>
+
+                        <div class="controls">
+                            <input id="textinput" name="textinput2" type="text" placeholder="Perekonnanimi" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+
+                    <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <label class="control-label" for="dp3">Eksami kuupäev</label>
+                        <input class="span2" size="16" type="text" value="12-02-2012">
+                        <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+                    </div>
+                </div>
+                <div class="span1 offset7 pull-right">
+                    <!-- Button -->
+                    <a class="btn btn-primary" href="#oral-exam-list-search">Otsi</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Eksami kuupäev</th>
+            <th>Kellaaeg</th>
+            <th>Toimumiskoht</th>
+            <th>Kutsesobivuskomisjoni koosseis</th>
+            <th>Max arv</th>
+            <th>Tegevus</th>
+        </tr>
+        <tr>
+            <td>03.02.2013</td>
+            <td>10:00</td>
+            <td>Rävala pst 3, Tallinn ruum 2</td>
+            <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
+            <td>10</td>
+            <td>
+                <ul class="nav nav-pills">
+                    <li><a href="#oral-exam-edit">Muuda</a></li>
+                    <li><a href="#oral-exam">Eksamineeritavad</a></li>
+                </ul>
+            </td>
+        </tr>
+
+    </table>
+    <p>
+        <small>Kokku: 1 kirjet</small>
+    </p>
+
+</section>
+
+            <!-- #include file="_includes/_comission/_oral_exam.html" -->
+            ﻿<section id="oral-exam">
+    
+     <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li>15.01.2014 eksamineeritavad</li>
+    </ul>
+
+    <div class="span12">
+        <p><a href="#oral-exam-edit">Suuline eksam 15.01.2014&nbsp;09:00&nbsp;<i class="glyphicon glyphicon-pencil"></i></a></p>
+        <p><b>Toimumiskoht:</b> Rävala pst. 3 Ruum 2</p>
+        <p><b>Komision 1:</b> Aadu Luberg, Mari-Ann Simovart, Erki Vabamets, Marko Aavik, Jaan Naaber</p>
+        <div>
+            <b>Eksamineeritavad:</b>
+            <ul class="unstyled">
+                <li><a href="#user-exam">Tuuli Päike</a></li>
+                <li><a href="#user-exam">Tea Klaas</a></li>
+                <li><a href="#user-exam">Joonas Tikerpäe</a></li>
+                <li><a href="#user-exam">Mailiis Tuul</a></li>
+                <li><a href="#user-exam">Mari Murakas</a></li>
+                <li><a href="#user-exam">Juhan Kask</a></li>
+                <li><a href="#user-exam">Krõõt Soosaar</a></li>
+                <li><a href="#user-exam">Kaisa Seinakas</a></li>
+                <li><a href="#user-exam">Ilona Punane</a></li>
+                <li><a href="#user-exam">Hannes Tuline</a></li>
+                <li><a href="#user-exam">Tanel Mehine</a></li>
+            </ul>
+        </div>
+        <p><a href="csv/Eksamineeritavad.csv">Genereeri CSV</a></p>
+    </div>
+</section>
+
+            <!-- #include file="_includes/_comission/_oral_exam_edit.html" -->
+            ﻿<section id="oral-exam-edit">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li>Eksami muutmine</li>
+    </ul>
+    <div class="span7">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>Suulise eksami muutmine</legend>
+
+                <div class="control-group">
+                    <label class="control-label">Eksami kuupäev</label>
+                    <div class="controls">
+                        <span>02.01.2013</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Eksami kellaaeg</label>
+                    <div class="controls">
+                        <span>10:00</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Eksami toimumiskoht</label>
+                    <div class="controls">
+                        <span>10:00</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="selectCaseGrade">Kutsesobivuskomisjoni koosseis</label>
+                    <div class="controls">
+
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" checked="checked" class="check-lg" id="checkbox2" value="1">
+                        </label>
+                        <span class="help-inline">Aadu Luberg</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" class="check-lg" id="checkbox6" value="1">
+                        </label>
+                        <span class="help-inline">Enno Loonurm</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" checked="checked" class="check-lg" id="checkboxes-0" value="1">
+                        </label>
+                        <span class="help-inline">Gunnar Vaikmaa</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" checked="checked" class="check-lg" id="checkbox8" value="1">
+                        </label>
+                        <span class="help-inline">Heli Sepp</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" class="check-lg" id="checkbox3" value="1">
+                        </label>
+                        <span class="help-inline">Mari-Ann Simovart</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" checked="checked" class="check-lg" id="checkbox7" value="1">
+                        </label>
+                        <span class="help-inline">Meeli Kaur</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" class="check-lg" id="checkbox4" value="1">
+                        </label>
+                        <span class="help-inline">Toomas Tamme</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" checked="checked" class="check-lg" id="checkbox5" value="1">
+                        </label>
+                        <span class="help-inline">Toomas Taube</span>
+                        <br />
+                        <label class="checkbox inline" for="checkboxes-0">
+                            <input type="checkbox" name="checkboxes" class="check-lg" id="checkbox1" value="1">
+                        </label>
+                        <span class="help-inline">Urmas Ustav</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="selectOralGrade">Eksamineeritava max arv</label>
+                    <div class="controls">
+                        <span>10</span>
+                    </div>
+                </div>         
+                 <div class="form-actions" style="background: none; border: none;">
+					    <a class="btn" href="javascript:history.go(-1);">Katkesta</a>
+					 <input type="submit" class="btn btn-primary" value="Salvesta" onclick="javascript: history.go(-1);" />
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+
+            <!-- #include file="_includes/_comission/_user_exam.html" -->
+            ﻿<section id="user-exam">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li>Aadu Aas eksami detailvaade</li>
+    </ul>
+
+    <div class="span4">
+        <h3>Aadu Aas</h3>
+        <p>Kirjaliku eksami kuupäev 02.01.2014</p>
+        <p>Vandeadvokaadi eksam</p>
+        <p>Eraõigus ja tsiviilkohtumenetlus</p>
+        <p class="pull-right">45/50</p>
+        <h4>Kirjalik test</h4>
+        <div class="pull-right">
+            <table class="table">
+                <tr>
+                    <th>eraõigus ja<br />
+                        tsiviilkohtumenetlus</th>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <th>riigi põhikord, avalik õigus ja<br />
+                        halduskohtumenetlus</th>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <th>karistusõigus ja<br />
+                        kriminaalmenetlus</th>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <th>Advokatuur</th>
+                    <td>3</td>
+                </tr>
+            </table>
+        </div>
+        <h4>Kaasuse kommentaarid</h4>
+        <div class="accordion" id="comment-accordion">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse1">Aadu Luberg, 02.01.2014 13:30
+                    </a>
+                </div>
+                <div id="comment-accordion-collapse1" class="accordion-body collapse in">
+                    <div class="accordion-inner">
+                        Kutsesobivuskomisjoni liikme kommentaar
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse2">Mari-Ann Simovart, 02.01.2014 13:30
+                    </a>
+                </div>
+                <div id="comment-accordion-collapse2" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <textarea rows="6">Kutsesobivuskomisjoni liikme kommentaar 2</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse3">Kommentaar
+                    </a>
+                </div>
+                <div id="comment-accordion-collapse3" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        <textarea rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn" data-toggle="button">Salvesta</button>
+        </div>
+    </div>
+    <div class="span8">
+        <div class="row">
+            <div class="span8">
+                <div class="accordion" id="case-accordion">
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseOne">Kaasusülesanne eraõiguse ja tsiviilkohtumenetluse valdkonnas</a>
+                        </div>
+                        <div id="case-accordion-collapseOne" class="accordion-body collapse in">
+                            <div class="accordion-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                </p>
+                                <p>
+                                    Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                </p>
+                                <p>
+                                    Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                </p>
+                                <p>
+                                    Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                </p>
+                                <p>
+                                    Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseTwo">Kaasuse näidislahendus</a>
+                        </div>
+                        <div id="case-accordion-collapseTwo" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                </p>
+                                <p>
+                                    Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                </p>
+                                <p>
+                                    Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                </p>
+                                <p>
+                                    Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                </p>
+                                <p>
+                                    Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseThree">Aadu Aas kaasusülesande lahendus</a>
+                        </div>
+                        <div id="case-accordion-collapseThree" class="accordion-body collapse">
+                            <div class="accordion-inner">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
+                                </p>
+                                <p>
+                                    Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.
+                                </p>
+                                <p>
+                                    Phasellus faucibus ante a erat fermentum, nec consequat elit fermentum. Aliquam vitae congue est. Quisque ut mi nec eros dapibus accumsan. Integer nisl nibh, sagittis non ante nec, tincidunt adipiscing quam. Etiam eget libero nec urna egestas vestibulum viverra consequat lorem. Vestibulum laoreet ornare urna non bibendum. Suspendisse varius sodales risus vel semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam at molestie orci. Vivamus hendrerit sem a purus ornare laoreet nec sit amet elit. Curabitur sed sagittis augue. In ut sem est. Praesent sodales viverra neque, in consequat leo tincidunt eu.
+                                </p>
+                                <p>
+                                    Aliquam magna diam, semper ut nisl eu, commodo tincidunt tellus. Pellentesque rhoncus nisi vestibulum odio pretium varius. Curabitur scelerisque eros eros, semper rhoncus ligula pharetra in. Pellentesque mollis tempus mollis. Nunc accumsan eleifend sem, ac egestas mi ornare eu. Etiam mattis dui vitae tempor varius. Curabitur bibendum felis in ipsum ultricies congue. Nullam tristique dui nec purus tempus vehicula. Nulla facilisi. Sed ullamcorper blandit mattis. Morbi luctus odio non ligula consequat, a facilisis ipsum posuere.
+                                </p>
+                                <p>
+                                    Donec vulputate imperdiet diam at vehicula. Nulla facilisi. Duis pellentesque, erat non pulvinar aliquam, turpis elit tempus eros, eget hendrerit nisl ligula id tortor. Morbi bibendum, erat lacinia vulputate facilisis, nisl nisi gravida odio, scelerisque dignissim velit tellus in metus. Sed bibendum augue porttitor nibh porttitor ultricies sed quis odio. Aliquam erat volutpat. Vestibulum interdum magna arcu, sed commodo nibh faucibus a. Donec cursus vestibulum velit a dapibus. Nulla lorem arcu, commodo sit amet blandit non, venenatis ut sapien. Donec venenatis massa eu erat euismod, a varius quam pharetra. Nunc non felis ut velit tempus aliquet at at nunc. Aliquam erat volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam nec purus non sapien condimentum vestibulum. Etiam ante urna, auctor a tellus vitae, porta pretium neque. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span8 text-center">
+                <a href="#oral-exam" class="btn">Tagasi</a>
+                <a href="#decision" class="btn btn-primary offset1">Eksamitulemuste otsus</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <!-- #include file="_includes/_comission/_decision.html" -->
+            ﻿<section id="decision">
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li><a href="#user-exam">Aadu Aas eksami detailvaade</a> <span class="divider">/</span></li>
+        <li>Aadu Aas eksami otsus</li>
+    </ul>
+
+    <div class="span12">
+        <form class="form-horizontal">
+            <fieldset>
+                <legend></legend>
+                <div class="control-group">
+                    <label class="control-label" for="inputDecisionDate">Otsuse kuupäev</label>
+                    <div class="controls">
+                        <div class="input-append date" id="dp3" data-date="08.10.2013" data-date-format="dd.mm.yyyy">
+                            <input class="span2" size="16" type="text" value="08.10.2013">
+                            <span class="add-on"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- #include file="_decision_staticform.html" -->
+                ﻿<div class="control-group">
+    <label class="control-label">Kutsesobivuskomisjoni otsuse nr</label>
+    <div class="controls">
+        <span>1</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kutsesobivuskomisjoni koosseis</label>
+    <div class="controls">
+        <ul class="unstyled span2">
+            <li>Aadu Luberg</li>
+            <li>Mari-Ann Simovart</li>
+            <li>Erki Vabamets</li>
+            <li>Marko Aavik</li>
+            <li>Jaan Naaber</li>
+        </ul>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Eksamineeritava ees- ja perekonnanimi</label>
+    <div class="controls">
+        <span>Aadu Aas</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Eksami liik</label>
+    <div class="controls">
+        <span>Vandeadvokaadi eksam</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Valdkond</label>
+    <div class="controls">
+        <span>Eraõigus ja tsiviilkohtumenetlus</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kirjaliku testi tulemus</label>
+    <div class="controls">
+        <span>70%</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kirjaliku kaasuse tulemus</label>
+    <div class="controls">
+        <span>80%</span>
+    </div>
+</div>
+
+                <div class="control-group">
+                    <label class="control-label" for="selectCaseGrade">Kirjaliku kaasusülesande lahenduse hinne</label>
+                    <div class="controls">
+                        <select name="selectCaseGrade" class="input-xlarge">
+                            <option>--Vali--</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="selectOralGrade">Suulise eksami hinne</label>
+                    <div class="controls">
+                        <select id="selectOralGrade" class="input-xlarge">
+                            <option>--Vali--</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="selectSuitability">Isikusobivus</label>
+                    <div class="controls">
+                        <select id="selectSuitability" class="input-xlarge">
+                            <option>--Vali--</option>
+                            <option>Sobiv</option>
+                            <option>Mittesobiv</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="selectDecision">Eksami sooritamise otsus</label>
+                    <div class="controls">
+                        <select id="selectDecision" class="input-xlarge">
+                            <option>--Vali--</option>
+                            <option>Sooritatud</option>
+                            <option>Mittesooritatud</option>
+                        </select>
+                    </div>
+                </div>
+                <a href="#user-exam" class="btn offset4">Tagasi</a>
+                <input type="submit" class="btn btn-primary offset1" value="Salvesta" onclick="location.hash = '#decision-confirm';" />
+            </fieldset>
+        </form>
+    </div>
+</section>
+            <!-- #include file="_includes/_comission/_decision_confirm.html" -->
+            ﻿<section id="decision-confirm">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li class="active"><a href="#oral-exam-list">Suuline eksam</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Breadcrumbs -->
+    <ul class="breadcrumb">
+        <li><a href="#oral-exam-list">Eksamite nimekiri</a> <span class="divider">/</span></li>
+        <li><a href="#user-exam">Aadu Aas eksami detailvaade</a> <span class="divider">/</span></li>
+        <li>Aadu Aas eksami otsus</li>
+    </ul>
+    <div class="span12">
+        <div id="decision-confirm-alert" class="alert alert-success" style="display: none;">
+             Aadu Aas eksami otsus on kinnitatud
+        </div>
+        <form class="form-horizontal">
+            <fieldset>
+                <legend></legend>
+                <div class="control-group">
+                    <label class="control-label">Otsuse kuupäev</label>
+                    <div class="controls">
+                        <span>8.10.2013</span>
+                    </div>
+                </div>
+                <!-- #include file="_decision_staticform.html" -->
+                ﻿<div class="control-group">
+    <label class="control-label">Kutsesobivuskomisjoni otsuse nr</label>
+    <div class="controls">
+        <span>1</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kutsesobivuskomisjoni koosseis</label>
+    <div class="controls">
+        <ul class="unstyled span2">
+            <li>Aadu Luberg</li>
+            <li>Mari-Ann Simovart</li>
+            <li>Erki Vabamets</li>
+            <li>Marko Aavik</li>
+            <li>Jaan Naaber</li>
+        </ul>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Eksamineeritava ees- ja perekonnanimi</label>
+    <div class="controls">
+        <span>Aadu Aas</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Eksami liik</label>
+    <div class="controls">
+        <span>Vandeadvokaadi eksam</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Valdkond</label>
+    <div class="controls">
+        <span>Eraõigus ja tsiviilkohtumenetlus</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kirjaliku testi tulemus</label>
+    <div class="controls">
+        <span>70%</span>
+    </div>
+</div>
+<div class="control-group">
+    <label class="control-label">Kirjaliku kaasuse tulemus</label>
+    <div class="controls">
+        <span>80%</span>
+    </div>
+</div>
+
+                <div class="control-group">
+                    <label class="control-label">Kirjaliku kaasusülesande lahenduse hinne</label>
+                    <div class="controls">
+                        <span>9</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Suulise eksami hinne</label>
+                    <div class="controls">
+                        <span>8</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Isikusobivus</label>
+                    <div class="controls">
+                        <span>Sobiv</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Eksami sooritamise otsus</label>
+                    <div class="controls">
+                        <span>Sooritatud</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="javascript:window.print();"><i class="glyphicon glyphicon-print"></i>&nbsp;Prindi</a>
+                </div>
+                <div>
+                    <a href="#decision" class="btn offset4">Tagasi</a>
+                    <input type="submit" class="btn btn-primary offset1" value="Kinnita" onclick="hideOnPage($(this).parent()); showOnPage($('#decision-confirm-alert')); window.scrollTo(0, 0);" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+            
+        </div>
+    </div>
+    <div id="push"></div>
+</div>
+<script>
+    var bindPages = true;
+</script>
+<!-- #include file="_includes/_footer.html" -->
+    <div id="footer">
+      <div class="container">
+        <ul class="inline">
+            <li class="nav-header"></li>
+            <li class='current'><a class='current' href="comission-index.html">Komisjoni liige</a></li>
+            <li><a href="index.html">Registreerimine</a></li>
+            <li><a href="examinant-test.html">Valikvastustega eksam</a></li>
+            <li><a href="administrator_index.html">Administraatori vaade</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+<!-- bootstrap -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-affix.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-datepicker.et.js"></script>
+
+<!-- vendor -->
+      <script src="js/bootbox.min.js"></script>
+      <script src="js/downCount-master/jquery.downCount.js"></script>
+      <script src="js/prettyCheckable/prettyCheckable.js"></script>
+      <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
+      <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
+      <script src="js/bootstrap-switch-master/static/js/bootstrap-switch.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+
+<!-- document scripts -->
+      <script src="js/advokatuur-angular-rules.js"></script>
+      <script src="js/advokatuur-jquery-plugins.js"></script>
+
+  </body>
+</html>

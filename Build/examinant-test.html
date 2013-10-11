@@ -148,14 +148,13 @@
   </header>
 
 <div id="wrap">
-  <div class="container" style="min-height:500px;">
-    <div class="row">
-        <div class="pagename"><h1>Kirjalik test</h1></div>
-        <!-- #include file="_includes/_examinant/_test_start.html" -->
-        <!-- #include file="_includes/_examinant/_test_test.html" -->
-        <!-- #include file="_includes/_examinant/_test_end.html" -->
-        <!-- #include file="_includes/_examinant/_written_start.html" -->
-          <section id="test-start">
+    <div class="container" style="min-height: 500px;">
+        <div class="row">
+            <div class="pagename">
+                <h1>Kirjalik test</h1>
+            </div>
+            <!-- #include file="_includes/_examinant/_test_start.html" -->
+              <section id="test-start">
       <div class="span12">
         <div class="well">
           <h1> Advokaadieksami kirjalik test </h1>
@@ -168,7 +167,8 @@
   </section>
 
 
-        
+            <!-- #include file="_includes/_examinant/_test_test.html" -->
+            
   <section id="test" data-spy="scroll" data-target=".pagination" ng-controller="QuestionListCtrl">
     <div class="span3">
       <div class="well test-sidenav affix-bottom">
@@ -214,7 +214,8 @@
     </div>
 
 </section>
-          <section id="test-end">
+            <!-- #include file="_includes/_examinant/_test_end.html" -->
+              <section id="test-end">
     <br><br><br>
     <div class="span12 hero-unit">
       <h1 class="text-center"> Oled testi edukalt sooritanud! </h1>
@@ -286,7 +287,8 @@
 
     <!-- span12 -->
   </section>
-          <section id="written-start">
+            <!-- #include file="_includes/_examinant/_written_start.html" -->
+              <section id="written-start">
     <br><br><br>
       <div class="span12">
         <div class="well">
@@ -299,35 +301,36 @@
       </div>
       <!-- span12 -->
   </section>
+        </div>
     </div>
-  </div>
-  <div id="push"></div>
+    <div id="push"></div>
 </div>
 <!-- #include file="_includes/_footer.html" -->
     <div id="footer">
       <div class="container">
         <ul class="inline">
-          <li class="nav-header"></li>
-            <li class="active"><a href="index.html">Registreerimine</a></li>
-            <li class='current'><a class='current' href="examinant-test.html">Valikvastustega eksam</a></li> 
-            <li><a href="comission-index.html">Komisjoni liige</a></li> 
-            <!--           <li><a href="#">Kaasuseksam</a></li> 
-          <li><a href="#">Admin</a></li>  -->
+            <li class="nav-header"></li>
+            <li><a href="comission-index.html">Komisjoni liige</a></li>
+            <li><a href="index.html">Registreerimine</a></li>
+            <li class='current'><a class='current' href="examinant-test.html">Valikvastustega eksam</a></li>
+            <li><a href="administrator_index.html">Administraatori vaade</a></li>
         </ul>
 
       </div>
     </div>
 
 <!-- bootstrap -->
-      <script src="js/jquery.js"></script>
-      <script src="js/bootstrap-affix.js"></script>
-      <script src="js/bootstrap-tab.js"></script>
-      <script src="js/bootstrap-dropdown.js"></script>
-      <script src="js/bootstrap-tooltip.js"></script>
-      <script src="js/bootstrap-popover.js"></script>
-      <script src="js/bootstrap-modal.js"></script>
-      <script src="js/bootstrap-scrollspy.js"></script>
-      <script src="js/bootstrap-collapse.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-affix.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/bootstrap-datepicker.et.js"></script>
 
 <!-- vendor -->
       <script src="js/bootbox.min.js"></script>
@@ -335,6 +338,7 @@
       <script src="js/prettyCheckable/prettyCheckable.js"></script>
       <script src="js/onepage-scroll-master/jquery.onepage-scroll.min.js"></script>
       <script src="js/silviomoreto-bootstrap-select/bootstrap-select.min.js"></script>
+      <script src="js/bootstrap-switch-master/static/js/bootstrap-switch.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 
 <!-- document scripts -->

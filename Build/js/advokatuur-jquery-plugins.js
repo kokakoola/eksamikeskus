@@ -17,17 +17,24 @@
  //bootstrap-modal + bootbox alert
 
 //hide some divs onload
-  $( document ).ready( function () {
+$(document).ready(function () {
   $('#register, #registered').hide();
   $('#test, #test-end, #written-start').hide();
  });
 
+//made by: Mari-Liis
+function handleRadiobuttonClick() {
+    
+            $("#inputDate").prop('disabled', !$('#radios-0').is(':checked'));
+            $("#selectbasicDisable").prop('disabled', !$('#radios-0').is(':checked'));
+}
+
 //autent page buttons actions
- $(document).on("click", "#js-login-mobile-button", function(e) {
+$(document).on("click", "#js-login-mobile-button", function (e) {
   bootbox.alert("Sulle pole veel eksami kohta käivaid andmeid sisestatud. Palun pöördu hiljem tagasi.");
 });
- $(document).on("click", "#js-login-id-button", function(e) {
-  bootbox.prompt("Palun sisesta PIN1", function(result) {
+$(document).on("click", "#js-login-id-button", function (e) {
+    bootbox.prompt("Palun sisesta PIN1", function (result) {
     if (result === null) {
       bootbox.alert("Logimine ebaõnnestus! Veenduge, et kas id kaart on korralikult lugejas või sisestatud PIN kood oli õige. Vea kordumisel palun sulgege brauser ja proovige algusest.");
     } else if (result > 0) {
@@ -56,20 +63,20 @@
 
 
 //confirmation page buttons actions
-$("#js-delete-reg").click(function(e){
+$("#js-delete-reg").click(function (e) {
   e.preventDefault();
   bootbox.confirm("Oled kindel, et soovid registreeringust loobuda?",
-    function(result) {
+      function (result) {
       if (result) {
-      window.location.href='https://www.advokatuur.ee/est/avaleht';
+              window.location.href = 'https://www.advokatuur.ee/est/avaleht';
       }
     });
 });
 
-$("#js-end-test").click(function(e){
+$("#js-end-test").click(function (e) {
   e.preventDefault();
   bootbox.confirm("Peale testi lõpetamist kinnitatakse testi tulemus ning hiljem vastuseid muuta ei saa. Oled kindel, et soovid testi esitada?",
-    function(result) {
+      function (result) {
       if (result) {
       $('#test').hide(); $('.pagename h1').hide(); $('#test-end').show();
       }
@@ -91,7 +98,7 @@ $("#js-end-test").click(function(e){
 
 // Timer for Test Rules
 $('.countdown').downCount({
-    date: '10/10/2013 23:30:00',
+    date: '12/12/2013 23:30:00',
     offset: +3
 }, function () {
     bootbox.alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
@@ -99,7 +106,7 @@ $('.countdown').downCount({
 
 
 // Large checkboxes
-$().ready(function(){
+$().ready(function () {
   $('input.check-lg').prettyCheckable();
 });
 
@@ -124,11 +131,42 @@ if (bindPages) {
         else {
             $('section:not(:first)').hide();
         }
+
+        window.setTimeout(function () { window.scrollTo(0, 0); }, 10);
     }
     
     showPage(location.hash);
         
     $(window).on('hashchange', function () {
         showPage(location.hash);
+        $(".hiddenOnPage").show();
+        $(".shownOnPage").hide();
     });
 }
+
+function hideOnPage(jqElem) {
+    $(jqElem).hide().addClass("hiddenOnPage");
+}
+
+function showOnPage(jqElem) {
+    $(jqElem).show().addClass("shownOnPage");
+}
+
+function shownOnPage2(jqElem,newclass) {
+	$(jqElem).show().removeClass("hidden").removeClass("hiddenOnPage").addClass(newclass);
+}
+
+function decreaseCount(id) {
+	var value = $(id).text();
+	value = value - 1;
+	$(id).text(value);
+}
+
+function resetValues() {
+	$('#etla').text(5); $('#etls').text(1); $('#etl').text(4);
+	$('#etqa').text(5); $('#etqs').text(3); $('#etq').text(4);
+	$('#ewa').text(5); $('#ews').text(1); $('#ew').text(4);
+	$('#oela').text(10); $('#oel').text(9);
+}
+
+$('.date').datepicker();
