@@ -38,10 +38,12 @@ validation-report.json
 
 # Folders to ignore
 node_modules
-Build/**/*
 
 # Visual Studio
 /*.user
 /*.suo
 /obj
 /bin
+
+# Hammer 
+/Build
