@@ -36,6 +36,7 @@
     <Content Include=".gitignore" />
     <Content Include="comission-index.html" />
     <Content Include="css\advokatuur.css" />
+    <Content Include="js\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
     <Content Include="examinant-test.html" />
@@ -77,6 +78,7 @@
     <Content Include="js\bootstrap-tooltip.js" />
     <Content Include="js\bootstrap-transition.js" />
     <Content Include="js\bootstrap-typeahead.js" />
+    <Content Include="js\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
     <Content Include="js\downCount-master\index.html" />
     <Content Include="js\downCount-master\jquery.downCount.js" />
     <Content Include="js\jquery.js" />
@@ -222,7 +224,6 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
-    <Content Include="_includes\_administrator\_adminmenu.html" />
     <Content Include="_includes\_administrator\_administrator_header.html" />
     <Content Include="_includes\_administrator\_settings_oral_exam_reminder.html" />
     <Content Include="_includes\_administrator\_settings_writing_reminder_notification.html" />
@@ -230,6 +231,7 @@
     <Content Include="_includes\_administrator\_settings_notifications.html" />
     <Content Include="_includes\_administrator\_settings_log.html" />
     <Content Include="_includes\_administrator\_settings_writings_case.html" />
+    <Content Include="_includes\_administrator\administrator_index.html" />
     <Content Include="_includes\_administrator\_exam-question-disabled.html" />
     <Content Include="_includes\_administrator\_exam-writings-disabled.html" />
     <Content Include="_includes\_administrator\_exam-writings-added.html" />
@@ -276,7 +278,6 @@
     <Content Include="_includes\_comission\_decision.html" />
     <Content Include="_includes\_comission\_oral-exam-list-search.html" />
     <Content Include="_includes\_comission\_oral-exam-list.html" />
-    <Content Include="_includes\_comission\_oral_exams.html" />
     <Content Include="_includes\_comission\_oral_exam_edit.html" />
     <Content Include="_includes\_comission\_oral_exam.html" />
     <Content Include="_includes\_comission\_user_exam.html" />
