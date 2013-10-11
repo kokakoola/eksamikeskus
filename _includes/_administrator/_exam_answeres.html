@@ -9,19 +9,8 @@
         <li class="active">27.10.2012 eksami vastused</li>
     </ul>
 
-    <div class="row">
-        <div class="span4">
-            <p class=" lead">Aadu Aas</p>
-        </div>
-        <div class="span3">
-            <select class="selectpicker show-tick">
-                <option>Arvestatud</option>
-                <option>Mitte ilmunud</option>
-                <option>Kõrvaldatud</option>
+    <h3>Aadu Aas</h3>
 
-            </select>
-        </div>
-    </div>
 
 
     <div class="tabbable">
@@ -31,10 +20,19 @@
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="1">
-                <p>Kirjaliku eksami kuupäev 27.01.2012</p>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <h6>Kirjaliku eksami kuupäev 27.01.2012</h6>
+                    </div>
+                    <div class="span4">
+                        <select class="selectpicker show-tick">
+                            <option>Arvestatud</option>
+                            <option>Mitte ilmunud</option>
+                            <option>Kõrvaldatud</option>
 
-
-
+                        </select>
+                    </div>
+                </div>
                 <form class="form-inline">
                     <fieldset>
 
@@ -161,7 +159,14 @@
             </div>
             <div class="tab-pane" id="2">
                 <div class="span4">
-                    <h3>Aadu Aas</h3>
+                    <div>
+            <select class="selectpicker show-tick">
+                <option>Arvestatud</option>
+                <option>Mitte ilmunud</option>
+                <option>Kõrvaldatud</option>
+
+            </select>
+        </div>
                     <p>Kirjaliku eksami kuupäev 02.01.2014</p>
                     <p>Vandeadvokaadi eksam</p>
                     <p>Eraõigus ja tsiviilkohtumenetlus</p>
@@ -335,6 +340,7 @@
 
         <div class="controls">
             <a id="singlebutton" href="#student-exam-info" name="singlebutton" type="button" class="btn btn-default">Tagasi</a>
+            <a id="singlebutton" href="#exam-result" name="singlebutton" type="button" class="btn btn-primary">Sisesta eksami tulemus</a>
         </div>
     </div>
 </section>

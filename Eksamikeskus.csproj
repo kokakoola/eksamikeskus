@@ -270,9 +270,12 @@
     <Content Include="_includes\_administrator\_student_exam_info.html" />
     <Content Include="_includes\_administrator\_add_user.html" />
     <Content Include="_includes\_administrator\_user_list.html" />
+    <Content Include="_includes\_comission\_comission_header.html" />
     <Content Include="_includes\_comission\_decision_staticform.html" />
     <Content Include="_includes\_comission\_decision_confirm.html" />
     <Content Include="_includes\_comission\_decision.html" />
+    <Content Include="_includes\_comission\_oral-exam-list-search.html" />
+    <Content Include="_includes\_comission\_oral-exam-list.html" />
     <Content Include="_includes\_comission\_oral_exams.html" />
     <Content Include="_includes\_comission\_oral_exam_edit.html" />
     <Content Include="_includes\_comission\_oral_exam.html" />
