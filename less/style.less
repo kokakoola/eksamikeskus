@@ -241,6 +241,23 @@ top: auto;
 bottom: 90px;
 }
 
+// stable affix position
+// http://coderguy.com/2013/06/18/twitter-bootstrap-affix-nav-tutorial.html
+  .body {
+  position: relative;
+}
+.affix {
+  width: inherit; //helped keep the content the same size on fluid layouts
+  position: fixed;
+  top: 50px;  //height of the nav
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;  //height of the footer
+}
+
 // #nav-wrapper.affix {
 //   position: fixed;
 //   top: 0;

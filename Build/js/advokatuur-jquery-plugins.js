@@ -4,10 +4,6 @@
 //Popover for help
   $('.glyphicon-info-sign').popover();
 
-  // $('.test-sidenav').scrollspy();
-
-  // $('#pagenav').affix();
-
   // $('.make-switch').bootstrapSwitch('toggleActivation');
 
 
@@ -19,8 +15,8 @@
 //hide some divs onload
 $(document).ready(function () {
   $('#register, #registered').hide();
-  // $('#test, #test-end, #written-start').hide();
-  $('#test-start, #test-end').hide();
+  $('#test, #test-end, #written-start').hide();
+  // $('#test-start, #test-end').hide(); to access test directly
  });
 
 //made by: Mari-Liis
@@ -45,21 +41,21 @@ $(document).on("click", "#js-login-id-button", function (e) {
   });
 });
 
-//registration page buttons actions
-// $(document).on("click", "#js-cancel-reg", function(e) {
-//   e.preventDefault();
-//   bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
-//     function(result) {
-//       if (result) {
-//       window.location.href='https://www.advokatuur.ee/est/avaleht';
-//       }
-//     });
-// });
-// $(document).on("click", "#js-confirm-reg", function(e) {
-//   $('#register').hide();
-//   $('.pagename h1').html('Registreerimise kinnitus');
-//   $('#registered').show();
-// });
+// registration page buttons actions
+$(document).on("click", "#js-cancel-reg", function(e) {
+  e.preventDefault();
+  bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
+    function(result) {
+      if (result) {
+      window.location.href='https://www.advokatuur.ee/est/avaleht';
+      }
+    });
+});
+$(document).on("click", "#js-confirm-reg", function(e) {
+  $('#register').hide();
+  $('.pagename h1').html('Registreerimise kinnitus');
+  $('#registered').show();
+});
 
 
 //confirmation page buttons actions

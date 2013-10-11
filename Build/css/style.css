@@ -11956,6 +11956,20 @@ header .pagename h1 {
   top: auto;
   bottom: 90px;
 }
+.body {
+  position: relative;
+}
+.affix {
+  width: inherit;
+  position: fixed;
+  top: 50px;
+}
+.affix-bottom {
+  width: inherit;
+  position: absolute;
+  top: auto;
+  bottom: 200px;
+}
 input.ng-dirty {
   background-color: #FA787E;
 }
