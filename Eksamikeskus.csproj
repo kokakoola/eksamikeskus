@@ -222,7 +222,7 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
-    <Content Include="_includes\_administrator\_admin-exams-MENU.html" />
+    <Content Include="_includes\_administrator\_adminmenu.html" />
     <Content Include="_includes\_administrator\_administrator_header.html" />
     <Content Include="_includes\_administrator\_settings_oral_exam_reminder.html" />
     <Content Include="_includes\_administrator\_settings_writing_reminder_notification.html" />
@@ -273,6 +273,7 @@
     <Content Include="_includes\_comission\_decision_staticform.html" />
     <Content Include="_includes\_comission\_decision_confirm.html" />
     <Content Include="_includes\_comission\_decision.html" />
+    <Content Include="_includes\_comission\_oral_exams.html" />
     <Content Include="_includes\_comission\_oral_exam_edit.html" />
     <Content Include="_includes\_comission\_oral_exam.html" />
     <Content Include="_includes\_comission\_user_exam.html" />
