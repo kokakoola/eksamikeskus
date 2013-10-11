@@ -91,7 +91,7 @@ $("#js-end-test").click(function(e){
 
 // Timer for Test Rules
 $('.countdown').downCount({
-    date: '10/10/2013 23:30:00',
+    date: '10/12/2013 23:30:00',
     offset: +3
 }, function () {
     bootbox.alert('Aitäh, eksamiks ettenähtud aeg on läbi!');
@@ -153,6 +153,13 @@ function decreaseCount(id) {
 	var value = $(id).text();
 	value = value - 1;
 	$(id).text(value);
+}
+
+function resetValues() {
+	$('#etla').text(5); $('#etls').text(1); $('#etl').text(4);
+	$('#etqa').text(5); $('#etqs').text(3); $('#etq').text(4);
+	$('#ewa').text(5); $('#ews').text(1); $('#ew').text(4);
+	$('#oela').text(10); $('#oel').text(9);
 }
 
 $('.date').datepicker();
