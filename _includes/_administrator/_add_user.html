@@ -3,7 +3,15 @@
     <br />
     <br />
     <br />
-
+    <script>
+      
+        $(function () {
+           
+                    $("#inputDate").prop('disabled', $('#radios-0').is(':checked'));
+                    $("#selectbasicDisable").prop('disabled', $('#radios-0').is(':checked'));
+               
+            });
+    </script>
     <ul class="breadcrumb">
         <li><a href="#user-list">Kasutajate nimekiri</a> <span class="divider">/</span></li>
         <li class="active">Kasutaja lisamine</li>
@@ -43,19 +51,19 @@
                 <label class="control-label" for="radios">Roll</label>
                 <div class="controls">
                     <label class="radio" for="radios-0">
-                        <input type="radio" name="radios" id="radios-0" value="Eksamineeritav" checked="checked">
+                        <input type="radio" name="radios" id="radios-0" value="Eksamineeritav" checked="checked" onclick="handleRadiobuttonClick();">
                         Eksamineeritav
                     </label>
                     <label class="radio" for="radios-1">
-                        <input type="radio" name="radios" id="radios-1" value="Advokatuuri kantselei töötaja">
+                        <input type="radio" name="radios" id="radios-1" value="Advokatuuri kantselei töötaja" onclick="handleRadiobuttonClick();">
                         Advokatuuri kantselei töötaja
                     </label>
                     <label class="radio" for="radios-2">
-                        <input type="radio" name="radios" id="radios-2" value="Kutsesobivuskomisjoni liige">
+                        <input type="radio" name="radios" id="radios-2" value="Kutsesobivuskomisjoni liige" onclick="handleRadiobuttonClick();">
                         Kutsesobivuskomisjoni liige
                     </label>
                     <label class="radio" for="radios-3">
-                        <input type="radio" name="radios" id="radios-3" value="Administraator">
+                        <input type="radio" name="radios" id="radios-3" value="Administraator" onclick="handleRadiobuttonClick();">
                         Administraator
                     </label>
                 </div>
@@ -65,8 +73,9 @@
             <div class="control-group">
                 <label class="control-label" for="selectbasic">Eksami liik</label>
                 <div class="controls">
-                    <select id="selectbasic" name="selectbasic" class="input-xlarge">
-                        <option>--vali--</option>
+                    <select id="selectbasicDisable" name="selectbasic" class="input-xlarge">
+                        <option>Vandeadvokaadi abi eksam</option>
+                        <option>Vandeadvokaadi eksam</option>
                     </select>
                 </div>
             </div>
@@ -75,7 +84,7 @@
                     <label class="control-label" for="inputDecisionDate">Juhatuse otsuse kuupäev</label>
                     <div class="controls">
                          <div class="input-append date" id="dp3" data-date="08.10.2013" data-date-format="dd.mm.yyyy">
-				            <input class="input-xlarge" size="16" type="text" value="08.10.2013">
+				            <input class="input-xlarge" size="16" type="text" id = "inputDate" value="08.10.2013">
 				            <span class="add-on"><i class="glyphicon glyphicon-calendar"></i></span>
 			              </div>
                     </div>
