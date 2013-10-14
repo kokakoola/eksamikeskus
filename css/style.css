@@ -12022,6 +12022,18 @@ input.ng-dirty {
   text-align: left;
   line-height: 1.55;
 }
+#writtentext-accordion-collapse1 {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+#writtentext-accordion-collapse2 {
+  max-height: 400px;
+}
+#writtentext-accordion-collapse2 .js-textarea.wysihtml5-editor body {
+  width: 100%;
+  overflow-y: scroll;
+  border: none;
+}
 @-ms-viewport {
   width: device-width;
 }

@@ -9,13 +9,31 @@
 
 //Call external plugins
 //****************
+// Textarea plugin
+$('.js-textarea').wysihtml5({
+  "image": false
+});
 
+wideArea();
+
+$(document).ready(function() {
+    var text_max = 50000;
+    $('#textarea_feedback').html('Jäänud on ' + text_max + ' tähemärki');
+
+    $('#writtentextarea').keyup(function() {
+        var text_length = $('#writtentextarea').val().length;
+        var text_remaining = text_max - text_length;
+
+        $('#textarea_feedback').html('Jäänud on ' + text_remaining + ' tähemärki');
+    });
+});
  //bootstrap-modal + bootbox alert
 
 //hide some divs onload
 $(document).ready(function () {
   $('#register, #registered').hide();
   $('#test, #test-end, #written-start').hide();
+
   // $('#test-start, #test-end').hide(); to access test directly
  });
 
@@ -41,24 +59,6 @@ $(document).on("click", "#js-login-id-button", function (e) {
   });
 });
 
-$('.js-textarea').wysihtml5({
-  "image": false
-});
-//registration page buttons actions
-// $(document).on("click", "#js-cancel-reg", function(e) {
-//   e.preventDefault();
-//   bootbox.confirm("Registreerimine katkestatud. Oled kindel et soovid lõpetada?",
-//     function(result) {
-//       if (result) {
-//       window.location.href='https://www.advokatuur.ee/est/avaleht';
-//       }
-//     });
-// });
-// $(document).on("click", "#js-confirm-reg", function(e) {
-//   $('#register').hide();
-//   $('.pagename h1').html('Registreerimise kinnitus');
-//   $('#registered').show();
-// });
 // registration page buttons actions
 $(document).on("click", "#js-cancel-reg", function(e) {
   e.preventDefault();
@@ -97,6 +97,26 @@ $("#js-end-test").click(function (e) {
     });
 });
 
+//writtentest page buttons actions
+$("#js-cancel-writtentest").click(function (e) {
+  e.preventDefault();
+  bootbox.confirm("Oled kindel, et soovid eksami katkestada? Tulemusi ei salvestata. Kui soovid pausi teha ja hiljem eksamit jätkata, salvesta tekst ja logi ülamenüüst välja.",
+      function (result) {
+      if (result) {
+              window.location.href = 'https://www.advokatuur.ee/est/avaleht';
+      }
+    });
+});
+
+$("#js-confirm-writtentest").click(function (e) {
+  e.preventDefault();
+  bootbox.confirm("Oled kindel, et soovid kaasuse esitada? Peale esitamist pole enam võimalik teksti muuta ja kirjalik eksam on lõpetatud.",
+      function (result) {
+      if (result) {
+              $('#written-test').hide(); $('.pagename h1').hide(); $('#written-test-end').show();
+      }
+    });
+});
 
 // <!--                 <a id="login" href="#" onclick="$('#login-box').slideToggle();
 //                 return false;">
