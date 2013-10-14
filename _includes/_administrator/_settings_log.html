@@ -4,10 +4,43 @@
     <br />
     <br />
 
-    <form class="form-inline">
+    <form class="form-horizontal">
         <fieldset>
             <!-- Form Name -->
             <legend>Logi</legend>
+            <div class="row">
+                <div class="span5">
+                    <div class="control-group">
+                        <label class="control-label" for="inputDecisionDate">Kuupäev</label>
+                        <div class="controls">
+                            <div class="input-append date" id="dp3" data-date="08.10.2013" data-date-format="dd.mm.yyyy">
+                                <input class="input-large" size="16" type="text" id="inputDate" value="08.10.2013">
+                                <span class="add-on"><i class="glyphicon glyphicon-calendar"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Text input-->
+                <div class="span4">
+                    <div class="control-group">
+
+                        <label class="control-label" for="textinput2">Kasutaja</label>
+
+                        <div class="controls">
+                            <input id="textinput" name="textinput2" type="text" placeholder="Kasutaja" class="input-medium">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="span1 offset6 pull-right">
+
+                    <a class="btn btn-primary" href="#settings-log">Otsi</a>
+                </div>
+                <br />
+                <br />
+            </div>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -28,19 +61,18 @@
                         </td>
                         <td>Aadu Aas
                         </td>
+                        <tr>
+                            <td>02.xx.xxxx</td>
+                            <td>00:00
+                            </td>
+                            <td>Kasutaja Aadu Aas loomine
+                            </td>
+                            <td>
+                            Administraator1
+                        </tr>
                     <tr>
                         <td>02.xx.xxxx</td>
-                        <td>
-                            00:00
-                        </td>
-                        <td>Kasutaja Aadu Aas loomine
-                        </td>
-                        <td>Administraator1
-                    </tr>
-                    <tr>
-                        <td>02.xx.xxxx</td>
-                        <td>
-                            00:00
+                        <td>00:00
                         </td>
                         <td>Eksamiküsimuse sisestamineTere
                         </td>
