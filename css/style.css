@@ -11806,12 +11806,12 @@ a.thumbnail:focus {
 -------------------------------------------------- */
 /* Wrapper for page content to push down footer */
 #wrap {
-  min-height: 100
+  min-height: 100%;
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
 
-  margin: 0 auto -60px;
+  margin: 0 auto -70px;
 }
 /* Set the fixed height of the footer here */
 #push,
@@ -12033,6 +12033,9 @@ input.ng-dirty {
   width: 100%;
   overflow-y: scroll;
   border: none;
+}
+.widearea-wrapper {
+  width: 100%!important;
 }
 @-ms-viewport {
   width: device-width;

@@ -14,8 +14,10 @@ $('.js-textarea').wysihtml5({
   "image": false
 });
 
+// It is conflicting with the textarea plugin. http://usablica.github.io/widearea/
 wideArea();
 
+// Max length chars http://jsfiddle.net/timur/47a7A/
 $(document).ready(function() {
     var text_max = 50000;
     $('#textarea_feedback').html('Jäänud on ' + text_max + ' tähemärki');
@@ -33,8 +35,7 @@ $(document).ready(function() {
 $(document).ready(function () {
   $('#register, #registered').hide();
   $('#test, #test-end, #written-start').hide();
-
-  // $('#test-start, #test-end').hide(); to access test directly
+  $('#test-start, #test-end').hide();
  });
 
 //made by: Mari-Liis
