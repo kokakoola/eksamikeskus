@@ -42,6 +42,7 @@ $(document).on("click", "#js-login-id-button", function (e) {
 });
 
 $('.js-textarea').wysihtml5({
+<<<<<<< HEAD
     "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
     "emphasis": true, //Italics, bold, etc. Default true
     "lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
@@ -49,6 +50,9 @@ $('.js-textarea').wysihtml5({
     "link": false, //Button to insert a link. Default true
     "image": false, //Button to insert an image. Default true,
     "color": false //Button to change color of font  
+=======
+  "image": false
+>>>>>>> 92216b60ae99ec732778748c39b5e4a4678fa929
 });
 //registration page buttons actions
 // $(document).on("click", "#js-cancel-reg", function(e) {
