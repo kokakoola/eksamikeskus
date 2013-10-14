@@ -157,7 +157,7 @@ $().ready(function () {
 // Better selectbox
 $('.selectpicker').selectpicker();
 
-if (bindPages) {
+if (typeof bindPages !== 'undefined' && bindPages) {
     function showPage(id) {
         if (id && $(id).length > 0) {
             $('section:not(' + id + ')').hide();
