@@ -39,6 +39,7 @@
     <Content Include="css\style.css" />
     <Content Include="examinant-register.html" />
     <Content Include="examinant-test.html" />
+    <Content Include="examinant-written-test.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="img\banner_bg.png" />
     <Content Include="img\bg.png" />
@@ -229,6 +230,9 @@
     <Content Include="_includes\_administrator\_settings_writing_exam_info.html" />
     <Content Include="_includes\_administrator\_users_change_exam_info.html" />
     <Content Include="_includes\_administrator\_administrator_header.html" />
+    <Content Include="_includes\_administrator\_adminmenu.html" />
+    <Content Include="_includes\_administrator\_exam-question-add.html" />
+    <Content Include="_includes\_administrator\_exam-writings-confirm.html" />
     <Content Include="_includes\_administrator\_settings_oral_exam_reminder.html" />
     <Content Include="_includes\_administrator\_settings_writing_reminder_notification.html" />
     <Content Include="_includes\_administrator\_settings_writing_registration_notification.html" />
@@ -255,10 +259,11 @@
     <Content Include="_includes\_administrator\_users_exam_result.html" />
     <Content Include="_includes\_administrator\_users_list_deleted_aadu.html" />
     <Content Include="_includes\_administrator\_users_list_only_new_user.html" />
+    <Content Include="_includes\_administrator\_users_student_exam_info_canceled_registration.html" />
     <Content Include="_includes\_administrator\_user_list_added_user.html" />
     <Content Include="_includes\_administrator\_exam-add-exam.html" />
     <Content Include="_includes\_administrator\_exam-change-exam.html" />
-    <Content Include="_includes\_administrator\_exam-question-add.html" />
+    <Content Include="_includes\_administrator\_exam-question-confirm.html" />
     <Content Include="_includes\_administrator\_exam-test-list-search.html" />
     <Content Include="_includes\_administrator\_exam-test-list.html" />
     <Content Include="_includes\_administrator\_exam-test-questions-search.html" />
