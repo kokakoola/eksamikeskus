@@ -36,7 +36,7 @@ $(document).ready(function() {
 $(document).ready(function () {
   $('#register, #registered').hide();
   $(' #test-end, #written-start').hide();
-  $('#test-start, #test-end').hide();
+  $('#test, #test-end').hide();
  });
 
 //made by: Mari-Liis

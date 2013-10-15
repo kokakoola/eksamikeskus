@@ -12668,11 +12668,10 @@ a .icon-flip-vertical:before {
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
-  height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
 
-  margin: 0 auto -70px;
+  margin: 41px auto -50px;
 }
 /* Set the fixed height of the footer here */
 #push,
@@ -12897,6 +12896,18 @@ span.icon-button a {
 }
 .widearea-wrapper {
   width: 100%!important;
+}
+a.tip {
+  font-size: 120%;
+}
+.table-filter input,
+.table-filter .bootstrap-select {
+  margin-right: 20px;
+}
+table th {
+  text-transform: uppercase;
+  font-size: small;
+  color: #ABABAB;
 }
 @-ms-viewport {
   width: device-width;
