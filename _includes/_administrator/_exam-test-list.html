@@ -20,7 +20,7 @@
 
 						<label class="control-label " for="textinput1">Eksami toimumiskoht</label>
 
-						<div class="controls controls-row">
+						<div class="controls">
 							<input id="text1" name="textinput1" type="text" placeholder="Eksami toimumiskoht" class="input-medium">
 						</div>
 					</div>
@@ -49,15 +49,15 @@
                 <div class="controls">
                     <div class="input-prepend">
                          <a href="#exam-add-exam" class="btn">Lisa Eksam</a>
-                        <span class="add-on"><i class="glyphicon glyphicon-plus-sign"></i></span>
+                        <span class="add-on"><i class="icon-plus-sign"></i></span>
                     </div>
                 </div>
             </div>
 
-	<table class="table table-bordered">
+	<table class="table">
         <tr>
             <th>Eksami kuupäev</th>
-            <th>Kellaaeg</th>
+            <th>Kella- <br> aeg</th>
             <th>Toimumiskoht</th>
             <th>Testi kestvus</th>
 			<th>Kaasuse kestvus</th>
@@ -69,21 +69,19 @@
             <td>27.12.2013</td>
             <td>10:00</td>
             <td>
-				<ul class="nav nav-pills">
-					<li>Rävala pst 3, Tallinn ruum 2</li>
-					<li>Rävala pst 3, Tallinn ruum 3</li>
-				</ul>
+				Rävala pst 3, Tallinn ruum 2 <br>
+				Rävala pst 3, Tallinn ruum 3
+
             </td>
 			<td>90 minutit</td>
 			<td>360 minutit</td>
 			<td>60</td>
 			<td>27.09.2013</td>
             <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
-				  <li ><a href="#oral-exam-generated-list">Genereeri suulise eksami järjekord</a></li>
-				</ul>
+          <span class="icon-button"> <a class="tip icon-edit" href="#exam-change-exam" data-toggle="tooltip" title="Muuda"></a> </span>
+				  <span class="icon-button"><a class="tip icon-trash" onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')" data-toggle="tooltip" title="Kustuta"></a></span>
+				  <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" data-toggle="tooltip" title="Genereeri kirjaliku eksami küsimustik"></a></span>
+
             </td>
         </tr>
 		<tr>

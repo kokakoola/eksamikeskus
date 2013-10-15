@@ -3,6 +3,7 @@
 
 //Popover for help
   $('.glyphicon-info-sign').popover();
+  $('.tip').tooltip();
 
   // $('.make-switch').bootstrapSwitch('toggleActivation');
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
 //hide some divs onload
 $(document).ready(function () {
   $('#register, #registered').hide();
-  $('#test, #test-end, #written-start').hide();
+  $(' #test-end, #written-start').hide();
   $('#test-start, #test-end').hide();
  });
 

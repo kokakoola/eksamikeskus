@@ -44,7 +44,8 @@
 // Components: Misc
 @import "bootstrap-less/thumbnails.less";
 
-@import "bootstrap-less/glyphicons.less";
+// @import "bootstrap-less/glyphicons.less";
+@import "../fonts/font-awesome/less/font-awesome.less";
 
 // Utility classes
 @import "bootstrap-less/utilities.less"; // Has to be last to override when necessary
@@ -84,6 +85,17 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+}
+
+@font-face {
+  font-family: 'Elusive-Icons';
+  src:url('../fonts/elusive-iconfont-master/fonts/Elusive-Icons.eot');
+  src:url('../fonts/elusive-iconfont-master/fonts/Elusive-Icons.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/elusive-iconfont-master/fonts/Elusive-Icons.svg#Elusive-Icons') format('svg'),
+    url('../fonts/elusive-iconfont-master/fonts/Elusive-Icons.woff') format('woff'),
+    url('../fonts/elusive-iconfont-master/fonts/Elusive-Icons.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 //Needed if using fixed navbar 
@@ -189,11 +201,11 @@ background: url(img/menu_line.png) no-repeat right 11px;
 }
 
 .search {
-position: absolute;
-top: 108px;
-right: 2px;
-height: 38px;
-width: 337px;
+  position: absolute;
+  top: 108px;
+  right: 2px;
+  height: 38px;
+  width: 337px;
   input {
   width: 280px;
   height: 38px;
@@ -223,22 +235,18 @@ position: relative;
   border-radius: 0;
 }
 
-.test-sidenav {
-width: 228px;
-margin: 30px 0 0;
-padding: 0;
--webkit-border-radius: 6px;
--moz-border-radius: 6px;
-border-radius: 6px;
--webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
--moz-box-shadow: 0 1px 4px rgba(0,0,0,.065);
-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-}
-
-.test-sidenav.affix-bottom {
-position: absolute;
-top: auto;
-bottom: 90px;
+span.icon-button {
+  margin-top: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  a {
+  padding: 8px 10px;
+  font-size: 120%;
+  text-decoration: none;
+  }
 }
 
 // stable affix position
@@ -248,6 +256,7 @@ bottom: 90px;
 }
 .affix {
   width: inherit; //helped keep the content the same size on fluid layouts
+  padding: inherit;
   position: fixed;
   top: 50px;  //height of the nav
 }
@@ -255,28 +264,13 @@ bottom: 90px;
   width: inherit;
   position: absolute;
   top: auto;
-  bottom: 200px;  //height of the footer
+  bottom: 70px;  //height of the footer
 }
 
-// #nav-wrapper.affix {
-//   position: fixed;
-//   top: 0;
-//   margin: 0 auto;
-//   left: 0;
-//   right: 0;
-// }
-
-input.ng-dirty {
-        background-color: #FA787E;
-      }
-
-#pagenav {
-  padding: 30px;
-}
-
-#test .pagination ul > li  {
-line-height: 36px;
-width: 30px;
+#test .pagination ul > li > a {
+padding: 5px 5px;
+text-align: center;
+width: 20px;
 }
 
 #test .pagination ul > .visited > a {
@@ -287,11 +281,6 @@ color: #fff;
 #test .pagination ul > .flagged > a {
 background-color: #F87D1C;
 color: #fff;
-}
-
-.testquestion:hover {
-  
-
 }
 
 #test .form-horizontal .control-label {
@@ -324,7 +313,6 @@ margin-left: 40px;
 .bar {
     z-index: 1;
     position: absolute;
-
 }
 
 .progress span {
@@ -355,13 +343,7 @@ margin-left: 40px;
 .widearea-wrapper {
   width: 100%!important;
 }
-// .ng-pristine label{
-//   color: red;
-// }
 
-// .ng-dirty label{
-//   color: green;
-// }
 
 
 
@@ -374,26 +356,6 @@ margin-left: 40px;
 //     -o-border-radius: 0;
 // }
 
-
-// dynamic numbering example
-//  body {
-//         counter-reset: h2counter;
-//     }
-
-// legend {
-//         counter-reset: h2counter;
-//     }
-
-// legend:before {
-//         content: counter(h2counter) ".\0000a0\0000a0";
-//         counter-increment: h2counter;
-//         counter-reset: h3counter;
-//     }
-
-//  label.control-label:before {
-//         content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-//         counter-increment: h3counter;
-//     }
 
 // RESPONSIVE CLASSES
 // ------------------
