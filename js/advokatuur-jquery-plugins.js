@@ -2,7 +2,7 @@
 //*****************
 
 //Popover for help
-  $('.glyphicon-info-sign').popover();
+  $('.icon-info-sign').popover();
   $('.tip').tooltip();
 
   // $('.make-switch').bootstrapSwitch('toggleActivation');
