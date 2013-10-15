@@ -286,6 +286,7 @@
     <Content Include="_includes\_comission\_decision.html" />
     <Content Include="_includes\_comission\_oral-exam-list-search.html" />
     <Content Include="_includes\_comission\_oral-exam-list.html" />
+    <Content Include="_includes\_comission\_oral_exams.html" />
     <Content Include="_includes\_comission\_oral_exam_edit.html" />
     <Content Include="_includes\_comission\_oral_exam.html" />
     <Content Include="_includes\_comission\_user_exam.html" />
