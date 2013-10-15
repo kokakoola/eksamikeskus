@@ -191,7 +191,7 @@
         createA: function(text, classes, inline) {
             return '<a tabindex="0" class="'+classes+'" style="'+inline+'">' +
                  text +
-                 '<i class="glyphicon glyphicon-ok icon-ok check-mark"></i>' +
+                 '<i class="icon-ok icon-ok check-mark"></i>' +
                  '</a>';
         },
 
