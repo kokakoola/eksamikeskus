@@ -13196,6 +13196,7 @@ a .icon-flip-vertical:before {
 /* Wrapper for page content to push down footer */
 #wrap {
   min-height: 100%;
+  height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
 
@@ -13439,6 +13440,9 @@ table th {
   text-transform: uppercase;
   font-size: small;
   color: #ABABAB;
+}
+td.narrow {
+  width: 4%;
 }
 .make-switch.has-switch {
   height: 30px;

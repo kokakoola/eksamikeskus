@@ -1,0 +1,102 @@
+<!-- #include file="_includes/_head.html" -->
+<!-- #include file="_includes/_header.html" -->
+<!-- @include _includes/_head -->
+<!-- @include _includes/_header -->
+
+<div id="wrap">
+  <div class="container">
+    <div class="row">
+    <div class="pagename"><h1>Komponendid</h1></div>
+
+<section >
+<!--     <ul class="breadcrumbs clearfix">
+        <li class="active">Kasutajad</li>
+    </ul> -->
+    <form class="form-inline">
+        <fieldset>
+            <div class="well table-filter">
+                <label for="textinput1">Nimi</label>
+                <input id="text1" name="textinput1" type="text" >
+
+                <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                    <option>Roll valimata</option>
+                    <option>Eksamineeritav</option>
+                    <option>Administraator</option>
+                    <option>Kutsesobivuskomisjoni liige</option>
+                    <option>Advokatuuri kantselei töötaja</option>
+                </select>
+                <select id="select1" name="select1" class="selectpicker show-tick">
+                    <option>Aktiivsus valimata</option>
+                    <option>Aktiivne</option>
+                    <option>Mitteaktiivne</option>
+                </select>
+                <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
+            </div>
+            <div class="row">
+                <div class="span4">
+                    <small>Kokku kasutajaid 2</small>
+                </div>
+                <div class=" pull-right">
+                    <a  href="#add-user" class="btn btn-primary"> <i class="icon-plus-sign">  Lisa kasutaja  </i>
+                    </a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <table class="table sortable">
+        <thead>
+            <tr class="sort">
+                <th data-sortkey="0">Eesnimi</th>
+                <th data-sortkey="1">Perekonnanimi</th>
+                <th data-sortkey="2">Roll</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aadu</td>
+                <td>Aas</td>
+                <td>Eksamineeritav</td>
+                <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+                </td>
+                <td>
+                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+                </td>
+                <td>
+                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mait</td>
+                <td>Metsanurk</td>
+                <td>Administraator</td>
+                <td class="narrow">
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+      <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
+          <input type="checkbox" checked>
+      </div>
+
+    </div>
+</section>
+        
+
+    </div>
+  </div>
+  <div id="push"></div>
+</div>
+<!-- #include file="_includes/_footer.html" -->
+<!-- @include _includes/_footer -->
