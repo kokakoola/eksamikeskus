@@ -51,6 +51,7 @@
 @import "bootstrap-less/utilities.less"; // Has to be last to override when necessary
 
 // Vendor
+@import "bootstrap-switch.less";
 
 /* Sticky footer styles http://getbootstrap.com/2.3.2/examples/sticky-footer-navbar.html
 -------------------------------------------------- */
@@ -321,7 +322,7 @@ margin-left: 40px;
     z-index: 2;
     color: #fff; // You might need to change it
     text-align: left;
-    line-height: 1.55;
+    line-height: 1.55; 
 
 }
 
@@ -353,11 +354,35 @@ a.tip {
   margin-right: 20px;
 }
 
+.table-filter .input-append input {
+  margin-right: 0;
+}
 table th {
   text-transform: uppercase;
   font-size: small;
   color: #ABABAB;
 }
+
+.make-switch.has-switch {
+  height: 30px;
+}
+
+.datepicker > div {
+  padding: 15px!important;
+}
+
+.tab-pane table tr th {
+  border-top: none;
+  padding-top: 0;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], 
+input[type="datetime-local"], input[type="date"], input[type="month"], 
+input[type="time"], input[type="week"], input[type="number"], input[type="email"], 
+input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  min-height: 30px!important;
+}
+
 
 // #nav > .navbar-inner {
 //     border-left: 0;

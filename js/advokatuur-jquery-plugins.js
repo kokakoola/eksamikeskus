@@ -5,9 +5,6 @@
   $('.icon-info-sign').popover();
   $('.tip').tooltip();
 
-  // $('.make-switch').bootstrapSwitch('toggleActivation');
-
-
 //Call external plugins
 //****************
 // Textarea plugin

@@ -1,5 +1,4 @@
 
-<body>
     <header>
         <div class="navbar navbar-inverse navbar-fixed-top" style="height: 23px;">
             <div class="navbar-inner">
@@ -10,8 +9,18 @@
                                 <a href="/est">EKSAMIKESKKOND</a>
                             </li>
                             <li><a href="#user-list">Kasutajad</a></li>
-                            <li><a href="#exam-test-list">Eksamid</a></li>
-
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    href="#">Eksamid <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#exam-test-list">Kirjalik eksam</a></li>
+                                    <li><a href="#oral-exam-list">Suuline eksam</a></li>
+                                    <li><a href="#exam-test-questions">Testi küsimused</a></li>
+                                    <li><a href="#exam-writings">Kaasusülesanded</a></li>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle"
                                     data-toggle="dropdown"
@@ -30,7 +39,7 @@
 
                         <ul class="nav head-nav pull-right">
                             <li><a href="#">Administraator Leo Kikerpuu</a></li>
-                            <li><a class="tip icon-signout" href="#" data-toggle="tooltip" data-original-title="Välju" data-placement="bottom"></a></li>
+                            <li><a class="tip icon-off" href="#" data-toggle="tooltip" data-original-title="Välju" data-placement="bottom"></a></li>
                         </ul>
                     </div>
                     <!--/.nav-collapse -->
