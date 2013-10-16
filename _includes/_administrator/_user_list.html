@@ -23,38 +23,55 @@
                 <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
             </div>
             <div class="row">
-                <div class="input-prepend pull-right">
-                    <a type="button" href="#add-user" class="btn ">Lisa kasutaja  <i class="icon-plus-sign"></i>
+                <div class="span4">
+                    <small>Kokku kasutajaid 2</small>
+                </div>
+                <div class=" pull-right">
+                    <a  href="#add-user" class="btn btn-primary"> <i class="icon-plus-sign">  Lisa kasutaja  </i>
                     </a>
                 </div>
             </div>
         </fieldset>
     </form>
-    <small class="pull-right">Kokku kasutajaid 2</small>
-    <table class="table">
-        <tr class="sort">
-            <th>Eesnimi</th>
-            <th>Perekonnanimi</th>
-            <th>Roll</th>
-            <th></th>
-        </tr>
-        <tr>
-            <td>Aadu</td>
-            <td>Aas</td>
-            <td>Eksamineeritav</td>
-            <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
-                <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
-            </td>
-        </tr>
-        <tr>
-            <td>Mait</td>
-            <td>Metsanurk</td>
-            <td>Administraator</td>
-            <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
-                <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
-            </td>
-        </tr>
+
+    <table class="table sortable">
+        <thead>
+            <tr class="sort">
+                <th data-sortkey="0">Eesnimi</th>
+                <th data-sortkey="1">Perekonnanimi</th>
+                <th data-sortkey="2">Roll</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aadu</td>
+                <td>Aas</td>
+                <td>Eksamineeritav</td>
+                <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+                </td>
+                <td>
+                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+                </td>
+                <td>
+                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mait</td>
+                <td>Metsanurk</td>
+                <td>Administraator</td>
+                <td class="narrow">
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                </td>
+            </tr>
+        </tbody>
     </table>
 </section>
