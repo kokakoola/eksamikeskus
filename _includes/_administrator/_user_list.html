@@ -1,103 +1,42 @@
 <section id="user-list">
-    <!--breadcrumbs -->
-    <ul class="breadcrumbs clearfix">
+<!--     <ul class="breadcrumbs clearfix">
         <li class="active">Kasutajad</li>
-    </ul>
-
+    </ul> -->
     <form class="form-inline">
         <fieldset>
-            <!-- Text input-->
             <div class="well table-filter">
                 <label for="textinput1">Nimi</label>
                 <input id="text1" name="textinput1" type="text" >
 
-                <select id="selectbasic" name="selectbasic" class="selectpicker">
+                <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
                     <option>Roll valimata</option>
                     <option>Eksamineeritav</option>
                     <option>Administraator</option>
                     <option>Kutsesobivuskomisjoni liige</option>
                     <option>Advokatuuri kantselei töötaja</option>
                 </select>
-                <select id="select1" name="select1" class="selectpicker">
+                <select id="select1" name="select1" class="selectpicker show-tick">
                     <option>Aktiivsus valimata</option>
                     <option>Aktiivne</option>
                     <option>Mitteaktiivne</option>
                 </select>
                 <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
             </div>
- <!--            <div class="row">
-                <div class="span4">
-                    <div class="control-group">
-
-                        <label class="control-label" for="textinput1">Eesnimi        </label>
-                        <div class="controls">
-                            <input id="text1" name="textinput1" type="text" placeholder="Nimi" class="input-medium">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="span4">
-                    <div class="control-group">
-
-                        <label class="control-label" for="textinput2">Perekonnanimi</label>
-
-                        <div class="controls">
-                            <input id="textinput" name="textinput2" type="text" placeholder="Perekonnanimi" class="input-medium">
-                        </div>
-                    </div>
-                </div>
-                <div class="span4">
-                    <div class="control-group">
-                        <label class="control-label" for="selectbasic">Roll</label>
-                        <div class="controls">
-                            <select id="selectbasic" name="selectbasic" class="input-medium">
-                                <option>--Vali--</option>
-                                <option>Eksamineeritav</option>
-                                <option>Administraator</option>
-                                <option>Kutsesobivuskomisjoni liige</option>
-                                <option>Advokatuuri kantselei töötaja</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <div class="row">
-                    <div class="span4">
-
-                        <div class="control-group">
-                            <label class="control-label">Aktiivne</label>
-                            <div class="controls">
-                                <select id="select1" class="input-medium">
-                                    <option>--Vali--</option>
-                                    <option>Jah</option>
-                                    <option>Ei</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span1 offset6 pull-right">
-
-                        <a class="btn btn-primary" href="#user-list">Otsi</a>
-                    </div>
-                </div> -->
-         
             <div class="row">
-
-                        <div class="input-prepend pull-right">
-                            <a type="button" href="#add-user" class="btn ">Lisa kasutaja  <i class="icon-plus-sign"></i>
-                            </a>
-                        </div>
-
+                <div class="input-prepend pull-right">
+                    <a type="button" href="#add-user" class="btn ">Lisa kasutaja  <i class="icon-plus-sign"></i>
+                    </a>
+                </div>
             </div>
         </fieldset>
     </form>
-    <small class="pull-right">Kokku: 1 kirje(t)</small>
+    <small class="pull-right">Kokku kasutajaid 2</small>
     <table class="table">
         <tr class="sort">
             <th>Eesnimi</th>
             <th>Perekonnanimi</th>
             <th>Roll</th>
-            <th>Tegevus</th>
+            <th></th>
         </tr>
         <tr>
             <td>Aadu</td>
@@ -105,7 +44,8 @@
             <td>Eksamineeritav</td>
             <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
                 <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></td></span>
+                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+            </td>
         </tr>
         <tr>
             <td>Mait</td>
@@ -113,10 +53,8 @@
             <td>Administraator</td>
             <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
                 <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></td></span>
+                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+            </td>
         </tr>
     </table>
-    
-    
-
 </section>

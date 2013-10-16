@@ -1,18 +1,14 @@
 <section id="change-user">
-    <!--breadcrumbs -->
-    <br />
-    <br />
-    <br />
 
-    <ul class="breadcrumbs">
-        <li><a href="#user-list">Kasutajate nimekiri</a> <span class="divider">/</span></li>
+    <ul class="breadcrumbs clearfix">
+        <li><a href="#user-list">Kasutajad</a> <span class="divider">/</span></li>
         <li class="active">Kasutaja muutmine</li>
     </ul>
     <form class="form-horizontal">
         <fieldset>
 
             <!-- Form Name -->
-            <legend>Kasutaja lisamine</legend>
+            <legend>Kasutaja muutmine</legend>
 
             <!-- Text input-->
             <div class="control-group">
@@ -39,7 +35,7 @@
             </div>
 
             <!-- Multiple Radios -->
-            <div class="control-group">
+<!--             <div class="control-group">
                 <label class="control-label" for="radios">Roll</label>
                 <div class="controls">
                     <label class="radio" for="radios-0">
@@ -59,13 +55,25 @@
                         Administraator
                     </label>
                 </div>
+            </div> -->
+
+            <div class="control-group">
+                <label class="control-label" for="selectbasic">Roll</label>
+                <div class="controls">
+                    <select id="selectbasicDisable" name="selectbasic" class="selectpicker show-tick">
+                        <option>Eksamineeritav</option>
+                        <option>Advokatuuri kantselei töötaja</option>
+                        <option>Kutsesobivuskomisjoni liige</option>
+                        <option>Administraator</option>
+                    </select>
+                </div>
             </div>
 
             <!-- Select Basic -->
             <div class="control-group">
-                <label class="control-label" for="selectbasic">Eksami liik</label>
+                <label class="control-label" for="selectbasic1">Eksami liik</label>
                 <div class="controls">
-                    <select id="selectbasicDisable" name="selectbasic" class="input-xlarge">
+                    <select id="selectbasicDisable1" name="selectbasic1" class="selectpicker show-tick">
                         <option>Vandeadvokaadi abi eksam</option>
                         <option>Vandeadvokaadi eksam</option>
                     </select>
@@ -73,26 +81,25 @@
             </div>
 
             <div class="control-group">
-
                     <label class="control-label" for="inputDecisionDate">Juhatuse otsuse kuupäev</label>
                     <div class="controls">
                          <div class="input-append date" id="dp3" data-date="08.10.2013" data-date-format="dd.mm.yyyy">
 				            <input class="input-xlarge" size="16" type="text" value="08.10.2013">
 				            <span class="add-on"><i class="icon-calendar"></i></span>
 			              </div>
-
                     </div>
                 </div>
             <!-- Multiple Checkboxes (inline) -->
             <div class="control-group">
-                <label class="control-label" for="checkboxes"></label>
+                <label class="control-label" for="selectbasic">Aktiivne</label>
                 <div class="controls">
-                    <label class="checkbox inline" for="checkboxes-0">
-                        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="Aktiivne kasutaja">
-                        Aktiivne kasutaja
-                    </label>
+                    <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
+                        <input type="checkbox" checked>
+                    </div>
                 </div>
             </div>
+
+            <hr>
 
             <!-- Button (Double) -->
             <div class="control-group">
