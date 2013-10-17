@@ -7,8 +7,7 @@
     <div class="pagename">
         <h2>Kaasusülesanded</h2>
     </div>
-
-
+    
     <form class="form-inline">
         <fieldset>
             <div class="well">
@@ -54,7 +53,8 @@
                 <th>Kaasuseülesande nr</th>
                 <th>Kaasuse valdkond</th>
                 <th>Staatus</th>
-                <th>Tegevus</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -63,11 +63,11 @@
                 <td>Kaasusülesanne 1</td>
                 <td>Eraõigus ja tsiviilkohtumenetlus</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#exam-writings-change">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#ew')">Kustuta</a></li>
-                    </ul>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#exam-writings-change" data-toggle="tooltip" title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -75,11 +75,11 @@
                 <td>Kaasusülesanne 2</td>
                 <td>Riigi põhikord, avalik õigus ja halduskohtumenetlus</td>
                 <td>Mitte Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#exam-writings-disabled">Vaata</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#ew')">Kustuta</a></li>
-                    </ul>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-eye-open" href="#exam-writings-disabled" data-toggle="tooltip" title="Vaata"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -87,11 +87,11 @@
                 <td>Kaasusülesanne 3</td>
                 <td>Karistusõigus ja kriminaalmenetlus</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#exam-writings-change">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#ew')">Kustuta</a></li>
-                    </ul>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#exam-writings-change" data-toggle="tooltip" title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -99,11 +99,11 @@
                 <td>Kaasusülesanne 4</td>
                 <td>Karistusõigus ja kriminaalmenetlus</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#exam-writings-change">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#ew')">Kustuta</a></li>
-                    </ul>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#exam-writings-change" data-toggle="tooltip" title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>

@@ -52,7 +52,8 @@
                 <th>Küsimuse valdkond</th>
                 <th>Testi küsimus</th>
                 <th>Staatus</th>
-                <th>Tegevus</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -61,23 +62,24 @@
                 <td>Eraõigus ja tsiviilkohtumenetlus</td>
                 <td>Käsipant, samuti õiguste pant lõpeb</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#test-change-test">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-                    </ul>
+                 <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
                 </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                </td>
+
             </tr>
             <tr>
                 <td>2</td>
                 <td>Eraõigus ja tsiviilkohtumenetlus</td>
                 <td>Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#test-change-test">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-                    </ul>
+                 <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -85,11 +87,11 @@
                 <td>Riigi põhikord, avalik õigus ja halduskohtumenetlus</td>
                 <td>Euroopa Inimõiguste Kohus jätab läbi vaatamata individuaalkaebusei</td>
                 <td>Aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#test-change-test">Muuda</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-                    </ul>
+                 <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -97,11 +99,11 @@
                 <td>Karistusõigus ja kriminaalmenetlus</td>
                 <td>Kriminaalmenetlust võib alustada</td>
                 <td>Mitte aktiivne</td>
-                <td>
-                    <ul class="nav nav-pills">
-                        <li><a href="#test-disabled-test">Vaata</a></li>
-                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-                    </ul>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-eye-open" href="#test-disabled-test" data-toggle="tooltip" title="Vaata"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>
