@@ -2,158 +2,163 @@
 
 	<!-- #include file="_adminmenu.html" -->
 
-    <ul class="breadcrumbs clearfix">
-        <li><a href="#user-list">Eksamid</a> <span class="divider">/</span></li>
-        <li class="active">Kirjalikud eksamid</li>
-    </ul>
-    <div class="pagename">
-            <h2>Kirjalikud eksamid</h2>
-    </div>
-  <form class="form-inline">
-        <fieldset>
-            <div class="well">
-                <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                  <label class="control-label" for="dp3">Eksami kuupäev&nbsp;&nbsp;</label>
-                  <input class="span2" size="16" type="text" value="12-02-2012">
-                  <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-                </div>
-              <label class="control-label " for="textinput1">Toimumiskoht</label>
-              <input id="text1" name="textinput1" type="text" class="input-medium">
+	<ul class="breadcrumbs clearfix">
+		<li><a href="#user-list">Eksamid</a> <span class="divider">/</span></li>
+		<li class="active">Kirjalikud eksamid</li>
+	</ul>
+	<div class="pagename">
+		<h2>Kirjalikud eksamid</h2>
+	</div>
+	<form class="form-inline">
+		<fieldset>
+			<div class="well">
+				<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+					<label class="control-label" for="dp3">Eksami kuupäev&nbsp;&nbsp;</label>
+					<input class="span2" size="16" type="text" value="12-02-2012">
+					<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+				</div>
+				<label class="control-label " for="textinput1">Toimumiskoht</label>
+				<input id="text1" name="textinput1" type="text" class="input-medium">
 
-              <label class="control-label" for="textinput2">Kellaaeg</label>
-              <input id="textinput" name="textinput2" type="text" placeholder="10:00" class="input-medium">
+				<label class="control-label" for="textinput2">Kellaaeg</label>
+				<input id="textinput" name="textinput2" type="text" placeholder="10:00" class="input-medium">
 
 
-                <a class="btn btn-primary pull-right" href="#exam-test-list-search">Filtreeri</a>
-            </div>
-            <div class="row">
-                <div class="input-prepend pull-right">
-                    <a type="button" href="#exam-add-exam" class="btn ">Lisa eksam  <i class="icon-plus-sign"></i>
-                    </a>
-                </div>
-            </div>
-        </fieldset>
-    </form>
+				<a class="btn btn-primary pull-right" href="#exam-test-list-search">Filtreeri</a>
+			</div>
+			<div class="row">
+				<div class="input-prepend pull-right">
+					<a type="button" href="#exam-add-exam" class="btn ">Lisa eksam  <i class="icon-plus-sign"></i>
+					</a>
+				</div>
+			</div>
+		</fieldset>
+	</form>
 
-	<table class="table">
-
-        <tr>
-            <th>Eksami kuupäev</th>
-            <th>Kella- <br> aeg</th>
-            <th>Toimumiskoht</th>
-            <th>Testi kestvus</th>
-			<th>Kaasuse kestvus</th>
-			<th>Max osalejate arv</th>
-			<th>Reg. lõppkuupäev</th>
-			<th></th>
-		</tr>
-		  <tr>
-            <td>27.12.2013</td>
-            <td>10:00</td>
-            <td>
-				<ul class="nav nav-pills">
-					<li>Rävala pst 3, Tallinn ruum 2</li>
-					<li>Rävala pst 3, Tallinn ruum 3</li>
-				</ul>
-            </td>
-			<td>90 minutit</td>
-			<td>360 minutit</td>
-			<td>60</td>
-			<td>27.09.2013</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etls')">Kustuta</a></li>
-				  <li ><a href="#oral-exam-generated-list">Genereeri suulise eksami järjekord</a></li>
-				</ul>
-            </td>
-        </tr>
-        <tr>
-            <td>27.12.2013</td>
-            <td>10:00</td>
-            <td>
-				Rävala pst 3, Tallinn ruum 2 <br>
-				Rävala pst 3, Tallinn ruum 3
-
-            </td>
-			<td>90 minutit</td>
-			<td>360 minutit</td>
-			<td>60</td>
-			<td>27.09.2013</td>
-            <td>
-          <span class="icon-button"> <a class="tip icon-edit" href="#exam-change-exam" data-toggle="tooltip" title="Muuda"></a> </span>
-				  <span class="icon-button"><a class="tip icon-trash" onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')" data-toggle="tooltip" title="Kustuta"></a></span>
-				  <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" data-toggle="tooltip" title="Genereeri kirjaliku eksami küsimustik"></a></span>
-
-            </td>
-        </tr>
-		<tr>
-            <td>27.01.2013</td>
-            <td>10:00</td>
-            <td>
-				<ul class="nav nav-pills">
-					<li>Rävala pst 3, Tallinn ruum 2</li>
-					<li>Rävala pst 3, Tallinn ruum 3</li>
-				</ul>
-            </td>
-			<td>90 minutit</td>
-			<td>360 minutit</td>
-			<td>60</td>
-			<td>27.12.2013</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
-				  <li><a href="#myModal1" role="button"  data-toggle="modal">Genereeri kirjaliku eksami küsimustik</a></li>
-				</ul>
-            </td>
-        </tr>
+	<table class="table sortable">
+		<thead>
 			<tr>
-            <td>27.07.2013</td>
-            <td>10:00</td>
-            <td>
-				<ul class="nav nav-pills">
-					<li>Rävala pst 3, Tallinn ruum 2</li>
-					<li>Rävala pst 3, Tallinn ruum 3</li>
-				</ul>
-            </td>
-			<td>90 minutit</td>
-			<td>360 minutit</td>
-			<td>40</td>
-			<td>27.12.2013</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
-				  <li><a href="#myModal2" role="button"  data-toggle="modal">Genereeri kirjaliku eksami küsimustik</a></li>
-				</ul>
-            </td>
-        </tr>
-		<tr>
-            <td>27.01.2013</td>
-            <td>10:00</td>
-            <td>
-				<ul class="nav nav-pills">
-					<li>Rävala pst 3, Tallinn ruum 2</li>
-					<li>Rävala pst 3, Tallinn ruum 3</li>
-				</ul>
-            </td>
-			<td>90 minutit</td>
-			<td>360 minutit</td>
-			<td>60</td>
-			<td>27.12.2013</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#exam-change-exam">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
-				  <li class="disabled"><a> </a></li>
-				</ul>
-            </td>
-        </tr>
-    </table>
-	 <p>
-            <small>Kokku: <span id="etl">4</span> kirjet</small>
-        </p>
+				<th>Eksami kuupäev</th>
+				<th>Kella-
+					<br>
+					aeg</th>
+				<th>Toimumiskoht</th>
+				<th>Testi kestvus</th>
+				<th>Kaasuse kestvus</th>
+				<th>Max osalejate arv</th>
+				<th>Reg. lõppkuupäev</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>27.12.2013</td>
+				<td>10:00</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li>Rävala pst 3, Tallinn ruum 2</li>
+						<li>Rävala pst 3, Tallinn ruum 3</li>
+					</ul>
+				</td>
+				<td>90 minutit</td>
+				<td>360 minutit</td>
+				<td>60</td>
+				<td>27.09.2013</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li><a href="#exam-change-exam">Muuda</a></li>
+						<li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etls')">Kustuta</a></li>
+						<li><a href="#oral-exam-generated-list">Genereeri suulise eksami järjekord</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>27.12.2013</td>
+				<td>10:00</td>
+				<td>Rävala pst 3, Tallinn ruum 2
+					<br>
+					Rävala pst 3, Tallinn ruum 3
+
+				</td>
+				<td>90 minutit</td>
+				<td>360 minutit</td>
+				<td>60</td>
+				<td>27.09.2013</td>
+				<td>
+					<span class="icon-button"><a class="tip icon-edit" href="#exam-change-exam" data-toggle="tooltip" title="Muuda"></a></span>
+					<span class="icon-button"><a class="tip icon-trash" onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')" data-toggle="tooltip" title="Kustuta"></a></span>
+					<span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" data-toggle="tooltip" title="Genereeri kirjaliku eksami küsimustik"></a></span>
+
+				</td>
+			</tr>
+			<tr>
+				<td>27.01.2013</td>
+				<td>10:00</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li>Rävala pst 3, Tallinn ruum 2</li>
+						<li>Rävala pst 3, Tallinn ruum 3</li>
+					</ul>
+				</td>
+				<td>90 minutit</td>
+				<td>360 minutit</td>
+				<td>60</td>
+				<td>27.12.2013</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li><a href="#exam-change-exam">Muuda</a></li>
+						<li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
+						<li><a href="#myModal1" role="button" data-toggle="modal">Genereeri kirjaliku eksami küsimustik</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>27.07.2013</td>
+				<td>10:00</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li>Rävala pst 3, Tallinn ruum 2</li>
+						<li>Rävala pst 3, Tallinn ruum 3</li>
+					</ul>
+				</td>
+				<td>90 minutit</td>
+				<td>360 minutit</td>
+				<td>40</td>
+				<td>27.12.2013</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li><a href="#exam-change-exam">Muuda</a></li>
+						<li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
+						<li><a href="#myModal2" role="button" data-toggle="modal">Genereeri kirjaliku eksami küsimustik</a></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>27.01.2013</td>
+				<td>10:00</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li>Rävala pst 3, Tallinn ruum 2</li>
+						<li>Rävala pst 3, Tallinn ruum 3</li>
+					</ul>
+				</td>
+				<td>90 minutit</td>
+				<td>360 minutit</td>
+				<td>60</td>
+				<td>27.12.2013</td>
+				<td>
+					<ul class="nav nav-pills">
+						<li><a href="#exam-change-exam">Muuda</a></li>
+						<li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etl')">Kustuta</a></li>
+						<li class="disabled"><a></a></li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p>
+		<small>Kokku: <span id="etl">4</span> kirjet</small>
+	</p>
 
 	<div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModal1Label" aria-hidden="true">
 		<div class="modal-header">
@@ -161,20 +166,20 @@
 			<h3 id="myModal1Label">Teade</h3>
 		</div>
 		<div class="modal-body">
-			
 
-				<span style="color:red">Eksami genereerimine ebaõnnestus!</span> 
+
+			<span style="color: red">Eksami genereerimine ebaõnnestus!</span>
 			<br />
 			<p>Põhjused:</p>
 			<ul>
 				<li>Valdkonnas "Eraõigus ja tsiviilkohtumenetlus" pole piisavalt aktiivseid kaasusülesandeid</li>
 				<li>Valdkonnas "Karistusõigus ja kriminaalmenetlus" pole piisavalt aktiivseid küsimusi</li>
 			</ul>
-				
-	</div>
-	<div class="modal-footer">
-		<button class="btn" data-dismiss="modal" aria-hidden="true">Sulge</button>
-	</div>
+
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Sulge</button>
+		</div>
 	</div>
 	<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModal1Label" aria-hidden="true">
 		<div class="modal-header">
@@ -182,13 +187,11 @@
 			<h3 id="H1">Teade</h3>
 		</div>
 		<div class="modal-body">
-			
-
-				Kirjaliku eksami küsimustiku genereerimine õnnestus!
+			Kirjaliku eksami küsimustiku genereerimine õnnestus!
 				
-	</div>
-	<div class="modal-footer">
-		<button class="btn" data-dismiss="modal" aria-hidden="true">Sulge</button>
-	</div>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Sulge</button>
+		</div>
 	</div>
 </section>
