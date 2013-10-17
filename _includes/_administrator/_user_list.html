@@ -1,13 +1,15 @@
-<section id="user-list">
+<section id="user-list" class="fixed">
 <!--     <ul class="breadcrumbs clearfix">
         <li class="active">Kasutajad</li>
     </ul> -->
     <form class="form-inline">
         <fieldset>
-            <div class="well table-filter">
+            <div class="well">
+                <span class="inline-group">
                 <label for="textinput1">Nimi</label>
                 <input id="text1" name="textinput1" type="text" >
-
+                </span>
+                <span class="inline-group">
                 <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
                     <option>Roll valimata</option>
                     <option>Eksamineeritav</option>
@@ -15,11 +17,14 @@
                     <option>Kutsesobivuskomisjoni liige</option>
                     <option>Advokatuuri kantselei töötaja</option>
                 </select>
+                </span>
+                <span class="inline-group">
                 <select id="select1" name="select1" class="selectpicker show-tick">
                     <option>Aktiivsus valimata</option>
                     <option>Aktiivne</option>
                     <option>Mitteaktiivne</option>
                 </select>
+                </span>
                 <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
             </div>
             <div class="row">
@@ -37,9 +42,9 @@
     <table class="table sortable">
         <thead>
             <tr class="sort">
-                <th data-sortkey="0">Eesnimi</th>
-                <th data-sortkey="1">Perekonnanimi</th>
-                <th data-sortkey="2">Roll</th>
+                <th>Eesnimi</th>
+                <th>Perekonnanimi</th>
+                <th>Roll</th>
                 <th></th>
                 <th></th>
                 <th></th>
