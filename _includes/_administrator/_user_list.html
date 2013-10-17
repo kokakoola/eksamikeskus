@@ -1,7 +1,7 @@
 <section id="user-list"  >
-<!--     <ul class="breadcrumbs clearfix">
-        <li class="active">Kasutajad</li>
-    </ul> -->
+    <div class="pagename">
+        <h2>Kasutajad</h2>
+    </div>
     <form class="form-inline">
         <fieldset>
             <div class="well">
@@ -61,7 +61,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
                 </td>
                 <td>
-                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -74,7 +74,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>
