@@ -304,8 +304,10 @@
     <None Include=".hammer-ignore" />
     <None Include=".travis.yml" />
     <None Include="csv\Eksamineeritavad.csv" />
+    <None Include="fonts\clbd.eot" />
     <None Include="fonts\clbd.ttf" />
     <None Include="fonts\clbd.woff" />
+    <None Include="fonts\clne.eot" />
     <None Include="fonts\clne.ttf" />
     <None Include="fonts\clne.woff" />
     <None Include="fonts\font-awesome\font\fontawesome-webfont.eot" />
