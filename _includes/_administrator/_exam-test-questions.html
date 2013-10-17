@@ -1,128 +1,109 @@
 ﻿<section id="exam-test-questions">
-					            <!-- #include file="_adminmenu.html" -->
-            <!-- @include _adminmenu -->
 
+    <ul class="breadcrumbs clearfix">
+        <li><a href="#exam-test-list">Eksamid</a> <span class="divider">/</span></li>
+        <li class="active">Testi küsimused</li>
+    </ul>
+    <div class="pagename">
+        <h2>Testi küsimused</h2>
+    </div>
 
-	<ul class="breadcrumbs clearfix">
-		<li>Testi küsimuste nimekiri <span class="divider">/</span></li>
-	</ul>
+    <form class="form-inline">
+        <fieldset>
+            <div class="well">
+                <span class="inline-group">
+                    <label class="control-label" for="dp3">Küsimuse valdkond</label>
+                    <select id="select2" name="selectbasic" class="span3 selectpicker">
+                        <option>Vali</option>
+                        <option>Riigi põhikord,avalik õigusja halduskohtumenetlus</option>
+                        <option>Eraõigus ja tsiviilkohtumenetlus</option>
+                        <option>Karistusõigus ja kriminaalmenetlus</option>
+                        <option>Advokatuur ja advokaadi kutsetegevus</option>
+                    </select>
 
-	<form class="form-horizontal">
-		<fieldset>
-				<div class="pagename">
-                <h1>Testi küsimuste nimekiri</h1>
-				</div>				<div class="row">
-				
+                </span>
+                <span class="inline-group">
+                    <label class="control-label " for="textinput1">Küsimuse staatus</label>
+                    <select id="select4" name="selectbasic" class="span3 selectpicker">
+                        <option>Vali</option>
+                        <option>Aktiivne</option>
+                        <option>Mitte aktiivne</option>
+                        <option>Testkeskkonna küsimus</option>
+                    </select>
+                </span>
+                <a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-questions-results tr:gt(2)')); return false;">Filtreeri</a>
+            </div>
+            <div class="row">
                 <div class="span4">
-                    <div class="control-group">
-
-                        <label class="control-label" for="">Küsimuse valdkond</label>
-                        <div class="controls">
-                            <select id="select3" name="selectbasic" class="span3 selectpicker">
-								<option>Vali</option>
-                                <option>Riigi põhikord,avalik õigusja halduskohtumenetlus</option>
-                                <option>Eraõigus ja tsiviilkohtumenetlus</option>
-                                <option>Karistusõigus ja kriminaalmenetlus</option>
-								<option>Advokatuur ja advokaadi kutsetegevus</option>
-                            </select>
-                        </div>
-                    </div>
+                    <small>Kokku küsimusi 5</small>
                 </div>
-				
-				<div class="span4 offset2">
-                    <div class="control-group">
-
-                        <label class="control-label" for="">Küsimuse staatus</label>
-                        <div class="controls">
-                            <select id="select1" name="selectbasic" class="span3 selectpicker">
-								<option>Vali</option>                                
-								<option>Aktiivne</option>
-                                <option>Mitte aktiivne</option>
-                                <option>Testkeskkonna küsimus</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-				<div class="span1 offset7 pull-right">
-					<!-- Button -->
-					<a class="btn btn-primary" href="#exam-test-questions-search">Otsi</a>
-				</div>
-			</div>
-		</fieldset>
-	</form>
-
-	<div class="control-group pull-right">
-                <div class="controls">
-                    <div class="input-prepend">
-                         <a href="#exam-question-add" class="btn">Lisa testi küsimus</a>
-                        <span class="add-on"><i class="icon-plus-sign"></i></span>
-                    </div>
+                <div class=" pull-right">
+                    <a href="#exam-question-add" class="btn btn-primary"><i class="icon-plus-sign">Lisa testi küsimus  </i>
+                    </a>
                 </div>
             </div>
+        </fieldset>
+    </form>
 
-	<table class="table sortable">
-		<thead>
-        <tr>
-            <th>Jrk. nr</th>
-            <th>Küsimuse valdkond</th>
-            <th>Testi küsimus</th>
-            <th>Staatus</th>
-			<th>Tegevus</th>
-		</tr>
-			</thead>
-		<tbody>
-        <tr>
-            <td>1</td>
-            <td>Eraõigus ja tsiviilkohtumenetlus</td>
-            <td>Käsipant, samuti õiguste pant lõpeb</td>
-			<td>Aktiivne</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-				</ul>
-            </td>
-        </tr>
-		<tr>
-            <td>2</td>
-            <td>Eraõigus ja tsiviilkohtumenetlus</td>
-            <td>Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse</td>
-			<td>Aktiivne</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-				</ul>
-            </td>
-        </tr>
-		<tr>
-            <td>3</td>
-            <td>Riigi põhikord, avalik õigus ja halduskohtumenetlus</td>
-            <td>Euroopa Inimõiguste Kohus jätab läbi vaatamata individuaalkaebusei</td>
-			<td>Aktiivne</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#test-change-test">Muuda</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-				</ul>
-            </td>
-        </tr>
-			<tr>
-            <td>4</td>
-            <td>Karistusõigus ja kriminaalmenetlus</td>
-            <td>Kriminaalmenetlust võib alustada</td>
-			<td>Mitte aktiivne</td>
-            <td>
-				<ul class="nav nav-pills">
-				  <li><a href="#test-disabled-test">Vaata</a></li>
-				  <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
-				</ul>
-            </td>
-        </tr>
-			</tbody>
+    <table class="table sortable" id="exam-test-questions-results">
+        <thead>
+            <tr>
+                <th>Jrk. nr</th>
+                <th>Küsimuse valdkond</th>
+                <th>Testi küsimus</th>
+                <th>Staatus</th>
+                <th>Tegevus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Eraõigus ja tsiviilkohtumenetlus</td>
+                <td>Käsipant, samuti õiguste pant lõpeb</td>
+                <td>Aktiivne</td>
+                <td>
+                    <ul class="nav nav-pills">
+                        <li><a href="#test-change-test">Muuda</a></li>
+                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Eraõigus ja tsiviilkohtumenetlus</td>
+                <td>Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse</td>
+                <td>Aktiivne</td>
+                <td>
+                    <ul class="nav nav-pills">
+                        <li><a href="#test-change-test">Muuda</a></li>
+                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Riigi põhikord, avalik õigus ja halduskohtumenetlus</td>
+                <td>Euroopa Inimõiguste Kohus jätab läbi vaatamata individuaalkaebusei</td>
+                <td>Aktiivne</td>
+                <td>
+                    <ul class="nav nav-pills">
+                        <li><a href="#test-change-test">Muuda</a></li>
+                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Karistusõigus ja kriminaalmenetlus</td>
+                <td>Kriminaalmenetlust võib alustada</td>
+                <td>Mitte aktiivne</td>
+                <td>
+                    <ul class="nav nav-pills">
+                        <li><a href="#test-disabled-test">Vaata</a></li>
+                        <li><a onclick="hideOnPage($(this).parent().parent().parent().parent());decreaseCount('#etq')">Kustuta</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
     </table>
-	 <p>
-            <small>Kokku: <span id="etq">4</span> kirjet</small>
-        </p>
 </section>
