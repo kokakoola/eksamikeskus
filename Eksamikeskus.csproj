@@ -264,7 +264,6 @@
     <Content Include="_includes\_administrator\_users_list_deleted_aadu.html" />
     <Content Include="_includes\_administrator\_users_list_only_new_user.html" />
     <Content Include="_includes\_administrator\_users_student_exam_info_canceled_registration.html" />
-    <Content Include="_includes\_administrator\_user_list_added_user.html" />
     <Content Include="_includes\_administrator\_exam-add-exam.html" />
     <Content Include="_includes\_administrator\_exam-change-exam.html" />
     <Content Include="_includes\_administrator\_exam-question-confirm.html" />
