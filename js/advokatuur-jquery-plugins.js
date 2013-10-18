@@ -154,7 +154,7 @@ $().ready(function () {
 // });
 
 // Better selectbox
-$('.selectpicker').selectpicker();
+$('.selectpicker').selectpicker({autoclose : true});
 
 if (typeof bindPages !== 'undefined' && bindPages) {
     function showPage(id) {
@@ -164,6 +164,7 @@ if (typeof bindPages !== 'undefined' && bindPages) {
         }
         else {
             $('section:not(:first)').hide();
+            $('section:first').show();
         }
 
         window.setTimeout(function () { window.scrollTo(0, 0); }, 10);

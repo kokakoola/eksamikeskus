@@ -61,18 +61,53 @@
 					</div>
 				</div>
 				<!-- Text input-->
-				<div class="span7">
+			    <div class="span7">
+			        <div class="control-group">
+
+			            <label class="control-label" for="">Kohti ruumis</label>
+
+			            <div class="controls">
+			                <input id="text4" value="30" name="textinput" type="text" placeholder="Max osalejate arv ruumis" class="input-large">
+			            </div>
+			        </div>
+			    </div>
+                
+                				<div class="hidden" id="change-exam-showMe">
+				<div id="Div4" class="span7">
 					<div class="control-group">
 
-						<label class="control-label" for="">Kohti ruumis</label>
+						<label class="control-label" for="">Toimumiskoht ja ruum</label>
 
 						<div class="controls">
-							<input id="text4" value="30" name="textinput" type="text" placeholder="Max osalejate arv ruumis" class="input-large">
+							<input id="text1" name="textinput" type="text" placeholder="Toimumiskoht ja ruum 2" class="input-large">&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent().parent().parent())">X</button>
 						</div>
 					</div>
 				</div>
-
 				<!-- Text input-->
+				<div id="Div5" class="span7">
+					<div class="control-group">
+
+						<label class="control-label" for="">Max osalejate arv ruumis</label>
+
+						<div class="controls">
+							<input id="text7" name="textinput" type="text" placeholder="Max osalejate arv ruumis 2" class="input-large">&nbsp;&nbsp;
+							<button class="btn" onclick="hideOnPage($(this).parent().parent().parent().parent())">X</button>
+						</div>
+					</div>
+				</div>
+				</div>
+                
+                 <div class="span7">
+                    <div class="control-group">
+                        <div class="controls add-item">
+                            <a href="javascript:shownOnPage2($('#change-exam-showMe'),'showOnPage')" class="btn btn-primary"><i class="icon-plus-sign"> Lisa eksami toimumiskoht</i>
+                            </a>
+                        </div>
+                    </div>
+				</div>
+
+			    <!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
 
@@ -85,18 +120,30 @@
 				</div>
 
 				<!-- Text input-->
+			    <div class="span7">
+			        <div class="control-group">
+
+			            <label class="control-label" for="">Kaasuse kestvus</label>
+
+			            <div class="controls">
+			                <input id="text6" value="360 minutit" name="textinput" type="text" placeholder="Kaasuse kestvus minutites" class="input-large">
+			            </div>
+			        </div>
+			    </div>
+                
+                 <!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
 
-						<label class="control-label" for="">Kaasuse kestvus</label>
+						<label class="control-label" for="">Kaasuse algusaeg</label>
 
 						<div class="controls">
-							<input id="text6" value="360 minutit" name="textinput" type="text" placeholder="Kaasuse kestvus minutites" class="input-large">
+							<input id="text8" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
 						</div>
 					</div>
 				</div>
 
-				<!-- Text input-->
+			    <!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="dp3">Registreerimise tähtaeg</label>
