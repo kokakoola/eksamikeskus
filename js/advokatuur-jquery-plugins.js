@@ -154,7 +154,7 @@ $().ready(function () {
 // });
 
 // Better selectbox
-$('.selectpicker').selectpicker();
+$('.selectpicker').selectpicker({autoclose : true});
 
 if (typeof bindPages !== 'undefined' && bindPages) {
     function showPage(id) {
