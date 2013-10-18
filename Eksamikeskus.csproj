@@ -234,6 +234,7 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_settings_notifications.html" />
     <Content Include="_includes\_administrator\_settings_test_exam_info.html" />
     <Content Include="_includes\_administrator\_settings_writing_exam_info.html" />
     <Content Include="_includes\_administrator\_users_change_exam_info.html" />
@@ -244,7 +245,6 @@
     <Content Include="_includes\_administrator\_settings_oral_exam_reminder.html" />
     <Content Include="_includes\_administrator\_settings_writing_reminder_notification.html" />
     <Content Include="_includes\_administrator\_settings_writing_registration_notification.html" />
-    <Content Include="_includes\_administrator\_settings_notifications.html" />
     <Content Include="_includes\_administrator\_settings_log.html" />
     <Content Include="_includes\_administrator\_settings_writings_case.html" />
     <Content Include="_includes\_administrator\_exam-question-disabled.html" />
@@ -408,6 +408,9 @@
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
