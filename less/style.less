@@ -319,34 +319,12 @@ margin-left: 230px;
   margin-left: -160px;
 float: left;
 margin-top: -30px;
-label {
-margin-top: -30px;
-margin-left: 40px;
-}
-}
-
-
-/**
- * Progress bars with centered text
- */
-.progress {
-    position: relative;
+  label {
+  margin-top: -30px;
+  margin-left: 40px;
+  }
 }
 
-.bar {
-    z-index: 1;
-    position: absolute;
-}
-
-.progress span {
-    position: absolute;
-    top: 0;
-    z-index: 2;
-    color: #fff; // You might need to change it
-    text-align: left;
-    line-height: 1.55; 
-
-}
 
 #writtentext-accordion-collapse1 {
   max-height:400px; 
@@ -410,7 +388,27 @@ input[type="url"], input[type="search"], input[type="tel"], input[type="color"],
   min-height: 30px!important;
 }
 
+textarea{
+  resize: none;
+}
 
+.accordion-inner textarea {
+  min-width: 100%;
+  padding: 0;
+  min-height: 100%!important;
+  max-height: 100%;
+  border: none;
+
+
+}
+
+.accordion-inner textarea:focus {
+    border-color: #fff;
+    outline: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 // #nav > .navbar-inner {
 //     border-left: 0;
 //     border-right: 0;
