@@ -36,8 +36,11 @@ $(document).ready(function() {
 
     $('.editableinline').editable(
       {mode: 'inline'}
-
       );
+    $('#outcome').editable({
+        mode: 'inline',
+        source: [ {value: 1, text: '75%, arvestatud'}, {value: 2, text: 'Mitte ilmunud'}, {value: 3, text: 'Kõrvaldatud'}]
+      });
 
 $(function(){
 
