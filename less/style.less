@@ -78,7 +78,129 @@
   }
 }
 
+// nav-vizard https://github.com/LeadDyno/bootstrap-nav-wizard/blob/master/src/bootstrap-nav-wizard.less
+//===============================================
+// Variables
+//===============================================
+@wizard-background: none;
+@border-color: #fff;
 
+@complete-color : @white;
+@complete-background : @linkColor;
+
+@active-color : @white;
+@active-background : @linkColor;
+
+@incomplete-color : lighten(#000, 60%);
+@incomplete-background : #ededed;
+@row-height: 13px;
+
+//===============================================
+// Mixins
+//===============================================
+
+.li-color(@color, @background) {
+  color: @color;
+  background: @background;
+  &:after {
+    border-left: 16px solid @background;
+  }
+  a, a:active, a:visited, a:focus {
+    color: @color;
+    background: @background;
+  }
+}
+
+.chevron-comp(@color) {
+  position: absolute;
+  display: block;
+  border: 24px solid transparent;
+  border-left: 16px solid @color;
+  border-right: 0;
+  top: -1px;
+  z-index: 10;
+  content: '';
+}
+
+//===============================================
+// Class Def
+//===============================================
+
+ul.nav-wizard {
+  background-color: @wizard-background;
+  border: 1px solid @border-color;
+  height: 47px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  *zoom: 1;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: @row-height;
+    height: @row-height + 1px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    z-index: 11;
+    content: " ";
+  }
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 3 * (@row-height);
+    height: @row-height + 1px;
+    border-top: 1px solid @border-color;
+    border-bottom: 1px solid @border-color;
+    z-index: 11;
+    content: " ";
+  }
+  li {
+    position: relative;
+    float: left;
+    height: @row-height;
+    display: inline-block;
+    text-align: middle;
+    padding: 10px 20px 0 30px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 14px;
+    a {
+      color: @complete-color;
+      padding: 0;
+      &:hover {
+        background-color: transparent;
+      }
+    }
+    &:before {
+      .chevron-comp(@border-color);
+      right: -16px;
+    }
+    &:after {
+      .chevron-comp(@wizard-background);
+      right: -15px;
+    }
+    &.active {
+      .li-color(@active-color, @active-background);
+    }
+  }
+  .active ~ li {
+    .li-color(@incomplete-color, @incomplete-background);
+  }
+  &.nav-wizard-backnav {
+    li:hover {
+      .li-color(@complete-color, lighten(@active-background, 7%));
+    }
+    .active ~ li {
+      .li-color(@incomplete-color, @incomplete-background);
+    }
+  }
+}
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/font-awesome/font/fontawesome-webfont.eot?v=3.2.1');
@@ -259,11 +381,6 @@ position: relative;
 }
 
 span.icon-button {
-  margin-top: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  display: inline-block;
   margin-right: 10px;
   a {
   padding: 8px 10px;
@@ -354,7 +471,7 @@ a.tip {
 table th {
   text-transform: uppercase;
   font-size: small;
-  color: #ABABAB;
+  color: @grayLight;
 }
 
 td.narrow {
@@ -369,10 +486,10 @@ td.narrow {
   padding: 15px!important;
 }
 
-.tab-pane table tr th {
-  border-top: none;
-  padding-top: 0;
-}
+// .tab-pane table tr th {
+//   border-top: none;
+//   padding-top: 0;
+// }
 
 .inline-group {
   margin-left: 20px;
@@ -398,17 +515,114 @@ textarea{
   min-height: 100%!important;
   max-height: 100%;
   border: none;
-
-
 }
 
 .accordion-inner textarea:focus {
-    border-color: #fff;
+    border-color: @white;
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
+
+.inactive {
+  color: @grayLight;
+}
+
+// draggable style for jquery sortable
+body.dragging, body.dragging * {
+  cursor: move !important;
+  
+}
+
+.dragged {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 2000;
+}
+
+  // content: "\f105";
+  // font-family: FontAwesome;
+  //   font-style: normal;
+  //   font-weight: normal;
+  //   text-decoration: inherit;
+  //   color: blue;
+  //   font-size: 18px;
+  //   padding-right: 0.5em;
+  //   position: absolute;
+  //   top: 10px;
+  //   left: 0;
+
+table.draggable tr {
+  cursor: pointer; }
+
+table.draggable tr:hover {
+  // color: @linkColor;
+  background: @grayLighter;
+}
+
+table.draggable tr:first-child:hover {
+  color: @grayLight;
+  background: @white;
+}
+
+/* line 93, application.css.sass */
+table.draggable tr.placeholder {
+  display: block;
+  position: relative;
+  margin: 0 0 0 -100px;
+  padding: 0;
+  border: none; }
+  /* line 100, application.css.sass */
+  table.draggable tr.placeholder:before {
+    // content: "";
+    // position: absolute;
+    // width: 0;
+    // height: 0;
+    // border: 5px solid transparent;
+    // border-left-color: red;
+    // margin-top: -5px;
+    // left: -5px;
+    // border-right: none; 
+    content: "\f105";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    color: @linkColor;
+    font-size: 24px;
+    line-height: 0;
+    padding-right: 0.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+table.sortable tr:hover, 
+table.draggable tr:hover {
+  // color: @linkColor;
+  background: @grayLighter;
+}
+
+table.sortable tr:first-child:hover,
+table.draggable tr:first-child:hover {
+  color: @grayLight;
+  background: @white;
+}
+
+  #hiderow {
+    display: none;
+  }
+
+tr {
+  font-size: 14px;
+}
+
+.navpills > li::after {
+  padding-right: 30px;
+  content: "koll";
+
+}
 // #nav > .navbar-inner {
 //     border-left: 0;
 //     border-right: 0;

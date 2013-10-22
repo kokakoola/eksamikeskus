@@ -1,33 +1,40 @@
 <section id="users-change-exam-info">
-    <!--breadcrumbs -->
-    <br />
-    <br />
-    <br />
 
     <ul class="breadcrumbs clearfix">
-        <li><a href="#user-list">Kasutajate nimekiri</a> <span class="divider">/</span></li>
-        <li><a href="#student-exam-info">Aadu Aas eksamite info</a> <span class="divider">/</span></li>
-        <li class="active">Muuda</li>
+        <li><a href="#user-list">Kasutajad</a> <span class="divider">/</span></li>
+        <li><a href="#change-user">Aadu Aas</a> <span class="divider">/</span></li>
+        <li class="active">Registreeringu muutmine kirjalikule eksamile</li>
     </ul>
+    <div class="pagename">
+        <h1><a href="#change-user" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas </h1>
+    </div>
     <div class="span12">
         <form class="form-horizontal">
             <fieldset>
 
                 <!-- Form Name -->
-                <legend>Eksami muutmine</legend>
+                <legend>Registreeringu muutmine kirjalikule eksamile</legend>
 
-                <!-- Text input-->
+                <!--Select-->
                 <div class="control-group">
-                    <label class="control-label" for="textinput">Eksami liik</label>
+                    <label class="control-label" for="selectbasic">Eksami liik</label>
                     <div class="controls">
-                        <span class="help-inline">Vandeadvokaadi eksam </span></div>
+                        <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+                            <option>Vandeadvokaadi eksam</option>
+                            <option>Vandeadvokaadi abi eksam</option>
+                        </select>
+                    </div>
                 </div>
 
                 <!-- Multiple Checkboxes (inline) -->
                 <div class="control-group">
-                    <label class="control-label" for="checkboxes">Korduseksam</label>
-                    <div class="controls">
-                        <span class="help-inline">Jah</span> </div>
+                  <label class="control-label" for="checkboxes">Korduseksam</label>
+                  <div class="controls">
+                    <label class="checkbox inline" for="checkboxes-1">
+                      <input type="checkbox" name="checkboxes" id="checkboxes-1" checked>
+                    </label>
+                    <span class="help-inline">Jah</span>
+                  </div>
                 </div>
 
                 <!-- Select Basic -->
@@ -42,34 +49,42 @@
                     </div>
                 </div>
 
-                <!-- Select Basic -->
+
+        <!-- Select Basic -->
                 <div class="control-group">
-                    <label class="control-label" for="selectbasic">Eksami toimumise koht ja aeg</label>
-                    <div class="controls">
-                        <span class="help-inline">Tallinn, Rävala pst 30, ruum 3 (30 kohta) 23.01.2014 kl 14.00</span></div>
+                  <label class="control-label" for="selectbasic">Toimumisaeg</label>
+                  <div class="controls">
+                    <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+                      <option>23.01.2014 kl 14.00</option>
+                      <option>30.01.2014 kl 13.00</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Select Basic -->
                 <div class="control-group">
-                    <label class="control-label" for="selectbasic">Ruum</label>
-                    <div class="controls">
-                        <span class="help-inline">3 (30 kohta)</span>
-                      </div>
-                    
+                  <label class="control-label" for="selectbasic">Toimumiskoht</label>
+                  <div class="controls">
+                    <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+                      <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta, vabu 2)</option>
+                      <option>Tallinn, Rävala pst 30, ruum 2 (15 kohta, vabu 5)</option>
+                    </select>
+                  </div>
                 </div>
 
                 <!-- Text input-->
                 <div class="control-group">
                     <label class="control-label" for="textinput">E-posti aadress</label>
                     <div class="controls">
-                        <span class="help-inline">nimi@server.ee</span>
+                        <span class="help-inline"><a class="editableinline" id="new_email" data-type="text" data-name="email" data-original-title="Muuda">nimi@server.ee</a></span>
                     </div>
                 </div>
 
                 <!-- Button -->
                 <div class="form-actions" style="background: none; border: none;">
-                    <a type="button" class="btn" href="#student-exam-info">Loobu</a>
-                    <a class="btn btn-primary" href="#student-exam-info">Kinnita</a>
+                    <a type="button" class="btn" href="#change-user">Katkesta</a>
+                    <a type="button" class="btn" href="javascript:void(0);">Tühista registreering</a>
+                    <a class="btn btn-primary" href="javascript:void(0);">Salvesta muudatused</a>
                 </div>
             </fieldset>
         </form>

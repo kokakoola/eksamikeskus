@@ -15,7 +15,7 @@
                     <label class="control-label" for="dp3">Küsimuse valdkond</label>
                     <select id="select2" name="selectbasic" class="span3 selectpicker">
                         <option>Vali</option>
-                        <option>Riigi põhikord,avalik õigusja halduskohtumenetlus</option>
+                        <option>Riigi põhikord, avalik õigusja halduskohtumenetlus</option>
                         <option>Eraõigus ja tsiviilkohtumenetlus</option>
                         <option>Karistusõigus ja kriminaalmenetlus</option>
                         <option>Advokatuur ja advokaadi kutsetegevus</option>
@@ -27,14 +27,14 @@
                     <select id="select4" name="selectbasic" class="span3 selectpicker">
                         <option>Vali</option>
                         <option>Aktiivne</option>
-                        <option>Mitte aktiivne</option>
+                        <option>Mitteaktiivne</option>
                         <option>Testkeskkonna küsimus</option>
                     </select>
                 </span>
                 <a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-questions-results tr:gt(2)')); return false;">Filtreeri</a>
             </div>
             <div class="row">
-                <div class="span4">
+                <div class="span11">
                     <small>Kokku küsimusi 5</small>
                 </div>
                 <div class=" pull-right">
@@ -94,7 +94,7 @@
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
-            <tr>
+            <tr class="inactive">
                 <td>4</td>
                 <td>Karistusõigus ja kriminaalmenetlus</td>
                 <td>Kriminaalmenetlust võib alustada</td>

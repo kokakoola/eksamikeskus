@@ -45,9 +45,9 @@
                 <th>Eesnimi</th>
                 <th>Perekonnanimi</th>
                 <th>Roll</th>
+                <th ></th>
                 <th></th>
-                <th></th>
-                <th></th>
+
             </tr>
         </thead>
         <tbody>
@@ -55,26 +55,21 @@
                 <td>Aadu</td>
                 <td>Aas</td>
                 <td>Eksamineeritav</td>
-                <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#change-user"></a></span>
                 </td>
-                <td>
-                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                </td>
-                <td>
-                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                <td class="narrow">
+                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
                 <td>Mait</td>
                 <td>Metsanurk</td>
                 <td>Administraator</td>
-                <td class="narrow">
+                <td>
+                    <span class="icon-button"><a class="icon-chevron-right" href="#change-user"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                </td>
-                <td class="narrow">
-                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>

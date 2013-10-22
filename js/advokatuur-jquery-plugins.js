@@ -15,6 +15,111 @@ $('.js-textarea').wysihtml5({
 // It is conflicting with the textarea plugin. http://usablica.github.io/widearea/
 wideArea();
 
+// Better selectbox
+$('.selectpicker').selectpicker({autoclose : true});
+
+// draggable http://johnny.github.io/jquery-sortable/#home
+$('.draggable').sortable({
+  containerSelector: 'table',
+  itemPath: '> tbody',
+  itemSelector: 'tr',
+  placeholder: '<tr class="placeholder"/>'
+})
+
+// xeditable
+$.fn.editable.defaults.mode = 'popup';
+$(document).ready(function() {
+    $('#js-lastname').editable(
+
+      );
+});
+
+    $('.editableinline').editable(
+      {mode: 'inline'}
+
+      );
+
+$(function(){
+
+    $('#comission').editable({
+        source: [
+              {value: 1, text: 'Aadu Luberg'},
+              {value: 2, text: 'Enno Loonurm'},
+              {value: 3, text: 'Gunnar Vaikmaa '},
+              {value: 4, text: 'Heli Sepp '},
+              {value: 5, text: 'Mari-Ann Simovart'},
+              {value: 6, text: 'Meeli Kaur '},
+              {value: 7, text: 'Toomas Tamme'},
+              {value: 8, text: 'Toomas Taube'},
+              {value: 9, text: 'Urmas Ustav'}
+           ]
+    });
+});
+
+ $('#state').editable({
+        source: [{value: 1, text: 'Administraator'}, {value: 2, text: 'Eksamineeritav'}, {value: 3, text: 'Komisjoni liige'}, {value: 4, text: 'Kantselei töötaja'}]
+    });
+
+ $.mockjax({
+    url: '/post'
+ });
+
+
+$('table').on('click', '.icon-trash', function(e){
+
+        $(this).closest('tr').remove()
+
+})
+
+$('#add-row').click(function(){
+  $("#hiderow").clone().removeAttr("id").prependTo( $("#hiderow").parent(), $("#hiderow a.myeditable ").html("") );
+
+//init editables 
+$('.myeditable').editable({
+    url: '/post' //this url will not be used for creating new user, it is only for update
+});
+ 
+//make username required
+$('#new_forename').editable('option', 'validate', function(v) {
+    if(!v) return 'Nõutav väli!';
+});
+
+$('#new_surname').editable('option', 'validate', function(v) {
+    if(!v) return 'Nõutav väli!';
+});
+
+ 
+//automatically show next editable
+$('.myeditable').on('save.newuser', function(){
+    var that = this;
+    setTimeout(function() {
+        $(that).closest('td').next().find('.myeditable').editable('show');
+    }, 200);
+});
+
+// NO NEED REALLY
+// $.mockjax({
+//     url: '/post',
+//     pk: 1,
+//     responseTime: 400,
+//     response: function(settings) {
+//         if(settings.data.value == 'err') {
+//            this.status = 500;  
+//            this.responseText = 'Validation error!'; 
+//         } else {
+//            this.responseText = '';  
+//         }
+//     }
+// });
+
+$.mockjax({
+  url: '/role',
+  responseTime: 400,
+  responseText: [{value: 1, text: 'Administraator'}, {value: 2, text: 'Eksamineeritav'}, {value: 3, text: 'Komisjoni liige'}, {value: 4, text: 'Kantselei töötaja'}]
+});
+
+});
+
 // Max length chars http://jsfiddle.net/timur/47a7A/
 $(document).ready(function() {
     var text_max = 50000;
@@ -153,8 +258,7 @@ $().ready(function () {
 //    updateURL: false // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
 // });
 
-// Better selectbox
-$('.selectpicker').selectpicker({autoclose : true});
+
 
 if (typeof bindPages !== 'undefined' && bindPages) {
     function showPage(id) {

@@ -6,104 +6,199 @@
 <div id="wrap">
   <div class="container">
     <div class="row">
-    <div class="pagename"><h1>Komponendid</h1></div>
-    <div class="pagename">
+      <div class="pagename"><h1>Komponendid</h1></div>
+      <div class="pagename">
         <h1><a href="#user-list" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas eksamid</h1>
-    </div>
-<section class="components">
+      </div>
+      <section class="components">
 <!--     <ul class="breadcrumbs clearfix">
         <li class="active">Kasutajad</li>
-    </ul> -->
-    <form class="form-inline">
+      </ul> -->
+      <form class="form-inline">
         <fieldset>
-            <div class="well">
-              <span class="inline-group">
-                <label for="textinput1">Nimi</label>
-                <input id="text1" name="textinput1" type="text" >
-              </span>
-              <span class="inline-group">
-                <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
-                    <option>Roll valimata</option>
-                    <option>Eksamineeritav</option>
-                    <option>Administraator</option>
-                    <option>Kutsesobivuskomisjoni liige</option>
-                    <option>Advokatuuri kantselei töötaja</option>
-                </select>
-              </span>
-              <span class="inline-group">
-                <select id="select1" name="select1" class="selectpicker show-tick">
-                    <option>Aktiivsus valimata</option>
-                    <option>Aktiivne</option>
-                    <option>Mitteaktiivne</option>
-                </select>
-              </span>
-                <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
+          <div class="well">
+            <span class="inline-group">
+              <label for="textinput1">Nimi</label>
+              <input id="text1" name="textinput1" type="text" >
+            </span>
+            <span class="inline-group">
+              <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                <option>Roll valimata</option>
+                <option>Eksamineeritav</option>
+                <option>Administraator</option>
+                <option>Kutsesobivuskomisjoni liige</option>
+                <option>Advokatuuri kantselei töötaja</option>
+              </select>
+            </span>
+            <span class="inline-group">
+              <select id="select1" name="select1" class="selectpicker show-tick">
+                <option>Aktiivsus valimata</option>
+                <option>Aktiivne</option>
+                <option>Mitteaktiivne</option>
+              </select>
+            </span>
+            <a class="btn btn-primary pull-right" href="#user-list">Filtreeri</a>
+          </div>
+          <div class="row">
+            <div class="span4">
+              <small>Kokku kasutajaid 2</small>
             </div>
-            <div class="row">
-                <div class="span4">
-                    <small>Kokku kasutajaid 2</small>
-                </div>
-                <div class=" pull-right">
-                    <a  href="#add-user" class="btn btn-primary"> <i class="icon-plus-sign">  Lisa kasutaja  </i>
-                    </a>
-                </div>
+            <div class=" pull-right">
+              <a  href="javascript:void(0);" id="add-row" class="btn btn-primary"> <i class="icon-plus-sign">  Lisa kasutaja  </i>
+              </a>
             </div>
+          </div>
         </fieldset>
-    </form>
+      </form>
 
-    <table class="table sortable">
+      <table class="table sortable">
         <thead>
-            <tr class="sort">
-                <th>Eesnimi</th>
-                <th>Perekonnanimi</th>
-                <th>Roll</th>
-                <th></th>
-                <th></th>
-                <th></th>
-            </tr>
+          <tr class="sort">
+            <th>Eesnimi</th>
+            <th>Perekonnanimi</th>
+            <th>Roll</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Aadu</td>
-                <td>Aas</td>
-                <td>Eksamineeritav</td>
-                <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
-                </td>
-                <td>
-                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                </td>
-                <td>
-                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>Mait</td>
-                <td>Metsanurk</td>
-                <td>Administraator</td>
-                <td class="narrow">
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+          <tr id="hiderow">
+            <td><a href="#" class="myeditable" id="new_forename" data-type="text" data-emptytext="Lisa eesnimi" data-name="forename" data-original-title="Sisesta eesnimi"></a></td>
+            <td><a href="#" class="myeditable" id="new_surname" data-type="text" data-emptytext="Lisa perenimi" data-name="surname" data-original-title="Sisesta perenimi"></a></td>
+            <td><a href="#" class="myeditable" data-type="select" data-source="/role" data-emptytext="Vali roll" data-value="0" data-name="role" data-original-title="Vali roll"></a></td>
 
-    <div class="row">
-      <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
+            <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+            </td>
+            <td>
+              <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+            </td>
+            <td>
+              <span class="icon-button"><a class="tip icon-trash" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Aadu</td>
+            <td>Aas</td>
+            <td>Eksamineeritav</td>
+            <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+            </td>
+            <td>
+              <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+            </td>
+            <td>
+              <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+            </td>
+          </tr>
+          <tr class="inactive">
+            <td>Mait</td>
+            <td><a href="#" id="js-lastname" data-type="text" data-pk="1" data-url="/post" data-title="Sisesta nimi">Metsanurk</a></td>
+            <td><a href="#" id="state" class="editable" data-type="select"  data-value="1" data-name="role" data-original-title="Vali roll"></a></td>
+            <td class="narrow">
+            </td>
+            <td class="narrow">
+              <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+            </td>
+            <td class="narrow">
+              <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
           <input type="checkbox" checked>
+        </div>
+      </div>
+        
+      <div class="row">
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>Suuline advokaadi abi eksam</legend>
+            <div id="r2" class="span7">
+              <div class="control-group">
+                <label class="control-label" for="">Kutsesobivuskomisjoni koosseis</label>
+                <div class="controls">
+                  <span class="help-inline"><a href="#" class="editable-empty" id="comission" data-type="checklist" data-pk="1" data-value="4"  data-url="/post" data-title="Vali liikmed"></a></span>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
 
-    </div>
-</section>
-        
+      
+    <div class="row">
+      <div class="span1">
+        <table class="table">
+          <thead>
+            <tr class="sort">
+              <td>Kell</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10:00</td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="span11">
+        <table class="table draggable">
+          <thead>
+            <tr class="sort">
+              <th>Eesnimi</th>
+              <th>Perekonnanimi</th>
+              <th>Roll</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Aadu</td>
+              <td>Aas</td>
+              <td>Eksamineeritav</td>
+              <td><span class="icon-button"><a class="tip icon-eye-open" href="#student-exam-info" data-toggle="tooltip" data-original-title="Vaata eksamite infot"></a></span>
+              </td>
+              <td>
+                <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+              </td>
+              <td>
+                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+              </td>
+            </tr>
+            <tr class="inactive">
+              <td>Mait</td>
+              <td>Metsanurk</td>
+              <td>Administraator</td>
+              <td class="narrow">
+              </td>
+              <td class="narrow">
+                <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
+              </td>
+              <td class="narrow">
+                <span class="icon-button"><a class="tip icon-trash" onclick="#users-list-deleted-aadu" data-toggle="tooltip" title="" data-original-title="Kustuta"></a></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </section>
 
-    </div>
+
   </div>
-  <div id="push"></div>
+</div>
+<div id="push"></div>
 </div>
 <!-- #include file="_includes/_footer.html" -->
 <!-- @include _includes/_footer -->
