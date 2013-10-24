@@ -1,0 +1,325 @@
+﻿<section id="exam-reg-on-exam">
+
+	            <!-- #include file="_adminmenu.html" -->
+            <!-- @include _adminmenu -->
+
+
+<!--	<ul class="nav nav-pills">
+		<li><a href="#exam-test-list">Eksamite nimekiri</a></li>
+		<li class="active"><a href="#examinant-statistics">Eksamineeritavate statistika</a></li>
+	</ul>-->
+
+	<ul class="breadcrumbs clearfix">
+		<li><a href="#exam-test-list">Eksamid</a> <span class="divider">/</span></li>
+        <li><a href="#exam-test-list">Kirjalikud eksamid</a> <span class="divider">/</span></li>
+		<li>Kirjalik eksam 12.02.2012 kell 10:00</li>
+	</ul>
+        
+        <div class="pagename">
+            <h1><a href="#exam-test-list" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>        Kirjalik eksam 12.02.2012 kell 10:00</h1>
+		</div>
+
+        <div class="well clearfix">
+          <h3>Kirjalikule eksamile registreerimine on alanud!</h3>
+          <ul class="nav nav-pills">
+            <li><a href="#exam-change-exam">Registreerimine <br />ei ole veel alanud</a></li>
+            <li class="active" ><a href="#exam-reg-on-exam">Registreerimine <br />on alanud</a></li>
+            <li class="active"><a href="#" style="color: #dddddd">Registreerimine <br />on lõppenud</a></li>
+            <li class="active"><a href="#" style="color: #dddddd">Eksam <br />on alanud</a></li>
+            <li class="active"><a href="#" style="color: #dddddd">Eksam <br />on lõppenud</a></li>
+          </ul>
+        <div class="row">
+            <div class="span5 pull-right">
+                <a class="btn" href="#exam-test-list" id="A10">Tühista eksam</a>
+                <a href="#oral-exam-generated-list" class="btn btn-primary"><span class="tip icon-sort-by-attributes"></span> Genereeri eksami küsimused</a>
+            </div>
+        </div>
+    
+    <div class="row">
+        <div class="span6">
+		    <form class="form-horizontal">
+			    <fieldset>
+
+                    <h3>Muuda kirjalikku eksamit</h3>
+                
+				    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+						    <label class="control-label" for="span2">Kuupäev</label>
+
+                            <div class="controls">
+                                <a href="#" class="editableinline" id="dob2" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">12-02-2012</a>
+                            </div>
+					    </div>
+				    </div>
+
+				    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+
+						    <label class="control-label" for="text2">Kellaaeg</label>
+
+						    <div class="controls">
+                                <a href="#" class="editableinline" id="text20" data-type="text" data-name="koht" data-original-title="Kellaaeg">10:00</a>
+						    </div>
+					    </div>
+				    </div>
+
+                    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+
+						    <label class="control-label" for="">Testi kestvus</label>
+
+						    <div class="controls">
+                                <a href="#" class="editableinline" id="text50" data-type="text" data-name="koht" data-original-title="Testi kestvus minutites">90 minutit</a>
+						    </div>
+					    </div>
+				    </div>
+
+                    <!-- Text input-->
+			        <div class="span7">
+			            <div class="control-group">
+
+			                <label class="control-label" for="">Kaasuse kestvus</label>
+
+			                <div class="controls">
+                                <a href="#" class="editableinline" id="text60" data-type="text" data-name="koht" data-original-title="Kaasuse kestvus minutites">360 minutit</a>
+			                </div>
+			            </div>
+			        </div>
+
+                    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+
+						    <label class="control-label" for="">Kaasuse algusaeg</label>
+
+						    <div class="controls">
+							    <a href="#" class="editableinline" id="text80" data-type="text" data-name="koht" data-original-title="Kellaaeg">11:30</a>
+						    </div>
+					    </div>
+				    </div>
+
+                    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+						    <label class="control-label" for="dp32">Registreerimise alguskuupäev</label>
+
+						    <div class="controls">
+                                <a href="#" class="editableinline" id="A20" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">12-02-2012</a>
+						    </div>
+					    </div>
+				    </div>
+
+                    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+						    <label class="control-label" for="dp30">Registreerimise lõppkuupäev</label>
+
+						    <div class="controls">
+						        <a href="#" class="editableinline" id="A30" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">15-02-2012</a>
+                            </div>
+					    </div>
+				    </div>
+
+                    <!-- Text input-->
+				    <div class="span7">
+					    <div class="control-group">
+						    <label class="control-label" for="dp31">Registreerimise annulleerimise lõppkuupäev</label>
+						    <div class="controls">
+						    <a href="#" class="editableinline" id="A40" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">12-02-2012</a>
+					    </div></div>
+				    </div>
+
+                    <!-- Button -->
+				    <div class="span7">
+					    <div class="control-group">
+				    <div class="form-actions" style="background: none; border: none;">
+					    <a class="btn btn-primary" href="#exam-test-list">Salvesta muudatused</a>
+				    </div></div></div>
+			    </fieldset>
+
+		    </form>
+        </div>
+        <div class="span6">
+            <h3>Toimumiskohad</h3>
+
+            <div class="span7" style="margin-left:-1px;margin-bottom:10px;">
+                <small>Toimumiskoht 1:</small>
+                <a href="#" class="editableinline" id="A50" data-type="text" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 2</a>
+                <small>Kohtade arv:</small>
+                <a href="#" class="editableinline" id="A60" data-type="text" data-name="koht" data-original-title="Kohtade arv">20</a>
+                <a class="tip icon-remove" onclick="hideOnPage($(this).parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+            </div>
+            
+            <div class="span7" style="margin-left:-1px;">
+                <small>Toimumiskoht 2:</small>
+                <a href="#" class="editableinline" id="A70" data-type="text" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 3</a>
+                <small>Kohtade arv:</small>
+                <a href="#" class="editableinline" id="A80" data-type="text" data-name="koht" data-original-title="Kohtade arv">20</a>
+                <a class="tip icon-remove" onclick="hideOnPage($(this).parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+            </div>
+            
+            <div class="hidden" id="showMe2">
+				<div id="Div4" class="span10" style="margin-left:-1px;margin-bottom:10px;">
+					<div class="control-group">
+
+						<label class="control-label" for=""><small>Toimumiskoht ja ruum</small></label>
+
+						<div class="controls">
+							<div class="controls">
+                                <select id="select3" name="selectkoht2" class="selectpicker">
+                                    <option value="">Vali toimumiskoht</option>
+                                    <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                                    <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                </select>
+						    </div>
+						</div>
+                        <label class="control-label" for=""><small>Kohti ruumis</small></label>
+
+						<div class="controls">
+							<input id="text1" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">&nbsp;&nbsp;
+							<button class="btn btn-primary" onclick=""><i class="icon-chevron-down"></i></button>
+                            <button class="btn" onclick="hideOnPage($(this).parent().parent().parent().parent())"><i class="icon-remove"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+                <div class="span7" style="margin:10px 0 0 -1px;">
+                    <div class="control-group">
+                        <div class="controls add-item">
+                            <a href="javascript:shownOnPage2($('#showMe2'),'showOnPage')" class="btn btn-primary"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+                        </div>
+                    </div>
+				</div>
+        </div>
+    </div>
+     </div>            
+    <div class="row">
+        <div class="tabbable">
+          <ul class="nav nav-tabs">
+            
+            <li class="active"><a href="#pane3" data-toggle="tab">Rävala pst 3, Tallinn ruum 2</a></li>
+            <li><a href="#pane4" data-toggle="tab">Rävala pst 3, Tallinn ruum 3</a></li>
+          </ul>
+          <div class="tab-content">
+            
+            <div id="pane3" class="tab-pane active">
+                <form class="form-inline">
+                    <fieldset>
+                        <div class="well">
+                            <div class="pagename">
+                                <h4>Eksamineeritavad</h4>
+				            </div>
+                            
+                            <span class="inline-group">
+                                <select id="select4" name="selectbasic" class="selectpicker show-tick">
+                                    <option>Vali eksami liik</option>
+                                    <option>Vandeadvokaadi eksam</option>
+                                    <option>Vandeadvokaadi abi eksam</option>
+                                </select>
+                            </span>
+                            <span class="inline-group">
+                                <select id="select5" name="select1" class="selectpicker show-tick">
+                                    <option>Vali soorituse staatus</option>
+                                    <option>Registreerunud</option>
+                                    <option>Test sooritatud</option>
+                                    <option>Kaasus esitatud</option>
+                                    <option>Eksam sooritatud</option>
+                                </select>
+                            </span>
+                            <span class="pull-right">
+                                <a class="btn" href="#exam-change-exam">Tühjenda</a>
+                                <a class="btn btn-primary" href="#exam-change-exam">Otsi</a>
+                            </span>
+                        </div>
+                    </fieldset>
+                </form>  
+                <table class="table sortable">
+                    <thead>
+                        <tr class="sort">
+                            <th>Eesnimi</th>
+                            <th>Perekonnanimi</th>
+                            <th>Eksami liik</th>
+                            <th>Staatus</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mait</td>
+                            <td>Metsanurk</td>
+                            <td>Vandeadvokaadi abi eksam</td>
+                            <td>Registreerunud</td>
+                            <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#change-user"></a></span></td>
+                            <td class="narrow">
+                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="pane4" class="tab-pane">
+                <form class="form-inline">
+                    <fieldset>
+                        <div class="well">
+                            <div class="pagename">
+                                <h4>Eksamineeritavad</h4>
+				            </div>
+                            
+                            <span class="inline-group">
+                                <select id="select1" name="selectbasic" class="selectpicker show-tick">
+                                    <option>Vali eksami liik</option>
+                                    <option>Vandeadvokaadi eksam</option>
+                                    <option>Vandeadvokaadi abi eksam</option>
+                                </select>
+                            </span>
+                            <span class="inline-group">
+                                <select id="select2" name="select1" class="selectpicker show-tick">
+                                    <option>Vali soorituse staatus</option>
+                                    <option>Registreerunud</option>
+                                    <option>Test sooritatud</option>
+                                    <option>Kaasus esitatud</option>
+                                    <option>Eksam sooritatud</option>
+                                </select>
+                            </span>
+                            <span class="pull-right">
+                                <a class="btn" href="#exam-change-exam">Tühjenda</a>
+                                <a class="btn btn-primary" href="#exam-change-exam">Otsi</a>
+                            </span>
+                        </div>
+                    </fieldset>
+                </form>
+                <table class="table sortable">
+                    <thead>
+                        <tr class="sort">
+                            <th>Eesnimi</th>
+                            <th>Perekonnanimi</th>
+                            <th>Eksami liik</th>
+                            <th>Staatus</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aadu</td>
+                            <td>Aas</td>
+                            <td>Vandeadvokaadi abi eksam</td>
+                            <td>Registreerunud</td>
+                            <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
+                            <td class="narrow">
+                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+    </div>
+				
+</section>

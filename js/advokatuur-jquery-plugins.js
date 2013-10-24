@@ -32,6 +32,9 @@ $(document).ready(function() {
     $('#js-lastname').editable(
 
       );
+    $('.js-place').editable(
+
+      );
 });
 
     $('.editableinline').editable(
@@ -67,6 +70,11 @@ $(function(){
     url: '/post'
  });
 
+ $(function(){
+     $('.place').editable({
+         source: [{value: 1, text: 'Rävala pst 3, Tallinn ruum 2'}, {value: 2, text: 'Rävala pst 3, Tallinn ruum 3'}]
+     });
+ });
 
 $('table').on('click', '.icon-trash', function(e){
 

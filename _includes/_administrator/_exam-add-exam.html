@@ -10,6 +10,7 @@
 
 	<!--Breadcrumbs -->
 	<ul class="breadcrumbs clearfix">
+        <li><a href="#exam-test-list">Eksamid</a><span class="divider">/</span></li>
         <li><a href="#exam-test-list">Kirjalikud eksamid</a><span class="divider">/</span></li>
 		<li>Kirjaliku eksami lisamine </li>
 	</ul>
@@ -33,7 +34,7 @@
 						<div class="controls">
 						<div class="input-append date" id="Div3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="">
+							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
@@ -90,7 +91,7 @@
                 <!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
-						<label class="control-label" for="dp3">Eksamile registreerimise alguskuupäev</label>
+						<label class="control-label" for="dp3">Registreerimise alguskuupäev</label>
 
 						<div class="controls">
 						<div class="input-append date" id="Div6" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
@@ -104,7 +105,7 @@
 			    <!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
-						<label class="control-label" for="dp3">Eksamile registreerimise lõppkuupäev</label>
+						<label class="control-label" for="dp3">Registreerimise lõppkuupäev</label>
 
 						<div class="controls">
 						<div class="input-append date" id="Div1" data-date="15-02-2012" data-date-format="dd-mm-yyyy">
@@ -118,7 +119,7 @@
 				<!-- Text input-->
 				<div class="span7">
 					<div class="control-group">
-						<label class="control-label" for="dp3">Registreerimise annuleerimise kuupäev</label>
+						<label class="control-label" for="dp3">Registreerimise annulleerimise lõppkuupäev</label>
 						<div class="controls">
 						<div class="input-append date" id="Div2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
@@ -127,17 +128,13 @@
 						</div>
 					</div></div>
 				</div>
-                <script type="text/javascript">
-                    function value() {
-                        document.getElementById("text1").value = document.getElementById("selectbasic").value;
-                    }
-                </script>
+                
                 <!-- Dropdown & Text input-->
 				<div class="span7">
                     <div class="control-group">
                         <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
                         <div class="controls">
-                            <select id="selectbasic" name="selectbasic" class="selectpicker" onchange="value()">
+                            <select id="selectbasic" name="selectbasic" class="selectpicker">
                                 <option value="">Vali toimumiskoht</option>
                                 <option value="20">Rävala pst 3, Tallinn ruum 2</option>
                                 <option value="20">Rävala pst 3, Tallinn ruum 3</option>
@@ -151,7 +148,7 @@
                 <!--Text-->
 				<div class="span7">
 					<div class="control-group">
-						<div class="row">
+						<div>
                             <label class="control-label" for="">Toimumiskoht 1</label>
 
 						    <div class="controls">
@@ -162,7 +159,7 @@
                                 </div>
 				            </div>
                         </div>
-                        <div class="row">
+                        <div>
                             <label class="control-label" for="">Toimumiskoht 2</label>
 
 						    <div class="controls">
@@ -179,7 +176,7 @@
                 <!--Text-->
                 <div class="span7">
 					<div class="control-group">
-						<label class="control-label" for="">Kokku osalejate arv</label>
+						<label class="control-label" for="">Kokku kohtade arv</label>
 
 						<div class="controls">  
 							<div class="span1">40</div>
