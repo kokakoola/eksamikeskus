@@ -1,7 +1,7 @@
 ﻿<section id="oral-exam-list">
 
     <ul class="breadcrumbs clearfix">
-        <li><a href="#exam-test-list">Eksamid</a> <span class="divider">/</span></li>
+        <li><a href="#oral-exam-list">Eksamid</a> <span class="divider">/</span></li>
         <li class="active">Suulised eksamid</li>
     </ul>
     <div class="pagename">
@@ -21,14 +21,14 @@
                     <label class="control-label " for="textinput1">Toimumiskoht</label>
                     <input id="text1" name="textinput1" type="text" class="input-medium">
                 </span>
-                <a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#oral-exam-list-table tr:gt(2)')); return false;">Filtreeri</a>
+                <a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#oral-exam-list-table tr:gt(2)')); return false;">Otsi</a>
             </div>
             <div class="row">
                 <div class="span4">
                     <small>Kokku eksameid 5</small>
                 </div>
                 <div class=" pull-right">
-                    <a href="#oral-exam-add" class="btn btn-primary"><i class="icon-plus-sign"> Lisa eksam</i>
+                    <a href="#oral-exam-add" class="btn btn-primary"><i class="icon-plus-sign"></i> Lisa eksam
                     </a>
                 </div>
             </div>
@@ -45,6 +45,7 @@
                 <th>Max arv</th>
                 <th></th>
                 <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -55,11 +56,12 @@
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-edit" href="#oral-change-exam" data-toggle="tooltip" title="Muuda"></a></span>
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
                 </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
             <tr>
                 <td>10.02.2013</td>
@@ -68,11 +70,12 @@
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-edit" href="#oral-change-exam" data-toggle="tooltip" title="Muuda"></a></span>
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
                 </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
             <tr>
                 <td>10.02.2013</td>
@@ -81,11 +84,12 @@
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-edit" href="#oral-change-exam" data-toggle="tooltip" title="Muuda"></a></span>
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
                 </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
             <tr>
                 <td>25.02.2013</td>
@@ -93,7 +97,12 @@
                 <td>Rävala pst 3, Tallinn ruum 2</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
                 </td>
@@ -104,7 +113,12 @@
                 <td>Rävala pst 3, Tallinn ruum 3</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
                 </td>
@@ -115,7 +129,12 @@
                 <td>Rävala pst 3, Tallinn ruum 2</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
                 </td>
@@ -126,10 +145,13 @@
                 <td>Rävala pst 3, Tallinn ruum 3</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
             <tr>
                 <td>10.02.2012</td>
@@ -137,10 +159,13 @@
                 <td>Rävala pst 3, Tallinn ruum 2</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
             <tr>
                 <td>10.02.2012</td>
@@ -148,10 +173,13 @@
                 <td>Rävala pst 3, Tallinn ruum 3</td>
                 <td>Urmas Ustav,Aadu Lumberg, Mari-Ann Maasikas, Tarmo Taare,Toomas Taube</td>
                 <td>10</td>
-                <td class="narrow"></td>
+                <td class="narrow">
+                    <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                </td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
+                <td class="narrow"></td>
             </tr>
         </tbody>
     </table>

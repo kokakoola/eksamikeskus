@@ -76,6 +76,24 @@ $(function(){
      });
  });
 
+ $(function () {
+     $('.committee').editable({
+         pk: 1,
+         limit: 3,
+         source: [
+          { value: 1, text: 'Aadu Luberg' },
+          { value: 2, text: 'Enno Loonurm' },
+          { value: 3, text: 'Gunnar Vaikmaa' },
+          { value: 4, text: 'Heli Sepp' },
+          { value: 5, text: 'Mari-Ann Simovart' },
+          { value: 6, text: 'Meeli Kaur' },
+          { value: 7, text: 'Toomas Tamme' },
+          { value: 8, text: 'Toomas Taube' },
+          { value: 9, text: 'Urmas Ustav' }
+         ]
+     });
+ });
+
 $('table').on('click', '.icon-trash', function(e){
 
         $(this).closest('tr').remove()
@@ -99,7 +117,6 @@ $('#new_surname').editable('option', 'validate', function(v) {
     if(!v) return 'Nõutav väli!';
 });
 
- 
 //automatically show next editable
 $('.myeditable').on('save.newuser', function(){
     var that = this;
