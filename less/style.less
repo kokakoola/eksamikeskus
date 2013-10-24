@@ -78,22 +78,23 @@
   }
 }
 
+#nav-wizard {
 // nav-vizard https://github.com/LeadDyno/bootstrap-nav-wizard/blob/master/src/bootstrap-nav-wizard.less
 //===============================================
 // Variables
 //===============================================
-@wizard-background: none;
-@border-color: #fff;
+@wizard-background: #f9f9f9;
+@border-color: #d4d4d4;
 
-@complete-color : @white;
-@complete-background : @linkColor;
+@complete-color : #468847;
+@complete-background : #dff0d8;
 
-@active-color : @white;
-@active-background : @linkColor;
+@active-color : #3a87ad;
+@active-background : #d9edf7;
 
 @incomplete-color : lighten(#000, 60%);
 @incomplete-background : #ededed;
-@row-height: 13px;
+@row-height: 46px;
 
 //===============================================
 // Mixins
@@ -129,7 +130,6 @@
 ul.nav-wizard {
   background-color: @wizard-background;
   border: 1px solid @border-color;
-  height: 47px;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -166,10 +166,10 @@ ul.nav-wizard {
     height: @row-height;
     display: inline-block;
     text-align: middle;
-    padding: 10px 20px 0 30px;
+    padding: 0 20px 0 30px;
     margin: 0;
-    font-size: 13px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: @row-height;
     a {
       color: @complete-color;
       padding: 0;
@@ -201,6 +201,8 @@ ul.nav-wizard {
     }
   }
 }
+}
+// end wizard
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/font-awesome/font/fontawesome-webfont.eot?v=3.2.1');
