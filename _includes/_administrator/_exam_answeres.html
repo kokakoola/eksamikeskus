@@ -32,19 +32,22 @@
   <li><a>Eksamikomisjoni otsus</a></li> 
 </ul>
 </div>
-  <div class="span6">
+  <div class="span4">
     <h3>Kirjalik eksam</h3>
     <p><small>Toimumise kuupäev:</small> 02.01.2014</p>
-    <span><small>Testi tulemust:</small></span>
-    <a href="#" class="editable" id="outcome" data-type="select" data-emptytext="Vali tulemus" data-value="1" data-name="outcome" ></a>
-    <br><br>
-    <p><small>Kaasuse valdkond: </small>Eraõigus ja tsiviilkohtumenetlus</p>
+    <p><small>Valdkond: </small>Eraõigus ja tsiviilkohtumenetlus</p>
+    <p><small>Testi tulemus:</small> 75% arvestatud</p>
     <p><small>Kaasuse tulemus:</small> 9</p>
   </div>
-  <div class="span6">
-    <h3>Otsus nr 12</h3>
-    <p><small>Suulise eksami toimumise kuupäev:</small> 02.02.2014</p>
+  <div class="span4">
+    <h3>Suuline eksam</h3>
+    <p><small>Toimumise kuupäev:</small> 02.02.2014</p>
     <p><small>Tulemus:</small> 9</p>
+  </div>
+  <div class="span4">
+    <h3>Otsus</h3>
+    <p><small>Kuupäev:</small> 08.10.2013</p>
+    <p><small>Otsuse nr:</small> 12</p>
     <p><small>Isikusobivus:</small> Sobib</p>
     <p><small>Eksamikomisjoni otsus:</small> Sooritatud</p>
   </div>
@@ -221,9 +224,10 @@
     </div>
 
     <div class="tab-pane" id="1">
-      <form class="form-inline">
+        <span>Testi tulemus:</span>
+        <a href="#" class="editable" id="outcome" data-type="select" data-emptytext="Vali tulemus" data-value="1" data-name="outcome" ></a>  
+        <form class="form-inline">
         <fieldset>
-
           <!-- Form Name -->
           <legend>1. Eraõigus ja tsiviilkohtumenetlus</legend>
 
@@ -346,6 +350,12 @@
 
     </div>
     <div class="tab-pane" id="2">
+      <div class="row">
+        <div class="span4">
+            <span>Kaasusülesande lahenduse hinne:</span>
+            <a href="#" class="kaasus" id="A1" data-type="select" data-emptytext="Vali tulemus" data-value="0" data-name="outcome" ></a>
+        </div>
+      </div><br />
       <div class="span4">
         <p class="pull-right">45/50</p>
         <h4>Kirjalik test</h4>
@@ -602,7 +612,7 @@
                         <div class="control-group">
                             <label class="control-label">Kirjaliku testi tulemus</label>
                             <div class="controls">
-                                <span>70%</span>
+                                <span>75%</span>
                             </div>
                         </div>
                         <div class="control-group">
@@ -611,7 +621,7 @@
                                 <span>80%</span>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <!--<div class="control-group">
                             <label class="control-label" for="selectCaseGrade">Kaasusülesande lahenduse hinne</label>
                             <div class="controls">
                                 <select name="selectCaseGrade" class="selectpicker show-tick">
@@ -628,7 +638,7 @@
                                     <option>10</option>
                                 </select>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="control-group">
                             <label class="control-label" for="selectOralGrade">Suulise eksami hinne</label>
                             <div class="controls">
