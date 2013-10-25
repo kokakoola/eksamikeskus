@@ -13,13 +13,17 @@
                 <span class="inline-group">
                     <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
                         <label class="control-label" for="dp3">Eksami kuupäev</label>
-                        <input class="span2" size="16" type="text" value="12-02-2012">
+                        <input class="span2" size="16" type="text" value="">
                         <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
                     </div>
                 </span>
                 <span class="inline-group">
                     <label class="control-label " for="textinput1">Toimumiskoht</label>
-                    <input id="text1" name="textinput1" type="text" class="input-medium">
+                    <select id="select3" name="selectkoht" class="selectpicker show-tick">
+                        <option value="">Vali toimumiskoht</option>
+                        <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                        <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                    </select>
                 </span>
                 <div class="pull-right">
                     <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#oral-exam-list-table tr')); return false;">Tühjenda</a></span>
@@ -56,7 +60,7 @@
                 <td>13.02.2013</td>
                 <td>10:00</td>
                 <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Järjekord genereeritud</td>
+                <td>Alanud</td>
                 <td>10</td>
                 <td class="narrow">
                     <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
@@ -107,7 +111,7 @@
                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
+                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Koosta järjekord"></a></span>
                 </td>
             </tr>
             <tr>
@@ -123,7 +127,7 @@
                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
+                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Koosta järjekord"></a></span>
                 </td>
             </tr>
             <tr>
@@ -139,7 +143,7 @@
                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Genereeritud järjekord"></a></span>
+                    <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-generated-list" title="Koosta järjekord"></a></span>
                 </td>
             </tr>
             <tr>
