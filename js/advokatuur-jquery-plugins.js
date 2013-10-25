@@ -45,23 +45,6 @@ $(document).ready(function() {
         source: [ {value: 1, text: '75%, arvestatud'}, {value: 2, text: 'Mitte ilmunud'}, {value: 3, text: 'Kõrvaldatud'}]
       });
 
-$(function(){
-
-    $('#comission').editable({
-        source: [
-              {value: 1, text: 'Aadu Luberg'},
-              {value: 2, text: 'Enno Loonurm'},
-              {value: 3, text: 'Gunnar Vaikmaa '},
-              {value: 4, text: 'Heli Sepp '},
-              {value: 5, text: 'Mari-Ann Simovart'},
-              {value: 6, text: 'Meeli Kaur '},
-              {value: 7, text: 'Toomas Tamme'},
-              {value: 8, text: 'Toomas Taube'},
-              {value: 9, text: 'Urmas Ustav'}
-           ]
-    });
-});
-
  $('#state').editable({
         source: [{value: 1, text: 'Administraator'}, {value: 2, text: 'Eksamineeritav'}, {value: 3, text: 'Komisjoni liige'}, {value: 4, text: 'Kantselei töötaja'}]
     });
