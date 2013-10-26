@@ -12,10 +12,10 @@
             <div class="controls" >
               <label class="radio testquestion" for="{{value}}" ng-repeat="(key, value) in test.answers">
                 <input type="radio" name="{{test.question}}" id="{{value}}" value="{{key}}" checked="checked" ng-model="tests">
-                {{key}}: {{value}}
+                {{value}}
               </label>
               <div class="flagged checkbox">
-                  <input type="checkbox" data-color="yellow" class="check-lg" id="mark"/> <label for="mark">Märgista
+                  <input type="checkbox" data-color="blue" class="check-lg" id="mark"/> <label for="mark">Märgista
                 </label>
               </div>
             </div>
@@ -30,8 +30,8 @@
         <div class="pagination" id="pagenav">
           <p>Vastatud: 1/{{tests.length}}</p>
           <ul class="nav">
-            <li ><a class="btn-warning" href="#">1</a></li>
-            <li ><a class="btn-primary" href="#">2</a></li>
+            <li ><a class="btn" href="#">1</a></li>
+            <li ><a class="btn-info" href="#">2</a></li>
             <li ng-repeat="test in tests"><a href="#question{{$index + 1}}">{{$index + 1}}</a></li>
           </ul>
           <p>Kui sa pole mõnes vastuses kindel, märgista see, et saaksid hiljem selle juurde tagasi pöörduda: loetelus on ta siis oranzhi värvi.</p>
