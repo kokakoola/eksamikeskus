@@ -25,7 +25,10 @@
                     <option>Mitteaktiivne</option>
                 </select>
                 </span>
-                <a class="btn btn-primary pull-right" href="#user-list">Otsi</a>
+                <div class="pull-right">
+                    <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#user-list tr'));">Tühjenda</a></span>
+                    <span class="span1"><a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#user-list tr:gt(2)')); return false;">Otsi</a></span>
+                </div>
             </div>
             <div class="row">
                 <div class="span4">
@@ -39,7 +42,7 @@
         </fieldset>
     </form>
 
-    <table class="table sortable">
+    <table class="table sortable" id="user-list">
         <thead>
             <tr class="sort">
                 <th>Eesnimi</th>

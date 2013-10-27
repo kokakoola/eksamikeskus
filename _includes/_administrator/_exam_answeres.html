@@ -26,25 +26,29 @@
   <div id="nav-wizard">
     <ul class='nav-wizard'>
 
-  <li><a href='#step1' data-toggle="tab"><span style="line-height: 1;">Kirjaliku <br>testi tulemus</span></a></li> 
+
+  <li><a href='#step1' data-toggle="tab">Testi tulemus</a></li> 
   <li class='active'><a href='#step2' data-toggle="tab">Kaasusülesande tulemus</a></li> 
   <li><a>Suulise eksami tulemus</a></li> 
   <li><a>Eksamikomisjoni otsus</a></li> 
 </ul>
 </div>
-  <div class="span6">
+  <div class="span4">
     <h3>Kirjalik eksam</h3>
     <p><small>Toimumise kuupäev:</small> 02.01.2014</p>
-    <span><small>Testi tulemust:</small></span>
-    <a href="#" class="editable" id="outcome" data-type="select" data-emptytext="Vali tulemus" data-value="1" data-name="outcome" ></a>
-    <br><br>
-    <p><small>Kaasuse valdkond: </small>Eraõigus ja tsiviilkohtumenetlus</p>
+    <p><small>Valdkond: </small>Eraõigus ja tsiviilkohtumenetlus</p>
+    <p><small>Testi tulemus:</small> 75% arvestatud</p>
     <p><small>Kaasuse tulemus:</small> 9</p>
   </div>
-  <div class="span6">
-    <h3>Otsus nr 12</h3>
-    <p><small>Suulise eksami toimumise kuupäev:</small> 02.02.2014</p>
+  <div class="span4">
+    <h3>Suuline eksam</h3>
+    <p><small>Toimumise kuupäev:</small> 02.02.2014</p>
     <p><small>Tulemus:</small> 9</p>
+  </div>
+  <div class="span4">
+    <h3>Otsus</h3>
+    <p><small>Kuupäev:</small> 08.10.2013</p>
+    <p><small>Otsuse nr:</small> 12</p>
     <p><small>Isikusobivus:</small> Sobib</p>
     <p><small>Eksamikomisjoni otsus:</small> Sooritatud</p>
   </div>
@@ -221,9 +225,10 @@
     </div>
 
     <div class="tab-pane" id="1">
-      <form class="form-inline">
+        <span>Testi tulemus:</span>
+        <a href="#" class="editable" id="outcome" data-type="select" data-emptytext="Vali tulemus" data-value="1" data-name="outcome" ></a>  
+        <form class="form-inline">
         <fieldset>
-
           <!-- Form Name -->
           <legend>1. Eraõigus ja tsiviilkohtumenetlus</legend>
 
@@ -266,12 +271,12 @@
               <label class="radio" for="radios3-0">
                 <input type="radio" name="radios6" id="radios33" value="Option one" class="hidden">
                 hagiavalduse esitamisega
-              </label>
+              </label> <span class="label label-success"><i class="icon-ok"></i></span>
               <br />
               <label class="radio" for="radios3-1">
                 <input type="radio" name="radios6" id="radios3-1" value="Option two" checked>
                 nõude tunnustamisega kohustatud isiku poolt
-              </label> <span class="label label-success"><i class="icon-remove"></i></span>
+              </label> <span class="label label-important"><i class="icon-remove"></i></span>
               <br />
               <label class="radio" for="radios3-2">
                 <input type="radio" name="radios6" id="radios3-2" value="Option three" class="hidden">
@@ -346,9 +351,15 @@
 
     </div>
     <div class="tab-pane" id="2">
+      <div class="row">
+        <div class="span6">
+            <span>Kaasusülesande lahenduse hinne:</span>
+            <a href="#" class="kaasus" id="A1" data-type="select" data-emptytext="Vali tulemus" data-value="0" data-name="outcome" ></a>
+        </div>
+      </div><br />
       <div class="span4">
         <p class="pull-right">45/50</p>
-        <h4>Kirjalik test</h4>
+        <h4>Test</h4>
         <div class="pull-right">
           <table class="table">
             <tr>
@@ -600,17 +611,17 @@
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label">Kirjaliku testi tulemus</label>
+                            <label class="control-label">Testi tulemus</label>
                             <div class="controls">
-                                <span>70%</span>
+                                <span>75%</span>
                             </div>
                         </div>
-                        <div class="control-group">
+                        <!--<div class="control-group">
                             <label class="control-label">Kaasuse tulemus</label>
                             <div class="controls">
                                 <span>80%</span>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="control-group">
                             <label class="control-label" for="selectCaseGrade">Kaasusülesande lahenduse hinne</label>
                             <div class="controls">

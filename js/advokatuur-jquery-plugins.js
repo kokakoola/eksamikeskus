@@ -77,6 +77,19 @@ $(document).ready(function() {
      });
  });
 
+ $(function () {
+     $('.kaasus').editable({
+         pk: 1,
+         limit: 3,
+         source: [
+          { value: 0, text: 'Vali' },
+          { value: 1, text: 'Arvestatud' },
+          { value: 3, text: 'Mitte ilmunud' },
+          { value: 4, text: 'Kõrvaldatud' }
+         ]
+     });
+ });
+
 $('table').on('click', '.icon-trash', function(e){
 
         $(this).closest('tr').remove()
@@ -150,6 +163,11 @@ $(document).ready(function () {
   $('#register, #registered').hide();
   $(' #test-end, #written-start').hide();
   $('#test, #test-end').hide();
+  
+  bootbox.addLocale('en', {
+      CONFIRM: 'Kinnita',
+      CANCEL: 'Loobu'
+  });
  });
 
 //made by: Mari-Liis
