@@ -186,7 +186,7 @@ $(document).on("click", "#js-login-id-button", function (e) {
       bootbox.alert("Logimine ebaõnnestus! Veenduge, et kas id kaart on korralikult lugejas või sisestatud PIN kood oli õige. Vea kordumisel palun sulgege brauser ja proovige algusest.");
     } else if (result > 0) {
       $('#welcome').hide(); 
-      $('.pagename h1').html('Registreerimine');
+      // $('.pagename h1').html('Registreerimine');
       $('#register').show();
     }
   });

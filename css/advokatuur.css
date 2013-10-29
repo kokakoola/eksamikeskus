@@ -378,34 +378,6 @@ b {
   width: 1600px;
   height: 203px;
 }
-.login {
-  height: 50px;
-  width: 100%;
-  background: #ff0000;
-}
-.head-nav {
-  font-size: 13px;
-  color: #ffffff;
-}
-.head-nav .active,
-.head-nav .active :hover,
-.head-nav .active :focus {
-  color: #ababab;
-  background: url(../img/header_active.png) repeat-x 0 0;
-  height: 39px;
-}
-.head-nav li {
-  background: url(../img/mmenu_line.png) no-repeat right 11px;
-}
-.head-nav li:last-child {
-  background: none;
-}
-.head-nav .active span {
-  display: none;
-}
-.head-nav .navbar .nav > li > a {
-  padding: 10px 0 10px 15px;
-}
 #header-container {
   position: relative;
   width: 100%;
@@ -417,36 +389,6 @@ b {
   width: 997px;
   margin: 0 auto;
   position: relative;
-}
-.search {
-  position: absolute;
-  top: 108px;
-  right: 2px;
-  height: 38px;
-  width: 337px;
-}
-.search input {
-  width: 280px;
-  height: 38px;
-  border: 0;
-  padding: 0px 5px;
-  margin: 0px;
-}
-.search a.search-button {
-  height: 38px;
-  float: right;
-  margin-left: -10px;
-  width: 55px;
-  position: absolute;
-  display: inline-block;
-  background: url(../img/search.png) no-repeat 0 0;
-}
-.search a:hover.search-button {
-  background: url(../img/search_hover.png) no-repeat 0 0;
-}
-.search a.search-button img {
-  width: 20px;
-  margin: 0 auto;
 }
 .main-menu {
   background: url(../img/main_menu.jpg) repeat-x 0 0;
