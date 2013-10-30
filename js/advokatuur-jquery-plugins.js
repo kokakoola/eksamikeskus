@@ -358,3 +358,49 @@ function calculatePercent(totalElemId, partialElemId, percentElemId) {
 }
 
 $('.date').datepicker();
+
+$(function () {
+    $('table.datatable').each(function () {
+        $this = $(this);
+        var hasNrs = $this.hasClass("datatable-nr");
+        var hasPaging = $this.hasClass("datatable-paging");
+        $(this).dataTable({
+            "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6 pull-right'p>>",
+            "sPaginationType": "bootstrap",
+            "bFilter": false,
+            "bPaginate": hasPaging,
+            "fnDrawCallback": function (oSettings) {
+                if (hasNrs) {
+                    /* Lisab järjekorra numbrid esimesse tulpa */
+                    if (oSettings.bSorted || oSettings.bFiltered) {
+                        for (var i = 0, iLen = oSettings.aiDisplay.length; i < iLen; i++) {
+                            this.fnUpdate(i + 1, oSettings.aiDisplay[i], 0, false, false);
+                        }
+                    }
+                }
+            },
+            "aLengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50]],
+            "aoColumnDefs": hasNrs
+                ? [
+                    { "bSortable": false, "sClass": "index", "aTargets": [0] },
+                    { "bSortable": false, "aTargets": ["js-no-sort"] }
+                ]
+                : [{ "bSortable": false, "aTargets": ["js-no-sort"] }],
+            "oLanguage": {
+                "sProcessing": "Laadimine...",
+                "sLengthMenu": "N&auml;ita kirjeid _MENU_ kaupa",
+                "sZeroRecords": "Tulemusi ei leitud.",
+                "sInfo": (hasPaging ? "Kokku: _TOTAL_ kirjet (kuvatud _START_-_END_)" : ""),
+                "sInfoEmpty": "Otsinguvasteid ei leitud",
+                "sInfoFiltered": " - filteeritud _MAX_ kirje seast.",
+                "sSearch": "Otsi k&otilde;ikide tulemuste seast:",
+                "oPaginate": {
+                    "sFirst": "Algus",
+                    "sPrevious": "Eelmine",
+                    "sNext": "J&auml;rgmine",
+                    "sLast": "Viimane"
+                }
+            }
+        });
+    });
+});
