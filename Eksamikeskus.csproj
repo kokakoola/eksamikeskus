@@ -234,6 +234,8 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_exam_reg_on_exam.html" />
+    <Content Include="_includes\_administrator\_oral-change-gen-exam.html" />
     <Content Include="_includes\_administrator\_settings_notifications.html" />
     <Content Include="_includes\_administrator\_settings_test_exam_info.html" />
     <Content Include="_includes\_administrator\_settings_writing_exam_info.html" />
@@ -295,6 +297,7 @@
     <Content Include="_includes\_examinant\_test_test.html" />
     <Content Include="_includes\_examinant\_welcome.html" />
     <Content Include="_includes\_examinant\_written_start.html" />
+    <Content Include="_includes\_examinant\_written_test.html" />
     <Content Include="_includes\_footer.html" />
     <Content Include="_includes\_head.html" />
     <Content Include="_includes\_header.html" />

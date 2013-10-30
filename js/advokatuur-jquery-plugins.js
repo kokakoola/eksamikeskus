@@ -32,29 +32,18 @@ $(document).ready(function() {
     $('#js-lastname').editable(
 
       );
+    $('.js-place').editable(
+
+      );
 });
 
     $('.editableinline').editable(
       {mode: 'inline'}
-
       );
-
-$(function(){
-
-    $('#comission').editable({
-        source: [
-              {value: 1, text: 'Aadu Luberg'},
-              {value: 2, text: 'Enno Loonurm'},
-              {value: 3, text: 'Gunnar Vaikmaa '},
-              {value: 4, text: 'Heli Sepp '},
-              {value: 5, text: 'Mari-Ann Simovart'},
-              {value: 6, text: 'Meeli Kaur '},
-              {value: 7, text: 'Toomas Tamme'},
-              {value: 8, text: 'Toomas Taube'},
-              {value: 9, text: 'Urmas Ustav'}
-           ]
-    });
-});
+    $('#outcome').editable({
+        mode: 'inline',
+        source: [ {value: 1, text: '75%, arvestatud'}, {value: 2, text: 'Mitte ilmunud'}, {value: 3, text: 'Kõrvaldatud'}]
+      });
 
  $('#state').editable({
         source: [{value: 1, text: 'Administraator'}, {value: 2, text: 'Eksamineeritav'}, {value: 3, text: 'Komisjoni liige'}, {value: 4, text: 'Kantselei töötaja'}]
@@ -64,6 +53,42 @@ $(function(){
     url: '/post'
  });
 
+ $(function(){
+     $('.place').editable({
+         source: [{value: 1, text: 'Rävala pst 3, Tallinn ruum 2'}, {value: 2, text: 'Rävala pst 3, Tallinn ruum 3'}]
+     });
+ });
+
+ $(function () {
+     $('.committee').editable({
+         pk: 1,
+         limit: 3,
+         source: [
+          { value: 1, text: 'Aadu Luberg' },
+          { value: 2, text: 'Enno Loonurm' },
+          { value: 3, text: 'Gunnar Vaikmaa' },
+          { value: 4, text: 'Heli Sepp' },
+          { value: 5, text: 'Mari-Ann Simovart' },
+          { value: 6, text: 'Meeli Kaur' },
+          { value: 7, text: 'Toomas Tamme' },
+          { value: 8, text: 'Toomas Taube' },
+          { value: 9, text: 'Urmas Ustav' }
+         ]
+     });
+ });
+
+ $(function () {
+     $('.kaasus').editable({
+         pk: 1,
+         limit: 3,
+         source: [
+          { value: 0, text: 'Vali' },
+          { value: 1, text: 'Arvestatud' },
+          { value: 3, text: 'Mitte ilmunud' },
+          { value: 4, text: 'Kõrvaldatud' }
+         ]
+     });
+ });
 
 $('table').on('click', '.icon-trash', function(e){
 
@@ -88,7 +113,6 @@ $('#new_surname').editable('option', 'validate', function(v) {
     if(!v) return 'Nõutav väli!';
 });
 
- 
 //automatically show next editable
 $('.myeditable').on('save.newuser', function(){
     var that = this;
@@ -139,6 +163,11 @@ $(document).ready(function () {
   $('#register, #registered').hide();
   $(' #test-end, #written-start').hide();
   $('#test, #test-end').hide();
+  
+  bootbox.addLocale('en', {
+      CONFIRM: 'Kinnita',
+      CANCEL: 'Loobu'
+  });
  });
 
 //made by: Mari-Liis
@@ -157,7 +186,7 @@ $(document).on("click", "#js-login-id-button", function (e) {
       bootbox.alert("Logimine ebaõnnestus! Veenduge, et kas id kaart on korralikult lugejas või sisestatud PIN kood oli õige. Vea kordumisel palun sulgege brauser ja proovige algusest.");
     } else if (result > 0) {
       $('#welcome').hide(); 
-      $('.pagename h1').html('Registreerimine');
+      // $('.pagename h1').html('Registreerimine');
       $('#register').show();
     }
   });
@@ -330,3 +359,49 @@ function calculatePercent(totalElemId, partialElemId, percentElemId) {
 }
 
 $('.date').datepicker();
+
+$(function () {
+    $('table.datatable').each(function () {
+        $this = $(this);
+        var hasNrs = $this.hasClass("datatable-nr");
+        var hasPaging = $this.hasClass("datatable-paging");
+        $(this).dataTable({
+            "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6 pull-right'p>>",
+            "sPaginationType": "bootstrap",
+            "bFilter": false,
+            "bPaginate": hasPaging,
+            "fnDrawCallback": function (oSettings) {
+                if (hasNrs) {
+                    /* Lisab järjekorra numbrid esimesse tulpa */
+                    if (oSettings.bSorted || oSettings.bFiltered) {
+                        for (var i = 0, iLen = oSettings.aiDisplay.length; i < iLen; i++) {
+                            this.fnUpdate(i + 1, oSettings.aiDisplay[i], 0, false, false);
+                        }
+                    }
+                }
+            },
+            "aLengthMenu": [[5, 10, 25, 50], [5, 10, 25, 50]],
+            "aoColumnDefs": hasNrs
+                ? [
+                    { "bSortable": false, "sClass": "index", "aTargets": [0] },
+                    { "bSortable": false, "aTargets": ["js-no-sort"] }
+                ]
+                : [{ "bSortable": false, "aTargets": ["js-no-sort"] }],
+            "oLanguage": {
+                "sProcessing": "Laadimine...",
+                "sLengthMenu": "N&auml;ita kirjeid _MENU_ kaupa",
+                "sZeroRecords": "Tulemusi ei leitud.",
+                "sInfo": (hasPaging ? "Kokku: _TOTAL_ kirjet (kuvatud _START_-_END_)" : ""),
+                "sInfoEmpty": "Otsinguvasteid ei leitud",
+                "sInfoFiltered": " - filteeritud _MAX_ kirje seast.",
+                "sSearch": "Otsi k&otilde;ikide tulemuste seast:",
+                "oPaginate": {
+                    "sFirst": "Algus",
+                    "sPrevious": "Eelmine",
+                    "sNext": "J&auml;rgmine",
+                    "sLast": "Viimane"
+                }
+            }
+        });
+    });
+});

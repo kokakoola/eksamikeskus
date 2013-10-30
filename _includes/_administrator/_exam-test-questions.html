@@ -31,14 +31,17 @@
                         <option>Testkeskkonna küsimus</option>
                     </select>
                 </span>
-                <a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-questions-results tr:gt(2)')); return false;">Filtreeri</a>
+                <div class="pull-right">
+                    <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#exam-test-questions-results tr'));  return false;">Tühjenda</a></span>
+                    <span class="span1"><a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-questions-results tr:gt(2)')); return false;">Otsi</a></span>
+                </div>
             </div>
             <div class="row">
                 <div class="span11">
                     <small>Kokku küsimusi 5</small>
                 </div>
                 <div class=" pull-right">
-                    <a href="#exam-question-add" class="btn btn-primary"><i class="icon-plus-sign"> Lisa testi küsimus</i>
+                    <a href="#exam-question-add" class="btn btn-primary"><i class="icon-plus-sign"></i> Lisa testi küsimus
                     </a>
                 </div>
             </div>
@@ -66,7 +69,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
 
             </tr>
@@ -79,7 +82,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
@@ -91,7 +94,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#test-change-test" data-toggle="tooltip" title="Muuda"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr class="inactive">
@@ -103,7 +106,7 @@
                     <span class="icon-button"><a class="tip icon-eye-open" href="#test-disabled-test" data-toggle="tooltip" title="Vaata"></a></span>
                 </td>
                 <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>

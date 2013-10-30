@@ -13214,10 +13214,9 @@ a .icon-flip-vertical:before {
   padding-top: 5px;
   line-height: 60px;
 }
-ul.nav-wizard {
-  background-color: none;
-  border: 1px solid #ffffff;
-  height: 47px;
+#nav-wizard ul.nav-wizard {
+  background-color: #f9f9f9;
+  border: 1px solid #d4d4d4;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -13225,123 +13224,123 @@ ul.nav-wizard {
   position: relative;
   overflow: hidden;
 }
-ul.nav-wizard:before {
+#nav-wizard ul.nav-wizard:before {
   display: block;
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 13px;
-  height: 14px;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  top: 46px;
+  height: 47px;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
   z-index: 11;
   content: " ";
 }
-ul.nav-wizard:after {
+#nav-wizard ul.nav-wizard:after {
   display: block;
   position: absolute;
   left: 0px;
   right: 0px;
-  top: 39px;
-  height: 14px;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  top: 138px;
+  height: 47px;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
   z-index: 11;
   content: " ";
 }
-ul.nav-wizard li {
+#nav-wizard ul.nav-wizard li {
   position: relative;
   float: left;
-  height: 13px;
+  height: 46px;
   display: inline-block;
   text-align: middle;
-  padding: 10px 20px 0 30px;
+  padding: 0 20px 0 30px;
   margin: 0;
-  font-size: 13px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 46px;
 }
-ul.nav-wizard li a {
-  color: #ffffff;
+#nav-wizard ul.nav-wizard li a {
+  color: #468847;
   padding: 0;
 }
-ul.nav-wizard li a:hover {
+#nav-wizard ul.nav-wizard li a:hover {
   background-color: transparent;
 }
-ul.nav-wizard li:before {
+#nav-wizard ul.nav-wizard li:before {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid #ffffff;
+  border-left: 16px solid #d4d4d4;
   border-right: 0;
   top: -1px;
   z-index: 10;
   content: '';
   right: -16px;
 }
-ul.nav-wizard li:after {
+#nav-wizard ul.nav-wizard li:after {
   position: absolute;
   display: block;
   border: 24px solid transparent;
-  border-left: 16px solid none;
+  border-left: 16px solid #f9f9f9;
   border-right: 0;
   top: -1px;
   z-index: 10;
   content: '';
   right: -15px;
 }
-ul.nav-wizard li.active {
-  color: #ffffff;
-  background: #0088cc;
+#nav-wizard ul.nav-wizard li.active {
+  color: #3a87ad;
+  background: #d9edf7;
 }
-ul.nav-wizard li.active:after {
-  border-left: 16px solid #0088cc;
+#nav-wizard ul.nav-wizard li.active:after {
+  border-left: 16px solid #d9edf7;
 }
-ul.nav-wizard li.active a,
-ul.nav-wizard li.active a:active,
-ul.nav-wizard li.active a:visited,
-ul.nav-wizard li.active a:focus {
-  color: #ffffff;
-  background: #0088cc;
+#nav-wizard ul.nav-wizard li.active a,
+#nav-wizard ul.nav-wizard li.active a:active,
+#nav-wizard ul.nav-wizard li.active a:visited,
+#nav-wizard ul.nav-wizard li.active a:focus {
+  color: #3a87ad;
+  background: #d9edf7;
 }
-ul.nav-wizard .active ~ li {
+#nav-wizard ul.nav-wizard .active ~ li {
   color: #999999;
   background: #ededed;
 }
-ul.nav-wizard .active ~ li:after {
+#nav-wizard ul.nav-wizard .active ~ li:after {
   border-left: 16px solid #ededed;
 }
-ul.nav-wizard .active ~ li a,
-ul.nav-wizard .active ~ li a:active,
-ul.nav-wizard .active ~ li a:visited,
-ul.nav-wizard .active ~ li a:focus {
+#nav-wizard ul.nav-wizard .active ~ li a,
+#nav-wizard ul.nav-wizard .active ~ li a:active,
+#nav-wizard ul.nav-wizard .active ~ li a:visited,
+#nav-wizard ul.nav-wizard .active ~ li a:focus {
   color: #999999;
   background: #ededed;
 }
-ul.nav-wizard.nav-wizard-backnav li:hover {
-  color: #ffffff;
-  background: #00a0f0;
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover {
+  color: #468847;
+  background: #f6fbfd;
 }
-ul.nav-wizard.nav-wizard-backnav li:hover:after {
-  border-left: 16px solid #00a0f0;
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover:after {
+  border-left: 16px solid #f6fbfd;
 }
-ul.nav-wizard.nav-wizard-backnav li:hover a,
-ul.nav-wizard.nav-wizard-backnav li:hover a:active,
-ul.nav-wizard.nav-wizard-backnav li:hover a:visited,
-ul.nav-wizard.nav-wizard-backnav li:hover a:focus {
-  color: #ffffff;
-  background: #00a0f0;
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:active,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:visited,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:focus {
+  color: #468847;
+  background: #f6fbfd;
 }
-ul.nav-wizard.nav-wizard-backnav .active ~ li {
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li {
   color: #999999;
   background: #ededed;
 }
-ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li:after {
   border-left: 16px solid #ededed;
 }
-ul.nav-wizard.nav-wizard-backnav .active ~ li a,
-ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
-ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
-ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li a,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li a:active,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li a:visited,
+#nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li a:focus {
   color: #999999;
   background: #ededed;
 }
@@ -13430,14 +13429,29 @@ header .pagename h1 {
   color: #fff;
   font-weight: normal;
 }
+header .navbar-inner {
+  height: 40px;
+  overflow-y: hidden;
+}
+.navbar-inverse .nav .active > a,
+.navbar-inverse .nav .active > a:hover,
+.navbar-inverse .nav .active > a:focus {
+  background-color: transparent;
+}
+.main-menu li {
+  padding: 0 10px;
+  background: url(img/mmenu_line.png) no-repeat left 15px;
+}
+.main-menu .active,
+.main-menu li:first-child.active {
+  background: url(img/main_menu_active.jpg) repeat-x 0 0;
+  height: 44px;
+}
 #header-container {
   width: 100%;
   height: 170px;
-  margin: 0 auto;
+  margin: 20px auto;
   background: url(img/header_bg.png) no-repeat center top;
-}
-#header-container {
-  display: none;
 }
 .fixed {
   background: rgba(220, 229, 236, 0.32);
@@ -13451,30 +13465,6 @@ header .pagename h1 {
 }
 .head-nav li {
   background: url(img/menu_line.png) no-repeat right 11px;
-}
-.search {
-  position: absolute;
-  top: 108px;
-  right: 2px;
-  height: 38px;
-  width: 337px;
-}
-.search input {
-  width: 280px;
-  height: 38px;
-  border: 0;
-  border-radius: 0;
-  padding: 0px 5px;
-  margin: 0px;
-}
-.search a.search-button {
-  height: 38px;
-  float: right;
-  margin-left: -10px;
-  width: 55px;
-  position: absolute;
-  display: inline-block;
-  background: url(img/search.png) no-repeat 0 0;
 }
 .header-inner {
   width: 997px;

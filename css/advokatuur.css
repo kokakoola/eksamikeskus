@@ -378,34 +378,6 @@ b {
   width: 1600px;
   height: 203px;
 }
-.login {
-  height: 50px;
-  width: 100%;
-  background: #ff0000;
-}
-.head-nav {
-  font-size: 13px;
-  color: #ffffff;
-}
-.head-nav .active,
-.head-nav .active :hover,
-.head-nav .active :focus {
-  color: #ababab;
-  background: url(../img/header_active.png) repeat-x 0 0;
-  height: 39px;
-}
-.head-nav li {
-  background: url(../img/mmenu_line.png) no-repeat right 11px;
-}
-.head-nav li:last-child {
-  background: none;
-}
-.head-nav .active span {
-  display: none;
-}
-.head-nav .navbar .nav > li > a {
-  padding: 10px 0 10px 15px;
-}
 #header-container {
   position: relative;
   width: 100%;
@@ -417,36 +389,6 @@ b {
   width: 997px;
   margin: 0 auto;
   position: relative;
-}
-.search {
-  position: absolute;
-  top: 108px;
-  right: 2px;
-  height: 38px;
-  width: 337px;
-}
-.search input {
-  width: 280px;
-  height: 38px;
-  border: 0;
-  padding: 0px 5px;
-  margin: 0px;
-}
-.search a.search-button {
-  height: 38px;
-  float: right;
-  margin-left: -10px;
-  width: 55px;
-  position: absolute;
-  display: inline-block;
-  background: url(../img/search.png) no-repeat 0 0;
-}
-.search a:hover.search-button {
-  background: url(../img/search_hover.png) no-repeat 0 0;
-}
-.search a.search-button img {
-  width: 20px;
-  margin: 0 auto;
 }
 .main-menu {
   background: url(../img/main_menu.jpg) repeat-x 0 0;
@@ -1203,3 +1145,49 @@ ul.gallery li {
   width: 550px;
 }
 /*end:lisas Marek*/
+/*start:Datatables*/
+table.dataTable thead th:hover:not(.sorting_disabled) {
+  background-color: #EFEFEF;
+}
+div.dataTables_length label {
+  float: left;
+  text-align: left;
+}
+div.dataTables_filter label {
+  float: right;
+}
+div.dataTables_info {
+  padding-top: 8px;
+}
+div.dataTables_paginate {
+  float: right;
+  margin: 0;
+}
+table {
+  margin-bottom: 6px !important;
+  clear: both;
+}
+table.table thead .sorting,
+table.table thead .sorting_asc,
+table.table thead .sorting_desc,
+table.table thead .sorting_asc_disabled,
+table.table thead .sorting_desc_disabled {
+  cursor: pointer;
+  *cursor: hand;
+}
+table.table thead .sorting {
+  background: url('../js/DataTables-1.9.4/media/images/sort_both.png') no-repeat center right;
+}
+table.table thead .sorting_asc {
+  background: url('../js/DataTables-1.9.4/media/images/sort_asc.png') no-repeat center right;
+}
+table.table thead .sorting_desc {
+  background: url('../js/DataTables-1.9.4/media/images/sort_desc.png') no-repeat center right;
+}
+table.table thead .sorting_asc_disabled {
+  background: url('../js/DataTables-1.9.4/media/images/sort_asc_disabled.png') no-repeat center right;
+}
+table.table thead .sorting_desc_disabled {
+  background: url('../js/DataTables-1.9.4/media/images/sort_desc_disabled.png') no-repeat center right;
+}
+/*end:Datatables*/
