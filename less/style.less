@@ -61,7 +61,7 @@
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
-  margin: 41px auto -50px;
+  margin: -20px auto -50px;
 }
 
 /* Set the fixed height of the footer here */
@@ -78,22 +78,27 @@
   }
 }
 
+.content {
+  margin-top: 30px;
+}
+
 #nav-wizard {
 // nav-vizard https://github.com/LeadDyno/bootstrap-nav-wizard/blob/master/src/bootstrap-nav-wizard.less
 //===============================================
 // Variables
 //===============================================
-@wizard-background: #f9f9f9;
-@border-color: #d4d4d4;
+@wizard-background: transparent;
+@border-color: #fff;
 
-@complete-color : #468847;
-@complete-background : #dff0d8;
+@complete-color : #242424;
+@complete-background : transparent;
 
-@active-color : #3a87ad;
-@active-background : #d9edf7;
+@active-color : #fff;
+@active-background : 
+   #0d8fda;
 
-@incomplete-color : lighten(#000, 60%);
-@incomplete-background : #ededed;
+@incomplete-color : lighten(#000, 20%);
+@incomplete-background : #e8e8e8;
 @row-height: 46px;
 
 //===============================================
@@ -130,12 +135,13 @@
 ul.nav-wizard {
   background-color: @wizard-background;
   border: 1px solid @border-color;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
   *zoom: 1;
   position: relative;
   overflow: hidden;
+  margin-left: 0;
   &:before {
     display: block;
     position: absolute;
@@ -194,7 +200,7 @@ ul.nav-wizard {
   }
   &.nav-wizard-backnav {
     li:hover {
-      .li-color(@complete-color, lighten(@active-background, 7%));
+      .li-color(@complete-color, @active-background);
     }
     .active ~ li {
       .li-color(@incomplete-color, @incomplete-background);
@@ -265,6 +271,7 @@ font-family: 'clbd', Arial, sans-serif;
 
 .well.afterheader {
   margin-top: 40px;
+  padding: 30px;
 }
 
 // Help icon style
@@ -289,7 +296,7 @@ font-family: 'clbd', Arial, sans-serif;
   background-image: -o-linear-gradient(bottom, #e8e8e8, #f5f5f5);
   background-image: linear-gradient(to top, #e8e8e8, #f5f5f5);
   border: none;
-  padding: 30px;
+
 }
 
 .row {
@@ -300,12 +307,19 @@ font-family: 'clbd', Arial, sans-serif;
   display: none;
 }
 
+.container h1 {
+  font-size:21px;
+  color:#242424;  
+  margin: 14px 0 14px 0px;
+  display: block;
+}
+
+
 // header styles
 // ----------------
 header {
 background: #105B8B;
 width: 100%;
-margin-bottom: 30px;
   .logo {
   position: absolute;
   top: 20px;
@@ -363,7 +377,7 @@ box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
 }
 
 .admin#header-container{
-  height: 205px;
+  height: 207px;
 }
 
 .admin .pagename {
@@ -378,14 +392,6 @@ box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
 
 .fixed {
   background: rgba(220, 229, 236, 0.32);
-}
-
-.container h1 {
-  font-size: 32px;
-  display: block;
-  margin-top: 40px;
-  margin-left: 30px;
-  margin-bottom: 30px;
 }
 
 .head-nav li {
@@ -519,6 +525,7 @@ table th {
   text-transform: uppercase;
   font-size: small;
   color: @grayLight;
+  font-weight: normal;
 }
 
 td.narrow {
@@ -539,10 +546,24 @@ td.narrow {
 // }
 
 .inline-group {
-  margin-left: 20px;
+  margin-left: 0;
+  margin-right: 15px;
   label {
-    margin-right: 10px;
+    margin-right: 5px;
   }
+}
+
+.filterbuttons {
+  max-width: 160px;
+  float: right;
+  clear: right;
+.btn-primary {
+    margin-left: 10px;
+  }
+}
+
+.tablebefore {
+  margin-top: 30px;
 }
 
 textarea, input[type="text"], input[type="password"], input[type="datetime"], 
