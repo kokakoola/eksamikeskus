@@ -90,16 +90,25 @@
 @wizard-background: transparent;
 @border-color: #fff;
 
-@complete-color : #242424;
-@complete-background : transparent;
+@complete-color : #fff;
+@complete-background : @gray;
 
 @active-color : #fff;
-@active-background : 
-   #0d8fda;
+@active-background : #0d8fda;
 
-@incomplete-color : lighten(#000, 20%);
+@incomplete-color : lighten(#000, 30%);
 @incomplete-background : #e8e8e8;
 @row-height: 46px;
+a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+ul.nav-wizard li.completed {
+  background-color: @complete-background;
+}
+ul.nav-wizard li.completed:after {
+  border-left: 16px solid @complete-background;
+}
 
 //===============================================
 // Mixins
@@ -135,13 +144,12 @@
 ul.nav-wizard {
   background-color: @wizard-background;
   border: 1px solid @border-color;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
   *zoom: 1;
   position: relative;
   overflow: hidden;
-  margin-left: 0;
   &:before {
     display: block;
     position: absolute;
@@ -200,7 +208,7 @@ ul.nav-wizard {
   }
   &.nav-wizard-backnav {
     li:hover {
-      .li-color(@complete-color, @active-background);
+      .li-color(@complete-color, lighten(@active-background, 7%));
     }
     .active ~ li {
       .li-color(@incomplete-color, @incomplete-background);
@@ -269,6 +277,14 @@ b {
 font-family: 'clbd', Arial, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, th {
+  font-weight: normal;
+}
+
+hr.closer {
+  margin: 5px 0 10px;
+}
+
 .well.afterheader {
   margin-top: 40px;
   padding: 30px;
@@ -289,6 +305,18 @@ font-family: 'clbd', Arial, sans-serif;
   margin-right: 15px; 
 }
 
+.controls a {
+  line-height: 30px;
+}
+
+#nav-wizard {
+  margin: 20px 0;
+}
+
+.nav-tabs > li > a {
+  border-radius: 0;
+}
+
 .well {
   border-radius: 0;
   background-image: -webkit-linear-gradient(bottom, #e8e8e8, #f5f5f5);
@@ -299,8 +327,30 @@ font-family: 'clbd', Arial, sans-serif;
 
 }
 
+.wellhead {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+ul.nav-wizard {
+  margin-left: 0;
+}
+
+.well small {
+  text-transform: uppercase;
+  color: @gray;
+  font-size: 80%;
+}
+
+.btn, button, .label, .btn-group > .dropdown-toggle, .btn-group > .btn:first-child, input[type="text"] {
+  border-radius: 0;
+}
 .row {
   margin-left: 0;
+}
+
+.row .span4 {
+  width: 295px;
 }
 
 .hide {
@@ -526,6 +576,7 @@ table th {
   font-size: small;
   color: @grayLight;
   font-weight: normal;
+  font-family: 'Clne',Arial !important;
 }
 
 td.narrow {
