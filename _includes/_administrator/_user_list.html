@@ -39,19 +39,21 @@
         </fieldset>
     </form>
 
-    <table class="table sortable">
+    <table class="table datatable datatable-nr">
         <thead>
             <tr class="sort">
+                <th>Nr</th>
                 <th>Eesnimi</th>
                 <th>Perekonnanimi</th>
                 <th>Roll</th>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th class="js-no-sort"></th>
+                <th class="js-no-sort"></th>
+                <th class="js-no-sort"></th>
             </tr>
         </thead>
         <tbody>
             <tr>
+                <td></td>
                 <td>Aadu</td>
                 <td>Aas</td>
                 <td>Eksamineeritav</td>
@@ -61,10 +63,11 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
                 </td>
                 <td>
-                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
             <tr>
+                <td></td>
                 <td>Mait</td>
                 <td>Metsanurk</td>
                 <td>Administraator</td>
@@ -74,7 +77,7 @@
                     <span class="icon-button"><a class="tip icon-edit" href="#change-user" data-toggle="tooltip"  data-original-title="Muuda"></a></span>
                 </td>
                 <td class="narrow">
-                     <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                    <span class="icon-button"><a class="tip icon-trash" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                 </td>
             </tr>
         </tbody>
