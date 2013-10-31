@@ -18,32 +18,40 @@
 		</div>
 
         <div class="well clearfix">
+          <h4 class="wellhead">Järjekord on genereeritud.</h4>
           <div id="nav-wizard">
               <ul class="nav-wizard">
-                <li><a href="">Registreerimine</a></li>
-                <li><a href="">Kirjalik eksam</a></li>
+                <li class="completed"><a href="">Registreerimine</a></li>
+                <li class="completed"><a href="">Kirjalik eksam</a></li>
                 <li class="active"><a href="">Suuline eksam</a></li>
                 <li><a href="">Eksam läbi</a></li>
               </ul>
          </div>
-         <div class="span12"><h4>Järjekord on genereeritud.</h4></div>
-        <div class="row" style="margin-left:10px;">
+        <div class="row">
             <div class="span4">
-                <h3>13.10.2012 <small>kell </small>10:00</h3>
-                <p>Rävala pst 3, Tallinn ruum 2 <small>kohti:</small> 19/20</p>
-                <p>Rävala pst 3, Tallinn ruum 3 <small>kohti:</small> 20/20</p>
-                <p>Rävala pst 3, Tallinn ruum 4 <small>kohti:</small> 10/10</p>
+                <h4>13.10.2012 kell 10:00</h4>
+                <hr class="closer">
+                <p>IT Kolledž, Mäealuse 4c Tallinn</p>
+
+                <p><small>Ruum: </small>302  (18/20)</p>
+                <p><small>Ruum: </small>302  (18/20)</p>
+                <p><small>Ruum: </small>302  (20/20)</p>
+                <p><small>Ruum: </small>302  (20/20)</p>
             </div>
             <div class="span4">
-                <h3>14.10.2012 <small>kell </small>13:00</h3>
-                <p>Rävala pst 3, Tallinn ruum 2 <small>kohti:</small> 20/20</p>
-                <p>Rävala pst 3, Tallinn ruum 3 <small>kohti:</small> 19/20</p>
+                <h4>14.10.2012 kell 10:00</h4>
+                <hr class="closer">
+                <p>Eesti Advokatuur, Rävala pst 3 Tallinn, 4. korrus</p>
+                <p><small>Ruum: </small>302  (20/20)</p>
+                <p><small>Ruum: </small>302  (20/20)</p>
             </div>
             <div class="span4">
-                <h3>15.10.2012 <small>kell </small>12:00</h3>
-                <p>Rävala pst 3, Tallinn ruum 2 <small>kohti:</small> 20/20</p>
-                <p>Rävala pst 3, Tallinn ruum 3 <small>kohti:</small> 20/20</p>
-                <p>Rävala pst 3, Tallinn ruum 4 <small>kohti:</small> 9/10</p>
+                <h4>15.10.2012 kell 10:00</h4>
+                <hr class="closer">
+                <p>Eesti Advokatuur, Rävala pst 3 Tallinn, 4. korrus</p>
+                <p><small>Ruum: </small>302  (19/20)</p>
+                <p><small>Ruum: </small>302  (10/20)</p>
+                <p><small>Ruum: </small>302  (9/20)</p>
             </div>
         </div>
     </div>
@@ -56,7 +64,6 @@
           <div class="tab-content">
             
             <div id="p2c" class="tab-pane active">
-                <div class="span14">
                     <div class="tabbable">
                       <ul class="nav nav-pills">
                         <li class="active"><a href="#koik4" data-toggle="tab">Kõik</a></li>
@@ -64,6 +71,43 @@
                       </ul>
                       <div class="tab-content">
                           <div id="koik4" class="tab-pane active">
+                              <form class="form-inline">
+                                <fieldset>
+                                  <div class="well">
+                                    <span class="inline-group">
+                                      <label for="textinput1">Nimi</label>
+                                      <input id="text1" name="textinput1" type="text" >
+                                    </span>
+                                    <span class="inline-group">
+                                      <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                                        <option>Eksami liik valimata</option>
+                                        <option>Vandeadvokaadi eksam</option>
+                                        <option>Vandeadvokaadi abi eksam</option>
+                                      </select>
+                                    </span>
+                                    <span class="inline-group">
+                                      <select id="select1" name="select1" class="selectpicker show-tick">
+                                        <option>Staatus valimata</option>
+                                        <option>Testile mitteilmunud</option>
+                                        <option>Testi lahendamiselt kõrvaldatud</option>
+                                        <option>Kaasus esitatud</option>
+                                        <option>Kaasusele mitteilmunud</option>
+                                        <option>Kaasuse lahendamiselt kõrvaldatud</option>
+                                        <option>Suulisele eksamile mitte ilmunud</option>
+                                        <option>Eksam sooritamata</option>
+                                        <option>Eksam sooritatud</option>
+                                      </select>
+                                    </span>
+                                    <span class="inline-group pull-right">
+                                        <a class="btn" href="#oral-change-gen-exam">Tühjenda</a>
+                                        <a class="btn btn-primary" href="#oral-change-gen-exam">Otsi</a>
+                                    </span>
+                                  </div>
+                                  <div class="row">
+                                      <small>Kokku eksamineeritavaid 4</small>
+                                  </div>
+                                </fieldset>
+                              </form>
                               <table class="table table-striped table-condensed sortable">
             					<thead>
                                     <tr class="sort">
@@ -83,8 +127,8 @@
                                         <td>Aas</td>
                                         <td>Vandeadvokaadi abi eksam</td>
                                         <td>13.02.2012 10:00</td>
-                                        <td>Rävala pst 3, Tallinn ruum 2</td>
-                                        <td>Kirjalik läbitud</td>
+                                        <td>IT Kolledž, Mäealuse 4c Tallinn ruum 202</td>
+                                        <td>Kaasus esitatud</td>
                                         <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
                                         <td class="narrow">
                                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
@@ -95,8 +139,8 @@
                                         <td>Pakiraam</td>
                                         <td>Vandeadvokaadi eksam</td>
                                         <td>15.02.2012 12:00</td>
-                                        <td>Rävala pst 3, Tallinn ruum 4</td>
-                                        <td>Kirjalik läbitud</td>
+                                        <td>Rävala pst 3 Tallinn, 4. korrus ruum 202</td>
+                                        <td>Kaasus esitatud</td>
                                         <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
                                         <td class="narrow">
                                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
@@ -107,8 +151,20 @@
                                         <td>Maasikas</td>
                                         <td>Vandeadvokaadi eksam</td>
                                         <td>14.02.2012 13:00</td>
-                                        <td>Rävala pst 3, Tallinn ruum 3</td>
-                                        <td>Kirjalik läbitud</td>
+                                        <td>Rävala pst 3 Tallinn, 4. korrus ruum 202</td>
+                                        <td>Kaasus esitatud</td>
+                                        <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
+                                        <td class="narrow">
+                                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mait</td>
+                                        <td>Metsanurk</td>
+                                        <td>Vandeadvokaadi eksam</td>
+                                        <td>14.02.2012 13:00</td>
+                                        <td>Rävala pst 3 Tallinn, 4. korrus ruum 202</td>
+                                        <td>Testile mitteilmunud</td>
                                         <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
                                         <td class="narrow">
                                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
@@ -118,159 +174,152 @@
             				</table>
                           </div>
                           <div id="kohad4" class="tab-pane">
-                              <div class="row">
-    		                    <div class="span12">
-                                    <div class="accordion">
-            		                    <div class="accordion-group">
-            			                    <div class="accordion-heading">
-            				                    <a class="accordion-toggle" data-toggle="collapse" href="#oral11">13.02.2012   Rävala pst 3, Tallinn ruum 2</a>
-            			                    </div>
-            			                    <div id="oral11" class="accordion-body collapse">
-            				                    <div class="accordion-inner">
-            					                    <table class="table table-striped table-condensed sortable">
-            						                    <thead>
-                                                            <tr class="sort">
-                                                                <th>Eesnimi</th>
-                                                                <th>Perekonnanimi</th>
-                                                                <th>Eksami liik</th>
-                                                                <th>Staatus</th>
-                                                                <th></th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Aadu</td>
-                                                                <td>Aas</td>
-                                                                <td>Vandeadvokaadi abi eksam</td>
-                                                                <td>Kirjalik läbitud</td>
-                                                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
-                                                                <td class="narrow">
-                                                                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-            					                    </table>
-            				                    </div>
-            			                    </div>
-                                            <div class="accordion-heading">
-            				                    <a class="accordion-toggle" data-toggle="collapse" href="#oral12">13.02.2012   Rävala pst 3, Tallinn ruum 3</a>
-            			                    </div>
-            			                    <div id="oral12" class="accordion-body collapse">
-            				                    <div class="accordion-inner">
-            					                    <table class="table table-striped table-condensed sortable">
-            						                    <thead>
-                                                            <tr class="sort">
-                                                                <th>Eesnimi</th>
-                                                                <th>Perekonnanimi</th>
-                                                                <th>Eksami liik</th>
-                                                                <th>Staatus</th>
-                                                                <th></th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
+                            <div class="accordion">
+            			        <div class="accordion-heading">
+            				        <a class="accordion-toggle" data-toggle="collapse" href="#oral11">13.02.2012 / ruum 202 / IT Kolledž, Mäealuse 4c Tallinn</a>
+            			        </div>
+            			        <div id="oral11" class="accordion-body collapse">
+            				        <div class="accordion-inner">
+            					        <table class="table table-striped table-condensed sortable">
+            						        <thead>
+                                                <tr class="sort">
+                                                    <th>Eesnimi</th>
+                                                    <th>Perekonnanimi</th>
+                                                    <th>Eksami liik</th>
+                                                    <th>Staatus</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Aadu</td>
+                                                    <td>Aas</td>
+                                                    <td>Vandeadvokaadi abi eksam</td>
+                                                    <td>Kaasus esitatud</td>
+                                                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
+                                                    <td class="narrow">
+                                                            <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+            					        </table>
+            				        </div>
+            			        </div>
+                                <div class="accordion-heading">
+            				        <a class="accordion-toggle" data-toggle="collapse" href="#oral12">13.02.2012 / ruum 203 / IT Kolledž, Mäealuse 4c Tallinn</a>
+            			        </div>
+            			        <div id="oral12" class="accordion-body collapse">
+            				        <div class="accordion-inner">
+            					        <table class="table table-striped table-condensed sortable">
+            						        <thead>
+                                                <tr class="sort">
+                                                    <th>Eesnimi</th>
+                                                    <th>Perekonnanimi</th>
+                                                    <th>Eksami liik</th>
+                                                    <th>Staatus</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
                                                                 
-                                                            </tr>
-                                                        </tbody>
-            					                    </table>
-            				                    </div>
-            			                    </div>
-                                            <div class="accordion-heading">
-            				                    <a class="accordion-toggle" data-toggle="collapse" href="#oral13">13.02.2012   Rävala pst 3, Tallinn ruum 4</a>
-            			                    </div>
-            			                    <div id="oral13" class="accordion-body collapse">
-            				                    <div class="accordion-inner">
-            					                    <table class="table table-striped table-condensed sortable">
-            						                    <thead>
-                                                            <tr class="sort">
-                                                                <th>Eesnimi</th>
-                                                                <th>Perekonnanimi</th>
-                                                                <th>Eksami liik</th>
-                                                                <th>Staatus</th>
-                                                                <th></th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
+                                                </tr>
+                                            </tbody>
+            					        </table>
+            				        </div>
+            			        </div>
+                                <div class="accordion-heading">
+            				        <a class="accordion-toggle" data-toggle="collapse" href="#oral13">13.02.2012 / ruum 204 / Rävala pst 3 Tallinn, 4. korrus</a>
+            			        </div>
+            			        <div id="oral13" class="accordion-body collapse">
+            				        <div class="accordion-inner">
+            					        <table class="table table-striped table-condensed sortable">
+            						        <thead>
+                                                <tr class="sort">
+                                                    <th>Eesnimi</th>
+                                                    <th>Perekonnanimi</th>
+                                                    <th>Eksami liik</th>
+                                                    <th>Staatus</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
                                                                 
-                                                            </tr>
-                                                        </tbody>
-            					                    </table>
-            				                    </div>
-            			                    </div>
-            			                    <div class="accordion-heading">
-                                              <a class="accordion-toggle" data-toggle="collapse" href="#oral2">14.02.2012   Rävala pst 3, Tallinn ruum 3</a>
-            			                    </div>
-            			                    <div id="oral2" class="accordion-body collapse">
-            				                    <div class="accordion-inner">
-            					                    <table class="table table-striped table-condensed sortable">
-                                                        <thead>
-                                                            <tr class="sort">
-                                                                <th>Eesnimi</th>
-                                                                <th>Perekonnanimi</th>
-                                                                <th>Eksami liik</th>
-                                                                <th>Staatus</th>
-                                                                <th></th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Mari</td>
-                                                                <td>Maasikas</td>
-                                                                <td>Vandeadvokaadi eksam</td>
-                                                                <td>Kirjalik läbitud</td>
-                                                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
-                                                                <td class="narrow">
-                                                                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-            					                    </table>
-            				                    </div>
-            			                    </div>
-                                            <div class="accordion-heading">
-                                              <a class="accordion-toggle" data-toggle="collapse" href="#oral3">15.02.2012   Rävala pst 3, Tallinn ruum 4</a>
-            			                    </div>
-            			                    <div id="oral3" class="accordion-body collapse">
-            				                    <div class="accordion-inner">
-            					                    <table class="table table-striped table-condensed sortable">
-                                                        <thead>
-                                                            <tr class="sort">
-                                                                <th>Eesnimi</th>
-                                                                <th>Perekonnanimi</th>
-                                                                <th>Eksami liik</th>
-                                                                <th>Staatus</th>
-                                                                <th></th>
-                                                                <th></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Peeter</td>
-                                                                <td>Pakiraam</td>
-                                                                <td>Vandeadvokaadi eksam</td>
-                                                                <td>Kirjalik läbitud</td>
-                                                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
-                                                                <td class="narrow">
-                                                                     <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-            					                    </table>
-            				                    </div>
-            			                    </div>
-            		                    </div>
-            	                    </div>
-                                </div>
-                            </div>
+                                                </tr>
+                                            </tbody>
+            					        </table>
+            				        </div>
+            			        </div>
+            			        <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" href="#oral2">14.02.2012 / ruum 202 / Rävala pst 3 Tallinn, 4. korrus</a>
+            			        </div>
+            			        <div id="oral2" class="accordion-body collapse">
+            				        <div class="accordion-inner">
+            					        <table class="table table-striped table-condensed sortable">
+                                            <thead>
+                                                <tr class="sort">
+                                                    <th>Eesnimi</th>
+                                                    <th>Perekonnanimi</th>
+                                                    <th>Eksami liik</th>
+                                                    <th>Staatus</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Mari</td>
+                                                    <td>Maasikas</td>
+                                                    <td>Vandeadvokaadi eksam</td>
+                                                    <td>Kaasus esitatud</td>
+                                                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
+                                                    <td class="narrow">
+                                                            <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+            					        </table>
+            				        </div>
+            			        </div>
+                                <div class="accordion-heading">
+                                    <a class="accordion-toggle" data-toggle="collapse" href="#oral3">15.02.2012 / ruum 202 / Rävala pst 3 Tallinn, 4. korrus</a>
+            			        </div>
+            			        <div id="oral3" class="accordion-body collapse">
+            				        <div class="accordion-inner">
+            					        <table class="table table-striped table-condensed sortable">
+                                            <thead>
+                                                <tr class="sort">
+                                                    <th>Eesnimi</th>
+                                                    <th>Perekonnanimi</th>
+                                                    <th>Eksami liik</th>
+                                                    <th>Staatus</th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Peeter</td>
+                                                    <td>Pakiraam</td>
+                                                    <td>Vandeadvokaadi eksam</td>
+                                                    <td>Kaasus esitatud</td>
+                                                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="../administrator_index.html#exam-answeres"></a></span></td>
+                                                    <td class="narrow">
+                                                            <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+            					        </table>
+            				        </div>
+            			        </div>
+            	            </div>
                           </div>
                       </div>
                     </div>
-	            </div>
             </div>
           </div>
         </div>
