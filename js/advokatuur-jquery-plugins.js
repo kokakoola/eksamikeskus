@@ -204,7 +204,6 @@ $(document).on("click", "#js-cancel-reg", function(e) {
 });
 $(document).on("click", "#js-confirm-reg", function(e) {
   $('#register').hide();
-  $('.pagename h1').html('Registreerimise kinnitus');
   $('#registered').show();
 });
 
