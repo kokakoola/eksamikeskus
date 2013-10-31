@@ -1,8 +1,8 @@
-<section id="register">
+<section class="content" id="register">
 
-  <div class="span12 well">
+  <div class="span12 well afterheader">
     <h3>Tere, Ants Jürisalu</h3>
-     <p>Siin saad valida endale sobiva kirjaliku eksami aja. Krirjalik eksam koosneb testist kestvusega 90 min ja kaasusülesandest kestvusega 5h. Suulisele eksamile pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse sulle e-mailile. Kontrolli, et sinu e-posti aadress oleks õige: sellele saadame kogu järgneva eksamiga seonduva info.</p>  
+     <p>Siin saad valida endale sobiva kirjaliku eksami aja. Kirjalik eksam koosneb testist kestvusega 90 min ja kaasusülesandest kestvusega 5h. Suulisele eksamile pääsevad kirjaliku eksami sooritanud, teade suulisele eksamile pääsemise kohta saadetakse sulle e-mailile. Kontrolli, et sinu e-posti aadress oleks õige: sellele saadame kogu järgneva eksamiga seonduva info.</p>  
     <p> Meie andmetel tuleb sul sooritada <b>vandeadvokaadi eksam</b>. Kui see pole nii, palun võta ühendust Advokatuuriga telefonil 662 0665 või saada kiri <a href="mailto:advokatuur@advokatuur.ee">advokatuur@advokatuur.ee</a></p>
   </div>
   <div class="span12">
@@ -11,40 +11,6 @@
 
         <!-- Form Name -->
         <legend>Registreerimine vandeadvokaadi eksamile</legend>
-
-        <!-- Text input-->
-        <div class="control-group">
-          <label class="control-label" for="textinput">Eksami liik</label>
-          <div class="controls">
-            <label class="checkbox inline" for="checkboxes-0">
-              <input type="checkbox" name="checkboxes"  id="checkboxes-0" value="1">
-            </label>
-            <span class="help-inline">Vandeadvokaadi eksam </span> 
-          </div>
-        </div>
-
-        <!-- Multiple Checkboxes (inline) -->
-        <!--<div class="control-group">
-          <label class="control-label" for="checkboxes">Korduseksam</label>
-          <div class="controls">
-            <label class="checkbox inline" for="checkboxes-1">
-              <input type="checkbox" name="checkboxes" class="check-lg" id="checkboxes-1" value="2">
-            </label>
-            <span class="help-inline">Jah</span>
-          </div>
-        </div>-->
-
-        <!-- Select Basic -->
-        <div class="control-group">
-          <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
-          <div class="controls">
-            <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
-              <option>Eraõigus ja tsiviilkohtu menetlus</option>
-              <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
-              <option>Karistusõigus ja kriminaalmenetlus</option>
-            </select>
-          </div>
-        </div>
 
         <!-- Select Basic -->
         <div class="control-group">
@@ -68,6 +34,18 @@
           </div>
         </div>
 
+        <!-- Select Basic -->
+        <div class="control-group">
+          <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
+          <div class="controls">
+            <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+              <option>Eraõigus ja tsiviilkohtu menetlus</option>
+              <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
+              <option>Karistusõigus ja kriminaalmenetlus</option>
+            </select>
+          </div>
+        </div>
+
         <!-- Text input-->
         <div class="control-group">
           <label class="control-label" for="textinput">E-posti aadress</label>
@@ -78,10 +56,22 @@
         </div>
 
         <!-- Text input-->
-        <div class="control-group">
+        <div class="control-group error">
           <label class="control-label" for="textinput">E-posti aadress uuesti</label>
           <div class="controls">
             <input id="textinput" name="textinput" type="text" placeholder="nimi@server.ee" class="input-xlarge">
+            <span class="help-inline">E-posti aadressid ei kattu </span>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="control-group">
+          <label class="control-label" for="textinput">Eksami liik</label>
+          <div class="controls">
+            <label class="checkbox inline" for="checkboxes-0">
+              <input type="checkbox" name="checkboxes"  id="checkboxes-0" value="1">
+            </label>
+            <span class="help-inline">Kinnitan, et soovin sooritada vandeadvokaadi eksamit </span> 
           </div>
         </div>
 
