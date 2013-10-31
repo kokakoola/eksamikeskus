@@ -13508,11 +13508,11 @@ header .pagename h1 {
 }
 .main-menu li {
   padding: 0 10px;
-  background: url(img/mmenu_line.png) no-repeat left 15px;
+  background: url(../img/mmenu_line.png) no-repeat left 15px;
 }
 .main-menu .active,
 .main-menu li:first-child.active {
-  background: url(img/main_menu_active.jpg) repeat-x 0 0;
+  background: url(../img/main_menu_active.jpg) repeat-x 0 0;
   height: 44px;
 }
 .main-menu .navbar-inner {
@@ -13523,7 +13523,7 @@ header .pagename h1 {
   width: 100%;
   height: 170px;
   margin: 20px auto;
-  background: url(img/header_bg.png) no-repeat center top;
+  background: url(../img/header_bg.png) no-repeat center top;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.2);
 }
@@ -13538,7 +13538,7 @@ header .pagename h1 {
   background: rgba(220, 229, 236, 0.32);
 }
 .head-nav li {
-  background: url(img/menu_line.png) no-repeat right 11px;
+  background: url(../img/menu_line.png) no-repeat right 11px;
 }
 .header-inner {
   width: 997px;
