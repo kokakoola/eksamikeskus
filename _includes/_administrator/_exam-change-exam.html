@@ -25,7 +25,7 @@
               <ul class="nav-wizard">
                 <li class="active"><a href="#exam-change-exam">Registreerimine</a></li>
                 <li><a href="#exam-reg-on-exam">Kirjalik eksam</a></li>
-                <li><a href="#">Suuline eksam</a></li>
+                <li><a href="#oral-change-exam">Suuline eksam</a></li>
               </ul>
          </div>
          <div class="span12"><h4>Registreerimine on alanud.</h4></div>
@@ -35,14 +35,14 @@
                 <p><small>Kuupäev:</small> 12.02.2012</p>
                 <p><small>Kellaaeg: </small>10:00</p>
                 <p><small>Testi kestvus:</small> 90 minutit</p>
-                <p><small>Kaasuse kestvus:</small> 360 minutit</p>
                 <p><small>Kaasuse algusaeg:</small> 11:30</p>
+                <p><small>Kaasuse kestvus:</small> 360 minutit</p>
             </div>
             <div class="span4">
                 <h3>Registreerimine</h3>
-                <p><small>Alguskuupäev:</small> 12.02.2012</p>
-                <p><small>Lõppkuupäev: </small>15.02.2012</p>
-                <p><small>Tühistamise kuupäev:</small> 12.02.2012</p>
+                <p><small>Alguskuupäev:</small> 01.02.2012</p>
+                <p><small>Lõppkuupäev: </small>11.02.2012</p>
+                <p><small>Tühistamise kuupäev:</small> 11.02.2012</p>
             </div>
             <div class="span4">
                 <h3>Toimumiskohad</h3>
@@ -52,7 +52,7 @@
 		    <form>
 			    <fieldset>
                     <div class="span5 pull-right">
-                        <div class="form-actions" style="background: none; border: none;">
+                        <div class="form-actions" style="background: none; border: none;margin:40px 0 -20px 0;">
                             <a class="btn" href="#exam-test-list" id="A1">Tühista eksam</a>
                             <a href="#exam-change-exam" class="btn btn-primary"><span class="tip icon-sort-by-attributes"></span> Koosta küsimustik</a>
                         </div>
@@ -72,13 +72,411 @@
           </ul>
           <div class="tab-content">
             
-            <div id="p1" class="tab-pane active">
-		      <div class="span6">
+            <div id="p1" class="tab-pane">
+		       <div class="well clearfix hidden" id="showMeAdd" style="padding-bottom:0px;">
+                <form class="form-horizontal">
+			        <fieldset>
+                        <div class="span4">
+				            <!-- Text input-->
+				            <div class="span2">
+					            <div class="control-group">
+						            <label class="control-label" for="dp3">Kuupäev</label>
+
+						            <div class="controls">
+							            <div class="input-append date" id="Div3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+
+								            <input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+								            <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+							            </div>
+						            </div>
+					            </div>
+				            </div>
+
+				            <!-- Text input-->
+				            <div class="span7">
+					            <div class="control-group">
+
+						            <label class="control-label" for="">Kellaaeg</label>
+
+						            <div class="controls">
+							            <input id="inputError" name="textinput" type="text" placeholder="Kellaaeg" class="input-small">
+      
+						            </div>
+					            </div>
+				            </div>
+				         </div>
+                        <div class="span4">
+                            <!-- Dropdown & Text input-->
+				            <div class="span8">
+                                <div class="control-group">
+                                    <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
+                                    <div class="controls">
+                                        <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                                            <option value="">Vali toimumiskoht</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                        </select>
+                                        <input id="text4" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">
+					                    <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
+						            </div>
+			                    </div>
+                            </div>
+                
+                            <!--Text-->
+				            <div class="span7">
+					            <div class="control-group">
+						            <div>
+                                        <label class="control-label" for="">Toimumiskoht 1</label>
+
+						                <div class="controls">
+                                            <div class="row">
+							                    <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
+                                                <span>20 kohta</span>
+                                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                            </div>
+				                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="control-label" for="">Toimumiskoht 2</label>
+
+						                <div class="controls">
+                                            <div class="row">
+							                    <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
+                                                <span>20 kohta</span>
+                                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                            </div>
+				                        </div>
+                                    </div>
+				                </div>
+                            </div>
+                        </div>
+				            <!-- Button -->
+				            <div class="span7">
+					            <div class="control-group">
+				            <div class="form-actions" style="background: none; border: none;">
+					            <a class="btn" href="javascript:hideOnPage($('#showMeAdd'),'hideOnPage')" id="A2">Katkesta</a>
+					            <a class="btn btn-primary" href="javascript:hideOnPage($('#showMeAdd'),'hideOnPage')">Lisa</a>
+				            </div>		</div>
+				            </div>
+			        </fieldset>
+
+		        </form>
+            </div>
+            <div class="row pull-right">
+                <a href="javascript:shownOnPage2($('#showMeAdd'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa suuline eksam</a>
+			</div>
                 <form>
-                     <fieldset>
+                   <fieldset>
+                         <legend>Kirjalik eksam 12.02.2012</legend>
+                              <div class="span3">
+				                <div class="span4"><h5 class="span2">Eksami aeg</h5></div>
+                                  <div class="span4">
+					               <div class="span2">
+                                       <label for="text"><small>Kuupäev</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A6" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">12-02-2012</a> 
+                                    </div>
+				                </div>
+
+				        
+				                <div class="span4">
+					                <div class="span2">
+                                        <label for="text2"><small>Kellaaeg</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                         <a href="#" class="js-place" id="A8" data-type="text" data-name="koht" data-original-title="Kellaaeg">10:00</a>
+						             </div>
+				                </div>
+
+                        
+				                <div class="span4">
+					                <div class="span2">
+						                <label for=""><small>Testi kestvus</small></label>
+                                    </div>
+						            <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A9" data-type="text" data-name="koht" data-original-title="Testi kestvus minutites">90 minutit</a>
+						            </div>
+				                </div>
+
+                        
+			                    <div class="span4">
+			                        <div class="span2">
+			                            <label for=""><small>Kaasuse kestvus</small></label>
+                                    </div>
+			                        <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A10" data-type="text" data-name="koht" data-original-title="Kaasuse kestvus minutites">360 minutit</a>
+			                        </div>
+			                    </div>
+
+                        
+				                <div class="span4">
+					                <div class="span2">
+						                <label for=""><small>Kaasuse algusaeg</small></label>
+                                    </div>
+						            <div class="span2" style="margin-left:-10px;">
+							            <a href="#" class="js-place" id="A11" data-type="text" data-name="koht" data-original-title="Kellaaeg">11:30</a>
+						            </div>
+					            </div>
+				       
+                        </div>
+                       <div class="span3" style="margin-left:30px;">
+                                <div class="span4"><h5 class="span2">Registreerimine</h5></div>
+				                <div class="span4">
+					                <div class="span2">
+						                <label for="dp3"><small>Alguskuupäev</small></label>
+                                     </div>
+						            <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A12" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">01-02-2012</a>
+						            </div>
+				                </div>
+
+                        
+				                <div class="span4">
+					                <div class="span2">
+						                <label for="dp3"><small>Lõppkuupäev</small></label>
+                                    </div>
+						            <div class="span2" style="margin-left:-10px;">
+						                <a href="#" class="js-place" id="A13" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">11-02-2012</a>
+                                    </div>
+				                </div>
+
+                        
+				                <div class="span4">
+					                <div class="span2">
+						                <label for="dp3"><small>Tühistamise kuupäev</small></label>
+                                    </div>
+						            <div class="span2" style="margin-left:-10px;">
+						                <a href="#" class="js-place" id="A14" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">11-02-2012</a>
+					                </div>
+				                </div>
+                       </div>
+                       <div class="span4" style="margin-left:30px;">
+                                <div class="span4"><h5 class="span2">Toimumiskohad</h5></div>
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 1</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A15" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 2</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 2</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A16" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 3</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+                        
+                                <div class="hidden" id="showMe">
+				                    <div id="Div4" class="span6" style="margin-left:40px;">
+					                    <select id="select3" name="selectkoht" class="selectpicker show-tick">
+                                            <option value="">Vali toimumiskoht</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                        </select>
+							            <input id="text1" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">&nbsp;&nbsp;
+							            <button class="btn btn-primary" onclick=""><i class="icon-chevron-down"></i></button>
+                                        <button class="btn" onclick="hideOnPage($(this).parent().parent())"><i class="icon-remove"></i></button>
+				                    </div>
+			                    </div>
+
+                                <div class="span6" style="margin:0 0 5px 40px;">
+                                    <a href="javascript:shownOnPage2($('#showMe'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+				                </div>
+                                <div class="span4">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Kohti kokku</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+						                40
+					                </div>
+                                </div>
+                        
+                           </div>     
+                        <div class="suuline">
+                        <legend>Suuline eksam 13.02.2012 <a class="tip icon-remove" onclick="hideOnPage($(this).parent())" data-toggle="tooltip" title="" data-original-title="Tühista suuline eksam"></a></legend>
+				            <div class="span4">
+				                <div class="span4">
+					               <div class="span2">
+                                       <label for="text"><small>Kuupäev</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A3" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">13-02-2012</a> 
+                                    </div>
+				                </div>
+                    
+                           
+				                <div class="span4">
+					                <div class="span2">
+                                        <label for="text2"><small>Kellaaeg</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                         <a href="#" class="js-place" id="A4" data-type="text" data-name="koht" data-original-title="Kellaaeg">10:00</a>
+						             </div>
+				                </div>
+                           </div>
+                            <div class="span6">
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 1</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A5" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 4</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 2</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A7" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 5</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+                        
+                                <div class="hidden" id="showMe2">
+				                    <div id="Div2" class="span6" style="margin-left:40px;">
+					                    <select id="select1" name="selectkoht" class="selectpicker show-tick">
+                                            <option value="">Vali toimumiskoht</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                        </select>
+							            <input id="text2" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">&nbsp;&nbsp;
+							            <button class="btn btn-primary" onclick=""><i class="icon-chevron-down"></i></button>
+                                        <button class="btn" onclick="hideOnPage($(this).parent().parent())"><i class="icon-remove"></i></button>
+				                    </div>
+			                    </div>
+
+                                <div class="span6" style="margin:0 0 5px 40px;">
+                                    <a href="javascript:shownOnPage2($('#showMe2'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+				                </div>
+                                <div class="span4">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Kohti kokku</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+						                40
+					                </div>
+                                </div>
+                        
+                       </div>
+                       </div>
+                       <div class="suuline">
+                       <legend>Suuline eksam 14.02.2012 <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista suuline eksam"></a></legend>
+				            <div class="span4">
+				                <div class="span4">
+					               <div class="span2">
+                                       <label for="text"><small>Kuupäev</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                        <a href="#" class="js-place" id="A17" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">14-02-2012</a> 
+                                    </div>
+				                </div>
+                    
+                           
+				                <div class="span4">
+					                <div class="span2">
+                                        <label for="text2"><small>Kellaaeg</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+                                         <a href="#" class="js-place" id="A18" data-type="text" data-name="koht" data-original-title="Kellaaeg">13:00</a>
+						             </div>
+				                </div>
+                           </div>
+                            <div class="span6">
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 1</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A19" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 4</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 2</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A20" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 5</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+
+                                <div class="span6">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Toimumiskoht 3</small></label>
+                                    </div>
+                                    <div class="span4" style="margin-left:-10px;">
+						                <a href="#" class="place" id="A21" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 6</a>
+                                        <small>&nbsp;Kohti:</small>
+                                        <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">10</a>
+                                        <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+					                </div>
+                                </div>
+                        
+                                <div class="hidden" id="showMe3">
+				                    <div id="Div5" class="span6" style="margin-left:40px;">
+					                    <select id="select2" name="selectkoht" class="selectpicker show-tick">
+                                            <option value="">Vali toimumiskoht</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 2</option>
+                                            <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                        </select>
+							            <input id="text3" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">&nbsp;&nbsp;
+							            <button class="btn btn-primary" onclick=""><i class="icon-chevron-down"></i></button>
+                                        <button class="btn" onclick="hideOnPage($(this).parent().parent())"><i class="icon-remove"></i></button>
+				                    </div>
+			                    </div>
+
+                                <div class="span6" style="margin:0 0 5px 40px;">
+                                    <a href="javascript:shownOnPage2($('#showMe3'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+				                </div>
+                                <div class="span4">
+                                    <div class="span2">
+                                        <label for="dp3"><small>Kohti kokku</small></label>
+                                    </div>
+                                    <div class="span2" style="margin-left:-10px;">
+						                50
+					                </div>
+                                </div>
+                        
+                       </div>
+                       </div>
+                        <div class="span6">
+                            <hr>
+                            <div class="form-actions" style="background: none; border: none; margin:-20px 0 -20px 0;">
+                                <a class="btn btn-primary" href="#exam-change-exam">Salvesta muudatused</a>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <!--<form>
+                   <fieldset>
+                      <div class="span6">
                          <legend>Kirjalik eksam</legend>
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					       <div class="span2">
                                <label for="text"><small>Kuupäev</small></label>
                             </div>
@@ -87,8 +485,8 @@
                             </div>
 				        </div>
 
-				        <!-- Text input-->
-				        <div class="span8">
+				        
+				        <div class="span4">
 					        <div class="span2">
                                 <label for="text2"><small>Kellaaeg</small></label>
                             </div>
@@ -97,8 +495,8 @@
 						     </div>
 				        </div>
 
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					        <div class="span2">
 						        <label for=""><small>Testi kestvus</small></label>
                             </div>
@@ -107,8 +505,8 @@
 						    </div>
 				        </div>
 
-                        <!-- Text input-->
-			            <div class="span8">
+                        
+			            <div class="span4">
 			                <div class="span2">
 			                    <label for=""><small>Kaasuse kestvus</small></label>
                             </div>
@@ -117,8 +515,8 @@
 			                </div>
 			            </div>
 
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					        <div class="span2">
 						        <label for=""><small>Kaasuse algusaeg</small></label>
                             </div>
@@ -128,8 +526,8 @@
 					    </div>
 				       
                
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					        <div class="span2">
 						        <label for="dp3"><small>Alguskuupäev</small></label>
                              </div>
@@ -138,8 +536,8 @@
 						    </div>
 				        </div>
 
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					        <div class="span2">
 						        <label for="dp3"><small>Lõppkuupäev</small></label>
                             </div>
@@ -148,8 +546,8 @@
                             </div>
 				        </div>
 
-                        <!-- Text input-->
-				        <div class="span8">
+                        
+				        <div class="span4">
 					        <div class="span2">
 						        <label for="dp3"><small>Tühistamise kuupäev</small></label>
                             </div>
@@ -159,7 +557,7 @@
 				        </div>
                
                 
-                        <div class="span8">
+                        <div class="span6">
                             <div class="span2">
                                 <label for="dp3"><small>Toimumiskoht 1</small></label>
                             </div>
@@ -171,7 +569,7 @@
 					        </div>
                         </div>
 
-                        <div class="span8">
+                        <div class="span6">
                             <div class="span2">
                                 <label for="dp3"><small>Toimumiskoht 2</small></label>
                             </div>
@@ -184,7 +582,7 @@
                         </div>
                         
                         <div class="hidden" id="showMe">
-				            <div id="Div4" class="span10" style="margin-left:40px;">
+				            <div id="Div4" class="span6" style="margin-left:40px;">
 					            <select id="select3" name="selectkoht" class="selectpicker show-tick">
                                     <option value="">Vali toimumiskoht</option>
                                     <option value="20">Rävala pst 3, Tallinn ruum 2</option>
@@ -196,68 +594,68 @@
 				            </div>
 			            </div>
 
-                            <div class="span7" style="margin:0 0 5px 40px;">
-                                <a href="javascript:shownOnPage2($('#showMe'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
-				            </div>
-                        <div class="span8">
+                        <div class="span6" style="margin:0 0 5px 40px;">
+                            <a href="javascript:shownOnPage2($('#showMe'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+				        </div>
+                        <div class="span4">
                             <div class="span2">
                                 <label for="dp3"><small>Kohti kokku</small></label>
                             </div>
-                            <div class="span3" style="margin-left:-10px;">
+                            <div class="span2" style="margin-left:-10px;">
 						        40
 					        </div>
                         </div>
-                        <hr class="span6"/>
-                        <div class="span8">
-                            <div class="form-actions" style="background: none; border: none;">
+                        
+                        <div class="span6">
+                            <hr>
+                            <div class="form-actions" style="background: none; border: none; margin:-20px 0 -20px 0;">
                                 <a class="btn btn-primary" href="#exam-change-exam">Salvesta muudatused</a>
                             </div>
                         </div>
                     
                     </div>  
-                    <div class="span6">
+                    <div class="span4">
                 
                         <legend>Suuline eksam</legend>
-                        <div class="span6">
-				            <!-- Text input-->
-				            <div class="span8">
+				            
+				            <div class="span4">
 					           <div class="span2">
                                    <label for="text"><small>Kuupäev</small></label>
                                 </div>
-                                <div class="span2">
+                                <div class="span2" style="margin-left:-10px;">
                                     <a href="#" class="js-place" id="A2" data-type="date" data-pk="1" data-url="/post" data-title="Kuupäev">12-02-2012</a> 
                                 </div>
 				            </div>
                     
-                            <!-- Text input-->
-				            <div class="span8">
+                           
+				            <div class="span4">
 					            <div class="span2">
                                     <label for="text2"><small>Kellaaeg</small></label>
                                 </div>
-                                <div class="span2">
+                                <div class="span2" style="margin-left:-10px;">
                                      <a href="#" class="js-place" id="A3" data-type="text" data-name="koht" data-original-title="Kellaaeg">12:00</a>
 						         </div>
 				            </div>
 
-                        </div>
-                        <div class="span8">
+                     
+                        <div class="span6">
                             <div class="span2">
                                 <label for="dp3"><small>Toimumiskoht 1</small></label>
                             </div>
-                            <div class="span4">
-						        <a href="#" class="place" id="A4" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 2</a>
+                            <div class="span4" style="margin-left:-10px;">
+						        <a href="#" class="place" id="A4" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 4</a>
                                 <small>&nbsp;Kohti:</small>
                                 <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
                                 <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
 					        </div>
                         </div>
 
-                        <div class="span8">
+                        <div class="span6">
                             <div class="span2">
                                 <label for="dp3"><small>Toimumiskoht 2</small></label>
                             </div>
-                            <div class="span4">
-						        <a href="#" class="place" id="A5" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 3</a>
+                            <div class="span4" style="margin-left:-10px;">
+						        <a href="#" class="place" id="A5" data-type="select" data-name="koht" data-original-title="Toimumiskoht">Rävala pst 3, Tallinn ruum 5</a>
                                 <small>&nbsp;Kohti:</small>
                                 <a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>
                                 <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
@@ -265,7 +663,7 @@
                         </div>
                         
                         <div class="hidden" id="showMe2">
-				            <div id="Div2" class="span10">
+				            <div id="Div2" class="span6" style="margin-left:40px;">
 					            <select id="select1" name="selectkoht" class="selectpicker show-tick">
                                     <option value="">Vali toimumiskoht</option>
                                     <option value="20">Rävala pst 3, Tallinn ruum 2</option>
@@ -277,13 +675,13 @@
 				            </div>
 			            </div>
 
-                            <div class="span7" style="margin:0 0 5px 40px;">
-                                <a href="javascript:shownOnPage2($('#showMe2'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
-				            </div>
+                        <div class="span6" style="margin:0 0 5px 40px;">
+                            <a href="javascript:shownOnPage2($('#showMe2'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+				        </div>
                       </div>
          
                     </fieldset>
-                </form>
+                </form>-->
                </div>   
             
             <div id="p2" class="tab-pane">
@@ -369,7 +767,7 @@
             					                    </table>
             				                    </div>
             			                    </div>
-            			                    <div class="accordion-heading country">
+            			                    <div class="accordion-heading">
                                               <a class="accordion-toggle" data-toggle="collapse" href="#country2">12.02.2012   Rävala pst 3, Tallinn ruum 3</a>
             			                    </div>
             			                    <div id="country2" class="accordion-body collapse">
@@ -426,10 +824,10 @@
 		                </tr>
                   </thead>
                   <tbody>
-		                  <tr>
+		                  <tr class="inactive">
                             <td>27.12.2013</td>
                             <td>Lõppenud</td>
-			                <td>20</td>
+			                <td>40</td>
 			                <td>27.09.2013</td>
                             <td class="narrow">
                                <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
@@ -438,7 +836,7 @@
                         <tr>
                             <td>27.12.2013</td>
                             <td>Registreerimine pole veel alanud</td>
-			                <td>20</td>
+			                <td>40</td>
 			                <td>27.09.2013</td>
                             <td class="narrow">
                                <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
@@ -447,25 +845,25 @@
 		                <tr>
                             <td>22.01.2013</td>
                             <td>Registreerimine on alanud</td>
-			                <td>20</td>
+			                <td>40</td>
 			                <td>27.12.2013</td>
                             <td class="narrow">
                                <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
                             </td>
                         </tr>
-			            <tr>
+			            <tr class="inactive">
                             <td>22.01.2013</td>
                             <td>Lõppenud</td>
-			                <td>20</td>
+			                <td>40</td>
 			                <td>27.12.2013</td>
                             <td class="narrow">
                                <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
                             </td>
                         </tr>
-		                <tr>
+		                <tr class="inactive">
                             <td>22.01.2013</td>
                             <td>Lõppenud</td>
-			                <td>20</td>
+			                <td>40</td>
 			                <td>27.12.2013</td>
                             <td class="narrow">
                                <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-change-exam" data-toggle="tooltip" title="Jätka"></a></span>
