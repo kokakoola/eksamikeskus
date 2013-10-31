@@ -1,174 +1,141 @@
 ﻿<section class="content" id="oral-exam-list">
 
-    <ul class="breadcrumbs clearfix">
+    <!--<ul class="breadcrumbs clearfix">
         <li><a href="#oral-exam-list">Eksamid</a> <span class="divider">/</span></li>
         <li class="active">Suulised eksamid</li>
-    </ul>
+    </ul>-->
     <div class="pagename">
-        <h2>Suulised eksamid</h2>
+        <h1>Eksamid</h1>
     </div>
     <form class="form-inline">
         <fieldset>
             <div class="well">
-                <span class="inline-group">
-                    <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-                        <label class="control-label" for="dp3">Eksami kuupäev</label>
-                        <input class="span2" size="16" type="text" value="">
-                        <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-                    </div>
-                </span>
-                <span class="inline-group">
-                    <label class="control-label " for="textinput1">Toimumiskoht</label>
-                    <select id="select3" name="selectkoht" class="selectpicker show-tick">
-                        <option value="">Vali toimumiskoht</option>
-                        <option value="20">Rävala pst 3, Tallinn ruum 2</option>
-                        <option value="20">Rävala pst 3, Tallinn ruum 3</option>
-                    </select>
-                </span>
-                <div class="pull-right">
-                    <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#oral-exam-list-table tr'));  return false;">Tühjenda</a></span>
-                    <span class="span1"><a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#oral-exam-list-table tr:gt(2)')); return false;">Otsi</a></span>
+        <span class="inline-group">
+
+                <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+          <label class="control-label" for="dp3">Kuupäev</label> 
+                  <input class="span2" size="16" type="text" value="" placeholder="Vali kuupäev">
+                  <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
                 </div>
-            </div>
-            <div class="row">
-                <div class="span4">
-                    <small>Kokku eksameid 9</small>
+
+        </span>
+        <span class="inline-group">
+              <select id="select3" name="selectkoht" class="selectpicker show-tick">
+                <option value="">Vali staatus</option>
+                <option value="20">Registreerimine pole veel alanud</option>
+                <option value="20">Registreerimine on alanud</option>
+                <option value="20">Registreerimine on lõppenud</option>
+                <option value="20">Eksam on alanud</option>
+                <option value="20">Eksam on lõppenud</option>
+            </select>
+        </span>
+                <div class="pull-right">
+                    <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#exam-test-list-table tr')); return false;">Tühjenda</a></span>
+                    <span class="span1"><a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-list-table tr:gt(2)')); return false;">Otsi</a></span>
                 </div>
             </div>
         </fieldset>
     </form>
+    <div class="row">
+        <div class="span4">
+            <small>Kokku eksameid 5</small>
+        </div>
+    </div>
+    <table class="table datatable datatable-nr" id="exam-test-list-table">
+                   <thead>
+                        <tr>
+                            <th>Nr</th>
+                            <th>Toimumise<br>kuupäev</th>
+                            <th>Staatus</th>
+                            <th>Eksamineeritavaid</th>
+                            <th>Reg. tähtaeg</th>
+			                <th></th>
+                            <th></th>
+                            <th></th>
+		                </tr>
+                  </thead>
+                  <tbody>
+		                  <tr>
+                            <td></td>
+                            <td>27.12.2013</td>
+                            <td>Kirjalik eksam lõppenud</td>
+			                <td>40</td>
+			                <td>27.09.2013</td>
+                            <td class="narrow">
+                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-sort-by-attributes" href="#oral-exam-list" data-toggle="tooltip" title="Genereeri järjekord"></a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>27.12.2013</td>
+                            <td>Registreerimine pole veel alanud</td>
+			                <td>40</td>
+			                <td>27.09.2013</td>
+                            <td class="narrow">
+                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                            <td class="narrow">
 
-    <table class="table sortable" id="oral-exam-list-table">
-        <thead>
-            <tr>
-                <th>Eksami kuupäev</th>
-                <th>Kellaaeg</th>
-                <th>Toimumiskoht</th>
-                <th>Komisjon</th>
-                <th>Max arv</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>13.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>10.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 2</td>
-                <td>Komisjon 2</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>10.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>25.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 2</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>25.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Komisjon 2</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>17.02.2013</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 2</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>17.02.2012</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>10.02.2012</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 2</td>
-                <td>Komisjon 1</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-            <tr>
-                <td>10.02.2012</td>
-                <td>10:00</td>
-                <td>Rävala pst 3, Tallinn ruum 3</td>
-                <td>Komisjon 2</td>
-                <td>10</td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-chevron-right" href="../administrator_index.html#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                </td>
-                <td class="narrow">
-                    <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+                            </td>
+                        </tr>
+		                <tr>
+                            <td></td>
+                            <td>22.01.2013</td>
+                            <td>Registreerimine on lõppenud</td>
+			                <td>40</td>
+			                <td>27.12.2013</td>
+                            <td class="narrow">
+                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                            <td class="narrow">
+                              
+                            </td>
+                        </tr>
+			            <tr class="inactive">
+                            <td></td>
+                            <td>22.01.2013</td>
+                            <td>Lõppenud</td>
+			                <td>40</td>
+			                <td>27.12.2013</td>
+                            <td class="narrow">
+                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                            <td class="narrow">
+
+                            </td>
+                        </tr>
+		                <tr class="inactive">
+                            <td></td>
+                            <td>22.01.2013</td>
+                            <td>Lõppenud</td>
+			                <td>40</td>
+			                <td>27.12.2013</td>
+                            <td class="narrow">
+                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
+                            </td>
+                            <td class="narrow">
+                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                            </td>
+                            <td class="narrow">
+
+                            </td>
+                        </tr>
+                </tbody>
+              </table>
 
 </section>
