@@ -13380,7 +13380,7 @@ a .icon-flip-vertical:before {
 }
 /* Lastly, apply responsive CSS fixes as necessary */
 .container {
-  width: 997px;
+  width: 1000px;
 }
 .container h1 {
   max-height: 100px;
@@ -13390,6 +13390,13 @@ a .icon-flip-vertical:before {
   margin: 10px 0 0px;
   margin-bottom: 20px;
   display: none;
+}
+fieldset {
+  width: 1000px;
+}
+#navwrapper {
+  width: 1000px;
+  margin: 0 auto;
 }
 b {
   font-family: 'clbd', Arial, sans-serif;
@@ -13462,9 +13469,6 @@ input[type="text"] {
 }
 .row {
   margin-left: 0;
-}
-.row .span4 {
-  width: 295px;
 }
 .hide {
   display: none;
@@ -13542,7 +13546,7 @@ header .pagename h1 {
   background: url(../img/menu_line.png) no-repeat right 11px;
 }
 .header-inner {
-  width: 997px;
+  width: 1000px;
   margin: 0 auto;
   position: relative;
 }

@@ -330,11 +330,11 @@ html {
   overflow: scroll;
 }
 html {
-  min-width: 997px !important;
+  min-width: 1000px !important;
 }
 body {
   font-family: 'Clne', Arial !important;
-  min-width: 997px !important;
+  min-width: 1000px !important;
 }
 header {
   background: #105b8b;
@@ -386,7 +386,7 @@ b {
   background: url(../img/header_bg.png) no-repeat center center;
 }
 .header-inner {
-  width: 997px;
+  width: 1000px;
   margin: 0 auto;
   position: relative;
 }
@@ -394,7 +394,7 @@ b {
   background: url(../img/main_menu.jpg) repeat-x 0 0;
   display: block;
   height: 44px;
-  width: 997px;
+  width: 1000px;
   margin: 0 auto;
   position: absolute;
   top: 159px;
