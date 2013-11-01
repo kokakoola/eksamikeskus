@@ -4,35 +4,34 @@
         <fieldset>
             <div class="well">
                 <span class="inline-group">
-                <label for="textinput1">Nimi</label>
-                <input id="text1" name="textinput1" type="text" >
+                    <label for="textinput1">Nimi</label>
+                    <input id="text1" name="textinput1" type="text" placeholder="Nimi">
                 </span>
                 <span class="inline-group">
-                <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
-                    <option>Roll valimata</option>
-                    <option>Eksamineeritav</option>
-                    <option>Administraator</option>
-                    <option>Kutsesobivuskomisjoni liige</option>
-                    <option>Advokatuuri kantselei töötaja</option>
-                </select>
+                    <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                        <option>Vali roll</option>
+                        <option>Eksamineeritav</option>
+                        <option>Administraator</option>
+                        <option>Kutsesobivuskomisjoni liige</option>
+                        <option>Advokatuuri kantselei töötaja</option>
+                    </select>
                 </span>
                 <span class="inline-group">
-                <select id="select1" name="select1" class="selectpicker show-tick">
-                    <option>Aktiivsus valimata</option>
-                    <option>Aktiivne</option>
-                    <option>Mitteaktiivne</option>
-                </select>
+                    <select id="select1" name="select1" class="selectpicker show-tick">
+                        <option>Vali aktiivsus</option>
+                        <option>Aktiivne</option>
+                        <option>Mitteaktiivne</option>
+                    </select>
                 </span>
                 <div class="filterbuttons">
-                    <a class="btn text-right" href="#" onclick="showOnPage($('#user-list tr')); return false;">Tühjenda</a>
-                    <a class="btn btn-primary text-right" href="#" onclick="hideOnPage($('#user-list tr:gt(2)')); return false;">Otsi</a>
+                    <span class="span1"><a class="btn text-right" href="#" onclick="showOnPage($('#user-list tr')); return false;">Tühjenda</a></span>
+                    <span class="span1"><a class="btn btn-primary text-right" href="#" onclick="hideOnPage($('#user-list tr:gt(2)')); return false;">Otsi</a></span>
                 </div>
             </div>
             <div class="row tablebefore">
                 <small>Kokku kasutajaid 2</small>
                 <div class="pull-right">
-                    <a  href="#add-user" class="btn btn-primary"> <i class="icon-plus-sign"></i>  Lisa kasutaja  
-                    </a>
+                    <a  href="#add-user" class="btn btn-primary"> <i class="icon-plus-sign"></i>  Lisa kasutaja</a>
                 </div>
             </div>
         </fieldset>
@@ -44,6 +43,7 @@
                 <th>Nr</th>
                 <th>Eesnimi</th>
                 <th>Perekonnanimi</th>
+                <th>Isikukood</th>
                 <th>Roll</th>
                 <th class="js-no-sort"></th>
                 <th class="js-no-sort"></th>
@@ -54,6 +54,7 @@
                 <td></td>
                 <td>Aadu</td>
                 <td>Aas</td>
+                <td>38705020123</td>
                 <td>Eksamineeritav</td>
                 <td class="narrow"><span class="icon-button"><a class="tip icon-chevron-right" href="#exam-answeres" data-toggle="tooltip" title="Jätka"></a></span>
                 </td>
@@ -65,6 +66,7 @@
                 <td></td>
                 <td>Mait</td>
                 <td>Metsanurk</td>
+                <td>37620013412</td>
                 <td>Administraator</td>
                 <td>
                     <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-answeres" data-toggle="tooltip" title="Jätka"></a></span>
