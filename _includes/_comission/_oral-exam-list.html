@@ -10,26 +10,24 @@
     <form class="form-inline">
         <fieldset>
             <div class="well">
-        <span class="inline-group">
-
-                <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-          <label class="control-label" for="dp3">Kuupäev</label> 
-                  <input class="span2" size="16" type="text" value="" placeholder="Vali kuupäev">
-                  <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-                </div>
-
-        </span>
-        <span class="inline-group">
-              <select id="select3" name="selectkoht" class="selectpicker show-tick">
-                <option value="">Vali staatus</option>
-                <option value="20">Registreerimine pole veel alanud</option>
-                <option value="20">Registreerimine on alanud</option>
-                <option value="20">Registreerimine on lõppenud</option>
-                <option value="20">Eksam on alanud</option>
-                <option value="20">Eksam on lõppenud</option>
-            </select>
-        </span>
-                <div class="pull-right">
+                <span class="inline-group">
+                    <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                        <label class="control-label" for="dp3">Kuupäev</label> 
+                        <input class="span2" size="16" type="text" value="" placeholder="Vali kuupäev">
+                        <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+                    </div>
+                </span>
+                <span class="inline-group">
+                      <select id="select3" name="selectkoht" class="selectpicker show-tick">
+                        <option value="">Vali staatus</option>
+                        <option value="20">Registreerimine pole veel alanud</option>
+                        <option value="20">Registreerimine on alanud</option>
+                        <option value="20">Registreerimine on lõppenud</option>
+                        <option value="20">Eksam on alanud</option>
+                        <option value="20">Eksam on lõppenud</option>
+                    </select>
+                </span>
+                <div class="filterbuttons">
                     <span class="span1"><a class="btn" href="#" onclick="showOnPage($('#exam-test-list-table tr')); return false;">Tühjenda</a></span>
                     <span class="span1"><a class="btn btn-primary pull-right" href="#" onclick="hideOnPage($('#exam-test-list-table tr:gt(2)')); return false;">Otsi</a></span>
                 </div>
