@@ -26,6 +26,10 @@ $('.draggable').sortable({
   placeholder: '<tr class="placeholder"/>'
 })
 
+$(function  () {
+  $(".accordion").sortable()
+})
+
 // xeditable
 $.fn.editable.defaults.mode = 'popup';
 $(document).ready(function() {

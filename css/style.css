@@ -13273,7 +13273,7 @@ a .icon-flip-vertical:before {
   line-height: 46px;
 }
 #nav-wizard ul.nav-wizard li a {
-  color: #ffffff;
+  color: #eeeeee;
   padding: 0;
 }
 #nav-wizard ul.nav-wizard li a:hover {
@@ -13330,7 +13330,7 @@ a .icon-flip-vertical:before {
   background: #e8e8e8;
 }
 #nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover {
-  color: #ffffff;
+  color: #eeeeee;
   background: #19a2f1;
 }
 #nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover:after {
@@ -13340,7 +13340,7 @@ a .icon-flip-vertical:before {
 #nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:active,
 #nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:visited,
 #nav-wizard ul.nav-wizard.nav-wizard-backnav li:hover a:focus {
-  color: #ffffff;
+  color: #eeeeee;
   background: #19a2f1;
 }
 #nav-wizard ul.nav-wizard.nav-wizard-backnav .active ~ li {
