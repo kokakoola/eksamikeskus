@@ -13772,7 +13772,7 @@ table.draggable tr:first-child:hover {
 table.draggable tr.placeholder {
   display: block;
   position: relative;
-  margin: 0 0 0 -100px;
+  margin: 0 0 0 -20px;
   padding: 0;
   border: none;
 }
