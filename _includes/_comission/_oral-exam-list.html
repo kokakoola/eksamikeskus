@@ -4,9 +4,6 @@
         <li><a href="#oral-exam-list">Eksamid</a> <span class="divider">/</span></li>
         <li class="active">Suulised eksamid</li>
     </ul>-->
-    <div class="pagename">
-        <h1>Eksamid</h1>
-    </div>
     <form class="form-inline">
         <fieldset>
             <div class="well">
@@ -20,11 +17,9 @@
                 <span class="inline-group">
                       <select id="select3" name="selectkoht" class="selectpicker show-tick">
                         <option value="">Vali staatus</option>
-                        <option value="20">Registreerimine pole veel alanud</option>
-                        <option value="20">Registreerimine on alanud</option>
-                        <option value="20">Registreerimine on lõppenud</option>
-                        <option value="20">Eksam on alanud</option>
-                        <option value="20">Eksam on lõppenud</option>
+                        <option>Järjekord genereeritud</option>
+                        <option>Lõppenud</option>
+                        
                     </select>
                 </span>
                 <div class="filterbuttons">
@@ -35,9 +30,7 @@
         </fieldset>
     </form>
     <div class="row">
-        <div class="span4">
-            <small>Kokku eksameid 5</small>
-        </div>
+      <small>Kokku eksameid 3</small>
     </div>
     <table class="table datatable datatable-nr" id="exam-test-list-table">
                    <thead>
@@ -55,7 +48,7 @@
 		                  <tr>
                             <td></td>
                             <td>27.12.2013</td>
-                            <td>Kirjalik eksam lõppenud</td>
+                            <td>Järjekord genereeritud</td>
 			                <td>40</td>
 			                <td>27.09.2013</td>
                             <td class="narrow">
@@ -65,32 +58,7 @@
                                 <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
                             </td>
                         </tr>
-                        <tr>
-                            <td></td>
-                            <td>27.12.2013</td>
-                            <td>Registreerimine pole veel alanud</td>
-			                <td>40</td>
-			                <td>27.09.2013</td>
-                            <td class="narrow">
-                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                            </td>
-                            <td class="narrow">
-                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                            </td>
-                        </tr>
-		                <tr>
-                            <td></td>
-                            <td>22.01.2013</td>
-                            <td>Registreerimine on lõppenud</td>
-			                <td>40</td>
-			                <td>27.12.2013</td>
-                            <td class="narrow">
-                               <span class="icon-button"><a class="tip icon-chevron-right" href="#oral-change-gen-exam" data-toggle="tooltip" title="Jätka"></a></span>
-                            </td>
-                            <td class="narrow">
-                                <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                            </td>
-                        </tr>
+                        
 			            <tr class="inactive">
                             <td></td>
                             <td>22.01.2013</td>
