@@ -23,7 +23,8 @@ $('.draggable').sortable({
   containerSelector: 'table',
   itemPath: '> tbody',
   itemSelector: 'tr',
-  placeholder: '<tr class="placeholder"/>'
+  placeholder: '<tr class="placeholder"/>',
+  exclude: '.js-fixed',
 })
 
 // xeditable
