@@ -354,7 +354,9 @@
                           <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
                         </div>
                       </div>
-                      <div class="hidden" id="Div1">
+                      <a href="#" class="toimumiskoht" data-type="address" data-pk="1" data-original-title="Lisa toimumiskoht"><i class="icon-plus-sign"></i></a>
+                      
+                        <div class="hidden" id="showMe5" style="margin-left:-150px;">
                         <div id="Div2" class="span6" style="margin-left:40px;">
                          <select id="select1" name="selectkoht" class="selectpicker show-tick">
                           <option value="">Vali toimumiskoht</option>
@@ -370,7 +372,7 @@
                     <hr class="closer">
                     <label for="dp3"><small>Kohti kokku 40</small></label>
                     <br>
-                    <a href="javascript:shownOnPage2($('#showMe6'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
+                    <a href="javascript:shownOnPage2($('#showMe5'),'showOnPage')" class="btn"><i class="icon-plus-sign"></i> Lisa toimumiskoht</a>
                   </div>
                 </div>
 
@@ -417,20 +419,22 @@
                                   </div>
                                 </fieldset>
                               </form>
-                              <table class="table sortable">
+                              <table class="table datatable datatable-nr">
             					<thead>
                                     <tr class="sort">
+                                        <th>Nr</th>
                                         <th>Eesnimi</th>
                                         <th>Perekonnanimi</th>
                                         <th>Eksami liik</th>
                                         <th>Toimumiskoht</th>
                                         <th>Staatus</th>
-                                        <th></th>
-                                        <th></th>
+                                        <th class="js-no-sort"></th>
+                                        <th class="js-no-sort"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
+                                        <td></td>
                                         <td>Aadu</td>
                                         <td>Aas</td>
                                         <td>Vandeadvokaadi abi eksam</td>
@@ -442,6 +446,7 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td></td>
                                         <td>Mait</td>
                                         <td>Metsanurk</td>
                                         <td>Vandeadvokaadi eksam</td>
@@ -453,6 +458,7 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td></td>
                                         <td>Peeter</td>
                                         <td>Pakiraam</td>
                                         <td>Vandeadvokaadi eksam</td>
@@ -464,6 +470,7 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td></td>
                                         <td>Mari</td>
                                         <td>Maasikas</td>
                                         <td>Vandeadvokaadi eksam</td>
