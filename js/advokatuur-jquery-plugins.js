@@ -24,7 +24,8 @@ $('.draggable').sortable({
   itemPath: '> tbody',
   itemSelector: 'tr',
   placeholder: '<tr class="placeholder"/>',
-  exclude: '.js-fixed'
+  exclude: '.js-fixed',
+  handle: '.handler'
 })
 
 // xeditable
