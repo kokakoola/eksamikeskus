@@ -128,58 +128,65 @@
 						</div>
 					</div></div>
 				</div>
-                
-                <!-- Dropdown & Text input-->
-				<div class="span8">
-                    <div class="control-group">
-                        <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
-                        <div class="controls">
-                            <select id="selectbasic" name="selectbasic" class="selectpicker">
+             <!--Toimumiskohtade lisamine-->   
+             <div class="span7">
+                 <div class="control-group">
+                    <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
+                    <div class="controls">
+                        <div class="span8" style="margin-left:0px;">
+                            <select id="select2" name="selectbasic" class="selectpicker show-tick">
                                 <option value="">Vali toimumiskoht</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 2</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                <option value="20">IT Kolledž, Mäealuse 4c Tallinn</option>
+                                <option value="20">Rävala pst 3, Tallinn</option>
                             </select>
-                            <input id="text1" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">
-					        <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
-						</div>
-			        </div>
+                            <select id="select3" name="selectbasic2" class="selectpicker show-tick reducedwidth">
+                                <option value="">Vali ruum</option>
+                                <option value="20">302</option>
+                                <option value="20">303</option>
+                            </select>
+                            <input id="text7" name="textinput" type="text" placeholder="Kohtade arv" class="input reducedwidth">
+                            <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="span7">
+                <div class="control-group">
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 1</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                <span><small>ruum: </small>302</span>
+                                <span><small>kohti: </small>20</span>
+                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 2</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                    <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                    <span><small>ruum: </small>302</span>
+                                    <span><small>kohti: </small>20</span>
+                                    <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                </div>
+                        </div>
+                    </div>
+                 </div>
+              </div> 
+
                 
-                <!--Text-->
-				<div class="span7">
-					<div class="control-group">
-						<div>
-                            <label class="control-label" for="">Toimumiskoht 1</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
-                        </div>
-                        <div>
-                            <label class="control-label" for="">Toimumiskoht 2</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
-                        </div>
-				    </div>
-                </div>
-
                 <!--Text-->
                 <div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="">Kokku kohtade arv</label>
 
 						<div class="controls">  
-							<div class="span1">40</div>
+							40
 						</div>
 					</div>
 				</div>
@@ -265,7 +272,7 @@
 						<label class="control-label" for="">Kokku kohtade arv</label>
 
 						<div class="controls">
-							<input id="text7" name="textinput" type="text" placeholder="Kokku kohtade arv" class="input-large">
+							40
 						</div>
 					</div>
 				</div>

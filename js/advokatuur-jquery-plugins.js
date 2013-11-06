@@ -98,7 +98,8 @@ $(document).ready(function() {
          url: '/post',
          title: 'Sisesta toimumiskoht ja kohtade arv #',
          value: {
-             street: "Rävala pst 3, Tallinn",
+             street: "",
+             city: "",
              building: ""
          }
      });
@@ -150,12 +151,14 @@ $(document).ready(function() {
                  return;
              }
              this.$input.filter('[name="street"]').val(value.street);
+             this.$input.filter('[name="city"]').val(value.city);
              this.$input.filter('[name="building"]').val(value.building);
          },
 
          input2value: function () {
              return {
                  street: this.$input.filter('[name="street"]').val(),
+                 city: this.$input.filter('[name="city"]').val(),
                  building: this.$input.filter('[name="building"]').val()
              };
          },
@@ -175,10 +178,16 @@ $(document).ready(function() {
 
      Address.defaults = $.extend({}, $.fn.editabletypes.abstractinput.defaults, {
          tpl: '<div class="editable-address"><label><span>Toimumiskoht: </span><select name="street">' +
+                                                                                 '<option>Vali toimumiskoht</option>' +
                                                                                  '<option>Rävala pst 3, Tallinn</option>' +
                                                                                  '<option>Rävala pst 3, Tallinn</option>' +
                                                                                 '</select></label></div>' +
-              '<div class="editable-address"><label><span>Kohtade arv: </span><input type="text" name="building" class="input-small"></label></div>',
+              '<div class="editable-address"><label><span>Ruum: </span><select name="city">' +
+                                                                                 '<option>Vali ruum</option>' +
+                                                                                 '<option>302</option>' +
+                                                                                 '<option>303</option>' +
+                                                                                '</select></label></div>' +
+              '<div class="editable-address"><label><span>Kohtade arv: </span><input type="text" name="building" class="input-small" placeholder="Kohtade arv"></label></div>',
 
          inputclass: ''
      });
