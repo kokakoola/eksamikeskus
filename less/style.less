@@ -311,7 +311,7 @@ hr.closer {
 
 // Adjust button group placemenet
 .form-actions button {
-  margin-right: 15px; 
+  margin-right: 10px; 
 }
 
 .form-actions {
@@ -361,6 +361,7 @@ ul.nav-wizard {
   border-radius: 0;
 }
 
+
 .label.simple {
   color: @textColor;
   border-radius: 0;
@@ -372,7 +373,7 @@ ul.nav-wizard {
   text-shadow: 0 0 0 @white;
 }
 
-.label.label-success {
+.label.label-success, .has-js .label_check  {
   min-width: 20px;
   min-height: 20px;
   border-radius: 0;
@@ -428,8 +429,6 @@ line-height: 20px;
 line-height: 30px;
 }
 
-.radio.testquestion {
-}
 .row {
   margin-left: 0;
 }
@@ -634,19 +633,8 @@ color: #fff;
 }
 
 #test .form-horizontal .controls {
-margin-left: 230px;
+margin-left: 150px;
 }
-
-#test .flagged  {
-  margin-left: -160px;
-float: left;
-margin-top: -30px;
-  label {
-  margin-top: -30px;
-  margin-left: 40px;
-  }
-}
-
 
 #writtentext-accordion-collapse1 {
   max-height:400px; 
@@ -686,7 +674,38 @@ td.narrow {
 }
 
 .make-switch.has-switch {
-  //height: 30px;
+  max-height: 30px;
+}
+
+.has-switch {
+  border-radius: 0;
+}
+
+.has-switch span.switch-left {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+#test .switch-left {
+  font-size: 17px;
+}
+
+
+#test .make-switch  {
+  margin-top: -40px;
+}
+
+input[type="radio"]:checked+span { 
+font-family: 'clbd', Arial, sans-serif;
+ }
+
+.pagination ul {
+  border-radius: 0;
+}
+
+.answered {
+  background-color: #F0F0F0;
 }
 
 .datepicker > div {

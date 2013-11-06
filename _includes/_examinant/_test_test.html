@@ -50,50 +50,56 @@
           <legend>Eraõigus ja tsiviilkohtumenetlus</legend>
           
           <!-- STABLE VERSION -->
-          <div class="control-group"  >
-            <label class="control-label " for="1" id="" >Käsipant, samuti õiguste pant lõpeb</label>
+          <div class="control-group">
+               <label for="Käsipant, samuti õiguste pant lõpeb" id="Label1"><b>1. Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada</b></label>
 
-            <div class="controls" >
-              <label class="radio testquestion" for="1-1">
-                <input type="radio" name="1" id="" value="1-1" checked="checked">
-                pandiga tagatud nõude loovutamisel
-              </label>
-              <label class="radio testquestion" for="1-2">
-                <input type="radio" name="1" id="" value="1-2" checked="checked">
-                pandiga tagatud nõude loovutamisel
-              </label>
-              <label class="radio testquestion" for="1-2">
-                <input type="radio" name="1" id="" value="1-2" checked="checked">
-                pandiga tagatud nõude loovutamisel
-              </label>
-              <label class="radio testquestion" for="1-2">
-                <input type="radio" name="1" id="" value="1-2" checked="checked">
-                pandiga tagatud nõude loovutamisel
-              </label>
-              <div class="flagged checkbox">
-                  <input type="checkbox" data-color="blue" class="check-lg" id="mark"/> <label for="mark">Märgista
+              <div class="controls">
+                <label class="radio">
+                  <input type="radio" name="1" value="1-1">
+                  <span>10 päeva jooksul alates otsuse apellandile kättetoimetamisest</span>
                 </label>
+
+                <label class="radio">
+                  <input type="radio" name="1" value="1-2">
+                  <span>15 päeva jooksul alates otsuse apellandile kättetoimetamisest</span>
+                </label>
+
+                <label class="radio">
+                  <input type="radio" name="1" value="1-3">
+                  <span>20 päeva jooksul alates otsuse apellandile kättetoimetamisest</span>
+                </label>
+
+
+                <label class="radio">
+                  <input type="radio" name="1" value="1-4">
+                  <span>25 päeva jooksul alates otsuse apellandile kättetoimetamisest</span>
+                </label>
+
               </div>
+                  <div class="make-switch" data-on="primary" data-on-label="<i class='icon-exclamation-sign'></i> " data-off-label="Märgi">
+                    <input type="checkbox">
+                  </div>
+              <hr>
             </div>
-            <hr>
-          </div>
         </fieldset>
+
+        
         <p class="text-center"> <a id="js-end-test" class="btn btn-primary" href="#">Esitan testi</a> </p>
       </form>
     </div>
     <div class="span3">
       <div class="test-sidenav affix-bottom" data-spy="affix" data-offset-top="100" data-offset-bottom="100">
         <div class="pagination" id="pagenav">
-          <p>Vastatud: 1/{{tests.length}}</p>
+          <p>Vastatud: 1/20</p>
           <ul class="nav">
-            <li ><a class="btn" href="#">1</a></li>
-            <li ><a class="btn-info" href="#">2</a></li>
-            <li ><a href="#">3</a></li>
+            <li ><a class="answered" href="#">1.</a></li>
+            <li ><a class="gradient blue" href="#">2.</a></li>
+            <li ><a href="#">3.</a></li>
           </ul>
           <p>Kui sa pole mõnes vastuses kindel, märgista see, et saaksid hiljem selle juurde tagasi pöörduda: loetelus on ta siis oranzhi värvi.</p>
 
         <span class="navbar-text countdown">
-          Aega jäänud <br><span class="btn"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
+          Aega jäänud <br><span class="label simple"><span class="hours">00</span> : <span class="minutes">00</span> : <span class="seconds">00</span></span>
         </span>
                 </div>
       </div>
