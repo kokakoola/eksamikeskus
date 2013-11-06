@@ -64,7 +64,7 @@ $(document).ready(function() {
  $(function () {
      $('.committee').editable({
          pk: 1,
-         limit: 3,
+         emptytext: 'Vali liikmed',
          source: [
           { value: 1, text: 'Aadu Luberg' },
           { value: 2, text: 'Enno Loonurm' },

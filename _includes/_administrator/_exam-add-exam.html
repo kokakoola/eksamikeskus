@@ -9,10 +9,10 @@
 	</ul>
 
 	<!--Breadcrumbs -->
-	<ul class="breadcrumbs clearfix">
+	<!--<ul class="breadcrumbs clearfix">
         <li><a href="#exam-test-list">Eksamid</a><span class="divider">/</span></li>
 		<li>Eksami lisamine </li>
-	</ul>
+	</ul>-->
 
 
     <!-- Page Name -->
@@ -21,13 +21,12 @@
 		</div>
 		<form class="form-horizontal">
 			<fieldset>
-              <div class="span6">
+              <div class="row">
 				
 
                 <h4>Kirjalik eksam</h4>
                 <hr />
 				<!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="dp3">Kuupäev</label>
 
@@ -38,58 +37,48 @@
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
-				</div>
 
 				<!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 
 						<label class="control-label" for="">Kellaaeg</label>
 
 						<div class="controls">
-							<input id="text2" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
+							<input id="text2" name="textinput" type="text" placeholder="Kellaaeg" class="span2">
 						</div>
 					</div>
-				</div>
 
 				<!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 
 						<label class="control-label" for="">Testi kestvus</label>
 
 						<div class="controls">
-							<input id="text5" name="textinput" type="text" placeholder="Testi kestvus minutites" class="input-large">
+							<input id="text5" name="textinput" type="text" placeholder="Kestvus minutites" class="span2">
 						</div>
 					</div>
-				</div>
 
 				<!-- Text input-->
-			    <div class="span7">
 			        <div class="control-group">
 
 			            <label class="control-label" for="">Kaasuse kestvus</label>
 
 			            <div class="controls">
-			                <input id="text6" name="textinput" type="text" placeholder="Kaasuse kestvus minutites" class="input-large">
+			                <input id="text6" name="textinput" type="text" placeholder="Kestvus minutites" class="span2">
 			            </div>
 			        </div>
-			    </div>
                 
                 <!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 
 						<label class="control-label" for="">Kaasuse algusaeg</label>
 
 						<div class="controls">
-							<input id="text8" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
+							<input id="text8" name="textinput" type="text" placeholder="Kellaaeg" class="span2">
 						</div>
 					</div>
-				</div>
 
                 <!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="dp3">Registreerimise alguskuupäev</label>
 
@@ -100,10 +89,8 @@
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
-				</div>
 
 			    <!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="dp3">Registreerimise lõppkuupäev</label>
 
@@ -114,22 +101,19 @@
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
-				</div>
 
 				<!-- Text input-->
-				<div class="span7">
 					<div class="control-group">
 						<label class="control-label" for="dp3">Registreerimise tühistamise kuupäev</label>
 						<div class="controls">
-						<div class="input-append date" id="Div2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+						    <div class="input-append date" id="Div2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
-							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-						</div>
-					</div></div>
-				</div>
-             <!--Toimumiskohtade lisamine-->   
-             <div class="span7">
+							    <input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+							    <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+						    </div>
+					    </div>
+					</div>
+             <!--Toimumiskohtade lisamine-->
                  <div class="control-group">
                     <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
                     <div class="controls">
@@ -149,8 +133,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="span7">
                 <div class="control-group">
                     <div class="row">
                         <label class="control-label" for="">Toimumiskoht 1</label>
@@ -177,115 +159,231 @@
                         </div>
                     </div>
                  </div>
-              </div> 
 
                 
                 <!--Text-->
-                <div class="span7">
-					<div class="control-group">
-						<label class="control-label" for="">Kokku kohtade arv</label>
-
-						<div class="controls">  
-							40
+				<div class="control-group">
+						<label class="control-label" for=""></label>
+						<div class="controls small-line">
+							<small>Kohti kokku: 40</small>
 						</div>
 					</div>
-				</div>
-              </div>
-
-              <div class="span6">
-                <h4>Suuline eksam</h4>
-                <hr />
-				<!-- Text input-->
-				<div class="span7">
-					<div class="control-group">
-						<label class="control-label" for="dp3">Kuupäev</label>
-
-						<div class="controls">
-							<div class="input-append date" id="Div4" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-
-								<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
-								<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Text input-->
-				<div class="span7">
-					<div class="control-group">
-
-						<label class="control-label" for="">Kellaaeg</label>
-
-						<div class="controls">
-							<input id="text3" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
-						</div>
-					</div>
-				</div>
-				
-                <!-- Dropdown & Text input-->
-				<div class="span8">
-                    <div class="control-group">
-                        <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
-                        <div class="controls">
-                            <select id="select1" name="selectbasic" class="selectpicker">
-                                <option value="">Vali toimumiskoht</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 2</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 3</option>
-                            </select>
-                            <input id="text4" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">
-					        <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
-						</div>
-			        </div>
-                </div>
-                
-                <!--Text-->
-				<div class="span7">
-					<div class="control-group">
-						<div>
-                            <label class="control-label" for="">Toimumiskoht 1</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
-                        </div>
-                        <div>
-                            <label class="control-label" for="">Toimumiskoht 2</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
-                        </div>
-				    </div>
-                </div>
-
-				<div id="Div5" class="span7">
-					<div class="control-group">
-
-						<label class="control-label" for="">Kokku kohtade arv</label>
-
-						<div class="controls">
-							40
-						</div>
-					</div>
-				</div>
-            </div>
                 
 				<!-- Button -->
-				<div class="span7 pull-right">
+				<div class="row">    
                     <hr />
+			        <div class="control-group">
+				        <div class="form-actions" style="background: none; border: none;">
+					        <a class="btn" href="#exam-test-list" id="A2">Katkesta</a>
+					        <a class="btn btn-primary" href="#exam-test-list">Lisa kirjalik eksam</a>
+                            <a class="btn" href="javascript:shownOnPage2($('#showMeAdd14'),'showOnPage')" onclick="hideOnPage($(this).parent().parent().parent())">Jätka suulise eksami lisamisega</a>
+				        </div>
+			        </div>
+				</div>
+              <div class="row hidden" id="showMeAdd14" style="margin-top:20px;">
+                <h4>Lisa suuline eksam</h4>
+                <hr />
+
+             <!-- Text input-->
+             <div class="control-group">
+                <label class="control-label" for="dp3">Kuupäev</label>
+ 
+                <div class="controls">
+                   <div class="input-append date" id="Div4" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+ 
+                    <input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+                    <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+                  </div>
+                </div>
+              </div>
+ 
+            <!-- Text input-->
+             <div class="control-group">
+ 
+              <label class="control-label" for="">Kellaaeg</label>
+ 
+              <div class="controls">
+               <input id="inputError" name="textinput" type="text" placeholder="Kellaaeg" class="span2">
+ 
+              </div>
+            </div>
+                        <!-- Text input-->
+             <div class="control-group">
+              <label class="control-label" for="">Komisjoni koosseis</label>
+              <div class="controls">
+                   <a href="#" class="committee" data-type="checklist" data-value="" data-original-title="Vali liikmed"></a>
+              </div>
+            </div>
+            <!-- Dropdown & Text input-->
+                
+                 <div class="control-group">
+                    <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
+                    <div class="controls">
+                        <div class="span8" style="margin-left:0px;">
+                            <select id="selectbasic" name="selectbasic" class="selectpicker show-tick">
+                                <option value="">Vali toimumiskoht</option>
+                                <option value="20">IT Kolledž, Mäealuse 4c Tallinn</option>
+                                <option value="20">Rävala pst 3, Tallinn</option>
+                            </select>
+                            <select id="select1" name="selectbasic2" class="selectpicker show-tick reducedwidth">
+                                <option value="">Vali ruum</option>
+                                <option value="20">302</option>
+                                <option value="20">303</option>
+                            </select>
+                            <input id="text4" name="textinput" type="text" placeholder="Kohtade arv" class="input reducedwidth">
+                            <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
+                        </div>
+                    </div>
+                </div>
+              
+ 
+            <!--Text-->
+                <!--<div class="control-group">
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 1</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                <span><small>ruum: </small>302</span>
+                                <span><small>kohti: </small>20</span>
+                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 2</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                    <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                    <span><small>ruum: </small>302</span>
+                                    <span><small>kohti: </small>20</span>
+                                    <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                </div>
+                        </div>
+                    </div>
+                 </div>-->
+
 					<div class="control-group">
-				<div class="form-actions" style="background: none; border: none;">
-					<a class="btn" href="#exam-test-list" id="A1">Katkesta</a>
-					<a class="btn btn-primary" href="#exam-test-list">Lisa eksam</a>
-				</div></div></div>
+						<label class="control-label" for=""></label>
+						<div class="controls small-line">
+							<small>Kohti kokku: 0</small>
+						</div>
+					</div>
+                  
+				<!-- Button -->    
+			        <div class="control-group">
+                        <hr />
+				        <div class="form-actions" style="background: none; border: none;">
+					        <a class="btn" href="#exam-test-list" id="A1">Katkesta</a>
+					        <a class="btn btn-primary" href="#exam-test-list">Lisa eksam</a>
+                            <a class="btn" href="javascript:shownOnPage2($('#showMeAdd15'),'showOnPage')" onclick="hideOnPage($(this).parent().parent())"><i class="icon-plus-sign"></i> Lisa suuline eksam</a>
+				        </div>
+			        </div>
+            </div>
+                <div class="row hidden" id="showMeAdd15" style="margin-top:20px;">
+                <h4>Lisa suuline eksam</h4>
+                <hr />
+
+             <!-- Text input-->
+             <div class="control-group">
+                <label class="control-label" for="dp3">Kuupäev</label>
+ 
+                <div class="controls">
+                   <div class="input-append date" id="Div7" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+ 
+                    <input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+                    <span class="add-on" onclick=""><i class="icon-calendar"></i></span>
+                  </div>
+                </div>
+              </div>
+ 
+            <!-- Text input-->
+             <div class="control-group">
+ 
+              <label class="control-label" for="">Kellaaeg</label>
+ 
+              <div class="controls">
+               <input id="Text1" name="textinput" type="text" placeholder="Kellaaeg" class="span2">
+ 
+              </div>
+            </div>
+                    <!-- Text input-->
+             <div class="control-group">
+              <label class="control-label" for="">Komisjoni koosseis</label>
+              <div class="controls">
+                   <a href="#" class="committee" data-type="checklist" data-value="" data-original-title="Vali liikmed"></a>
+              </div>
+            </div>
+            <!-- Dropdown & Text input-->
+                
+                 <div class="control-group">
+                    <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
+                    <div class="controls">
+                        <div class="span8" style="margin-left:0px;">
+                            <select id="select4" name="selectbasic" class="selectpicker show-tick">
+                                <option value="">Vali toimumiskoht</option>
+                                <option value="20">IT Kolledž, Mäealuse 4c Tallinn</option>
+                                <option value="20">Rävala pst 3, Tallinn</option>
+                            </select>
+                            <select id="select5" name="selectbasic2" class="selectpicker show-tick reducedwidth">
+                                <option value="">Vali ruum</option>
+                                <option value="20">302</option>
+                                <option value="20">303</option>
+                            </select>
+                            <input id="text3" name="textinput" type="text" placeholder="Kohtade arv" class="input reducedwidth">
+                            <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
+                        </div>
+                    </div>
+                </div>
+              
+ 
+            <!--Text-->
+                <div class="control-group">
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 1</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                <span><small>ruum: </small>302</span>
+                                <span><small>kohti: </small>20</span>
+                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 2</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                    <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                    <span><small>ruum: </small>302</span>
+                                    <span><small>kohti: </small>20</span>
+                                    <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                </div>
+                        </div>
+                    </div>
+                 </div>
+
+					<div class="control-group">
+						<label class="control-label" for=""></label>
+						<div class="controls small-line">
+							<small>Kohti kokku: 40</small>
+						</div>
+					</div>
+                  <hr />
+				<!-- Button -->   
+			        <div class="control-group">
+				        <div class="form-actions" style="background: none; border: none;">
+					        <a class="btn" href="#exam-test-list" id="A3">Katkesta</a>
+					        <a class="btn btn-primary" href="#exam-test-list">Lisa eksam</a>
+                            <a class="btn" href="javascript:shownOnPage2($('#showMeAdd15'),'showOnPage')" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-plus-sign"></i> Lisa suuline eksam</a>
+				        </div>
+			        </div>
+            </div>
+                
 			</fieldset>
 
 		</form>
