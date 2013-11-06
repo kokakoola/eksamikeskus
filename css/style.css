@@ -7360,7 +7360,8 @@ hr.closer {
 #nav-wizard {
   margin: 20px 0;
 }
-.nav-tabs > li > a {
+.nav-tabs > li > a,
+.nav-pills > li > a {
   border-radius: 0;
 }
 .well {
