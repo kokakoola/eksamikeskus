@@ -269,7 +269,7 @@ $(document).ready(function() {
 $(document).ready(function () {
   $('#register, #registered').hide();
   $(' #test-end, #written-start').hide();
-  $('#test, #test-end').hide();
+  // $('#test, #test-end').hide();
   
   bootbox.addLocale('en', {
       CONFIRM: 'Kinnita',
