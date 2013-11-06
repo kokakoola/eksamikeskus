@@ -85,6 +85,19 @@ $(document).ready(function() {
          limit: 3,
          source: [
           
+          { value: 1, text: 'Esitatud' },
+          { value: 3, text: 'Mitte ilmunud' },
+          { value: 4, text: 'Kõrvaldatud' }
+         ]
+     });
+ });
+
+ $(function () {
+     $('.kaasus2').editable({
+         pk: 1,
+         limit: 3,
+         source: [
+
           { value: 1, text: 'Arvestatud' },
           { value: 3, text: 'Mitte ilmunud' },
           { value: 4, text: 'Kõrvaldatud' }
