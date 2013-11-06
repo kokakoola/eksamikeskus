@@ -21,7 +21,7 @@
 		</div>
 		<form class="form-horizontal">
 			<fieldset>
-              <div class="span6">
+              <div class="row">
 				
 
                 <h4>Kirjalik eksam</h4>
@@ -34,7 +34,7 @@
 						<div class="controls">
 						<div class="input-append date" id="Div3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+							<input class="input-small" size="16" type="text" value="" placeholder="Kuupäev">
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
@@ -47,7 +47,7 @@
 						<label class="control-label" for="">Kellaaeg</label>
 
 						<div class="controls">
-							<input id="text2" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
+							<input id="text2" name="textinput" type="text" placeholder="Kellaaeg" class="input-small">
 						</div>
 					</div>
 				</div>
@@ -59,7 +59,7 @@
 						<label class="control-label" for="">Testi kestvus</label>
 
 						<div class="controls">
-							<input id="text5" name="textinput" type="text" placeholder="Testi kestvus minutites" class="input-large">
+							<input id="text5" name="textinput" type="text" placeholder="Testi kestvus minutites" class="input-small">
 						</div>
 					</div>
 				</div>
@@ -71,7 +71,7 @@
 			            <label class="control-label" for="">Kaasuse kestvus</label>
 
 			            <div class="controls">
-			                <input id="text6" name="textinput" type="text" placeholder="Kaasuse kestvus minutites" class="input-large">
+			                <input id="text6" name="textinput" type="text" placeholder="Kaasuse kestvus minutites" class="input-small">
 			            </div>
 			        </div>
 			    </div>
@@ -83,7 +83,7 @@
 						<label class="control-label" for="">Kaasuse algusaeg</label>
 
 						<div class="controls">
-							<input id="text8" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
+							<input id="text8" name="textinput" type="text" placeholder="Kellaaeg" class="input-small">
 						</div>
 					</div>
 				</div>
@@ -96,7 +96,7 @@
 						<div class="controls">
 						<div class="input-append date" id="Div6" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+							<input class="input-small" size="16" type="text" value="" placeholder="Kuupäev">
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
@@ -110,7 +110,7 @@
 						<div class="controls">
 						<div class="input-append date" id="Div1" data-date="15-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+							<input class="input-small" size="16" type="text" value="" placeholder="Kuupäev">
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div></div>
 					</div>
@@ -123,7 +123,7 @@
 						<div class="controls">
 						<div class="input-append date" id="Div2" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 							
-							<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+							<input class="input-small" size="16" type="text" value="" placeholder="Kuupäev">
 							<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 						</div>
 					</div></div>
@@ -192,7 +192,7 @@
 				</div>
               </div>
 
-              <div class="span6">
+              <div class="row">
                 <h4>Suuline eksam</h4>
                 <hr />
 				<!-- Text input-->
@@ -203,7 +203,7 @@
 						<div class="controls">
 							<div class="input-append date" id="Div4" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 
-								<input class="span2" size="16" type="text" value="" placeholder="Kuupäev">
+								<input class="input-small" type="text" value="" placeholder="Kuupäev">
 								<span class="add-on" onclick=""><i class="icon-calendar"></i></span>
 							</div>
 						</div>
@@ -217,54 +217,61 @@
 						<label class="control-label" for="">Kellaaeg</label>
 
 						<div class="controls">
-							<input id="text3" name="textinput" type="text" placeholder="Kellaaeg" class="input-large">
+							<input id="text3" name="textinput" type="text" placeholder="Kellaaeg" class="input-small">
 						</div>
 					</div>
 				</div>
 				
-                <!-- Dropdown & Text input-->
-				<div class="span8">
-                    <div class="control-group">
-                        <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
-                        <div class="controls">
-                            <select id="select1" name="selectbasic" class="selectpicker">
+                <!--Toimumiskohtade lisamine-->   
+             <div class="span7">
+                 <div class="control-group">
+                    <label class="control-label" for="selectbasic">Lisa toimumiskoht</label>
+                    <div class="controls">
+                        <div class="span8" style="margin-left:0px;">
+                            <select id="select1" name="selectbasic" class="selectpicker show-tick">
                                 <option value="">Vali toimumiskoht</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 2</option>
-                                <option value="20">Rävala pst 3, Tallinn ruum 3</option>
+                                <option value="20">IT Kolledž, Mäealuse 4c Tallinn</option>
+                                <option value="20">Rävala pst 3, Tallinn</option>
                             </select>
-                            <input id="text4" name="textinput" type="text" placeholder="Kohtade arv" class="input-small">
-					        <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
-						</div>
-			        </div>
-                </div>
-                
-                <!--Text-->
-				<div class="span7">
-					<div class="control-group">
-						<div>
-                            <label class="control-label" for="">Toimumiskoht 1</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
+                            <select id="select4" name="selectbasic2" class="selectpicker show-tick reducedwidth">
+                                <option value="">Vali ruum</option>
+                                <option value="20">302</option>
+                                <option value="20">303</option>
+                            </select>
+                            <input id="text1" name="textinput" type="text" placeholder="Kohtade arv" class="input reducedwidth">
+                            <a class="btn btn-primary" href="#exam-add-exam">Lisa</a>
                         </div>
-                        <div>
-                            <label class="control-label" for="">Toimumiskoht 2</label>
-
-						    <div class="controls">
-                                <div class="row">
-							        <div class="span3">Rävala pst 3, Tallinn ruum 2</div>
-                                    <span>20 kohta</span>
-                                    <button class="btn" onclick="hideOnPage($(this).parent().parent().parent())"><i class="icon-remove"></i></button>
-                                </div>
-				            </div>
-                        </div>
-				    </div>
+                    </div>
                 </div>
+            </div>
+            <div class="span7">
+                <div class="control-group">
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 1</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                <span><small>ruum: </small>302</span>
+                                <span><small>kohti: </small>20</span>
+                                <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="control-label" for="">Toimumiskoht 2</label>
+ 
+                        <div class="controls">
+                            <div class="span6" style="margin-left:0px;">
+                                    <span>IT Kolledž, Mäealuse 4c Tallinn</span>
+                                    <span><small>ruum: </small>302</span>
+                                    <span><small>kohti: </small>20</span>
+                                    <a class="tip icon-remove" onclick="hideOnPage($(this).parent().parent().parent())" data-toggle="tooltip" title="" data-original-title="Tühista toimumiskoht"></a>
+                                </div>
+                        </div>
+                    </div>
+                 </div>
+              </div> 
 
 				<div id="Div5" class="span7">
 					<div class="control-group">
@@ -277,10 +284,10 @@
 					</div>
 				</div>
             </div>
-                
+                <hr />
 				<!-- Button -->
-				<div class="span7 pull-right">
-                    <hr />
+				<div class="span7">
+                    
 					<div class="control-group">
 				<div class="form-actions" style="background: none; border: none;">
 					<a class="btn" href="#exam-test-list" id="A1">Katkesta</a>
