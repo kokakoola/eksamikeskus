@@ -28,33 +28,36 @@
     </div>
     <div class="row">
       <div class="span4">
-        <h4>Kirjalik eksam</h4>
-        <hr class="closer">
- 
-        <p><small>Kuupäev: </small>12.02.2012</p>
-        <p><small>Kellaaeg: </small>10:00</p>
-        <p><small>Testi kestvus: </small>90 minutit</p>
-        <p><small>Kaasuse algusaeg: </small>11:30</p>
-        <p><small>Kaasuse kestvus: </small>360 minutit</p>
-      </div>
-      <div class="span4">
-        <h4>Registreerimine</h4>
-        <hr class="closer">
- 
-        <p><small>Alguskuupäev: </small>01.02.2012</p>
-        <p><small>Lõppkuupäev: </small>11.02.2012</p>
-        <p><small>Tühistamise kuupäev: </small>11.02.2012</p>
-      </div>
-      <div class="span4">
-        <h4>Toimumiskohad</h4>
-        <hr class="closer">
- 
-        <p>Rävala pst 3 Tallinn, 4. korrus ruum 302 <small>kohti:</small> 19/20</p>
-        <p>Rävala pst 3, Tallinn ruum 3 <small>kohti:</small> 19/20</p>
-      </div>
+                <h4>Registreerimine</h4>
+                <hr class="closer">
+
+                <p>02.10.2013 - 02.12.2013</p>
+                <p><small>Vandeadvokaadi: </small>20</p>
+                <p><small>Vandeadvokaadi abi: </small>25</p>
+                <p><small>Vabu kohti: </small>15</p>
+            </div>
+            <div class="span4">
+                <h4>Kirjalik eksam</h4>
+                <hr class="closer">
+
+                <p><small>Kaasus esitatud: </small>-</p>
+                <p><small>Test sooritamata: </small>-</p>
+                <p><small>Testile mitteilmunud: </small>-</p>
+                <p><small>Testilt kõrvaldatud: </small>-</p>
+                <p><small>Kaasusele mitteilmunud: </small>-</p>
+                <p><small>Kaasuselt kõrvaldatud: </small>-</p>
+            </div>
+            <div class="span4">
+                <h4>Suuline eksam</h4>
+                <hr class="closer">
+
+                <p><small>Kohti: </small>45</p>
+                <p><small>Vandeadvokaadi sooritanud: </small>-/20</p>
+                <p><small>Vandeadvokaadi abi sooritanud: </small>-/25</p>
+            </div>
       <form>
        <fieldset>
-        <div class="span5 pull-right">
+        <div class="row pull-right">
           <div class="form-actions" style="background: none; border: none;">
             <a class="btn" href="#exam-test-list" id="A1">Tühista eksam</a>
             <a href="#exam-change-exam" class="btn btn-primary"><span class="tip icon-sort-by-attributes"></span> Koosta küsimustik</a>
@@ -68,14 +71,14 @@
   <div class="tabbable">
     <ul class="nav nav-tabs">
  
-      <li><a href="#p1" data-toggle="tab">Üldinfo</a></li>
-      <li><a href="#p2" data-toggle="tab">Eksamineeritavad</a></li>
-      <li><a href="#p4" data-toggle="tab">Küsimused</a></li>
+      <li><a href="#reg1" data-toggle="tab">Üldinfo</a></li>
+      <li><a href="#reg2" data-toggle="tab">Eksamineeritavad</a></li>
+      <!--<li><a href="#reg4" data-toggle="tab">Küsimused</a></li>-->
       <!--<li><a href="#p5" data-toggle="tab">Kõik eksamid</a></li>-->
     </ul>
     <div class="tab-content">
  
-      <div id="p1" class="tab-pane">
+      <div id="reg1" class="tab-pane">
        <div class="row addoral hidden" id="showMeAdd">
         <form class="form-horizontal">
          <fieldset>
@@ -404,7 +407,7 @@
                                   <a href="#" class="place" id="A19" data-type="select" data-name="koht" data-original-title="Toimumiskoht"> Rävala pst 3, Tallinn</a>
                                   <br>
                                   <label for=""><small>Ruum: </small></label>
-                                  <a href="#" class="place" id="A20" data-type="select" data-name="koht" data-original-title="Toimumiskoht"> 3</a> (<a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">20</a>)
+                                  <a href="#" class="place" id="A20" data-type="select" data-name="koht" data-original-title="Toimumiskoht"> 3</a> (<a href="#" class="js-place" data-type="text" data-pk="1" data-url="/post" data-title="Kohtade arv">5</a>)
                                   <br>
                                   <label for=""><small>Kutsesobivuskomisjoni koosseis:</small></label>
                                   <br>
@@ -424,14 +427,14 @@
                       </form>
                     </div>  
  
-                    <div id="p2" class="tab-pane">
+                    <div id="reg2" class="tab-pane">
                       <div class="tabbable">
                         <ul class="nav nav-pills">
-                          <li class="active"><a href="#koik" data-toggle="tab">Kõik</a></li>
-                          <li><a href="#kohad" data-toggle="tab">Toimumiskohtade järgi</a></li>
+                          <li class="active"><a href="#koik12" data-toggle="tab">Kõik</a></li>
+                          <li><a href="#kohad12" data-toggle="tab">Toimumiskohtade järgi</a></li>
                         </ul>
                         <div class="tab-content">
-                          <div id="koik" class="tab-pane active">
+                          <div id="koik12" class="tab-pane active">
                             <form class="form-inline">
                               <fieldset>
                                 <div class="well">
@@ -470,59 +473,26 @@
                             </thead>
                             <tbody>
                               <tr>
-                                <td>Aadu</td>
-                                <td>Aas</td>
-                                <td>Vandeadvokaadi abi eksam</td>
+                                <td>Jarko</td>
+                                <td>Taal</td>
+                                <td>Vandeadvokaadi abi</td>
                                 <td>Rävala pst 3, Tallinn ruum 2</td>
                                 <td>Registreerunud</td>
-                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
+                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#user-examinant"></a></span></td>
                                 <td class="narrow">
-                                  <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
+                                  <span class="icon-button"><a class="tip icon-remove" href="#exam-change-exam" data-toggle="tooltip" title="Tühista registreering"></a></span>
                                 </td>
                               </tr>
-                              <tr>
-                                <td>Mait</td>
-                                <td>Metsanurk</td>
-                                <td>Vandeadvokaadi eksam</td>
-                                <td>Rävala pst 3, Tallinn ruum 3</td>
-                                <td>Registreerunud</td>
-                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                                <td class="narrow">
-                                  <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Peeter</td>
-                                <td>Pakiraam</td>
-                                <td>Vandeadvokaadi eksam</td>
-                                <td>Rävala pst 3, Tallinn ruum 3</td>
-                                <td>Registreerunud</td>
-                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                                <td class="narrow">
-                                  <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>Mari</td>
-                                <td>Maasikas</td>
-                                <td>Vandeadvokaadi eksam</td>
-                                <td>Rävala pst 3, Tallinn ruum 3</td>
-                                <td>Registreerunud</td>
-                                <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                                <td class="narrow">
-                                  <span class="icon-button"><a class="tip icon-remove" href="#" onclick="hideOnPage($(this).parent().parent().parent()); return false;" data-toggle="tooltip" title="Kustuta"></a></span>
-                                </td>
-                              </tr>
+                              
                             </tbody>
                           </table>
                         </div>
-                        <div id="kohad" class="tab-pane">
+                        <div id="kohad12" class="tab-pane">
                      
-                  <div class="span12">
+                  <div class="row">
                     <table class="table sortable draggable">
                       <thead>
                         <tr class="sort">
-                          <th></th>
                           <th>Eesnimi</th>
                           <th>Perekonnanimi</th>
                           <th>Eksami liik</th>
@@ -535,96 +505,16 @@
                           <td colspan="7"><b>12.02.2012 / ruum 302 / Rävala pst 3, Tallinn</b></td>
                         </tr>
                    <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
+                    <td>Jarko</td>
+                    <td>Taal</td>
+                    <td>Vandeadvokaadi</td>
                     <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
+                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#user-examinant"></a></span></td>
+                    <td class="narrow">
+                        <span class="icon-button"><a class="tip icon-remove" href="#exam-change-exam"  data-toggle="tooltip" title="Tühista registreering"></a></span>
+                    </td>
                   </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mait</td>
-                    <td>Metsanurk</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                        <tr class="js-fixed">
-                          <td colspan="7" ><b>12.02.2012 / ruum 302 / Rävala pst 3, Tallinn</b></td>
-                        </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
-                   <tr>
-                    <td class="narrow handler"><span class="icon-button"><i class="icon-move"></i></span></td>
-                    <td>Mari</td>
-                    <td>Maasikas</td>
-                    <td>Vandeadvokaadi eksam</td>
-                    <td>Registreerunud</td>
-                    <td class="narrow"><span class="icon-button"><a class="icon-chevron-right" href="#exam-answeres"></a></span></td>
-                  </tr>
+                   
                  </tbody>
                </table>
               </div>
@@ -632,9 +522,9 @@
          </div>
        </div>
      </div>
-     <div id="p4" class="tab-pane">
+     <!--<div id="reg4" class="tab-pane">
  
-     </div>
+     </div>-->
             <!--<div id="p5" class="tab-pane">
                <table class="table sortable" id="exam-test-list-table">
                   <thead>

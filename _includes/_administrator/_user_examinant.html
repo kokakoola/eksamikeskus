@@ -1,0 +1,172 @@
+﻿
+  <section class="content" id="user-examinant">
+    <div class="pagename">
+      <h1><a href="#user-list" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Jarko Taal </h1>
+    </div>
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li  ><a href="#examina" data-toggle="tab">Isikuandmed</a></li> <!-- class="active" -->
+        <li class="active"><a href="#examina0" data-toggle="tab">Registreering</a></li>
+        
+      </ul>
+
+
+      <div class="tab-content">
+        <div class="tab-pane" id="examina">
+          <form class="form-horizontal">
+            <fieldset>
+
+              <!-- Text input-->
+
+              <div class="control-group">
+                <label class="control-label" for="textinput">Isikukood</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="new_forename" data-type="text" data-name="forename" data-original-title="Muuda">1234567890</a>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="textinput">Nimi</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="A1" data-type="text" data-name="forename" data-original-title="Muuda">Jarko</a> &nbsp; <a href="#" class="editableinline" id="A2" data-type="text" data-name="forename" data-original-title="Muuda">Taal</a>
+                </div>
+              </div>
+
+              <!-- Text input-->
+
+
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Roll</label>
+                <div class="controls">
+                  <select id="selectbasicDisable" name="selectbasic" class="selectpicker show-tick">
+                    <option value="1">Eksamineeritav</option>
+                    <option>Advokatuuri kantselei töötaja</option>
+                    <option>Kutsesobivuskomisjoni liige</option>
+                    <option>Administraator</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Select Basic -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic1">Eksami liik</label>
+                <div class="controls">
+                  <select id="add-user-exam-type" name="selectbasic1" class="selectpicker show-tick">
+                    <option>Vandeadvokaadi abi eksam</option>
+                    <option>Vandeadvokaadi eksam</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="inputDecisionDate">Juhatuse otsuse kuupäev</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Select date">15/05/1984</a>
+                </div>
+              </div>
+              <!-- Multiple Checkboxes (inline) -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Aktiivne</label>
+                <div class="controls">
+                  <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
+                    <input type="checkbox" checked>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <!-- Button (Double) -->
+              <div class="form-actions" style="background: none; border: none;">
+                <a href="javascript:history.back();" name="button1id" class="btn btn-default">Katkesta</a>
+                <a href="#user-list" name="" class="btn btn-default">Kustuta kasutaja</a>
+                <a href="#user-list" name="button2id" class="btn btn-primary">Salvesta muudatused</a>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+        <div class="tab-pane active" id="examina0">
+          <form class="form-horizontal">
+            <fieldset>
+
+              <!--Select-->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Eksami liik</label>
+                <div class="controls">
+                  <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
+                    <option>Vandeadvokaadi eksam</option>
+                    <option>Vandeadvokaadi abi eksam</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Multiple Checkboxes (inline) -->
+              <div class="control-group">
+                <label class="control-label" for="checkboxes">Korduseksam</label>
+                <div class="controls">
+                  <label class="checkbox inline" for="checkboxes-1">
+                    <input type="checkbox" name="checkboxes" id="checkboxes-1">
+                  </label>
+                  <span class="help-inline">Jah</span>
+                </div>
+              </div>
+
+              <!-- Select Basic -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
+                <div class="controls">
+                  <select id="select1" name="selectbasic" class="span5 selectpicker">
+                    <option>Eraõigus ja tsiviilkohtu menetlus</option>
+                    <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
+                    <option>Karistusõigus ja kriminaalmenetlus</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <!-- Select Basic -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Toimumiskoht</label>
+                <div class="controls">
+                  <select id="select3" name="selectbasic" class="span5 selectpicker">
+                    <option>23.01.2014 kl 14.00 Tallinn, Rävala pst 30, ruum 3</option>
+                    <option>30.01.2014 kl 13.00 Tallinn, Rävala pst 30, ruum 2</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Text input-->
+              <div class="control-group">
+                <label class="control-label" for="textinput">E-posti aadress</label>
+                <div class="controls">
+                  <span class="help-inline"><a class="editableinline" id="new_email" data-type="text" data-name="email" data-original-title="Muuda">jarko@server.ee</a></span>
+                </div>
+              </div>
+
+              <hr>
+
+              <!-- Button -->
+              <div class="form-actions" style="background: none; border: none;">
+                <a type="button" class="btn" href="javascript:history.back();">Katkesta</a>
+                <a type="button" class="btn" href="#user-list">Tühista registreering</a>
+                <a class="btn btn-primary" href="#user-list">Salvesta muudatused</a>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        
+                </div> <!-- end tab content -->
+              </div> <!-- end tab -->
+
+
+
+            </section>
+
+    <!--         <div class="control-group pull-right">
+
+          <div class="controls">
+            <a id="singlebutton" href="#student-exam-info" name="singlebutton" type="button" class="btn btn-default">Tagasi</a>
+            <a id="singlebutton" href="#exam-result" name="singlebutton" type="button" class="btn btn-primary">Sisesta eksami tulemus</a>
+          </div>
+        </div> -->

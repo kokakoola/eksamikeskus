@@ -5,17 +5,17 @@
 
   <section class="content" id="exam-answeres">
     <div class="pagename">
-      <h1><a href="#user-list" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas </h1>
+      <h1><a href="javascript:history.back();" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas </h1>
     </div>
 
 
     <div class="well clearfix" style="margin-bottom: 30px;">
-      <h4 class="wellhead">Vandeadvokaadi abi eksam 02.01.2014</h4>
+      <h4 class="wellhead">Vandeadvokaadi eksam 02.01.2014</h4>
       <div id="nav-wizard">
         <ul class='nav-wizard'>
           <li class="completed"><a href='#step1' data-toggle="tab">Testi tulemus</a></li> 
-          <li class='active'><a href='#step2' data-toggle="tab">Kaasusülesande tulemus</a></li> 
-          <li><a>Suulise eksami tulemus</a></li> 
+          <li class="completed"><a href='#step2' data-toggle="tab">Kaasusülesande tulemus</a></li> 
+          <li class="active"><a>Suulise eksami tulemus</a></li> 
           <li><a>Eksamikomisjoni otsus</a></li> 
         </ul>
       </div>
@@ -32,15 +32,15 @@
           <h4>Suuline eksam</h4>
           <hr class="closer">
           <p><small>Toimumise kuupäev:</small> 02.02.2014</p>
-          <p><small>Tulemus:</small> 9</p>
+          <p><small>Tulemus:</small> -</p>
         </div>
         <div class="span4">
           <h4>Otsus</h4>
           <hr class="closer">
-          <p><small>Kuupäev:</small> 08.10.2013</p>
-          <p><small>Otsuse nr:</small> 12</p>
-          <p><small>Isikusobivus:</small> Sobib</p>
-          <p><small>Eksamikomisjoni otsus:</small> Sooritatud</p>
+          <p><small>Kuupäev:</small> -</p>
+          <p><small>Otsuse nr:</small> -</p>
+          <p><small>Isikusobivus:</small> -</p>
+          <p><small>Eksamikomisjoni otsus:</small> -</p>
         </div>
       </div>
     </div>
@@ -48,7 +48,6 @@
     <div class="tabbable">
       <ul class="nav nav-tabs">
         <li  ><a href="#persona" data-toggle="tab">Isikuandmed</a></li> <!-- class="active" -->
-        <li><a href="#0" data-toggle="tab">Registreering</a></li>
         <li><a href="#1" data-toggle="tab">Testi vastused</a></li>
         <li><a href="#2" data-toggle="tab">Kaasusülesande lahendus</a></li>
         <li><a href="#3" data-toggle="tab">Otsus</a></li>
@@ -128,86 +127,6 @@
                 <a href="#user-list-added-user" name="button2id" class="btn btn-primary">Salvesta muudatused</a>
               </div>
 
-            </fieldset>
-          </form>
-        </div>
-        <div class="tab-pane" id="0">
-          <form class="form-horizontal">
-            <fieldset>
-
-              <!--Select-->
-              <div class="control-group">
-                <label class="control-label" for="selectbasic">Eksami liik</label>
-                <div class="controls">
-                  <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
-                    <option>Vandeadvokaadi eksam</option>
-                    <option>Vandeadvokaadi abi eksam</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Multiple Checkboxes (inline) -->
-              <div class="control-group">
-                <label class="control-label" for="checkboxes">Korduseksam</label>
-                <div class="controls">
-                  <label class="checkbox inline" for="checkboxes-1">
-                    <input type="checkbox" name="checkboxes" id="checkboxes-1" checked>
-                  </label>
-                  <span class="help-inline">Jah</span>
-                </div>
-              </div>
-
-              <!-- Select Basic -->
-              <div class="control-group">
-                <label class="control-label" for="selectbasic">Kaasuse valdkond</label>
-                <div class="controls">
-                  <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
-                    <option>Eraõigus ja tsiviilkohtu menetlus</option>
-                    <option>Riigi põhikord, avalik õigus ja halduskohtumenetlus</option>
-                    <option>Karistusõigus ja kriminaalmenetlus</option>
-                  </select>
-                </div>
-              </div>
-
-
-              <!-- Select Basic -->
-              <div class="control-group">
-                <label class="control-label" for="selectbasic">Toimumisaeg</label>
-                <div class="controls">
-                  <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
-                    <option>23.01.2014 kl 14.00</option>
-                    <option>30.01.2014 kl 13.00</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Select Basic -->
-              <div class="control-group">
-                <label class="control-label" for="selectbasic">Toimumiskoht</label>
-                <div class="controls">
-                  <select id="selectbasic" name="selectbasic" class="span5 selectpicker">
-                    <option>Tallinn, Rävala pst 30, ruum 3 (30 kohta, vabu 2)</option>
-                    <option>Tallinn, Rävala pst 30, ruum 2 (15 kohta, vabu 5)</option>
-                  </select>
-                </div>
-              </div>
-
-              <!-- Text input-->
-              <div class="control-group">
-                <label class="control-label" for="textinput">E-posti aadress</label>
-                <div class="controls">
-                  <span class="help-inline"><a class="editableinline" id="new_email" data-type="text" data-name="email" data-original-title="Muuda">nimi@server.ee</a></span>
-                </div>
-              </div>
-
-              <hr>
-
-              <!-- Button -->
-              <div class="form-actions" style="background: none; border: none;">
-                <a type="button" class="btn" href="#change-user">Katkesta</a>
-                <a type="button" class="btn" href="javascript:void(0);">Tühista registreering</a>
-                <a class="btn btn-primary" href="javascript:void(0);">Salvesta muudatused</a>
-              </div>
             </fieldset>
           </form>
         </div>
@@ -333,8 +252,8 @@
     <div class="tab-pane" id="2">
       <div class="row">
         <div class="label simple pull-right">
-          <span>Kaasusülesande lahenduse hinne:</span>
-          <a href="#" class="kaasus2" id="A1" data-type="select" data-emptytext="Vali tulemus" data-value="0" data-name="outcome" ></a>
+          <span>Kaasusülesande lahendus:</span>
+          <a href="#" class="kaasus" id="A1" data-type="select" data-emptytext="Vali tulemus" data-value="0" data-name="outcome" ></a>
         </div>
       </div><br />
       <div class="span4">
@@ -475,6 +394,7 @@
             <div class="row">
               <form class="form-horizontal">
                 <fieldset>
+                    <span class="icon-button pull-right"><a class="icon-print printbutton" href="#users-finish" onclick="window.print()"> Prindi</a></span>
                   <!-- Text input-->
                   <div class="control-group">
                     <label class="control-label" for="selectDate">Kuupäev</label>
@@ -568,13 +488,19 @@
                               </select>
                             </div>
                           </div>
+                    <div class="control-group">
+                            <label class="control-label" for="selectDecision">Märkused</label>
+                            <div class="controls">
+                              <textarea></textarea>
+                            </div>
+                          </div>
                           <hr />
 
 
                           <!-- Button (Double) -->
                           <div class="form-actions" style="background: none; border: none;">
                             <a href="#exam-answeres" name="" class="btn btn-default">Katkesta</a>
-                            <a href="#" name="" onclick="location.hash = '#exam-answeres';" class="btn btn-primary">Salvesta muudatused</a>
+                            <a href="#exam-decision" name="" class="btn btn-primary">Koosta otsus</a>
                           </div>
 
                           
@@ -628,48 +554,29 @@
                         <th>Eksami liik</th>
                         <th>Soorituse staatus</th>
                         <th></th>
-                      </tr>
-                      <tr>
-                        <td>27.06.2012</td>
-                        <td>27.06.2012</td>
-                        <td>Vandeadvokaadi abi</td>
-                        <td>Sooritatud</td>
+                     <tr>
+                        <td>02.01.2014</td>
+                        <td>02.02.2014</td>
+                        <td>Vandeadvokaadi</td>
+                        <td>Kaasus esitatud</td>
 
                         <td>
-                          <span class="icon-button"><a class="tip icon-chevron-right" href="#users-change-exam-info" data-toggle="tooltip"  data-original-title="Jätka"></a></span>
-                          <span class="icon-button"><a class="tip icon-remove" onclick="#users-student-exam-info-canceled-registration" data-toggle="tooltip" title="" data-original-title="Tühista registreering"></a></span>
+                          <!--<span class="icon-button"><a class="tip icon-chevron-right" href="#exam-decision" data-toggle="tooltip"  data-original-title="Jätka"></a></span>-->
+                          
                         </td>
                       </tr>
                       <tr>
-                        <td>27.01.2012</td>
-                        <td>27.06.2012</td>
-                        <td>Vandeadvokaadi abi</td>
+                        <td>20.06.2010</td>
+                        <td>27.06.2010</td>
+                        <td>Vandeadvokaadi</td>
                         <td>Sooritatud</td>
 
                         <td>
-                          <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-answeres" data-toggle="tooltip" data-original-title="Jätka"></a></span>
+                          <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-decision" data-toggle="tooltip"  data-original-title="Jätka"></a></span>
+                          
                         </td>
                       </tr>
-                      <tr>
-                        <td>03.07.2012</td>
-                        <td>03.07.2012</td>
-                        <td>Vandeadvokaadi abi</td>
-                        <td>Sooritatud</td>
 
-                        <td>
-                          <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-answeres" data-toggle="tooltip" data-original-title="Jätka"></a></span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>03.02.2012</td>
-                        <td>03.07.2012</td>
-                        <td>Vandeadvokaadi abi</td>
-                        <td>Sooritatud</td>
-
-                        <td>
-                          <span class="icon-button"><a class="tip icon-chevron-right" href="#exam-answeres" data-toggle="tooltip" data-original-title="Jätka"></a></span>
-                        </td>
-                      </tr>
                     </table>
 
                   </div>

@@ -1,19 +1,18 @@
 ﻿
-
-  <section class="content" id="users-finish">
+  <section class="content" id="exam-decision">
     <div class="pagename">
-      <h1><a href="#oral-change-gen-exam" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas </h1>
+      <h1><a href="#user-list" class="tip icon-angle-left" data-toggle="tooltip"  data-original-title="Tagasi"></a>    Aadu Aas </h1>
     </div>
 
 
     <div class="well clearfix" style="margin-bottom: 30px;">
-      <h4 class="wellhead">Vandeadvokaadi abi eksam 02.01.2014</h4>
+      <h4 class="wellhead">Vandeadvokaadi eksam 02.01.2014</h4>
       <div id="nav-wizard">
-        <ul class="nav-wizard">
+        <ul class='nav-wizard'>
           <li class="completed"><a href='#step1' data-toggle="tab">Testi tulemus</a></li> 
-          <li  class="completed"><a href='#step2' data-toggle="tab">Kaasusülesande tulemus</a></li> 
+          <li class="completed"><a href='#step2' data-toggle="tab">Kaasusülesande tulemus</a></li> 
           <li class="completed"><a>Suulise eksami tulemus</a></li> 
-          <li class="active"><a>Eksamikomisjoni otsus</a></li> 
+          <li class='active'><a>Eksamikomisjoni otsus</a></li> 
         </ul>
       </div>
       <div class="row">
@@ -44,22 +43,211 @@
 
     <div class="tabbable">
       <ul class="nav nav-tabs">
-        
-        
-        
-        <li><a href="#4" data-toggle="tab">Kaasusülesande lahendus</a></li>
-        <li class="active"><a href="#5" data-toggle="tab">Otsus</a></li>
-        <li><a href="#userfinish5" data-toggle="tab">Kõik eksamid</a></li>
+        <li  ><a href="#decision" data-toggle="tab">Isikuandmed</a></li> <!-- class="active" -->
+        <li><a href="#decision1" data-toggle="tab">Testi vastused</a></li>
+        <li><a href="#decision2" data-toggle="tab">Kaasusülesande lahendus</a></li>
+        <li class="active"><a href="#decision3" data-toggle="tab">Otsus</a></li>
+        <li><a href="#decision4" data-toggle="tab">Kõik eksamid</a></li>
       </ul>
 
 
       <div class="tab-content">
-        
-    <div class="tab-pane" id="4">
+        <div class="tab-pane" id="decision">
+          <form class="form-horizontal">
+            <fieldset>
+
+              <!-- Text input-->
+
+              <div class="control-group">
+                <label class="control-label" for="textinput">Isikukood</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="new_forename" data-type="text" data-name="forename" data-original-title="Muuda">1234567890</a>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="textinput">Nimi</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="A1" data-type="text" data-name="forename" data-original-title="Muuda">Aadu</a> &nbsp; <a href="#" class="editableinline" id="A2" data-type="text" data-name="forename" data-original-title="Muuda">Aas</a>
+                </div>
+              </div>
+
+              <!-- Text input-->
+
+
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Roll</label>
+                <div class="controls">
+                  <select id="selectbasicDisable" name="selectbasic" class="selectpicker show-tick">
+                    <option value="1">Eksamineeritav</option>
+                    <option>Advokatuuri kantselei töötaja</option>
+                    <option>Kutsesobivuskomisjoni liige</option>
+                    <option>Administraator</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Select Basic -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic1">Eksami liik</label>
+                <div class="controls">
+                  <select id="add-user-exam-type" name="selectbasic1" class="selectpicker show-tick">
+                    <option>Vandeadvokaadi abi eksam</option>
+                    <option>Vandeadvokaadi eksam</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="inputDecisionDate">Juhatuse otsuse kuupäev</label>
+                <div class="controls">
+                  <a href="#" class="editableinline" id="dob" data-type="date" data-pk="1" data-url="/post" data-title="Select date">15/05/1984</a>
+                </div>
+              </div>
+              <!-- Multiple Checkboxes (inline) -->
+              <div class="control-group">
+                <label class="control-label" for="selectbasic">Aktiivne</label>
+                <div class="controls">
+                  <div class="make-switch" data-on="primary" data-on-label="Jah" data-off-label="Ei">
+                    <input type="checkbox" checked>
+                  </div>
+                </div>
+              </div>
+
+              <hr>
+
+              <!-- Button (Double) -->
+              <div class="form-actions" style="background: none; border: none;">
+                <a href="#user-list" name="button1id" class="btn btn-default">Katkesta</a>
+                <a href="#" name="" class="btn btn-default">Kustuta kasutaja</a>
+                <a href="#user-list-added-user" name="button2id" class="btn btn-primary">Salvesta muudatused</a>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+        <div class="tab-pane" id="decision1">
+          <div class="row">
+            <div class="span8 pull-left">
+              <span class="label label-success"><i class="icon-ok"></i></span> Eksamineeritava vastus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <b>Paksu tekstiga</b>&nbsp;&nbsp;Õige vastus
+            </div>
+            <div class="pull-right">
+              <div class="label simple ">Testi tulemus: 75% arvestatud
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <form class="form-horizontal left-less-intent">
+              <fieldset style="margin-top: 20px;">
+                <legend>1. Eraõigus ja tsiviilkohtumenetlus</legend>
+
+                <div class="control-group">
+                  <label for="Käsipant, samuti õiguste pant lõpeb" id="question1"><b>1.1 Käsipant, samuti õiguste pant lõpeb pandiga tagatud nõude loovutamisel </b></label>
+
+                  <div class="controls">
+                    <label class="radio testquestion" for="Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada">
+                     <span class="label label-success"><i class="icon-ok"></i></span> <b>Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada</b>
+                   </label>
+                   <label class="radio testquestion" for="kui pandipidaja teatab pantijale kirjalikult pandi vabastamisest"> <span class="label label-empty">&nbsp;</span>
+                    kui pandipidaja teatab pantijale kirjalikult pandi vabastamisest 
+                  </label>
+                  <label class="radio testquestion" for="pandi registrist kustutamisel"><span class="label label-empty">&nbsp;</span>
+                    pandi registrist kustutamisel
+                  </label>
+                  <label class="radio testquestion" for="pandi eseme üleandmisel"><span class="label label-empty">&nbsp;</span>
+                    pandi eseme üleandmisel
+                  </label>
+                </div>
+                <hr>
+              </div>
+              <div class="control-group">
+                <label for="Käsipant, samuti õiguste pant" id="question2"><b>1.2 Nõude aegumine peatub</b></label>
+
+                <div class="controls">
+
+                  <label class="radio testquestion" for="hagiavalduse esitamisega"><span class="label label-empty">&nbsp;</span>
+                    <b>hagiavalduse esitamisega</b>
+                  </label>
+
+                  <label class="radio testquestion" for="nõude tunnustamisega kohustatud isiku poolt"><span class="label label-empty">&nbsp;</span>
+                    nõude tunnustamisega kohustatud isiku poolt
+                  </label>
+
+                  <label class="radio testquestion" for="läbirääkimiste pidamisega läbirääkimiste toimumise ajaks"><span class="label label-success"><i class="icon-ok"></i></span>
+                   läbirääkimiste pidamisega läbirääkimiste toimumise ajaks
+                 </label>
+
+                 <label class="radio testquestion" for="nõude loovutamisega"> <span class="label label-empty">&nbsp;</span>
+                   nõude loovutamisega
+                 </label>
+               </div>
+
+               <hr>
+             </div>
+             <div class="control-group">
+              <label for="Käsipant, samuti õiguste pant lõpeb" id="Label1"><b>1.3 Tsiviilasjades võib maakohtu otsuse peale apellatsioonkaebuse esitada</b></label>
+
+              <div class="controls">
+                <label class="radio testquestion" for="10 päeva jooksul alates otsuse apellandile kättetoimetamisest">
+                  <span class="label label-empty">&nbsp;</span>
+                  10 päeva jooksul alates otsuse apellandile kättetoimetamisest
+                </label>
+
+                <label class="radio testquestion" for="15 päeva jooksul alates otsuse apellandile kättetoimetamisest">
+                  <span class="label label-empty">&nbsp;</span>
+                  <b>15 päeva jooksul alates otsuse apellandile kättetoimetamisest</b>
+                </label>
+
+                <label class="radio testquestion" for="20 päeva jooksul alates otsuse apellandile kättetoimetamisest">
+                  <span class="label label-success"><i class="icon-ok"></i></span>
+                  20 päeva jooksul alates otsuse apellandile kättetoimetamisest
+                </label>
+
+
+                <label class="radio testquestion" for="25 päeva jooksul alates otsuse apellandile kättetoimetamisest">
+                  <span class="label label-empty">&nbsp;</span>
+                  25 päeva jooksul alates otsuse apellandile kättetoimetamisest
+                </label>
+              </div>
+              <hr>
+            </div>
+            <div class="control-group">
+              <label for="Käsipant, samuti õiguste pant lõpeb" id="Label2"><b>1.4 Müügilepingu sõlmimisega</b></label>
+
+              <div class="controls">
+
+                <label class="radio testquestion" for="tekib ostjal õigus nõuda müügieseme omandi ülekandmist">
+                  <span class="label label-empty">&nbsp;</span>
+                  tekib ostjal õigus nõuda müügieseme omandi ülekandmist
+                </label>
+
+                <label class="radio testquestion" for="läheb müügieseme omand üle ostjale juhul, kui ta on müügihinna täielikult tasunud">
+                  <span class="label label-empty">&nbsp;</span>
+                  läheb müügieseme omand üle ostjale juhul, kui ta on müügihinna täielikult tasunud
+                </label>
+
+                <label class="radio testquestion" for="läheb müügieseme omand üle ostjale, välja arvatud juhul, kui on kokku lepitud omandireservatsioonis">
+                  <span class="label label-empty">&nbsp;</span>
+                  läheb müügieseme omand üle ostjale, välja arvatud juhul, kui on kokku lepitud omandireservatsioonis
+                </label>
+
+                <label class="radio testquestion" for="täidab ostja oma ostuhinna tasumise kohustuse">
+                  <span class="label label-success"><i class="icon-ok"></i></span>
+                  <b>täidab ostja oma ostuhinna tasumise kohustuse</b>
+                </label>
+              </div>
+              <hr>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+    </div>
+    <div class="tab-pane" id="decision2">
       <div class="row">
         <div class="label simple pull-right">
-          <span>Kaasusülesande lahenduse hinne:</span>
-          Arvestatud
+          <span>Kaasusülesande lahendus: Esitatud</span>
         </div>
       </div><br />
       <div class="span4">
@@ -89,52 +277,55 @@
                 </table>
               </div>
               <h4>Kaasuse kommentaarid</h4>
-              <div class="accordion" id="comment-accordion2">
+              <div class="accordion" id="comment-accordion">
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion2" href="#comment-accordion-collapse1One">Aadu Luberg, 02.01.2014 13:30
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse1">Aadu Luberg, 02.01.2014 13:30
                     </a>
                   </div>
-                  <div id="comment-accordion-collapse1One" class="accordion-body collapse in">
+                  <div id="comment-accordion-collapse1" class="accordion-body collapse in">
                     <div class="accordion-inner">
-                      Kutsesobivuskomisjoni liikme kommentaar
+                      <textarea rows="6">Kutsesobivuskomisjoni liikme kommentaar</textarea>
 
                     </div>
                   </div>
                 </div>
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion2" href="#comment-accordion-collapse2Two">Mari-Ann Simovart, 02.01.2014 13:30
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse2">Mari-Ann Simovart, 02.01.2014 13:30
                     </a>
                   </div>
-                  <div id="comment-accordion-collapse2Two" class="accordion-body collapse">
+                  <div id="comment-accordion-collapse2" class="accordion-body collapse">
                     <div class="accordion-inner">
-                      Kutsesobivuskomisjoni liikme kommentaar 2
+                      <textarea rows="6">Kutsesobivuskomisjoni liikme kommentaar 2</textarea>
                     </div>
                   </div>
                 </div>
                 <div class="accordion-group">
                   <div class="accordion-heading">
-                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion2" href="#comment-accordion-collapse3Three">Lisa oma kommentaar
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#comment-accordion" href="#comment-accordion-collapse3">Lisa oma kommentaar
                     </a>
                   </div>
-                  <div id="comment-accordion-collapse3Three" class="accordion-body collapse">
+                  <div id="comment-accordion-collapse3" class="accordion-body collapse">
                     <div class="accordion-inner">
-                      Viimati lisatud kutsesobivuskomisjoni liikme kommentaar
+                      <textarea rows="6"></textarea>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="pull-right">
+                <button type="button" class="btn btn-primary" data-toggle="button">Salvesta</button>
               </div>
             </div>
             <div class="span8">
               <div class="row">
                 <div class="span8">
-                  <div class="accordion" id="case-accordion2">
+                  <div class="accordion" id="case-accordion">
                     <div class="accordion-group">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion2" href="#case-accordion-collapse1One">Kaasusülesanne eraõiguse ja tsiviilkohtumenetluse valdkonnas</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseOne">Kaasusülesanne eraõiguse ja tsiviilkohtumenetluse valdkonnas</a>
                       </div>
-                      <div id="case-accordion-collapse1One" class="accordion-body collapse">
+                      <div id="case-accordion-collapseOne" class="accordion-body collapse">
                         <div class="accordion-inner">
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.</p>
                           <p>Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla. </p>
@@ -146,9 +337,9 @@
                     </div> <!-- end accordion group -->
                     <div class="accordion-group">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion2" href="#case-accordion-collapse2Two">Kaasuse näidislahendus</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseTwo">Kaasuse näidislahendus</a>
                       </div>
-                      <div id="case-accordion-collapse2Two" class="accordion-body collapse">
+                      <div id="case-accordion-collapseTwo" class="accordion-body collapse">
                         <div class="accordion-inner">
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.</p>
                           <p>Phasellus ac ligula rutrum, vestibulum mi quis, luctus purus. Aenean at metus quis sem facilisis imperdiet. Vivamus suscipit commodo hendrerit. Nullam hendrerit tortor in sapien egestas, tincidunt fermentum tellus consectetur. Maecenas euismod consequat arcu, hendrerit suscipit risus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque aliquam fermentum augue sed accumsan. Aliquam in nibh vel est blandit dapibus. Integer enim nisl, scelerisque ut tempus sed, malesuada pretium tortor. Sed neque erat, volutpat nec arcu ac, sollicitudin scelerisque sapien. Duis pretium dignissim convallis. Suspendisse luctus, quam vel iaculis volutpat, tortor diam tincidunt orci, vel vehicula metus sem vel nulla.</p>
@@ -160,9 +351,9 @@
                     </div> <!-- end accordion group -->
                     <div class="accordion-group">
                       <div class="accordion-heading">
-                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion2" href="#case-accordion-collapse3Three">Aadu Aas kaasusülesande lahendus</a>
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#case-accordion" href="#case-accordion-collapseThree">Aadu Aas kaasusülesande lahendus</a>
                       </div>
-                      <div id="case-accordion-collapse3Three" class="accordion-body collapse in">
+                      <div id="case-accordion-collapseThree" class="accordion-body collapse in">
                         <div class="accordion-inner">
                           <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis nisi diam, nec iaculis elit accumsan et. Vivamus rutrum commodo pharetra. Integer blandit mollis ante, eu aliquam diam sagittis eget. Nulla cursus risus at sagittis aliquet. Nunc tincidunt augue sed nisl convallis hendrerit. In elementum et ligula ut porttitor. Integer dapibus mollis metus, nec accumsan enim rhoncus in. Etiam eleifend, sapien vel faucibus congue, nibh augue varius neque, gravida sollicitudin neque urna eu massa.
@@ -193,9 +384,9 @@
             </div>
           </div>
           <!-- end tab pane 3 -->
-          <div class="tab-pane active" id="5">
+          <div class="tab-pane active" id="decision3">
             <div class="row">
-                <span class="icon-button pull-right"><a class="icon-print printbutton" href="#users-finish" onclick="window.print()"> Prindi</a></span>
+              <span class="icon-button pull-right"><a class="icon-print printbutton" href="#exam-decision" onclick="window.print()"> Prindi</a></span>
               <div id="print" style="margin: 0 auto; max-width:700px;padding:30px;">
 	                <div class="header-picture" style="text-align:center;">
                         <img src="../../img/image001.jpg" style="width:inherit;height:inherit;"/>
@@ -226,85 +417,9 @@
                     <p style="margin:20px 0 10px 0;">Kutsesobivuskomisjoni liikmete allkirjad:</p>
 
                 </div>
-               <!--<form class="form-horizontal">
-                <fieldset>
-                  
-                  <div class="control-group">
-                    <label class="control-label" for="selectDate">Kuupäev</label>
-                    <div class="controls">
-                      08.10.2013
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label">Kutsesobivuskomisjoni koosseis</label>
-                    <div class="controls">
-                     <ul style="list-style:none;margin-left:1px;">
-                         <li>Aadu Luberg</li>
-                         <li>Gunnar Vaikmaa</li>
-                         <li>Heli Sepp</li>
-                     </ul>
-                   </div>
-                 </div>
-                 <div class="control-group">
-                  <label class="control-label">Eksami liik</label>
-                  <div class="controls">
-                    <span>Vandeadvokaadi eksam</span>
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label">Valdkond</label>
-                  <div class="controls">
-                    <span>Eraõigus ja tsiviilkohtumenetlus</span>
-                  </div>
-                </div>
-                <div class="control-group">
-                  <label class="control-label">Testi tulemus</label>
-                  <div class="controls">
-                    <span>75%</span>
-                  </div>
-                </div>
-                       <div class="control-group">
-                            <label class="control-label">Kaasuse tulemus</label>
-                            <div class="controls">
-                                <span>80%</span>
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label" for="selectCaseGrade">Kaasusülesande lahenduse hinne</label>
-                            <div class="controls">
-                              <span>7</span>
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label" for="selectOralGrade">Suulise eksami hinne</label>
-                            <div class="controls">
-                              <span>8</span>
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label" for="selectSuitability">Isikusobivus</label>
-                            <div class="controls">
-                              <span>Sobiv</span>
-                            </div>
-                          </div>
-                          <div class="control-group">
-                            <label class="control-label" for="selectDecision">Eksami sooritamise otsus</label>
-                            <div class="controls">
-                              <span>Sooritatud</span>
-                            </div>
-                          </div>
-                          <span class="icon-button"><a class="icon-print printbutton" href="" onclick="window.print()"> Prindi</a></span>
-                          <span class="icon-button"><a class="icon-file printbutton" href=""> PDF</a></span>
-
-
-
-                          
-                        </fieldset>
-                      </form>-->
-                
                     </div>
                   </div> <!-- end tab pane 4 -->
-                   <div class="tab-pane" id="userfinish5">
+                  <div class="tab-pane" id="decision4">
                     <form class="form-inline">
                       <fieldset>
                         <div class="well">
@@ -350,7 +465,8 @@
                         <th>Eksami liik</th>
                         <th>Soorituse staatus</th>
                         <th></th>
-                     <tr>
+                      </tr>
+                      <tr>
                         <td>02.01.2014</td>
                         <td>02.02.2014</td>
                         <td>Vandeadvokaadi</td>
@@ -372,7 +488,7 @@
                           
                         </td>
                       </tr>
-
+                      
                     </table>
 
                   </div>

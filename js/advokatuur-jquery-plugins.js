@@ -92,19 +92,6 @@ $(document).ready(function() {
      });
  });
 
- $(function () {
-     $('.kaasus2').editable({
-         pk: 1,
-         limit: 3,
-         source: [
-
-          { value: 1, text: 'Arvestatud' },
-          { value: 3, text: 'Mitte ilmunud' },
-          { value: 4, text: 'Kõrvaldatud' }
-         ]
-     });
- });
-
 // START: xeditable aadress ehk toimumiskoha lisamine
  $(function () {
      $('.js-toimumiskoht').editable({
