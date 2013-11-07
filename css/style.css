@@ -13214,9 +13214,6 @@ a .icon-flip-vertical:before {
   padding-top: 5px;
   line-height: 60px;
 }
-.content {
-  margin-top: 30px;
-}
 #nav-wizard a:hover {
   text-decoration: none;
   cursor: default;
