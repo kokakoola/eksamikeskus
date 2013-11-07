@@ -7622,6 +7622,14 @@ h1.addoralheader {
   overflow-y: scroll;
   border: none;
 }
+#comment-accordion-collapse1,
+#comment-accordion-collapse2,
+#comment-accordion-collapse3 {
+  max-height: 149px;
+}
+.accordion-group {
+  border-radius: 0;
+}
 .widearea-wrapper {
   width: 100%!important;
 }
@@ -7809,4 +7817,7 @@ tr {
 }
 .small-line {
   line-height: 13px !important;
+}
+.printbutton {
+  border: solid 1px #f5f5f5;
 }
