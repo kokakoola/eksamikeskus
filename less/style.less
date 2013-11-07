@@ -611,10 +611,28 @@ h1.addoralheader {
   bottom: 70px;  //height of the footer
 }
 
+.pagination ul.nav {
+border-radius: 0;
+}
+
+.inverted {
+color: @white;
+}
+
+.inverted:hover {
+color: darken(@white, 15%);
+}
+
+#test .pagination ul > li > a.answered {
+  background: @grayLighter;
+  color: @gray;
+}
+
 #test .pagination ul > li > a {
 padding: 5px 5px;
 text-align: center;
 width: 20px;
+border-radius: 0;
 }
 
 #test .pagination ul > .visited > a {
@@ -700,13 +718,6 @@ input[type="radio"]:checked+span {
 font-family: 'clbd', Arial, sans-serif;
  }
 
-.pagination ul {
-  border-radius: 0;
-}
-
-.answered {
-  background-color: #F0F0F0;
-}
 
 .datepicker > div {
   padding: 15px!important;
@@ -794,10 +805,10 @@ table.draggable tr:hover {
   background: @grayLighter;
 }
 
-table.draggable tr:first-child:hover {
-  color: @grayLight;
-  background: @white;
-}
+// table.draggable tr:first-child:hover {
+//   color: @grayLight;
+//   background: @white;
+// }
 
 /* line 93, application.css.sass */
 table.draggable tr.placeholder {
@@ -837,11 +848,11 @@ table.draggable tr:hover {
   background: @grayLighter;
 }
 
-table.sortable tr:first-child:hover,
-table.draggable tr:first-child:hover {
-  color: @grayLight;
-  background: @white;
-}
+// table.sortable tr:first-child:hover,
+// table.draggable tr:first-child:hover {
+//   color: @grayLight;
+//   background: @white;
+// }
 
   #hiderow {
     display: none;
@@ -851,11 +862,6 @@ tr {
   font-size: 14px;
 }
 
-.navpills > li::after {
-  padding-right: 30px;
-  content: "koll";
-
-}
 // #nav > .navbar-inner {
 //     border-left: 0;
 //     border-right: 0;

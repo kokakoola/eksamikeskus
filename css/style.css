@@ -13656,10 +13656,24 @@ h1.addoralheader {
   top: auto;
   bottom: 70px;
 }
+.pagination ul.nav {
+  border-radius: 0;
+}
+.inverted {
+  color: #ffffff;
+}
+.inverted:hover {
+  color: #d9d9d9;
+}
+#test .pagination ul > li > a.answered {
+  background: #eeeeee;
+  color: #555555;
+}
 #test .pagination ul > li > a {
   padding: 5px 5px;
   text-align: center;
   width: 20px;
+  border-radius: 0;
 }
 #test .pagination ul > .visited > a {
   background-color: #0b80c7;
@@ -13723,12 +13737,6 @@ td.narrow {
 input[type="radio"]:checked + span {
   font-family: 'clbd', Arial, sans-serif;
 }
-.pagination ul {
-  border-radius: 0;
-}
-.answered {
-  background-color: #F0F0F0;
-}
 .datepicker > div {
   padding: 15px!important;
 }
@@ -13785,10 +13793,6 @@ table.draggable tr {
 table.draggable tr:hover {
   background: #eeeeee;
 }
-table.draggable tr:first-child:hover {
-  color: #999999;
-  background: #ffffff;
-}
 /* line 93, application.css.sass */
 table.draggable tr.placeholder {
   display: block;
@@ -13816,20 +13820,11 @@ table.sortable tr:hover,
 table.draggable tr:hover {
   background: #eeeeee;
 }
-table.sortable tr:first-child:hover,
-table.draggable tr:first-child:hover {
-  color: #999999;
-  background: #ffffff;
-}
 #hiderow {
   display: none;
 }
 tr {
   font-size: 14px;
-}
-.navpills > li::after {
-  padding-right: 30px;
-  content: "koll";
 }
 @-ms-viewport {
   width: device-width;
