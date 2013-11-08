@@ -273,7 +273,7 @@ $(document).ready(function () {
   
   bootbox.addLocale('en', {
       CONFIRM: 'Kinnita',
-      CANCEL: 'Loobu'
+      CANCEL: 'Katkesta'
   });
  });
 
