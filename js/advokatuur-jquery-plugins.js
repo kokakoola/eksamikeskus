@@ -57,7 +57,16 @@ $(document).ready(function() {
 
  $(function(){
      $('.place').editable({
-         source: [{value: 1, text: 'Rävala pst 3, Tallinn ruum 2'}, {value: 2, text: 'Rävala pst 3, Tallinn ruum 3'}]
+         emptytext: 'Vali toimumiskoht',
+         source: [{value: 1, text: 'Eesti Advokatuur, Rävala pst 3, Tallinn'}, {value: 2, text: 'IT Kolledž, Raja 4c, Tallinn'}]
+     });
+ });
+
+ $(function () {
+     $('.place2be').editable({
+         emptytext: 'Vali toimumiskoht',
+         mode: 'inline',
+         source: [{ value: 1, text: 'Eesti Advokatuur, Rävala pst 3, Tallinn' }, { value: 2, text: 'IT Kolledž, Raja 4c, Tallinn' }]
      });
  });
 
@@ -89,6 +98,34 @@ $(document).ready(function() {
           { value: 3, text: 'Mitte ilmunud' },
           { value: 4, text: 'Kõrvaldatud' }
          ]
+     });
+ });
+
+ $(function () {
+     $('.locations').editable({
+         emptytext: 'Lisa aadress',
+         mode: 'inline'
+     });
+ });
+
+ $(function () {
+     $('.locationsname').editable({
+         emptytext: 'Lisa nimetus',
+         mode: 'inline'
+     });
+ });
+
+ $(function () {
+     $('.room').editable({
+         emptytext: 'Lisa ruum',
+         mode: 'inline'
+     });
+ });
+
+ $(function () {
+     $('.nr').editable({
+         emptytext: 'Lisa kohtade arv',
+         mode: 'inline'
      });
  });
 

@@ -234,8 +234,15 @@
     <Content Include="_bootstrap-2.3.2\docs\index.html" />
     <Content Include="_bootstrap-2.3.2\docs\javascript.html" />
     <Content Include="_bootstrap-2.3.2\docs\scaffolding.html" />
+    <Content Include="_includes\_administrator\_exam_added.html" />
+    <Content Include="_includes\_administrator\_exam_decision.html" />
+    <Content Include="_includes\_administrator\_exam_end_exam.html" />
+    <Content Include="_includes\_administrator\_exam_finish_exam.html" />
     <Content Include="_includes\_administrator\_exam_reg_on_exam.html" />
-    <Content Include="_includes\_administrator\_oral-change-gen-exam.html" />
+    <Content Include="_includes\_administrator\_settings_locations.html" />
+    <Content Include="_includes\_administrator\_user_admin.html" />
+    <Content Include="_includes\_administrator\_user_examinant.html" />
+    <Content Include="_includes\_comission\_oral-change-gen-exam.html" />
     <Content Include="_includes\_administrator\_settings_notifications.html" />
     <Content Include="_includes\_administrator\_settings_test_exam_info.html" />
     <Content Include="_includes\_administrator\_settings_writing_exam_info.html" />
@@ -289,6 +296,9 @@
     <Content Include="_includes\_comission\_oral_exams.html" />
     <Content Include="_includes\_comission\_oral_exam_edit.html" />
     <Content Include="_includes\_comission\_oral_exam.html" />
+    <Content Include="_includes\_comission\_oral_finish_exam.html" />
+    <Content Include="_includes\_comission\_users.html" />
+    <Content Include="_includes\_comission\_users_finish.html" />
     <Content Include="_includes\_comission\_user_exam.html" />
     <Content Include="_includes\_examinant\_register.html" />
     <Content Include="_includes\_examinant\_registered.html" />
