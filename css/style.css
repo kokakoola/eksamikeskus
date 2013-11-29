@@ -7842,7 +7842,7 @@ tr {
   padding: 30px;
 }
 .printable #sobivus {
-  font-size: 11px;
+  font-size: 12px;
 }
 .printable #paragraafid {
   text-align: justify;
@@ -7856,11 +7856,13 @@ tr {
   }
   .printable {
     width: 18cm;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     position: absolute;
     top: 30px;
-    left: 100px;
-    right: 100px;
-    line-height: 20px;
+    line-height: 22px;
     font-size: 14pt;
   }
   .printable h1 {
@@ -7873,7 +7875,7 @@ tr {
     border-top: 1px solid black;
   }
   .printable #sobivus {
-    font-size: 11px;
+    font-size: 12px;
   }
   .printable #paragraafid {
     text-align: justify;
