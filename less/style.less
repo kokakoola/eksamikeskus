@@ -917,3 +917,46 @@ tr {
 .filterwidth-input {
     width:125px !important;
 }
+.printable {
+    margin: 0 auto; 
+    width:18cm;
+    padding:30px;
+}
+    .printable #sobivus {
+        font-size:11px;
+    }
+    .printable #paragraafid {
+        text-align:justify;
+    }
+@media print {
+    body * {
+    visibility: hidden;
+  }
+  .printable * {
+    visibility: visible;
+  }
+  .printable {
+    width:18cm;
+    position:absolute;
+    top:30px;
+    left:100px;
+    right:100px;
+    line-height:20px;
+    font-size:14pt;
+  }
+    .printable h1 {
+        font-size:18pt;
+    }
+    .printable h4 {
+        font-size:14pt;
+    }
+    .printable hr {
+      border-top:1px solid black;
+    }
+    .printable #sobivus {
+        font-size:11px;
+    }
+    .printable #paragraafid {
+        text-align:justify;
+    }
+}
